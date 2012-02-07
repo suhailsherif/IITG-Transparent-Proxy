@@ -1,0 +1,20 @@
+IITG Transparent Proxy would like to thank the following for their contributions:
+(Past, present and future) Users, Testers and Debuggers
+Redsocks (http://darkk.net.ru/redsocks/) - an opensource transparent socks redirector that wouldn't work by itself in IITG
+ProxyDroid (http://code.google.com/p/proxydroid/) - the open source android app that worked and showed how it can be done
+Mini fake DNS server (http://code.activestate.com/recipes/491264-mini-fake-dns-server/) - a small fake dns server conforming to protocol
+Me (Suhail Sherif) and Ajaykumar Kannan - for developing it.
+iptables - for being so awesome
+
+TODO - Licensing, GUI, packaging and Improvements (Includes analysis of the working of the IITG DNS)
+
+HOWTO:
+Make redsocks, get the executable.
+Use proxy.sh (taken directly from ProxyDroid) to generate a redsocks conf file and to run redsocks.
+defaultIPs has some domains and ip addresses that you might want to be preconfigured
+Run fakeDNS.py
+Run script.sh to use iptables to redirect flow through this application
+IMPORTANT:
+Edit /etc/resolv.conf and add a line 'nameserver 127.0.0.1' at the top. Or add 127.0.0.1 to your DNS serverlist. The former seems cooler.
+
+Beware! Non-authentic DNS servers can be used VERY convincingly for phishing. Make sure you are in control of your configuration.
