@@ -6,7 +6,7 @@ Mini fake DNS server (http://code.activestate.com/recipes/491264-mini-fake-dns-s
 Me (Suhail Sherif) and Ajaykumar Kannan - for developing it.
 iptables - for being so awesome
 
-TODO - Licensing, GUI, packaging and Improvements (Includes analysis of the working of the IITG DNS)
+TODO - Removing cache entries, Licensing, GUI, packaging and Improvements (Includes analysis of the working of the IITG DNS)
 
 HOWTO:
 Make redsocks, get the executable.
