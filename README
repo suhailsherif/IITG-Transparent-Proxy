@@ -9,12 +9,18 @@ iptables - for being so awesome
 TODO - Removing cache entries, Licensing, GUI, packaging and Improvements (Includes analysis of the working of the IITG DNS)
 
 HOWTO:
+
 Make redsocks, get the executable.
-Use proxy.sh (taken directly from ProxyDroid) to generate a redsocks conf file and to run redsocks.
-Example: sudo sh proxy.sh start http 202.141.80.22 3128 true <username> <password>
-defaultIPs has some domains and ip addresses that you might want to be preconfigured
-Run fakeDNS.py
-Run script to use iptables to redirect flow through this application
+
+Edit redsocks.conf to suit your needs.
+
+Run ./redsocks -c redsocks.conf
+
+defaultIPs has some domains and ip addresses that you might want to have preconfigured
+Run python fakeDNS.py
+
+Run ./script (it uses iptables to redirect internet through this application and dns server)
+
 IMPORTANT:
 Edit /etc/resolv.conf and add a line 'nameserver 127.0.0.1' at the top. Or add 127.0.0.1 to your DNS serverlist. The former seems cooler.
 
