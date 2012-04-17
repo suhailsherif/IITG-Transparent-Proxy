@@ -11,15 +11,19 @@ TODO - Removing cache entries, Licensing, GUI, packaging and Improvements (Inclu
 HOWTO:
 (Most of these commands may need superuser priveleges)
 
-In the redsocks folder, just make redsocks and get the executable.
+One-time : In the redsocks folder, just make redsocks and get the executable.
 
-Run sh redsocksConfig.sh <proxy_ip> <proxy_port> <username> <password>
-(username and password are optional. You can edit this file to make it prompt you for the username and password if you don't like your credentials in plaintext in your history. And have it delete the redsocksauto.conf that it creates in the redsocks folder.)
+Run sh script start (it uses iptables to redirect internet through this application and dns server)
 
 Run python fakeDNS.py
 (defaultIPs has some domains and ip addresses that you might want to have preconfigured)
 
-Run sh script (it uses iptables to redirect internet through this application and dns server)
+Run sh redsocksConfig.sh <proxy_ip> <proxy_port> <username> <password>
+(username and password are optional. You can edit this file to make it prompt you for the username and password if you don't like your credentials in plaintext in your history. And have it delete the redsocksauto.conf that it creates in the redsocks folder.)
+
+To stop:
+Run sh script stop
+(Optionally) stop fakeDNS and redsocks.
 
 IMPORTANT:
 Edit /etc/resolv.conf and add a line 'nameserver 127.0.0.1' at the top. Or add 127.0.0.1 to your DNS serverlist. The former seems cooler.
