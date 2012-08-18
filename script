@@ -12,15 +12,16 @@ sudo iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDIRECT --to 8123
 sudo iptables -t nat -A OUTPUT -p tcp --dport 443 -j REDIRECT --to 8124
 sudo iptables -t nat -A OUTPUT -p tcp --dport 5228 -j REDIRECT --to 8124
 sed '1inameserver 127.0.0.1' /etc/resolv.conf > temp.conf
+sudo mv /etc/resolv.conf /etc/resolv.conf.bckup
 sudo mv temp.conf /etc/resolv.conf
 sudo chown root:root /etc/resolv.conf
 sudo chmod 644 /etc/resolv.conf
 ;;
 stop)
-sed '1d' /etc/resolv.conf > temp.conf
-sudo mv temp.conf /etc/resolv.conf
-sudo chown root:root /etc/resolv.conf
-sudo chmod 644 /etc/resolv.conf
+if [ -f /etc/resolv.conf.bckup ]
+then
+    sudo mv /etc/resolv.conf.bckup /etc/resolv.conf
+fi
 sudo sudo iptables -t nat -F OUTPUT
 ;;
 esac
