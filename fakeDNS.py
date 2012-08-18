@@ -4,7 +4,7 @@ import httplib
 from threading import Thread
 import re
 
-defaultIP='172.16.25.74'
+defaultIP='8.8.8.8'
 
 class DNSQuery:
   def __init__(self, data, addr):
