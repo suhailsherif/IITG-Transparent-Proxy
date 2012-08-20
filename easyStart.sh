@@ -25,3 +25,4 @@ sudo echo "Got sudo rights"
 ./script start & 
 ./redsocksConfig.sh $proxy $port $username $password & 
 sudo python fakeDNS.py &
+echo $! > pidfile.temp
