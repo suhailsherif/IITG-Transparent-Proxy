@@ -11,14 +11,16 @@ TODO - Removing cache entries, Licensing, GUI, packaging and Improvements (Inclu
 HOWTO:
 (Most of these commands may need superuser priveleges)
 
-One-time : In the redsocks folder, just make redsocks and get the executable.
+The easy way (aka the noob way :D)
+./easyStart.sh to start the transparent proxy and ./easyStop.sh to stop the proxy. You can edit easyStart.sh if you don't want to enter the proxy details each time.I've included an example.
 
-Run sh script start (it uses iptables to redirect internet through this application and dns server)
-
-Run python fakeDNS.py
+The more difficult way:
+One-time : In the redsocks folder, "make" to get the executable. If make fails, you will need to compile libevent. I've included the tar file for it. Or you can download it online. 
+Run the following:
+./script start
+sudo python fakeDNS.py
 (defaultIPs has some domains and ip addresses that you might want to have preconfigured)
-
-Run sh redsocksConfig.sh <proxy_ip> <proxy_port> <username> <password>
+sh redsocksConfig.sh <proxy_ip> <proxy_port> <username> <password>
 (username and password are optional. You can edit this file to make it prompt you for the username and password if you don't like your credentials in plaintext in your history. And have it delete the redsocksauto.conf that it creates in the redsocks folder.)
 
 To stop:
