@@ -11,6 +11,12 @@ sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.81.22/24 -j RETURN
 sudo iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDIRECT --to 8123
 sudo iptables -t nat -A OUTPUT -p tcp --dport 443 -j REDIRECT --to 8124
 sudo iptables -t nat -A OUTPUT -p tcp --dport 5228 -j REDIRECT --to 8124
+sudo iptables -t nat -A OUTPUT -p tcp --dport 5223 -j REDIRECT --to 8124
+sudo iptables -t nat -A OUTPUT -p tcp --dport 5222 -j REDIRECT --to 8124
+sudo iptables -t nat -A OUTPUT -p tcp --dport 5242 -j REDIRECT --to 8124
+sudo iptables -t nat -A OUTPUT -p tcp --dport 4244 -j REDIRECT --to 8124
+sudo iptables -t nat -A OUTPUT -p tcp --dport 943 -j REDIRECT --to 8124
+
 echo "nameserver 127.0.0.1" > temp.conf
 sudo mv /etc/resolv.conf /etc/resolv.conf.bckup
 sudo mv temp.conf /etc/resolv.conf

@@ -16,7 +16,7 @@ fi
 read -p "Enter the proxy address: " proxy
 read -p "Enter the proxy port: " port
 read -p "Enter your proxy username: " username
-read -s -p "Enter your proxy password: " password
+read -p "Enter your proxy password: " password
 echo " " 
 # Uncomment this section to use details stored in the file
 #proxy=202.141.80.22
