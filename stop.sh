@@ -6,4 +6,5 @@ then
 	rm pidfile.temp
 fi
 sudo killall redsocks
+sudo killall openvpn
 ./script stop

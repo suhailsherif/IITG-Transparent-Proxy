@@ -3,3 +3,5 @@ redsocks/redsocksauto.conf
 pidfile.temp
 dnsCache
 startMyProxy.sh
+*cred.txt
+config.sh
