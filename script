@@ -22,12 +22,15 @@ sudo mv /etc/resolv.conf /etc/resolv.conf.bckup
 sudo mv temp.conf /etc/resolv.conf
 sudo chown root:root /etc/resolv.conf
 sudo chmod 644 /etc/resolv.conf
+
 ;;
 stop)
+
 if [ -f /etc/resolv.conf.bckup ]
 then
     sudo mv /etc/resolv.conf.bckup /etc/resolv.conf
 fi
+
 sudo sudo iptables -t nat -F OUTPUT
 ;;
 esac
