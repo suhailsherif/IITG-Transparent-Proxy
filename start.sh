@@ -24,6 +24,12 @@ if [ "" = "$PKG_OK" ]; then
   echo "No libevent-dev. Setting up libevent-dev."
   sudo apt-get --force-yes --yes install libevent-dev
 fi
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' openvpn |grep "install ok installed")
+echo Checking for openvpn: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+  echo "No openvpn. Setting up openvpn."
+  sudo apt-get --force-yes --yes install openvpn
+fi
 
 sudo fuser -k 55/udp
 sleep 0.1
@@ -73,14 +79,16 @@ else
 	read -p "VPNBook username ? : " vpnbook_username
 	read -p "VPNBook password ? : " vpnbook_password
 	for f in ./*.ovpn; do
-	    [ -e "$f" ] && echo "files do exist" || echo "files do not exist"
-	    echo "Do you want to use $f as server configuration file ?[y/n] :"
+	    echo -n "Do you want to use $f as server configuration file ?[y/n] : "
 	    read -p "" ch
-
-	    ## This is all we needed to know, so we can break after the first iteration
-	    break
+	    if [ "$ch" = "y" ] ;then
+	    	vpnbook_path=$(readlink -f $f)
+			break
+		fi
 	done
-	read -p "VPN config file path(full) ? : " vpnbook_path
+	if [ ! -z "$vpnbook_path" ]; then 
+		read -p "VPN config file path(full) ? : " vpnbook_path
+	fi
 	echo -n "\nDo you want to save your configuration ?[y/n] : "
 	read -p "" save
 	if [ "$save" = "y" ]
@@ -106,7 +114,7 @@ echo "Configuring redsocks ..."
 ./redsocksConfig.sh $proxy_server $proxy_port $proxy_username $proxy_password > ./log/Redsocks.log 2>&1 & 
 echo "redsocks configured successfully"
 echo "initiating fake DNS server ..."
-sudo python fakeDNS.py > ./log/DNS &
+sudo python fakeDNS.py &
 echo "DNS server initiated"
 echo $! > pidfile.temp &
 if [ -f ./vpnbook_cred ] && [ -f ./proxy_cred ] 
