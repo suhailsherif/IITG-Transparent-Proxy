@@ -114,7 +114,7 @@ echo "Configuring redsocks ..."
 ./redsocksConfig.sh $proxy_server $proxy_port $proxy_username $proxy_password > ./log/Redsocks.log 2>&1 & 
 echo "redsocks configured successfully"
 echo "initiating fake DNS server ..."
-sudo python fakeDNS.py &
+sudo python -u fakeDNS.py > ./log/DNS.log & 
 echo "DNS server initiated"
 echo $! > pidfile.temp &
 if [ -f ./vpnbook_cred ] && [ -f ./proxy_cred ] 
