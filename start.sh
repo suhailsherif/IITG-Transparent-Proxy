@@ -1,12 +1,19 @@
 #!/bin/bash
 
-sudo echo "This is the easy version of starting up the transparent proxy."
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+echo "This is the easy version of starting up the transparent proxy."
 echo "The backend needs to compiled. I've done that in the script itself."
 echo "In case make fails, you will need to compile libevent. I've included the tar for it. Extract it and use the readme file. "
 
 echo "Removing log files ..."
-sudo rm -rf *.log &
+sudo rm -rf *.log log/*.log &
 echo "Log files removed"
+
+echo "Stopping process if already running ..."
+sudo ./stop.sh > ./log/stop.log
 
 echo "Checking Internet connection ..."
 if ping -W 5 -c 1 202.141.80.3 >/dev/null; then
@@ -18,18 +25,17 @@ else
     exit
 fi
 
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' libevent-dev |grep "install ok installed")
-echo Checking for libevent-dev: $PKG_OK
-if [ "" = "$PKG_OK" ]; then
-  echo "No libevent-dev. Setting up libevent-dev."
-  sudo apt-get --force-yes --yes install libevent-dev
-fi
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' openvpn |grep "install ok installed")
-echo Checking for openvpn: $PKG_OK
-if [ "" = "$PKG_OK" ]; then
-  echo "No openvpn. Setting up openvpn."
-  sudo apt-get --force-yes --yes install openvpn
-fi
+req_packages=( "libevent-dev" "openvpn" "plasma-nm" )
+
+for i in "${req_packages[@]}"
+do
+	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "installed")
+	echo Checking package $i: $PKG_OK
+	if [ "" = "$PKG_OK" ]; then
+	  echo "No $i. Setting up $i."
+	  sudo apt-get --force-yes --yes install $i
+	fi
+done
 
 sudo fuser -k 55/udp
 sleep 0.1
@@ -105,8 +111,11 @@ else
 fi
 
 echo "Creating temporary files for openvpn connection ..."
-echo "$vpnbook_username\n$vpnbook_password" > $(pwd)$vpnbook_cred_path
-echo "$proxy_username\n$proxy_password" > $(pwd)$proxy_cred_path
+echo "$vpnbook_username" > $(pwd)$vpnbook_cred_path
+echo "$vpnbook_password" >> $(pwd)$vpnbook_cred_path
+
+echo "$proxy_username" > $(pwd)$proxy_cred_path
+echo "$proxy_password" >> $(pwd)$proxy_cred_path
 
 
 ./script start & 
@@ -120,16 +129,24 @@ echo $! > pidfile.temp &
 if [ -f ./vpnbook_cred ] && [ -f ./proxy_cred ] 
 then
 	echo "initiating openvpn connection ..."
-	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic &
-	sleep 0.1
+	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic > ./log/openvpn.log &
+	sleep 0.5
 	echo "removing temporary credential files ..."
 	sudo rm -rf ./proxy_cred ./vpnbook_cred &
 	echo "credential files removed"
+	echo -n "Waiting for openvpn connection ..."
+	while ! grep -q "Initialization Sequence Completed" "./log/openvpn.log"; do
+		echo -n "."
+		sleep 1
+		echo -n " ."
+		sleep 0.5
+	done
+	echo ""
+	echo "Openvpn connection successful"
 else
 	echo "config files not found"
-	echo "\n\nExit On Error !\n\n"
+	echo "Exit On Error !"
 fi
 
-
-
-
+echo "Transparent proxy initiated, running in background"
+echo "Exit on success !"

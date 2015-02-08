@@ -32,7 +32,7 @@ vpnbook_path=<full_path_to_server_conf.ovpn>
 #### To start :
 ###### A]	*Simple Way* :
 
-`sudo sh start.sh
+`sudo bash start.sh
 `
 <br/>
 You can edit start.sh if you don't want to enter the proxy details each time.I've included an example.
@@ -57,7 +57,7 @@ I've included the tar file for it. Or you can download it online.
 (username and password are optional. You can edit this file to make it prompt you for the username and password if you don't like your credentials in plaintext in your history. And have it delete the redsocksauto.conf that it creates in the redsocks folder.)
 
 #### To stop :
-`sudo sh stop.sh
+`sudo bash stop.sh
 `
 <br/>
 (Optionally) stop fakeDNS and redsocks.
@@ -65,12 +65,11 @@ I've included the tar file for it. Or you can download it online.
 --------------------
 
 ##### *IMPORTANT*:
-Edit /etc/resolv.conf and add a line 'nameserver 127.0.0.1' at the top.
+Edit /etc/resolv.conf and add a line `nameserver 127.0.0.1` at the top.
+Or add *127.0.0.1* to your DNS serverlist. The former seems cooler.
 <br/>
-`nameserver 127.0.0.1
-`
+You can use *kde-nm-connection-editor* in package *plasma-nm* to create wireless access-point on your Ubuntu machine.
 <br/>
-Or add 127.0.0.1 to your DNS serverlist. The former seems cooler.
 
 ##### *Beware !*
 Non-authentic DNS servers can be used VERY 	convincingly for phishing. 
