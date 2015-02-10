@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! "$BASH_VERSION" ] ; then
+    sudo exec /bin/bash "$0" "$@"
+fi
+
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
@@ -15,15 +19,70 @@ echo "Log files removed"
 echo "Stopping process if already running ..."
 sudo ./stop.sh > ./log/stop.log
 
-echo "Checking Internet connection ..."
-if ping -W 5 -c 1 202.141.80.3 >/dev/null; then
-    echo "Internet is up."
+# echo "Checking Internet connection ..."
+# if ping -W 2 -c 5 202.141.80.3 >/dev/null; then
+#     echo "Internet is up."
+# else
+# 	if ping -W 2 -c 5 172.16.24.3 >/dev/null; then
+#     	echo "Internet is up."
+# 	else 
+# 	    echo "Offline"
+# 	    echo "Check Internet Access and try again"
+# 	    echo "Exit on Error !"
+# 	    exit
+#     fi
+# fi
+
+echo "Checking connectivity to default DNS ..."
+def_dns=$(/sbin/ip route | awk '/default/ { print $3 }')
+if [[ ! $def_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
+then
+	echo "default dns not set"
+	read -p "Proxy DNS ? : " proxy_dns
+	if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
+	then
+		ping -W 2 -c 5 $proxy_dns >/dev/null
+		ping -W 2 -c 5 $proxy_dns >/dev/null
+		if [ $? -eq 0 ]
+		then
+			echo "Internet is up."
+			sudo ip route add default via $proxy_dns
+		else
+			echo "Offline"
+			echo "Check Internet Access and try again"
+			echo "Exit on Error !"
+			exit
+		fi
+	else
+		echo "incorrect dns"
+	fi
 else
-    echo "Offline"
-    echo "Check Internet Access and try again"
-    echo "Exit on Error !"
-    exit
+	ping -W 2 -c 5 $def_dns >/dev/null
+	ping -W 2 -c 5 $def_dns >/dev/null
+	if [ $? -eq 0 ]
+	then
+		echo "Internet is up."
+	else
+		echo "Offline"
+		read -p "Proxy Server DNS ? : " proxy_dns
+		if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]
+		then
+			ping -W 2 -c 5 $proxy_dns >/dev/null
+			ping -W 2 -c 5 $proxy_dns >/dev/null
+			if [ $? -eq 0 ]
+			then
+				echo "Internet is up."
+				sudo ip route add default via $proxy_dns
+			else
+				echo "Offline"
+				echo "Check Internet Access and try again"
+				echo "Exit on Error !"
+				exit
+			fi
+		fi
+	fi
 fi
+
 
 req_packages=( "libevent-dev" "openvpn" "plasma-nm" )
 
@@ -82,6 +141,7 @@ else
 	stty -echo
 	read -p "Proxy password ? : " proxy_password; echo 
 	stty echo
+	read -p "Proxy DNS ? : " proxy_dns
 	read -p "VPNBook username ? : " vpnbook_username
 	read -p "VPNBook password ? : " vpnbook_password
 	for f in ./*.ovpn; do
@@ -103,9 +163,11 @@ else
 		echo "export proxy_port=$proxy_port " >> config.sh
 		echo "export proxy_username=$proxy_username " >> config.sh
 		echo "export proxy_password=$proxy_password " >> config.sh
+		echo "export proxy_dns=$proxy_dns " >> config.sh
 		echo "export vpnbook_username=$vpnbook_username " >> config.sh
 		echo "export vpnbook_password=$vpnbook_password " >> config.sh
 		echo "export vpnbook_path=$vpnbook_path " >> config.sh
+		echo "export restore_dns=$(/sbin/ip route | awk '/default/ { print $3 }')" >> config.sh
 		echo "" >> config.sh
 	fi
 fi
@@ -117,25 +179,38 @@ echo "$vpnbook_password" >> $(pwd)$vpnbook_cred_path
 echo "$proxy_username" > $(pwd)$proxy_cred_path
 echo "$proxy_password" >> $(pwd)$proxy_cred_path
 
-
-./script start & 
+echo "Getting variables ..."
+source config.sh #&
+echo "Configuring iptables ..."
+./script start #& 
+echo "Configuring routes ..."
+source config_routes.sh #&
 echo "Configuring redsocks ..."
 ./redsocksConfig.sh $proxy_server $proxy_port $proxy_username $proxy_password > ./log/Redsocks.log 2>&1 & 
 echo "redsocks configured successfully"
 echo "initiating fake DNS server ..."
 sudo python -u fakeDNS.py > ./log/DNS.log & 
 echo "DNS server initiated"
-echo $! > pidfile.temp &
+echo $! > pidfile.temp #&
 if [ -f ./vpnbook_cred ] && [ -f ./proxy_cred ] 
 then
 	echo "initiating openvpn connection ..."
-	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic > ./log/openvpn.log &
+	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy-timeout 5 --http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic > ./log/openvpn.log &
 	sleep 0.5
 	echo "removing temporary credential files ..."
 	sudo rm -rf ./proxy_cred ./vpnbook_cred &
 	echo "credential files removed"
 	echo -n "Waiting for openvpn connection ..."
 	while ! grep -q "Initialization Sequence Completed" "./log/openvpn.log"; do
+		if grep -q "HTTP/1.0 403 Forbidden" "./log/openvpn.log"
+		then
+			echo ""
+			echo "403 Forbidden Error"
+			echo "Check config.sh and try again"
+			echo "Exit on error !"
+			exit
+		fi		
+
 		echo -n "."
 		sleep 1
 		echo -n " ."

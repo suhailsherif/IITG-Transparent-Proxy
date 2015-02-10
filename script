@@ -12,7 +12,7 @@ sudo iptables -t nat -A OUTPUT -d 127.0.0.0/8 -j RETURN
 sudo iptables -t nat -A OUTPUT -p tcp -d 10.0.0.0/8 -j RETURN
 sudo iptables -t nat -A OUTPUT -p tcp -d 172.16.0.0/16 -j RETURN
 sudo iptables -t nat -A OUTPUT -p tcp -d 192.168.1.1/16 -j RETURN
-sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.80.0/24 -j RETURN
+sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.80.0/23 -j RETURN
 sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.80.14 -j RETURN
 
 sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.81.22/24 -j RETURN
@@ -37,6 +37,8 @@ sudo mv temp.conf /etc/resolv.conf
 sudo chown root:root /etc/resolv.conf
 sudo chmod 644 /etc/resolv.conf
 echo "resolv.conf setup successful"
+
+
 ;;
 stop)
 

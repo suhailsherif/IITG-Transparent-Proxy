@@ -6,3 +6,4 @@ startMyProxy.sh
 *cred.txt
 config.sh
 *.log
+*test.sh

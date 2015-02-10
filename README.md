@@ -71,6 +71,10 @@ Or add *127.0.0.1* to your DNS serverlist. The former seems cooler.
 You can use *kde-nm-connection-editor* in package *plasma-nm* to create wireless access-point on your Ubuntu machine.
 <br/>
 
+##### *Tested OS :*
+- Ubuntu 14.04 64-bit
+
+<br/>
 ##### *Beware !*
 Non-authentic DNS servers can be used VERY 	convincingly for phishing. 
 Make sure you are in control of your configuration.

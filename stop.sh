@@ -5,6 +5,10 @@ then
 	sed 's|[0-9]*|sudo kill &|g' pidfile.temp | bash
 	rm pidfile.temp
 fi
-sudo killall redsocks
-sudo killall openvpn
-./script stop
+
+sudo fuser -k 55/udp
+source config.sh
+source unconfig_routes.sh
+sudo ./script stop
+sudo ps -ef | grep "redsocks" | awk '{print $2}' | xargs kill
+sudo ps -ef | grep "openvpn" | awk '{print $2}' | xargs kill
