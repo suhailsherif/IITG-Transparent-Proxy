@@ -1,8 +1,7 @@
 #!/bin/bash
 
-if [ ! "$BASH_VERSION" ] ; then
-    sudo exec /bin/bash "$0" "$@"
-fi
+# force bash
+[ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
@@ -20,10 +19,10 @@ echo "Stopping process if already running ..."
 sudo ./stop.sh > ./log/stop.log
 
 # echo "Checking Internet connection ..."
-# if ping -W 2 -c 5 202.141.80.3 >/dev/null; then
+# if ping -W 1 -c 5 202.141.80.3 >/dev/null; then
 #     echo "Internet is up."
 # else
-# 	if ping -W 2 -c 5 172.16.24.3 >/dev/null; then
+# 	if ping -W 1 -c 5 172.16.24.3 >/dev/null; then
 #     	echo "Internet is up."
 # 	else 
 # 	    echo "Offline"
@@ -33,16 +32,16 @@ sudo ./stop.sh > ./log/stop.log
 #     fi
 # fi
 
-echo "Checking connectivity to default DNS ..."
+echo "Checking connectivity to default Gateway ..."
 def_dns=$(/sbin/ip route | awk '/default/ { print $3 }')
 if [[ ! $def_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
 then
 	echo "default dns not set"
-	read -p "Proxy DNS ? : " proxy_dns
+	read -p "Proxy Gateway ? : " proxy_dns
 	if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
 	then
-		ping -W 2 -c 5 $proxy_dns >/dev/null
-		ping -W 2 -c 5 $proxy_dns >/dev/null
+		ping -W 1 -c 5 $proxy_dns >/dev/null
+		ping -W 1 -c 5 $proxy_dns >/dev/null
 		if [ $? -eq 0 ]
 		then
 			echo "Internet is up."
@@ -57,18 +56,18 @@ then
 		echo "incorrect dns"
 	fi
 else
-	ping -W 2 -c 5 $def_dns >/dev/null
-	ping -W 2 -c 5 $def_dns >/dev/null
+	ping -W 1 -c 5 $def_dns >/dev/null
+	ping -W 1 -c 5 $def_dns >/dev/null
 	if [ $? -eq 0 ]
 	then
 		echo "Internet is up."
 	else
 		echo "Offline"
-		read -p "Proxy Server DNS ? : " proxy_dns
+		read -p "Proxy Server Gateway ? : " proxy_dns
 		if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]
 		then
-			ping -W 2 -c 5 $proxy_dns >/dev/null
-			ping -W 2 -c 5 $proxy_dns >/dev/null
+			ping -W 1 -c 5 $proxy_dns >/dev/null
+			ping -W 1 -c 5 $proxy_dns >/dev/null
 			if [ $? -eq 0 ]
 			then
 				echo "Internet is up."
@@ -96,6 +95,7 @@ do
 	fi
 done
 
+# Killing fake DNS server, if running
 sudo fuser -k 55/udp
 sleep 0.1
 
@@ -141,7 +141,7 @@ else
 	stty -echo
 	read -p "Proxy password ? : " proxy_password; echo 
 	stty echo
-	read -p "Proxy DNS ? : " proxy_dns
+	read -p "Proxy Gateway ? : " proxy_dns
 	read -p "VPNBook username ? : " vpnbook_username
 	read -p "VPNBook password ? : " vpnbook_password
 	for f in ./*.ovpn; do

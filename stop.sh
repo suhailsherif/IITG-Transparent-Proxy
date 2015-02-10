@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# force bash
+[ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+
 echo "This script stops the transparent proxy and restores the normal behavior"
 if [ -f pidfile.temp ] 
 then 
