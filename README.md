@@ -1,4 +1,4 @@
-# IITG Transparent Proxy
+# All Proxy
 
 #### We would like to thank the following for their contributions:
 -	(Past, present and future) Users, Testers and Debuggers
