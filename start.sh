@@ -19,10 +19,10 @@ echo "Stopping process if already running ..."
 sudo ./stop.sh > ./log/stop.log
 
 # echo "Checking Internet connection ..."
-# if ping -W 1 -c 5 202.141.80.3 >/dev/null; then
+# if ping -W 1 -c 2 202.141.80.3 >/dev/null; then
 #     echo "Internet is up."
 # else
-# 	if ping -W 1 -c 5 172.16.24.3 >/dev/null; then
+# 	if ping -W 1 -c 2 172.16.24.3 >/dev/null; then
 #     	echo "Internet is up."
 # 	else 
 # 	    echo "Offline"
@@ -40,12 +40,12 @@ then
 	read -p "Proxy Gateway ? : " proxy_dns
 	if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
 	then
-		ping -W 1 -c 5 $proxy_dns >/dev/null
-		ping -W 1 -c 5 $proxy_dns >/dev/null
+		ping -W 1 -c 2 $proxy_dns >/dev/null
+		ping -W 1 -c 2 $proxy_dns >/dev/null
 		if [ $? -eq 0 ]
 		then
 			echo "Internet is up."
-			sudo ip route add default via $proxy_dns
+			# sudo ip route add default via $proxy_dns
 		else
 			echo "Offline"
 			echo "Check Internet Access and try again"
@@ -53,11 +53,11 @@ then
 			exit
 		fi
 	else
-		echo "incorrect dns"
+		echo "incorrect gateway"
 	fi
 else
-	ping -W 1 -c 5 $def_dns >/dev/null
-	ping -W 1 -c 5 $def_dns >/dev/null
+	ping -W 1 -c 2 $def_dns >/dev/null
+	ping -W 1 -c 2 $def_dns >/dev/null
 	if [ $? -eq 0 ]
 	then
 		echo "Internet is up."
@@ -66,12 +66,12 @@ else
 		read -p "Proxy Server Gateway ? : " proxy_dns
 		if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]
 		then
-			ping -W 1 -c 5 $proxy_dns >/dev/null
-			ping -W 1 -c 5 $proxy_dns >/dev/null
+			ping -W 1 -c 2 $proxy_dns >/dev/null
+			ping -W 1 -c 2 $proxy_dns >/dev/null
 			if [ $? -eq 0 ]
 			then
 				echo "Internet is up."
-				sudo ip route add default via $proxy_dns
+				# sudo ip route add default via $proxy_dns
 			else
 				echo "Offline"
 				echo "Check Internet Access and try again"
@@ -195,7 +195,8 @@ echo $! > pidfile.temp #&
 if [ -f ./vpnbook_cred ] && [ -f ./proxy_cred ] 
 then
 	echo "initiating openvpn connection ..."
-	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy-timeout 5 --http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic > ./log/openvpn.log &
+	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy-timeout 5 \
+		--http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic > ./log/openvpn.log &
 	sleep 0.5
 	echo "removing temporary credential files ..."
 	sudo rm -rf ./proxy_cred ./vpnbook_cred &
@@ -206,6 +207,14 @@ then
 		then
 			echo ""
 			echo "403 Forbidden Error"
+			echo "Check config.sh and try again"
+			echo "Exit on error !"
+			exit
+		fi		
+		if grep -q "process exiting" "./log/openvpn.log"
+		then
+			echo ""
+			echo "Openvpn Connection Error"
 			echo "Check config.sh and try again"
 			echo "Exit on error !"
 			exit
