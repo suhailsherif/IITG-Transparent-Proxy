@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Allproxy
-Exec=/usr/bin/qmlscene $@ /usr/share/Allproxy/Allproxy.qml
-Icon=qmlscene
-Terminal=false
-Type=Application
-X-Ubuntu-Touch=true

@@ -18,4 +18,4 @@ check:
 	qmltestrunner -input tests/unit
 
 run:
-	/usr/bin/qmlscene $@ Allproxy.qml
+        APP_ID=Allproxy /usr/bin/qmlscene $@ Allproxy.qml
