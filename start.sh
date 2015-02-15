@@ -36,7 +36,7 @@ echo "Checking connectivity to default Gateway ..."
 def_dns=$(/sbin/ip route | awk '/default/ { print $3 }')
 if [[ ! $def_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
 then
-	echo "default dns not set"
+	echo "default gateway not set"
 	read -p "Proxy Gateway ? : " proxy_dns
 	if  [[ $proxy_dns =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
 	then
@@ -45,7 +45,7 @@ then
 		if [ $? -eq 0 ]
 		then
 			echo "Internet is up."
-			# sudo ip route add default via $proxy_dns
+			sudo ip route add default via $proxy_dns
 		else
 			echo "Offline"
 			echo "Check Internet Access and try again"
@@ -83,7 +83,7 @@ else
 fi
 
 
-req_packages=( "libevent-dev" "openvpn" "plasma-nm" )
+req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "putty" )
 
 for i in "${req_packages[@]}"
 do
