@@ -50,4 +50,3 @@ fi
 sudo sudo iptables -t nat -F OUTPUT
 ;;
 esac
-exit

@@ -11,8 +11,8 @@ then
 fi
 
 sudo fuser -k 55/udp
-source config.sh
-source unconfig_routes.sh
-sudo ./script stop
+source ./config/config.sh
+source ./config/unconfig_routes.sh
+. ./config/script stop
 sudo ps -ef | grep "redsocks" | awk '{print $2}' | xargs kill
 sudo ps -ef | grep "openvpn" | awk '{print $2}' | xargs kill

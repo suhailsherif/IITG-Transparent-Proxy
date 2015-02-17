@@ -15,6 +15,7 @@ TEMPLATE = app
 SOURCES += main.cpp\
         allproxy.cpp
 
-HEADERS  += allproxy.h
+HEADERS  += allproxy.h \
+    constants.h
 
 FORMS    += allproxy.ui
