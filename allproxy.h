@@ -112,6 +112,7 @@ private:
     void load_configuration();
 
     void display_error(QString error);
+    void update_config(QString key, QString value)
 };
 
 #endif // ALLPROXY_H

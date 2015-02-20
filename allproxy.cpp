@@ -55,10 +55,20 @@ void AllProxy::load_configuration(){
     this->ui->in_text_vproxy_password->setText(project_settings.value("vproxy_password").toString());
     this->ui->in_text_vproxy_path->setText(project_settings.value("vproxy_path").toString());
 
+    this->ui->in_text_lproxy_local_port->setText(project_settings.value("lproxy_local_port").toString());
+    this->ui->in_text_lproxy_server->setText(project_settings.value("lproxy_server").toString());
+    this->ui->in_text_lproxy_port->setText(project_settings.value("lproxy_port").toString());
 
+    this->ui->in_text_tproxy_username->setText(project_settings.value("tproxy_username").toString());
+    this->ui->in_text_tproxy_password->setText(project_settings.value("tproxy_password").toString());
+    this->ui->in_text_tproxy_server->setText(project_settings.value("tproxy_server").toString());
+    this->ui->in_text_tproxy_port->setText(project_settings.value("tproxy_port").toString());
 
-
-
+    this->ui->in_text_sproxy_username->setText(project_settings.value("sproxy_username").toString());
+    this->ui->in_text_sproxy_password->setText(project_settings.value("sproxy_password").toString());
+    this->ui->in_text_sproxy_server->setText(project_settings.value("sproxy_server").toString());
+    this->ui->in_text_sproxy_local_port->setText(project_settings.value("sproxy_local_port").toString());
+    this->ui->in_text_sproxy_port->setText(project_settings.value("sproxy_port").toString());
 }
 
 void AllProxy::on_in_button_browse_clicked()
@@ -91,6 +101,10 @@ void AllProxy::display_error(QString error){
     QMessageBox::critical(this,tr("Error"),error);
 }
 
+void AllProxy::update_config(QString key, QString value){
+
+}
+
 void AllProxy::on_in_button_save_nproxy_clicked()
 {
     QSettings project_settings("project_settings");
@@ -105,6 +119,7 @@ void AllProxy::on_in_button_save_nproxy_clicked()
     if(nproxy_server != this->ui->in_text_nproxy_server->text()){
 //        qDebug() << "Saving server : " << this->ui->in_text_nnproxy_server->text() << " from " << project_settings.value("nproxy_server").toString();
         project_settings.setValue("nproxy_server", this->ui->in_text_nproxy_server->text());
+
     }
     if(nproxy_port != this->ui->in_text_nproxy_port->text()){
 //        qDebug() << "Saving port : " << this->ui->in_text_nproxy_port->text() << " from " << project_settings.value("nproxy_port").toString();

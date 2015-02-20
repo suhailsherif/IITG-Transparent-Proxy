@@ -3,10 +3,7 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
+
 # echo "This is the easy version of starting up the transparent proxy."
 # echo "The backend needs to compiled. I've done that in the script itself."
 # echo "In case make fails, you will need to compile libevent. I've included the tar for it. Extract it and use the readme file. "
