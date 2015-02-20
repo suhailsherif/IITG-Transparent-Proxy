@@ -4,6 +4,14 @@
 sudo fuser -k 55/udp
 sleep 0.1
 
+
+echo "Getting variables ..."
+source ./config/config.sh #&
+echo "Configuring iptables ..."
+. ./config/script start #& 
+echo "Configuring routes ..."
+source ./config/config_routes.sh #&
+
 if [ ! -f ./redsocks/redsocks ] 
 then
 	echo "make redsocks initiating ..."
@@ -27,6 +35,6 @@ echo "initiating fake DNS server ..."
 sudo python -u fakeDNS.py > ./log/DNS.log & 
 echo "DNS server initiated"
 
-echo $! > pidfile.temp #&
+echo $! > ./pid/tproxy #&
 
 echo "Transparent proxy initiated, running in background"

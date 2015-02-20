@@ -4,15 +4,23 @@
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
 echo "This script stops the transparent proxy and restores the normal behavior"
-if [ -f pidfile.temp ] 
-then 
-	sed 's|[0-9]*|sudo kill &|g' pidfile.temp | bash
-	rm pidfile.temp
-fi
 
-sudo fuser -k 55/udp
-source ./config/config.sh
-source ./config/unconfig_routes.sh
-. ./config/script stop
-sudo ps -ef | grep "redsocks" | awk '{print $2}' | xargs kill
-sudo ps -ef | grep "openvpn" | awk '{print $2}' | xargs kill
+case $1 in
+tproxy)
+	source ./tproxy/stop.sh &
+;;
+vproxy)
+	source ./vproxy/stop.sh &
+;;
+lproxy)
+	source ./lproxy/stop.sh &
+;;
+sproxy)
+	source ./sproxy/stop.sh &
+;;
+*) 
+	sudo fuser -k 55/udp
+	source ./config/config.sh
+	source ./config/unconfig_routes.sh
+;;
+esac

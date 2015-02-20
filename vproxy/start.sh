@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo "Creating temporary files for openvpn connection ..."
 echo "$vpnbook_username" > $(pwd)$vpnbook_cred_path
@@ -12,6 +13,7 @@ then
 	openvpn --config $vpnbook_path --auth-user-pass $(pwd)$vpnbook_cred_path --http-proxy-timeout 5 \
 		--http-proxy $proxy_server $proxy_port $(pwd)$proxy_cred_path basic > ./log/openvpn.log &
 	sleep 0.5
+	echo `ps aux | grep -F 'openvpn' | grep -v -F 'grep' | awk '{ print $2 }'` > ./pid/vproxy
 	echo "removing temporary credential files ..."
 	sudo rm -rf $(pwd)$proxy_cred_path $(pwd)$vpnbook_cred_path &
 	echo "credential files removed"
