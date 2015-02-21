@@ -1,6 +1,8 @@
 #!/bin/bash
 
 source ./config/config.sh
+# echo "1" >> new.txt
+# sudo echo "2" >> new.txt
 
 sudo mv /etc/squid3/squid.conf /etc/squid3/squid_bak.conf
 
@@ -21,10 +23,11 @@ echo "acl Safe_ports port 488		# gss-http" >> /etc/squid3/squid.conf
 echo "acl Safe_ports port 591		# filemaker" >> /etc/squid3/squid.conf
 echo "acl Safe_ports port 777		# multiling http" >> /etc/squid3/squid.conf
 echo "acl CONNECT method CONNECT" >> /etc/squid3/squid.conf
-echo "http_port $lproxy_port" >> /etc/squid3/squid.conf
-echo "http_port $lproxy_trans_port intercept" >> /etc/squid3/squid.conf
-echo "cache_peer $lproxy_proxy_server parent $lproxy_proxy_port 0 no-query default login=$lproxy_proxy_username:$lproxy_proxy_password" >> /etc/squid3/squid.conf
+echo "http_port $lproxy_local_port" >> /etc/squid3/squid.conf
+# echo "http_port $lproxy_trans_port intercept" >> /etc/squid3/squid.conf
+echo "cache_peer $lproxy_server parent $lproxy_port 0 no-query default login=$lproxy_username:$lproxy_password" >> /etc/squid3/squid.conf
 echo "never_direct allow all" >> /etc/squid3/squid.conf
 
 sudo squid3
-echo `ps aux | grep -F 'squid3' | grep -v -F 'grep' | awk '{ print $2 }'` > ./pid/lproxy
+sleep 0.5
+echo `ps aux | grep -m 1 -F 'squid3' | grep -v -F 'grep' | awk '{ print $2 }'` > ./pid/lproxy

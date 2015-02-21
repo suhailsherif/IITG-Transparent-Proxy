@@ -21,6 +21,6 @@ sproxy)
 *) 
 	sudo fuser -k 55/udp
 	source ./config/config.sh
-	source ./config/unconfig_routes.sh
+	source ./config/unconfig_routes.sh >> ./log/unconfig_routes
 ;;
 esac

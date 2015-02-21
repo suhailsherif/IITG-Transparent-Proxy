@@ -23,16 +23,6 @@ public:
 private slots:
     void on_in_button_browse_clicked();
 
-    void on_in_text_proxy_server_textChanged(const QString &arg1);
-
-    void on_in_text_proxy_username_textChanged(const QString &arg1);
-
-    void on_in_text_proxy_gateway_textChanged(const QString &arg1);
-
-    void on_in_text_proxy_port_textChanged(const QString &arg1);
-
-    void on_in_text_proxy_password_textChanged(const QString &arg1);
-        
     void on_push_tproxy_off_clicked();
     
     void on_push_tproxy_on_clicked();
@@ -49,8 +39,6 @@ private slots:
 
     void on_push_vproxy_on_clicked();
 
-    void on_in_text_vproxy_username_cursorPositionChanged(int arg1, int arg2);
-
     void on_in_text_vproxy_username_textChanged(const QString &arg1);
 
     void on_in_text_vproxy_password_textChanged(const QString &arg1);
@@ -66,8 +54,6 @@ private slots:
     void on_in_button_save_sproxy_clicked();
 
     void on_in_text_sproxy_local_port_textChanged(const QString &arg1);
-
-    void on_in_text_sproxy_proxy_password_textChanged(const QString &arg1);
 
     void on_in_text_sproxy_server_textChanged(const QString &arg1);
 
@@ -101,6 +87,16 @@ private slots:
 
     void on_in_text_nproxy_password_textChanged(const QString &arg1);
 
+    void on_in_text_sproxy_ssh_server_textChanged(const QString &arg1);
+
+    void on_in_text_vproxy_server_textChanged(const QString &arg1);
+
+    void on_in_text_vproxy_port_textChanged(const QString &arg1);
+
+    void on_in_text_vproxy_proxy_username_textChanged(const QString &arg1);
+
+    void on_in_text_vproxy_proxy_password_textChanged(const QString &arg1);
+
 private:
     Ui::AllProxy *ui;
     QToolBox *box;
@@ -110,9 +106,11 @@ private:
     QStringList files_list;
     QString project_config_file_name;
     void load_configuration();
+    void start();
+    static void setToolBoxButtonColor(QToolBox* toolBox, int index, QColor color);
 
     void display_error(QString error);
-    void update_config(QString key, QString value)
+    void update_config(QString key, QString value);
 };
 
 #endif // ALLPROXY_H
