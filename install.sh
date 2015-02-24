@@ -48,10 +48,10 @@ python_version=2.7
 chmod a+x ./dproxy/main.py
 
 # Copy the downloader class library to /usr/lib/python (this can be changed based on the version of python)
-sudo cp ./dproxy/downloader.py /usr/lib/python$python_version/
+cp ./dproxy/downloader.py /usr/lib/python$python_version/
 
 # Copy the main file to the bin folder
-sudo cp ./dproxy/main.py /usr/bin/pycurl-download
+cp ./dproxy/main.py /usr/bin/pycurl-download
 
 # Create a log file and change its read write permission
-sudo touch /var/log/downloader.log ; sudo chmod 777 /var/log/downloader.log
+touch /var/log/downloader.log ; chmod 777 /var/log/downloader.log
