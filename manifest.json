@@ -1,0 +1,15 @@
+{
+    "name": "com.ubuntu.developer.username.allproxy",
+    "description": "description of Allproxy",
+    "framework": "ubuntu-sdk-14.04-qml",
+    "architecture": "all",
+    "title": "Allproxy",
+    "hooks": {
+        "Allproxy": {
+            "apparmor": "Allproxy.json",
+            "desktop": "Allproxy.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": ""
+}
