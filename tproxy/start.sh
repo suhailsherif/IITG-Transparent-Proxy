@@ -43,3 +43,6 @@ echo "DNS server initiated" >> ./log/tproxy
 echo $! > ./pid/tproxy #&
 
 echo "Transparent proxy initiated, running in background" >> ./log/tproxy 
+
+echo "Done !!"
+

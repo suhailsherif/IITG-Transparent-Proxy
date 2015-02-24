@@ -65,6 +65,13 @@ public:
     QLabel *label_25;
     QLineEdit *in_text_vproxy_proxy_username;
     QLineEdit *in_text_vproxy_proxy_password;
+    QWidget *page_dproxy;
+    QLineEdit *in_dproxy_url;
+    QLineEdit *in_dproxy_filepath;
+    QLabel *label_26;
+    QLabel *label_27;
+    QPushButton *browse_dproxy;
+    QPushButton *push_dproxy_download;
     QWidget *page_sproxy;
     QLineEdit *in_text_sproxy_local_port;
     QLineEdit *in_text_sproxy_server;
@@ -147,7 +154,7 @@ public:
         toolbox_main->setFrameShadow(QFrame::Sunken);
         page_nproxy = new QWidget();
         page_nproxy->setObjectName(QStringLiteral("page_nproxy"));
-        page_nproxy->setGeometry(QRect(0, 0, 651, 215));
+        page_nproxy->setGeometry(QRect(0, 0, 651, 184));
         page_nproxy->setStyleSheet(QLatin1String(" QWidget#page_nproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -202,10 +209,10 @@ public:
         in_button_save_nproxy = new QPushButton(group_proxy);
         in_button_save_nproxy->setObjectName(QStringLiteral("in_button_save_nproxy"));
         in_button_save_nproxy->setGeometry(QRect(260, 140, 141, 27));
-        toolbox_main->addItem(page_nproxy, QStringLiteral("Nproxy                                                                                                                 - Normal Proxy Settings"));
+        toolbox_main->addItem(page_nproxy, QStringLiteral("Nproxy                                                                                                                                     - Normal Proxy"));
         page_vproxy = new QWidget();
         page_vproxy->setObjectName(QStringLiteral("page_vproxy"));
-        page_vproxy->setGeometry(QRect(0, 0, 651, 215));
+        page_vproxy->setGeometry(QRect(0, 0, 651, 184));
         page_vproxy->setStyleSheet(QLatin1String(" QWidget#page_vproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -421,10 +428,34 @@ public:
         in_text_vproxy_proxy_password->setObjectName(QStringLiteral("in_text_vproxy_proxy_password"));
         in_text_vproxy_proxy_password->setGeometry(QRect(500, 100, 113, 27));
         in_text_vproxy_proxy_password->setEchoMode(QLineEdit::Password);
-        toolbox_main->addItem(page_vproxy, QStringLiteral("Vproxy                                                                                                            - OpenVPN Proxy Settings"));
+        toolbox_main->addItem(page_vproxy, QStringLiteral("Vproxy                                                                                                                                - OpenVPN Proxy"));
+        page_dproxy = new QWidget();
+        page_dproxy->setObjectName(QStringLiteral("page_dproxy"));
+        page_dproxy->setGeometry(QRect(0, 0, 651, 184));
+        in_dproxy_url = new QLineEdit(page_dproxy);
+        in_dproxy_url->setObjectName(QStringLiteral("in_dproxy_url"));
+        in_dproxy_url->setGeometry(QRect(90, 0, 561, 27));
+        in_dproxy_filepath = new QLineEdit(page_dproxy);
+        in_dproxy_filepath->setObjectName(QStringLiteral("in_dproxy_filepath"));
+        in_dproxy_filepath->setGeometry(QRect(120, 80, 531, 27));
+        label_26 = new QLabel(page_dproxy);
+        label_26->setObjectName(QStringLiteral("label_26"));
+        label_26->setGeometry(QRect(50, 0, 31, 20));
+        label_26->setFont(font1);
+        label_27 = new QLabel(page_dproxy);
+        label_27->setObjectName(QStringLiteral("label_27"));
+        label_27->setGeometry(QRect(0, 60, 191, 20));
+        label_27->setFont(font1);
+        browse_dproxy = new QPushButton(page_dproxy);
+        browse_dproxy->setObjectName(QStringLiteral("browse_dproxy"));
+        browse_dproxy->setGeometry(QRect(20, 80, 98, 27));
+        push_dproxy_download = new QPushButton(page_dproxy);
+        push_dproxy_download->setObjectName(QStringLiteral("push_dproxy_download"));
+        push_dproxy_download->setGeometry(QRect(250, 130, 98, 27));
+        toolbox_main->addItem(page_dproxy, QStringLiteral("Dproxy                                                                                                                                  - Download files"));
         page_sproxy = new QWidget();
         page_sproxy->setObjectName(QStringLiteral("page_sproxy"));
-        page_sproxy->setGeometry(QRect(0, 0, 651, 215));
+        page_sproxy->setGeometry(QRect(0, 0, 651, 184));
         page_sproxy->setStyleSheet(QLatin1String(" QWidget#page_sproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -588,10 +619,10 @@ public:
         label_21 = new QLabel(page_sproxy);
         label_21->setObjectName(QStringLiteral("label_21"));
         label_21->setGeometry(QRect(360, 80, 91, 20));
-        toolbox_main->addItem(page_sproxy, QStringLiteral("Sproxy                                                                                                          -  SSH Tunnel Proxy Settings"));
+        toolbox_main->addItem(page_sproxy, QStringLiteral("Sproxy                                                                                                                             -  SSH Tunnel Proxy"));
         page_lproxy = new QWidget();
         page_lproxy->setObjectName(QStringLiteral("page_lproxy"));
-        page_lproxy->setGeometry(QRect(0, 0, 651, 215));
+        page_lproxy->setGeometry(QRect(0, 0, 651, 184));
         page_lproxy->setStyleSheet(QLatin1String(" QWidget#page_lproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -736,10 +767,10 @@ public:
         in_button_save_lproxy = new QPushButton(page_lproxy);
         in_button_save_lproxy->setObjectName(QStringLiteral("in_button_save_lproxy"));
         in_button_save_lproxy->setGeometry(QRect(360, 110, 161, 27));
-        toolbox_main->addItem(page_lproxy, QStringLiteral("Lproxy                                                                                                         - Squid Proxy Server Settings "));
+        toolbox_main->addItem(page_lproxy, QStringLiteral("Lproxy                                                                                                               - Local Squid Proxy Server "));
         page_tproxy = new QWidget();
         page_tproxy->setObjectName(QStringLiteral("page_tproxy"));
-        page_tproxy->setGeometry(QRect(0, 0, 651, 215));
+        page_tproxy->setGeometry(QRect(0, 0, 651, 184));
         page_tproxy->setStyleSheet(QLatin1String(" QWidget#page_tproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -891,10 +922,10 @@ public:
         in_button_save_tproxy = new QPushButton(page_tproxy);
         in_button_save_tproxy->setObjectName(QStringLiteral("in_button_save_tproxy"));
         in_button_save_tproxy->setGeometry(QRect(420, 120, 161, 27));
-        toolbox_main->addItem(page_tproxy, QStringLiteral("Tproxy                                                                                                           - Transparent Proxy Settings"));
+        toolbox_main->addItem(page_tproxy, QStringLiteral("Tproxy                                                                                                                            - Transparent Proxy"));
         page_new = new QWidget();
         page_new->setObjectName(QStringLiteral("page_new"));
-        page_new->setGeometry(QRect(0, 0, 651, 215));
+        page_new->setGeometry(QRect(0, 0, 651, 184));
         page_new->setStyleSheet(QStringLiteral(""));
         group_tproxy = new QGroupBox(page_new);
         group_tproxy->setObjectName(QStringLiteral("group_tproxy"));
@@ -951,7 +982,7 @@ public:
 
         retranslateUi(AllProxy);
 
-        toolbox_main->setCurrentIndex(1);
+        toolbox_main->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(AllProxy);
@@ -967,7 +998,7 @@ public:
         label_2->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
         label_8->setText(QApplication::translate("AllProxy", "Default Gateway", 0));
         in_button_save_nproxy->setText(QApplication::translate("AllProxy", "Apply", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_nproxy), QApplication::translate("AllProxy", "Nproxy                                                                                                                 - Normal Proxy Settings", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_nproxy), QApplication::translate("AllProxy", "Nproxy                                                                                                                                     - Normal Proxy", 0));
         group_vpn->setTitle(QString());
         in_button_save_vproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         label_7->setText(QApplication::translate("AllProxy", "VPN Password", 0));
@@ -982,7 +1013,12 @@ public:
         label_23->setText(QApplication::translate("AllProxy", "Proxy Server", 0));
         label_24->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
         label_25->setText(QApplication::translate("AllProxy", "Proxy Password", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_vproxy), QApplication::translate("AllProxy", "Vproxy                                                                                                            - OpenVPN Proxy Settings", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_vproxy), QApplication::translate("AllProxy", "Vproxy                                                                                                                                - OpenVPN Proxy", 0));
+        label_26->setText(QApplication::translate("AllProxy", "URL", 0));
+        label_27->setText(QApplication::translate("AllProxy", "Full path (with filename) :", 0));
+        browse_dproxy->setText(QApplication::translate("AllProxy", "Browse ...", 0));
+        push_dproxy_download->setText(QApplication::translate("AllProxy", "Download", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_dproxy), QApplication::translate("AllProxy", "Dproxy                                                                                                                                  - Download files", 0));
         label_9->setText(QApplication::translate("AllProxy", "Local Port", 0));
         label_10->setText(QApplication::translate("AllProxy", "Proxy Server", 0));
         label_11->setText(QApplication::translate("AllProxy", "Proxy Port", 0));
@@ -993,7 +1029,7 @@ public:
         push_sproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
         in_button_save_sproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         label_21->setText(QApplication::translate("AllProxy", "SSH Server", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_sproxy), QApplication::translate("AllProxy", "Sproxy                                                                                                          -  SSH Tunnel Proxy Settings", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_sproxy), QApplication::translate("AllProxy", "Sproxy                                                                                                                             -  SSH Tunnel Proxy", 0));
         label_14->setText(QApplication::translate("AllProxy", "Local port", 0));
         label_15->setText(QApplication::translate("AllProxy", "Proxy server", 0));
         label_16->setText(QApplication::translate("AllProxy", "Proxy port", 0));
@@ -1001,7 +1037,7 @@ public:
         push_lproxy_on->setText(QApplication::translate("AllProxy", "On", 0));
         push_lproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
         in_button_save_lproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_lproxy), QApplication::translate("AllProxy", "Lproxy                                                                                                         - Squid Proxy Server Settings ", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_lproxy), QApplication::translate("AllProxy", "Lproxy                                                                                                               - Local Squid Proxy Server ", 0));
         group_tproxy_switch->setTitle(QString());
         push_tproxy_on->setText(QApplication::translate("AllProxy", "On", 0));
         push_tproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
@@ -1010,7 +1046,7 @@ public:
         label_19->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
         label_20->setText(QApplication::translate("AllProxy", "Proxy Password", 0));
         in_button_save_tproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_tproxy), QApplication::translate("AllProxy", "Tproxy                                                                                                           - Transparent Proxy Settings", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_tproxy), QApplication::translate("AllProxy", "Tproxy                                                                                                                            - Transparent Proxy", 0));
         group_tproxy->setTitle(QString());
         in_radio_tproxy->setText(QApplication::translate("AllProxy", "Tproxy", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_new), QApplication::translate("AllProxy", "To be added ...", 0));
