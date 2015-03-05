@@ -5,8 +5,8 @@
 
 # sudo ps -ef | grep "ssh" | awk '{print $2}' | xargs kill
 
-if [ -f ./pid/sproxy ] 
+if [ -f $allproxy_path/pid/sproxy ] 
 then 
-	sed 's|[0-9]*|sudo kill &|g' ./pid/sproxy | bash
-	rm ./pid/sproxy
+	sed 's|[0-9]*|sudo kill &|g' $allproxy_path/pid/sproxy | bash
+	rm $allproxy_path/pid/sproxy
 fi

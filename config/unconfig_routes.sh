@@ -2,7 +2,7 @@
 
 sudo ip route del 202.141.80.0/23 via $nproxy_gateway
 def_gateway=$(/sbin/ip route | awk '/default/ { print $3 }')
-source ./config/config.sh
+source $allproxy_path/config/config.sh
 echo $restore_gateway
 echo $def_gateway
 if [ ! "$restore_gateway" == "$def_gateway" ]

@@ -715,10 +715,6 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qtoolbox.h \
 		/usr/include/qt5/QtWidgets/qframe.h \
 		ui_allproxy.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
 		/usr/include/qt5/QtWidgets/QApplication \
 		/usr/include/qt5/QtWidgets/qapplication.h \
 		/usr/include/qt5/QtCore/qcoreapplication.h \
@@ -726,12 +722,14 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
 		/usr/include/qt5/QtGui/qguiapplication.h \
 		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QGroupBox \
-		/usr/include/qt5/QtWidgets/qgroupbox.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
+		/usr/include/qt5/QtCore/QTranslator \
+		/usr/include/qt5/QtCore/qtranslator.h \
+		/usr/include/qt5/QtCore/QLocale \
+		/usr/include/qt5/QtCore/QLibraryInfo \
+		/usr/include/qt5/QtCore/qlibraryinfo.h \
+		/usr/include/qt5/QtCore/qdatetime.h \
+		/usr/include/qt5/QtWidgets/QTreeView \
+		/usr/include/qt5/QtWidgets/qtreeview.h \
 		/usr/include/qt5/QtWidgets/qabstractitemview.h \
 		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
 		/usr/include/qt5/QtCore/qitemselectionmodel.h \
@@ -745,33 +743,6 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qstyle.h \
 		/usr/include/qt5/QtWidgets/qtabbar.h \
 		/usr/include/qt5/QtWidgets/qrubberband.h \
-		/usr/include/qt5/QtWidgets/QLabel \
-		/usr/include/qt5/QtWidgets/qlabel.h \
-		/usr/include/qt5/QtWidgets/QLayout \
-		/usr/include/qt5/QtWidgets/qlayout.h \
-		/usr/include/qt5/QtWidgets/qlayoutitem.h \
-		/usr/include/qt5/QtWidgets/qboxlayout.h \
-		/usr/include/qt5/QtWidgets/qgridlayout.h \
-		/usr/include/qt5/QtWidgets/QLineEdit \
-		/usr/include/qt5/QtWidgets/qlineedit.h \
-		/usr/include/qt5/QtGui/qtextcursor.h \
-		/usr/include/qt5/QtGui/qtextformat.h \
-		/usr/include/qt5/QtGui/qpen.h \
-		/usr/include/qt5/QtGui/qtextoption.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h \
-		/usr/include/qt5/QtWidgets/QRadioButton \
-		/usr/include/qt5/QtWidgets/qradiobutton.h \
-		/usr/include/qt5/QtWidgets/QWidget \
-		/usr/include/qt5/QtCore/QTranslator \
-		/usr/include/qt5/QtCore/qtranslator.h \
-		/usr/include/qt5/QtCore/QLocale \
-		/usr/include/qt5/QtCore/QLibraryInfo \
-		/usr/include/qt5/QtCore/qlibraryinfo.h \
-		/usr/include/qt5/QtCore/qdatetime.h \
-		/usr/include/qt5/QtWidgets/QTreeView \
-		/usr/include/qt5/QtWidgets/qtreeview.h \
 		/usr/include/qt5/QtCore/QSettings \
 		/usr/include/qt5/QtCore/qsettings.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
@@ -780,6 +751,10 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/QTextEdit \
 		/usr/include/qt5/QtWidgets/qtextedit.h \
 		/usr/include/qt5/QtGui/qtextdocument.h \
+		/usr/include/qt5/QtGui/qtextoption.h \
+		/usr/include/qt5/QtGui/qtextcursor.h \
+		/usr/include/qt5/QtGui/qtextformat.h \
+		/usr/include/qt5/QtGui/qpen.h \
 		/usr/include/qt5/QtGui/QtGui \
 		/usr/include/qt5/QtGui/QtGuiDepends \
 		/usr/include/qt5/QtCore/QtCore \
@@ -955,6 +930,10 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtGui/qdesktopservices.h \
 		/usr/include/qt5/QtGui/qtguiversion.h \
 		/usr/include/qt5/QtWidgets/QVBoxLayout \
+		/usr/include/qt5/QtWidgets/qboxlayout.h \
+		/usr/include/qt5/QtWidgets/qlayout.h \
+		/usr/include/qt5/QtWidgets/qlayoutitem.h \
+		/usr/include/qt5/QtWidgets/qgridlayout.h \
 		/usr/include/qt5/QtGui/QCloseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o allproxy.o allproxy.cpp
 

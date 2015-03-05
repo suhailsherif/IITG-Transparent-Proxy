@@ -8,10 +8,10 @@ sudo ps -ef | grep "squid3" | awk '{print $2}' | xargs kill
 echo "7" >> new.txt
 
 sudo echo "8" >> new.txt
-if [ -f ./pid/lproxy ] 
+if [ -f $allproxy_path/pid/lproxy ] 
 then 
-	sed 's|[0-9]*|sudo kill &|g' ./pid/lproxy | bash
-	rm ./pid/lproxy
+	sed 's|[0-9]*|sudo kill &|g' $allproxy_path/pid/lproxy | bash
+	rm $allproxy_path/pid/lproxy
 	
 fi
 

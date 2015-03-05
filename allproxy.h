@@ -23,22 +23,6 @@ public:
 private slots:
     void on_in_button_browse_clicked();
 
-    void on_push_tproxy_off_clicked();
-    
-    void on_push_tproxy_on_clicked();
-    
-    void on_push_lproxy_off_clicked();
-
-    void on_push_lproxy_on_clicked();
-
-    void on_push_sproxy_off_clicked();
-
-    void on_push_sproxy_on_clicked();
-
-    void on_push_vproxy_off_clicked();
-
-    void on_push_vproxy_on_clicked();
-
     void on_in_text_vproxy_username_textChanged(const QString &arg1);
 
     void on_in_text_vproxy_password_textChanged(const QString &arg1);
@@ -101,6 +85,26 @@ private slots:
 
     void on_push_dproxy_download_clicked();
 
+    void on_in_button_fproxy_browse_download_clicked();
+    
+    void on_in_button_fproxy_browse_upload_clicked();
+    
+    void on_switch_fproxy_clicked();
+    
+    void on_switch_vproxy_clicked();
+    
+    void on_switch_sproxy_clicked();
+    
+    void on_switch_lproxy_clicked();
+    
+    void on_switch_tproxy_clicked();
+    
+    void on_switch_cproxy_clicked();
+
+    void on_in_text_lproxy_username_textChanged(const QString &arg1);
+
+    void on_in_text_lproxy_password_textChanged(const QString &arg1);
+
 private:
     Ui::AllProxy *ui;
     QToolBox *box;
@@ -109,6 +113,7 @@ private:
     QString module_name,project_path;
     QStringList files_list;
     QString project_config_file_name;
+    bool event(QEvent * e);
     void load_configuration();
     void start();
     static void setToolBoxButtonColor(QToolBox* toolBox, int index, QColor color);

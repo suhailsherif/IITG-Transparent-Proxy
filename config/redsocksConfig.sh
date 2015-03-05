@@ -29,6 +29,6 @@ redsocks {
  login = \"$3\";
  password = \"$4\";
 }
-" > ./redsocks/redsocksauto.conf
+" > $allproxy_path/redsocks/redsocksauto.conf
 
-sudo ./redsocks/redsocks -c ./redsocks/redsocksauto.conf
+sudo $allproxy_path/redsocks/redsocks -c $allproxy_path/redsocks/redsocksauto.conf

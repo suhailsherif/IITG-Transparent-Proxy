@@ -103,6 +103,9 @@ class downloader:
 		lim_u=self.chunk		# upper limit of the byte-range for download
 		i=1
 		while lim_l<=self.size :
+			f = open('status', 'w')
+			s = str(int(100*i*self.chunk/self.size))
+			f.write(s)
 
 			# Create a temporary filename
 			temp_output=os.path.join(self.dir_name,"output"+str(i))

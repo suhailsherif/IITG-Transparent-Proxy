@@ -6,27 +6,35 @@
 case $1 in
 tproxy)
 	
-	source ./tproxy/start.sh &
+	source $allproxy_path/tproxy/start.sh &
 ;;
 vproxy)
 	
-	source ./vproxy/start.sh &
+	source $allproxy_path/vproxy/start.sh &
 ;;
 lproxy)
 	
-	source ./lproxy/start.sh &
+	source $allproxy_path/lproxy/start.sh &
 ;;
 sproxy)
 	
-	source ./sproxy/start.sh &
+	source $allproxy_path/sproxy/start.sh &
 ;;
-nproxy)
+fproxy)
 	
-	source ./nproxy/start.sh &
+	source $allproxy_path/fproxy/start.sh &
+;;
+dproxy)
+	
+	source $allproxy_path/dproxy/start.sh $2 $3 &
+;;
+cproxy)
+	
+	source $allproxy_path/cproxy/start.sh &
 ;;
 *)
 	echo "Stopping process if already running ..."
-	. ./stop.sh > ./log/stop.log
+	. $allproxy_path/stop.sh > $allproxy_path/log/stop.log
 
 	echo "Checking connectivity to default Gateway ..."
 	def_gateway=$(/sbin/ip route | awk '/default/ { print $3 }')
@@ -85,27 +93,33 @@ nproxy)
 	echo "Check your config/config.sh file"
 	read -p "Press [Enter] key to start ..."
 
-	chmod +rwx ./config/config.sh
+	chmod +rwx $allproxy_path/config/config.sh
 
-	source ./config/config.sh
+	source $allproxy_path/config/config.sh
 
 	read -p "Which proxy ? : " which_proxy
 
 	case $which_proxy in
 	tproxy)
-		source ./tproxy/start.sh &
+		source $allproxy_path/tproxy/start.sh &
 	;;
 	vproxy)
-		source ./vproxy/start.sh &
+		source $allproxy_path/vproxy/start.sh &
 	;;
 	lproxy)
-		source ./lproxy/start.sh &
+		source $allproxy_path/lproxy/start.sh &
 	;;
 	sproxy)
-		source ./sproxy/start.sh &
+		source $allproxy_path/sproxy/start.sh &
 	;;
 	nproxy)
-		source ./nproxy/start.sh &
+		source $allproxy_path/nproxy/start.sh &
+	;;
+	fproxy)
+		source $allproxy_path/fproxy/start.sh &
+	;;
+	cproxy)
+		source $allproxy_path/cproxy/start.sh &
 	;;
 	esac
 ;;

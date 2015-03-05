@@ -13,12 +13,14 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLayout>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QToolBox>
@@ -44,6 +46,17 @@ public:
     QLabel *label_2;
     QLabel *label_8;
     QPushButton *in_button_save_nproxy;
+    QWidget *page_fproxy;
+    QPushButton *in_button_fproxy_browse_upload;
+    QLabel *in_text_fproxy_path_upload;
+    QPushButton *in_button_fproxy_send;
+    QLineEdit *in_text_fproxy_dip;
+    QLabel *in_text_vproxy_path_3;
+    QPushButton *in_button_fproxy_browse_download;
+    QLabel *in_text_vproxy_path_4;
+    QLabel *in_text_fproxy_path_download;
+    QLabel *in_text_vproxy_path_6;
+    QCheckBox *fproxy_check;
     QWidget *page_vproxy;
     QGroupBox *group_vpn;
     QPushButton *in_button_save_vproxy;
@@ -54,9 +67,6 @@ public:
     QLabel *label_6;
     QPushButton *in_button_browse;
     QLabel *label_5;
-    QGroupBox *group_vproxy_switch;
-    QPushButton *push_vproxy_on;
-    QPushButton *push_vproxy_off;
     QLineEdit *in_text_vproxy_port;
     QLineEdit *in_text_vproxy_server;
     QLabel *label_22;
@@ -72,6 +82,7 @@ public:
     QLabel *label_27;
     QPushButton *browse_dproxy;
     QPushButton *push_dproxy_download;
+    QProgressBar *dproxy_progress;
     QWidget *page_sproxy;
     QLineEdit *in_text_sproxy_local_port;
     QLineEdit *in_text_sproxy_server;
@@ -83,9 +94,6 @@ public:
     QLabel *label_11;
     QLabel *label_12;
     QLabel *label_13;
-    QGroupBox *group_sproxy_switch;
-    QPushButton *push_sproxy_on;
-    QPushButton *push_sproxy_off;
     QPushButton *in_button_save_sproxy;
     QLineEdit *in_text_sproxy_ssh_server;
     QLabel *label_21;
@@ -96,14 +104,12 @@ public:
     QLabel *label_16;
     QLineEdit *in_text_lproxy_server;
     QLineEdit *in_text_lproxy_port;
-    QGroupBox *group_lproxy_switch;
-    QPushButton *push_lproxy_on;
-    QPushButton *push_lproxy_off;
     QPushButton *in_button_save_lproxy;
+    QLineEdit *in_text_lproxy_username;
+    QLineEdit *in_text_lproxy_password;
+    QLabel *label_28;
+    QLabel *label_29;
     QWidget *page_tproxy;
-    QGroupBox *group_tproxy_switch;
-    QPushButton *push_tproxy_on;
-    QPushButton *push_tproxy_off;
     QLineEdit *in_text_tproxy_server;
     QLineEdit *in_text_tproxy_port;
     QLineEdit *in_text_tproxy_username;
@@ -116,13 +122,19 @@ public:
     QWidget *page_new;
     QGroupBox *group_tproxy;
     QRadioButton *in_radio_tproxy;
+    QPushButton *switch_tproxy;
+    QPushButton *switch_lproxy;
+    QPushButton *switch_sproxy;
+    QPushButton *switch_vproxy;
+    QPushButton *switch_cproxy;
+    QPushButton *switch_fproxy;
 
     void setupUi(QMainWindow *AllProxy)
     {
         if (AllProxy->objectName().isEmpty())
             AllProxy->setObjectName(QStringLiteral("AllProxy"));
         AllProxy->setEnabled(true);
-        AllProxy->resize(671, 420);
+        AllProxy->resize(671, 509);
         AllProxy->setStyleSheet(QLatin1String("QMainWindow#Allproxy{\n"
 "     background-color: rgba(50, 255, 50, 20);\n"
 " }"));
@@ -133,7 +145,7 @@ public:
 "}"));
         toolbox_main = new QToolBox(widget_main);
         toolbox_main->setObjectName(QStringLiteral("toolbox_main"));
-        toolbox_main->setGeometry(QRect(10, 10, 651, 401));
+        toolbox_main->setGeometry(QRect(10, 10, 651, 441));
         QFont font;
         font.setBold(false);
         font.setWeight(50);
@@ -154,7 +166,7 @@ public:
         toolbox_main->setFrameShadow(QFrame::Sunken);
         page_nproxy = new QWidget();
         page_nproxy->setObjectName(QStringLiteral("page_nproxy"));
-        page_nproxy->setGeometry(QRect(0, 0, 651, 184));
+        page_nproxy->setGeometry(QRect(0, 0, 651, 193));
         page_nproxy->setStyleSheet(QLatin1String(" QWidget#page_nproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -210,9 +222,43 @@ public:
         in_button_save_nproxy->setObjectName(QStringLiteral("in_button_save_nproxy"));
         in_button_save_nproxy->setGeometry(QRect(260, 140, 141, 27));
         toolbox_main->addItem(page_nproxy, QStringLiteral("Nproxy                                                                                                                                     - Normal Proxy"));
+        page_fproxy = new QWidget();
+        page_fproxy->setObjectName(QStringLiteral("page_fproxy"));
+        page_fproxy->setGeometry(QRect(0, 0, 651, 193));
+        in_button_fproxy_browse_upload = new QPushButton(page_fproxy);
+        in_button_fproxy_browse_upload->setObjectName(QStringLiteral("in_button_fproxy_browse_upload"));
+        in_button_fproxy_browse_upload->setGeometry(QRect(0, 110, 98, 27));
+        in_text_fproxy_path_upload = new QLabel(page_fproxy);
+        in_text_fproxy_path_upload->setObjectName(QStringLiteral("in_text_fproxy_path_upload"));
+        in_text_fproxy_path_upload->setGeometry(QRect(110, 110, 481, 31));
+        in_button_fproxy_send = new QPushButton(page_fproxy);
+        in_button_fproxy_send->setObjectName(QStringLiteral("in_button_fproxy_send"));
+        in_button_fproxy_send->setGeometry(QRect(400, 160, 101, 27));
+        in_text_fproxy_dip = new QLineEdit(page_fproxy);
+        in_text_fproxy_dip->setObjectName(QStringLiteral("in_text_fproxy_dip"));
+        in_text_fproxy_dip->setGeometry(QRect(110, 160, 131, 27));
+        in_text_vproxy_path_3 = new QLabel(page_fproxy);
+        in_text_vproxy_path_3->setObjectName(QStringLiteral("in_text_vproxy_path_3"));
+        in_text_vproxy_path_3->setGeometry(QRect(0, 160, 101, 31));
+        in_button_fproxy_browse_download = new QPushButton(page_fproxy);
+        in_button_fproxy_browse_download->setObjectName(QStringLiteral("in_button_fproxy_browse_download"));
+        in_button_fproxy_browse_download->setGeometry(QRect(0, 30, 98, 27));
+        in_text_vproxy_path_4 = new QLabel(page_fproxy);
+        in_text_vproxy_path_4->setObjectName(QStringLiteral("in_text_vproxy_path_4"));
+        in_text_vproxy_path_4->setGeometry(QRect(0, 0, 151, 31));
+        in_text_fproxy_path_download = new QLabel(page_fproxy);
+        in_text_fproxy_path_download->setObjectName(QStringLiteral("in_text_fproxy_path_download"));
+        in_text_fproxy_path_download->setGeometry(QRect(110, 30, 481, 31));
+        in_text_vproxy_path_6 = new QLabel(page_fproxy);
+        in_text_vproxy_path_6->setObjectName(QStringLiteral("in_text_vproxy_path_6"));
+        in_text_vproxy_path_6->setGeometry(QRect(0, 80, 151, 31));
+        fproxy_check = new QCheckBox(page_fproxy);
+        fproxy_check->setObjectName(QStringLiteral("fproxy_check"));
+        fproxy_check->setGeometry(QRect(110, 90, 141, 22));
+        toolbox_main->addItem(page_fproxy, QStringLiteral("Fproxy                                                                                                                                    - File Exchange "));
         page_vproxy = new QWidget();
         page_vproxy->setObjectName(QStringLiteral("page_vproxy"));
-        page_vproxy->setGeometry(QRect(0, 0, 651, 184));
+        page_vproxy->setGeometry(QRect(0, 0, 651, 193));
         page_vproxy->setStyleSheet(QLatin1String(" QWidget#page_vproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -247,158 +293,6 @@ public:
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(0, 30, 131, 20));
         label_5->setFont(font1);
-        group_vproxy_switch = new QGroupBox(group_vpn);
-        group_vproxy_switch->setObjectName(QStringLiteral("group_vproxy_switch"));
-        group_vproxy_switch->setGeometry(QRect(510, 130, 81, 31));
-        QPalette palette;
-        QBrush brush(QColor(255, 255, 255, 255));
-        brush.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(150, 150, 150, 255));
-        brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
-        QBrush brush2(QColor(164, 164, 164, 255));
-        brush2.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Light, brush2);
-        QBrush brush3(QColor(136, 136, 136, 255));
-        brush3.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Midlight, brush3);
-        QBrush brush4(QColor(54, 54, 54, 255));
-        brush4.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Dark, brush4);
-        QBrush brush5(QColor(72, 72, 72, 255));
-        brush5.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Mid, brush5);
-        palette.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
-        QBrush brush6(QColor(0, 0, 0, 255));
-        brush6.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
-        QBrush brush7(QColor(255, 255, 220, 255));
-        brush7.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
-        palette.setBrush(QPalette::Inactive, QPalette::Midlight, brush3);
-        palette.setBrush(QPalette::Inactive, QPalette::Dark, brush4);
-        palette.setBrush(QPalette::Inactive, QPalette::Mid, brush5);
-        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
-        palette.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
-        palette.setBrush(QPalette::Disabled, QPalette::Midlight, brush3);
-        palette.setBrush(QPalette::Disabled, QPalette::Dark, brush4);
-        palette.setBrush(QPalette::Disabled, QPalette::Mid, brush5);
-        palette.setBrush(QPalette::Disabled, QPalette::Text, brush4);
-        palette.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        QBrush brush8(QColor(109, 109, 109, 255));
-        brush8.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush8);
-        palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        group_vproxy_switch->setPalette(palette);
-        group_vproxy_switch->setAutoFillBackground(false);
-        group_vproxy_switch->setStyleSheet(QLatin1String("QGroupBox#group_vproxy_switch{\n"
-"	background-color: rgb(150,150,150);\n"
-"	border-style: outset;\n"
-"	border-radius: 5px;\n"
-"}"));
-        push_vproxy_on = new QPushButton(group_vproxy_switch);
-        push_vproxy_on->setObjectName(QStringLiteral("push_vproxy_on"));
-        push_vproxy_on->setGeometry(QRect(41, 2, 38, 27));
-        push_vproxy_on->setStyleSheet(QLatin1String(" QPushButton#push_vproxy_on {\n"
-"     background-color: rgb(50, 255, 50);\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
-        push_vproxy_off = new QPushButton(group_vproxy_switch);
-        push_vproxy_off->setObjectName(QStringLiteral("push_vproxy_off"));
-        push_vproxy_off->setGeometry(QRect(1, 2, 38, 27));
-        QPalette palette1;
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush6);
-        QBrush brush9(QColor(255, 0, 0, 255));
-        brush9.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Button, brush9);
-        palette1.setBrush(QPalette::Active, QPalette::Light, brush9);
-        QBrush brush10(QColor(247, 52, 52, 255));
-        brush10.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Midlight, brush10);
-        QBrush brush11(QColor(120, 0, 0, 255));
-        brush11.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Dark, brush11);
-        QBrush brush12(QColor(160, 0, 0, 255));
-        brush12.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Mid, brush12);
-        palette1.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette1.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
-        palette1.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette1.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        QBrush brush13(QColor(247, 127, 127, 255));
-        brush13.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush13);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        QBrush brush14(QColor(255, 105, 105, 255));
-        brush14.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Inactive, QPalette::Light, brush14);
-        palette1.setBrush(QPalette::Inactive, QPalette::Midlight, brush10);
-        palette1.setBrush(QPalette::Inactive, QPalette::Dark, brush11);
-        palette1.setBrush(QPalette::Inactive, QPalette::Mid, brush12);
-        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush13);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush11);
-        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Light, brush14);
-        palette1.setBrush(QPalette::Disabled, QPalette::Midlight, brush10);
-        palette1.setBrush(QPalette::Disabled, QPalette::Dark, brush11);
-        palette1.setBrush(QPalette::Disabled, QPalette::Mid, brush12);
-        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush11);
-        palette1.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush11);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        QBrush brush15(QColor(240, 0, 0, 255));
-        brush15.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush15);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        push_vproxy_off->setPalette(palette1);
-        push_vproxy_off->setAutoFillBackground(false);
-        push_vproxy_off->setStyleSheet(QLatin1String(" QPushButton#push_vproxy_off {\n"
-"     background-color: red;\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
         in_text_vproxy_port = new QLineEdit(group_vpn);
         in_text_vproxy_port->setObjectName(QStringLiteral("in_text_vproxy_port"));
         in_text_vproxy_port->setGeometry(QRect(390, 0, 113, 27));
@@ -431,7 +325,7 @@ public:
         toolbox_main->addItem(page_vproxy, QStringLiteral("Vproxy                                                                                                                                - OpenVPN Proxy"));
         page_dproxy = new QWidget();
         page_dproxy->setObjectName(QStringLiteral("page_dproxy"));
-        page_dproxy->setGeometry(QRect(0, 0, 651, 184));
+        page_dproxy->setGeometry(QRect(0, 0, 651, 193));
         in_dproxy_url = new QLineEdit(page_dproxy);
         in_dproxy_url->setObjectName(QStringLiteral("in_dproxy_url"));
         in_dproxy_url->setGeometry(QRect(90, 0, 561, 27));
@@ -452,10 +346,14 @@ public:
         push_dproxy_download = new QPushButton(page_dproxy);
         push_dproxy_download->setObjectName(QStringLiteral("push_dproxy_download"));
         push_dproxy_download->setGeometry(QRect(250, 130, 98, 27));
+        dproxy_progress = new QProgressBar(page_dproxy);
+        dproxy_progress->setObjectName(QStringLiteral("dproxy_progress"));
+        dproxy_progress->setGeometry(QRect(450, 130, 191, 23));
+        dproxy_progress->setValue(24);
         toolbox_main->addItem(page_dproxy, QStringLiteral("Dproxy                                                                                                                                  - Download files"));
         page_sproxy = new QWidget();
         page_sproxy->setObjectName(QStringLiteral("page_sproxy"));
-        page_sproxy->setGeometry(QRect(0, 0, 651, 184));
+        page_sproxy->setGeometry(QRect(0, 0, 651, 193));
         page_sproxy->setStyleSheet(QLatin1String(" QWidget#page_sproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -490,126 +388,6 @@ public:
         label_13 = new QLabel(page_sproxy);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(296, 150, 141, 20));
-        group_sproxy_switch = new QGroupBox(page_sproxy);
-        group_sproxy_switch->setObjectName(QStringLiteral("group_sproxy_switch"));
-        group_sproxy_switch->setGeometry(QRect(100, 110, 81, 31));
-        QPalette palette2;
-        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette2.setBrush(QPalette::Active, QPalette::Light, brush2);
-        palette2.setBrush(QPalette::Active, QPalette::Midlight, brush3);
-        palette2.setBrush(QPalette::Active, QPalette::Dark, brush4);
-        palette2.setBrush(QPalette::Active, QPalette::Mid, brush5);
-        palette2.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette2.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette2.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette2.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette2.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
-        palette2.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette2.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Light, brush2);
-        palette2.setBrush(QPalette::Inactive, QPalette::Midlight, brush3);
-        palette2.setBrush(QPalette::Inactive, QPalette::Dark, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::Mid, brush5);
-        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette2.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette2.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette2.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::Light, brush2);
-        palette2.setBrush(QPalette::Disabled, QPalette::Midlight, brush3);
-        palette2.setBrush(QPalette::Disabled, QPalette::Dark, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::Mid, brush5);
-        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette2.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush8);
-        palette2.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette2.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        group_sproxy_switch->setPalette(palette2);
-        group_sproxy_switch->setAutoFillBackground(false);
-        group_sproxy_switch->setStyleSheet(QLatin1String("QGroupBox#group_sproxy_switch{\n"
-"	background-color: rgb(150,150,150);\n"
-"	border-style: outset;\n"
-"	border-radius: 5px;\n"
-"}"));
-        push_sproxy_on = new QPushButton(group_sproxy_switch);
-        push_sproxy_on->setObjectName(QStringLiteral("push_sproxy_on"));
-        push_sproxy_on->setGeometry(QRect(41, 2, 38, 27));
-        push_sproxy_on->setStyleSheet(QLatin1String(" QPushButton#push_sproxy_on {\n"
-"     background-color: rgb(50, 255, 50);\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
-        push_sproxy_off = new QPushButton(group_sproxy_switch);
-        push_sproxy_off->setObjectName(QStringLiteral("push_sproxy_off"));
-        push_sproxy_off->setGeometry(QRect(1, 2, 38, 27));
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush6);
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush9);
-        palette3.setBrush(QPalette::Active, QPalette::Light, brush9);
-        palette3.setBrush(QPalette::Active, QPalette::Midlight, brush10);
-        palette3.setBrush(QPalette::Active, QPalette::Dark, brush11);
-        palette3.setBrush(QPalette::Active, QPalette::Mid, brush12);
-        palette3.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette3.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette3.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette3.setBrush(QPalette::Active, QPalette::AlternateBase, brush13);
-        palette3.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette3.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        palette3.setBrush(QPalette::Inactive, QPalette::Light, brush14);
-        palette3.setBrush(QPalette::Inactive, QPalette::Midlight, brush10);
-        palette3.setBrush(QPalette::Inactive, QPalette::Dark, brush11);
-        palette3.setBrush(QPalette::Inactive, QPalette::Mid, brush12);
-        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette3.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush13);
-        palette3.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette3.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush11);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette3.setBrush(QPalette::Disabled, QPalette::Light, brush14);
-        palette3.setBrush(QPalette::Disabled, QPalette::Midlight, brush10);
-        palette3.setBrush(QPalette::Disabled, QPalette::Dark, brush11);
-        palette3.setBrush(QPalette::Disabled, QPalette::Mid, brush12);
-        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush11);
-        palette3.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush11);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush9);
-        palette3.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush15);
-        palette3.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette3.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        push_sproxy_off->setPalette(palette3);
-        push_sproxy_off->setAutoFillBackground(false);
-        push_sproxy_off->setStyleSheet(QLatin1String(" QPushButton#push_sproxy_off {\n"
-"     background-color: red;\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
         in_button_save_sproxy = new QPushButton(page_sproxy);
         in_button_save_sproxy->setObjectName(QStringLiteral("in_button_save_sproxy"));
         in_button_save_sproxy->setGeometry(QRect(80, 70, 161, 27));
@@ -622,7 +400,7 @@ public:
         toolbox_main->addItem(page_sproxy, QStringLiteral("Sproxy                                                                                                                             -  SSH Tunnel Proxy"));
         page_lproxy = new QWidget();
         page_lproxy->setObjectName(QStringLiteral("page_lproxy"));
-        page_lproxy->setGeometry(QRect(0, 0, 651, 184));
+        page_lproxy->setGeometry(QRect(0, 0, 651, 193));
         page_lproxy->setStyleSheet(QLatin1String(" QWidget#page_lproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
 " }"));
@@ -644,255 +422,28 @@ public:
         in_text_lproxy_port = new QLineEdit(page_lproxy);
         in_text_lproxy_port->setObjectName(QStringLiteral("in_text_lproxy_port"));
         in_text_lproxy_port->setGeometry(QRect(460, 50, 113, 27));
-        group_lproxy_switch = new QGroupBox(page_lproxy);
-        group_lproxy_switch->setObjectName(QStringLiteral("group_lproxy_switch"));
-        group_lproxy_switch->setGeometry(QRect(190, 120, 81, 31));
-        QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Active, QPalette::Light, brush2);
-        palette4.setBrush(QPalette::Active, QPalette::Midlight, brush3);
-        palette4.setBrush(QPalette::Active, QPalette::Dark, brush4);
-        palette4.setBrush(QPalette::Active, QPalette::Mid, brush5);
-        palette4.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette4.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette4.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
-        palette4.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette4.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Inactive, QPalette::Light, brush2);
-        palette4.setBrush(QPalette::Inactive, QPalette::Midlight, brush3);
-        palette4.setBrush(QPalette::Inactive, QPalette::Dark, brush4);
-        palette4.setBrush(QPalette::Inactive, QPalette::Mid, brush5);
-        palette4.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette4.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette4.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
-        palette4.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette4.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::Light, brush2);
-        palette4.setBrush(QPalette::Disabled, QPalette::Midlight, brush3);
-        palette4.setBrush(QPalette::Disabled, QPalette::Dark, brush4);
-        palette4.setBrush(QPalette::Disabled, QPalette::Mid, brush5);
-        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush4);
-        palette4.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette4.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush8);
-        palette4.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette4.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        group_lproxy_switch->setPalette(palette4);
-        group_lproxy_switch->setAutoFillBackground(false);
-        group_lproxy_switch->setStyleSheet(QLatin1String("QGroupBox#group_lproxy_switch{\n"
-"	background-color: rgb(150,150,150);\n"
-"	border-style: outset;\n"
-"	border-radius: 5px;\n"
-"}"));
-        push_lproxy_on = new QPushButton(group_lproxy_switch);
-        push_lproxy_on->setObjectName(QStringLiteral("push_lproxy_on"));
-        push_lproxy_on->setGeometry(QRect(41, 2, 38, 27));
-        push_lproxy_on->setStyleSheet(QLatin1String(" QPushButton#push_lproxy_on {\n"
-"     background-color: rgb(50, 255, 50);\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
-        push_lproxy_off = new QPushButton(group_lproxy_switch);
-        push_lproxy_off->setObjectName(QStringLiteral("push_lproxy_off"));
-        push_lproxy_off->setGeometry(QRect(1, 2, 38, 27));
-        QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Light, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Midlight, brush10);
-        palette5.setBrush(QPalette::Active, QPalette::Dark, brush11);
-        palette5.setBrush(QPalette::Active, QPalette::Mid, brush12);
-        palette5.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::AlternateBase, brush13);
-        palette5.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette5.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        palette5.setBrush(QPalette::Inactive, QPalette::Light, brush14);
-        palette5.setBrush(QPalette::Inactive, QPalette::Midlight, brush10);
-        palette5.setBrush(QPalette::Inactive, QPalette::Dark, brush11);
-        palette5.setBrush(QPalette::Inactive, QPalette::Mid, brush12);
-        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette5.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush13);
-        palette5.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette5.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush11);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette5.setBrush(QPalette::Disabled, QPalette::Light, brush14);
-        palette5.setBrush(QPalette::Disabled, QPalette::Midlight, brush10);
-        palette5.setBrush(QPalette::Disabled, QPalette::Dark, brush11);
-        palette5.setBrush(QPalette::Disabled, QPalette::Mid, brush12);
-        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush11);
-        palette5.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush11);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush9);
-        palette5.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush15);
-        palette5.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette5.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        push_lproxy_off->setPalette(palette5);
-        push_lproxy_off->setAutoFillBackground(false);
-        push_lproxy_off->setStyleSheet(QLatin1String(" QPushButton#push_lproxy_off {\n"
-"     background-color: red;\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
         in_button_save_lproxy = new QPushButton(page_lproxy);
         in_button_save_lproxy->setObjectName(QStringLiteral("in_button_save_lproxy"));
         in_button_save_lproxy->setGeometry(QRect(360, 110, 161, 27));
+        in_text_lproxy_username = new QLineEdit(page_lproxy);
+        in_text_lproxy_username->setObjectName(QStringLiteral("in_text_lproxy_username"));
+        in_text_lproxy_username->setGeometry(QRect(120, 80, 113, 27));
+        in_text_lproxy_password = new QLineEdit(page_lproxy);
+        in_text_lproxy_password->setObjectName(QStringLiteral("in_text_lproxy_password"));
+        in_text_lproxy_password->setGeometry(QRect(120, 110, 113, 27));
+        in_text_lproxy_password->setEchoMode(QLineEdit::Password);
+        label_28 = new QLabel(page_lproxy);
+        label_28->setObjectName(QStringLiteral("label_28"));
+        label_28->setGeometry(QRect(10, 80, 111, 20));
+        label_29 = new QLabel(page_lproxy);
+        label_29->setObjectName(QStringLiteral("label_29"));
+        label_29->setGeometry(QRect(10, 110, 111, 20));
         toolbox_main->addItem(page_lproxy, QStringLiteral("Lproxy                                                                                                               - Local Squid Proxy Server "));
         page_tproxy = new QWidget();
         page_tproxy->setObjectName(QStringLiteral("page_tproxy"));
-        page_tproxy->setGeometry(QRect(0, 0, 651, 184));
+        page_tproxy->setGeometry(QRect(0, 0, 651, 193));
         page_tproxy->setStyleSheet(QLatin1String(" QWidget#page_tproxy {\n"
 "     background-color: rgba(250, 155, 50, 20);\n"
-" }"));
-        group_tproxy_switch = new QGroupBox(page_tproxy);
-        group_tproxy_switch->setObjectName(QStringLiteral("group_tproxy_switch"));
-        group_tproxy_switch->setGeometry(QRect(110, 80, 81, 31));
-        QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette6.setBrush(QPalette::Active, QPalette::Light, brush2);
-        palette6.setBrush(QPalette::Active, QPalette::Midlight, brush3);
-        palette6.setBrush(QPalette::Active, QPalette::Dark, brush4);
-        palette6.setBrush(QPalette::Active, QPalette::Mid, brush5);
-        palette6.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette6.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette6.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
-        palette6.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette6.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette6.setBrush(QPalette::Inactive, QPalette::Light, brush2);
-        palette6.setBrush(QPalette::Inactive, QPalette::Midlight, brush3);
-        palette6.setBrush(QPalette::Inactive, QPalette::Dark, brush4);
-        palette6.setBrush(QPalette::Inactive, QPalette::Mid, brush5);
-        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette6.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
-        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette6.setBrush(QPalette::Disabled, QPalette::Light, brush2);
-        palette6.setBrush(QPalette::Disabled, QPalette::Midlight, brush3);
-        palette6.setBrush(QPalette::Disabled, QPalette::Dark, brush4);
-        palette6.setBrush(QPalette::Disabled, QPalette::Mid, brush5);
-        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush4);
-        palette6.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        palette6.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush8);
-        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        group_tproxy_switch->setPalette(palette6);
-        group_tproxy_switch->setAutoFillBackground(false);
-        group_tproxy_switch->setStyleSheet(QLatin1String("QGroupBox#group_tproxy_switch {\n"
-"	background-color: rgb(150,150,150);\n"
-"	border-style: outset;\n"
-"	border-radius: 5px;\n"
-"}"));
-        push_tproxy_on = new QPushButton(group_tproxy_switch);
-        push_tproxy_on->setObjectName(QStringLiteral("push_tproxy_on"));
-        push_tproxy_on->setGeometry(QRect(41, 2, 38, 27));
-        push_tproxy_on->setStyleSheet(QLatin1String("QPushButton#push_tproxy_on{\n"
-"     background-color: rgb(50, 255, 50);\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
-" }"));
-        push_tproxy_off = new QPushButton(group_tproxy_switch);
-        push_tproxy_off->setObjectName(QStringLiteral("push_tproxy_off"));
-        push_tproxy_off->setGeometry(QRect(1, 2, 38, 27));
-        QPalette palette7;
-        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::Button, brush9);
-        palette7.setBrush(QPalette::Active, QPalette::Light, brush9);
-        palette7.setBrush(QPalette::Active, QPalette::Midlight, brush10);
-        palette7.setBrush(QPalette::Active, QPalette::Dark, brush11);
-        palette7.setBrush(QPalette::Active, QPalette::Mid, brush12);
-        palette7.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette7.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette7.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette7.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::AlternateBase, brush13);
-        palette7.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette7.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        palette7.setBrush(QPalette::Inactive, QPalette::Light, brush14);
-        palette7.setBrush(QPalette::Inactive, QPalette::Midlight, brush10);
-        palette7.setBrush(QPalette::Inactive, QPalette::Dark, brush11);
-        palette7.setBrush(QPalette::Inactive, QPalette::Mid, brush12);
-        palette7.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette7.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette7.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush13);
-        palette7.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette7.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush11);
-        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette7.setBrush(QPalette::Disabled, QPalette::Light, brush14);
-        palette7.setBrush(QPalette::Disabled, QPalette::Midlight, brush10);
-        palette7.setBrush(QPalette::Disabled, QPalette::Dark, brush11);
-        palette7.setBrush(QPalette::Disabled, QPalette::Mid, brush12);
-        palette7.setBrush(QPalette::Disabled, QPalette::Text, brush11);
-        palette7.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette7.setBrush(QPalette::Disabled, QPalette::ButtonText, brush11);
-        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush9);
-        palette7.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush15);
-        palette7.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette7.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        push_tproxy_off->setPalette(palette7);
-        push_tproxy_off->setAutoFillBackground(false);
-        push_tproxy_off->setStyleSheet(QLatin1String(" QPushButton#push_tproxy_off {\n"
-"     background-color: red;\n"
-"     border-radius: 5px;\n"
-"	 border-width: 1px;\n"
 " }"));
         in_text_tproxy_server = new QLineEdit(page_tproxy);
         in_text_tproxy_server->setObjectName(QStringLiteral("in_text_tproxy_server"));
@@ -925,7 +476,7 @@ public:
         toolbox_main->addItem(page_tproxy, QStringLiteral("Tproxy                                                                                                                            - Transparent Proxy"));
         page_new = new QWidget();
         page_new->setObjectName(QStringLiteral("page_new"));
-        page_new->setGeometry(QRect(0, 0, 651, 184));
+        page_new->setGeometry(QRect(0, 0, 651, 193));
         page_new->setStyleSheet(QStringLiteral(""));
         group_tproxy = new QGroupBox(page_new);
         group_tproxy->setObjectName(QStringLiteral("group_tproxy"));
@@ -940,6 +491,24 @@ public:
         font2.setWeight(75);
         in_radio_tproxy->setFont(font2);
         toolbox_main->addItem(page_new, QStringLiteral("To be added ..."));
+        switch_tproxy = new QPushButton(widget_main);
+        switch_tproxy->setObjectName(QStringLiteral("switch_tproxy"));
+        switch_tproxy->setGeometry(QRect(560, 470, 41, 31));
+        switch_lproxy = new QPushButton(widget_main);
+        switch_lproxy->setObjectName(QStringLiteral("switch_lproxy"));
+        switch_lproxy->setGeometry(QRect(510, 470, 41, 31));
+        switch_sproxy = new QPushButton(widget_main);
+        switch_sproxy->setObjectName(QStringLiteral("switch_sproxy"));
+        switch_sproxy->setGeometry(QRect(460, 470, 41, 31));
+        switch_vproxy = new QPushButton(widget_main);
+        switch_vproxy->setObjectName(QStringLiteral("switch_vproxy"));
+        switch_vproxy->setGeometry(QRect(410, 470, 41, 31));
+        switch_cproxy = new QPushButton(widget_main);
+        switch_cproxy->setObjectName(QStringLiteral("switch_cproxy"));
+        switch_cproxy->setGeometry(QRect(610, 470, 41, 31));
+        switch_fproxy = new QPushButton(widget_main);
+        switch_fproxy->setObjectName(QStringLiteral("switch_fproxy"));
+        switch_fproxy->setGeometry(QRect(360, 470, 41, 31));
         AllProxy->setCentralWidget(widget_main);
         QWidget::setTabOrder(in_text_sproxy_local_port, in_text_sproxy_server);
         QWidget::setTabOrder(in_text_sproxy_server, in_text_sproxy_port);
@@ -947,9 +516,7 @@ public:
         QWidget::setTabOrder(in_text_sproxy_ssh_server, in_text_sproxy_username);
         QWidget::setTabOrder(in_text_sproxy_username, in_text_sproxy_password);
         QWidget::setTabOrder(in_text_sproxy_password, in_button_save_sproxy);
-        QWidget::setTabOrder(in_button_save_sproxy, push_sproxy_on);
-        QWidget::setTabOrder(push_sproxy_on, push_sproxy_off);
-        QWidget::setTabOrder(push_sproxy_off, in_button_browse);
+        QWidget::setTabOrder(in_button_save_sproxy, in_button_browse);
         QWidget::setTabOrder(in_button_browse, in_text_vproxy_username);
         QWidget::setTabOrder(in_text_vproxy_username, in_text_vproxy_password);
         QWidget::setTabOrder(in_text_vproxy_password, in_text_vproxy_server);
@@ -957,9 +524,7 @@ public:
         QWidget::setTabOrder(in_text_vproxy_port, in_text_vproxy_proxy_username);
         QWidget::setTabOrder(in_text_vproxy_proxy_username, in_text_vproxy_proxy_password);
         QWidget::setTabOrder(in_text_vproxy_proxy_password, in_button_save_vproxy);
-        QWidget::setTabOrder(in_button_save_vproxy, push_vproxy_on);
-        QWidget::setTabOrder(push_vproxy_on, push_vproxy_off);
-        QWidget::setTabOrder(push_vproxy_off, in_text_nproxy_server);
+        QWidget::setTabOrder(in_button_save_vproxy, in_text_nproxy_server);
         QWidget::setTabOrder(in_text_nproxy_server, in_text_nproxy_port);
         QWidget::setTabOrder(in_text_nproxy_port, in_text_nproxy_username);
         QWidget::setTabOrder(in_text_nproxy_username, in_text_nproxy_password);
@@ -969,20 +534,16 @@ public:
         QWidget::setTabOrder(in_text_lproxy_local_port, in_text_lproxy_server);
         QWidget::setTabOrder(in_text_lproxy_server, in_text_lproxy_port);
         QWidget::setTabOrder(in_text_lproxy_port, in_button_save_lproxy);
-        QWidget::setTabOrder(in_button_save_lproxy, push_lproxy_on);
-        QWidget::setTabOrder(push_lproxy_on, push_lproxy_off);
-        QWidget::setTabOrder(push_lproxy_off, in_text_tproxy_server);
+        QWidget::setTabOrder(in_button_save_lproxy, in_text_tproxy_server);
         QWidget::setTabOrder(in_text_tproxy_server, in_text_tproxy_port);
         QWidget::setTabOrder(in_text_tproxy_port, in_text_tproxy_username);
         QWidget::setTabOrder(in_text_tproxy_username, in_text_tproxy_password);
         QWidget::setTabOrder(in_text_tproxy_password, in_button_save_tproxy);
-        QWidget::setTabOrder(in_button_save_tproxy, push_tproxy_on);
-        QWidget::setTabOrder(push_tproxy_on, push_tproxy_off);
-        QWidget::setTabOrder(push_tproxy_off, in_radio_tproxy);
+        QWidget::setTabOrder(in_button_save_tproxy, in_radio_tproxy);
 
         retranslateUi(AllProxy);
 
-        toolbox_main->setCurrentIndex(2);
+        toolbox_main->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(AllProxy);
@@ -999,6 +560,16 @@ public:
         label_8->setText(QApplication::translate("AllProxy", "Default Gateway", 0));
         in_button_save_nproxy->setText(QApplication::translate("AllProxy", "Apply", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_nproxy), QApplication::translate("AllProxy", "Nproxy                                                                                                                                     - Normal Proxy", 0));
+        in_button_fproxy_browse_upload->setText(QApplication::translate("AllProxy", "Browse ...", 0));
+        in_text_fproxy_path_upload->setText(QApplication::translate("AllProxy", "path", 0));
+        in_button_fproxy_send->setText(QApplication::translate("AllProxy", "Send", 0));
+        in_text_vproxy_path_3->setText(QApplication::translate("AllProxy", "Destination  IP", 0));
+        in_button_fproxy_browse_download->setText(QApplication::translate("AllProxy", "Browse ...", 0));
+        in_text_vproxy_path_4->setText(QApplication::translate("AllProxy", "Downloads Directory", 0));
+        in_text_fproxy_path_download->setText(QApplication::translate("AllProxy", "path", 0));
+        in_text_vproxy_path_6->setText(QApplication::translate("AllProxy", "Upload path", 0));
+        fproxy_check->setText(QApplication::translate("AllProxy", "Path is directory", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_fproxy), QApplication::translate("AllProxy", "Fproxy                                                                                                                                    - File Exchange ", 0));
         group_vpn->setTitle(QString());
         in_button_save_vproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         label_7->setText(QApplication::translate("AllProxy", "VPN Password", 0));
@@ -1006,9 +577,6 @@ public:
         label_6->setText(QApplication::translate("AllProxy", "VPN Username", 0));
         in_button_browse->setText(QApplication::translate("AllProxy", "Browse ...", 0));
         label_5->setText(QApplication::translate("AllProxy", "Server config file", 0));
-        group_vproxy_switch->setTitle(QString());
-        push_vproxy_on->setText(QApplication::translate("AllProxy", "On", 0));
-        push_vproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
         label_22->setText(QApplication::translate("AllProxy", "Proxy Port", 0));
         label_23->setText(QApplication::translate("AllProxy", "Proxy Server", 0));
         label_24->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
@@ -1024,23 +592,16 @@ public:
         label_11->setText(QApplication::translate("AllProxy", "Proxy Port", 0));
         label_12->setText(QApplication::translate("AllProxy", "SSH Login Username", 0));
         label_13->setText(QApplication::translate("AllProxy", "SSH Login Password", 0));
-        group_sproxy_switch->setTitle(QString());
-        push_sproxy_on->setText(QApplication::translate("AllProxy", "On", 0));
-        push_sproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
         in_button_save_sproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         label_21->setText(QApplication::translate("AllProxy", "SSH Server", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_sproxy), QApplication::translate("AllProxy", "Sproxy                                                                                                                             -  SSH Tunnel Proxy", 0));
         label_14->setText(QApplication::translate("AllProxy", "Local port", 0));
         label_15->setText(QApplication::translate("AllProxy", "Proxy server", 0));
         label_16->setText(QApplication::translate("AllProxy", "Proxy port", 0));
-        group_lproxy_switch->setTitle(QString());
-        push_lproxy_on->setText(QApplication::translate("AllProxy", "On", 0));
-        push_lproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
         in_button_save_lproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
+        label_28->setText(QApplication::translate("AllProxy", "Proxy password", 0));
+        label_29->setText(QApplication::translate("AllProxy", "Proxy username", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_lproxy), QApplication::translate("AllProxy", "Lproxy                                                                                                               - Local Squid Proxy Server ", 0));
-        group_tproxy_switch->setTitle(QString());
-        push_tproxy_on->setText(QApplication::translate("AllProxy", "On", 0));
-        push_tproxy_off->setText(QApplication::translate("AllProxy", "Off", 0));
         label_17->setText(QApplication::translate("AllProxy", "Proxy Server", 0));
         label_18->setText(QApplication::translate("AllProxy", "Proxy Port", 0));
         label_19->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
@@ -1050,6 +611,12 @@ public:
         group_tproxy->setTitle(QString());
         in_radio_tproxy->setText(QApplication::translate("AllProxy", "Tproxy", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_new), QApplication::translate("AllProxy", "To be added ...", 0));
+        switch_tproxy->setText(QApplication::translate("AllProxy", "T", 0));
+        switch_lproxy->setText(QApplication::translate("AllProxy", "L", 0));
+        switch_sproxy->setText(QApplication::translate("AllProxy", "S", 0));
+        switch_vproxy->setText(QApplication::translate("AllProxy", "V", 0));
+        switch_cproxy->setText(QApplication::translate("AllProxy", "C", 0));
+        switch_fproxy->setText(QApplication::translate("AllProxy", "F", 0));
     } // retranslateUi
 
 };

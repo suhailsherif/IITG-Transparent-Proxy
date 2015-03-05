@@ -35,3 +35,6 @@ export tproxy_server=
 export tproxy_port=
 export tproxy_username=
 export tproxy_password=
+
+#Misc
+export allproxy_path=

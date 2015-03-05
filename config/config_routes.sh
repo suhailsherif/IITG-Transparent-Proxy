@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./config/config.sh #&
+source $allproxy_path/config/config.sh #&
 
 echo "setting default gateway to " $nproxy_gateway
 sudo ip route add to 202.141.80.0/23 via $nproxy_gateway
