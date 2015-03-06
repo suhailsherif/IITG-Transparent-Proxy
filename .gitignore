@@ -11,6 +11,6 @@ config.sh
 *.autosave
 *.user*
 new.txt
-vpnbook
+vpnbook/
 *.iso
 *.o
