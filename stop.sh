@@ -2,6 +2,7 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+source /etc/environment
 
 echo "This script stops the transparent proxy and restores the normal behavior"
 

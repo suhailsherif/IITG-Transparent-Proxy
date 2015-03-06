@@ -2,6 +2,7 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+source /etc/environment
 
 sudo ps -ef | grep "squid3" | awk '{print $2}' | xargs kill
 

@@ -2,6 +2,7 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+source /etc/environment
 
 sudo fuser -k 55/udp
 . $allproxy_path/config/script stop

@@ -18,6 +18,7 @@
 #include <QVBoxLayout>
 #include <QCloseEvent>
 #include <QThread>
+#include <QInputDialog>
 
 AllProxy::AllProxy(QWidget *parent) :
     QMainWindow(parent),
@@ -38,8 +39,24 @@ AllProxy::~AllProxy()
 
 void AllProxy::start(){
     qDebug() << "App path : " << qApp->applicationDirPath();
-    system("touch config/config.sh");
-//    system("sudo bash start.sh");
+
+}
+
+void AllProxy::display_error(QString error){
+    QMessageBox::critical(this,tr("Error"),error);
+}
+
+void AllProxy::update_config(QString key, QString value){
+
+    key.replace(QString("/"), QString("\\/"));
+    value.replace(QString("/"), QString("\\/"));
+    QProcess p;
+    QString s = "sed -i s/" + key + "=.*/" + key + "=" + value + "/g config/config.sh";
+    qDebug() << "string: " << s ;
+    p.start(s);
+    if (p.state() == QProcess::Running)
+        p.waitForFinished(-1);
+    p.waitForFinished(-1);
 }
 
 bool AllProxy::event(QEvent * e) // overloading event(QEvent*) method of QMainWindow
@@ -53,9 +70,7 @@ bool AllProxy::event(QEvent * e) // overloading event(QEvent*) method of QMainWi
             int ms = 100;  
             struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
             nanosleep(&ts, NULL);
-            qDebug() << "main window focus";
             QProcess p;
-            qDebug() << "updating status";
 
             p.start("bash", QStringList() << "./config/update_status.sh");
             if (p.state() == QProcess::Running)
@@ -150,12 +165,7 @@ bool AllProxy::event(QEvent * e) // overloading event(QEvent*) method of QMainWi
         }
         case QEvent::Close :{
             // lost focus
-            qDebug() << "main window close";
-            QProcess p;\
-            p.start("bash", QStringList() << "./stop.sh" << "all");
-            if (p.state() == QProcess::Running)
-                p.waitForFinished(-1);
-            p.waitForFinished(-1);
+
             break ;
         // ...
         }
@@ -187,16 +197,6 @@ void AllProxy::setToolBoxButtonColor(QToolBox* toolBox, int index, QColor color)
 
 void AllProxy::load_configuration(){
     QSettings project_settings("project_settings");
-
-    qDebug() << project_settings.fileName();
-    qDebug() << "Gateway : " << project_settings.value("nproxy_gateway").toString();
-    qDebug() << "Server : " << project_settings.value("nproxy_server").toString();
-    qDebug() << "Port : " << project_settings.value("nproxy_port").toString();
-    qDebug() << "Username : " << project_settings.value("nproxy_username").toString();
-    qDebug() << "Password : " << project_settings.value("nproxy_password").toString();
-    qDebug() << "Vproxy Username : " << project_settings.value("vproxy_username").toString();
-    qDebug() << "Vproxy password : " << project_settings.value("vproxy_password").toString();
-
 
     this->ui->in_text_nproxy_gateway->setText(project_settings.value("nproxy_gateway").toString());
     this->ui->in_text_nproxy_server->setText(project_settings.value("nproxy_server").toString());
@@ -231,6 +231,12 @@ void AllProxy::load_configuration(){
     this->ui->in_text_sproxy_port->setText(project_settings.value("sproxy_port").toString());
     this->ui->in_text_sproxy_ssh_server->setText(project_settings.value("sproxy_ssh_server").toString());
     
+
+    if(project_settings.value("fproxy_checked").toString() == "true"){
+        this->ui->fproxy_check->setChecked(true);
+    }else{
+        this->ui->fproxy_check->setChecked(false);
+    }
     this->ui->in_text_fproxy_path_download->setText(project_settings.value("fproxy_download_path").toString());
     this->ui->in_text_fproxy_path_upload->setText(project_settings.value("fproxy_upload_path").toString());
 
@@ -266,23 +272,6 @@ void AllProxy::on_in_button_browse_clicked()
 
         this->ui->in_text_vproxy_path->setText(file_path);
     }
-}
-
-void AllProxy::display_error(QString error){
-    QMessageBox::critical(this,tr("Error"),error);
-}
-
-void AllProxy::update_config(QString key, QString value){
-
-    key.replace(QString("/"), QString("\\/"));
-    value.replace(QString("/"), QString("\\/"));
-    QProcess p;
-    QString s = "sed -i s/" + key + "=.*/" + key + "=" + value + "/g config/config.sh";
-    qDebug() << "string: " << s ;
-    p.start(s);
-    if (p.state() == QProcess::Running)
-        p.waitForFinished(-1);
-    p.waitForFinished(-1);
 }
 
 void AllProxy::on_in_button_save_nproxy_clicked()
@@ -648,14 +637,12 @@ void AllProxy::on_in_text_sproxy_ssh_server_textChanged(const QString &arg1)
 {
     this->ui->in_button_save_sproxy->setText("Save Configuration");
     this->ui->in_button_save_sproxy->setVisible(true);
-
 }
 
 void AllProxy::on_in_text_vproxy_server_textChanged(const QString &arg1)
 {
     this->ui->in_button_save_vproxy->setText("Save Configuration");
     this->ui->in_button_save_vproxy->setVisible(true);
-
 }
 
 void AllProxy::on_in_text_vproxy_port_textChanged(const QString &arg1)
@@ -669,14 +656,17 @@ void AllProxy::on_in_text_vproxy_proxy_username_textChanged(const QString &arg1)
 {
     this->ui->in_button_save_vproxy->setText("Save Configuration");
     this->ui->in_button_save_vproxy->setVisible(true);
-
 }
 
 void AllProxy::on_in_text_vproxy_proxy_password_textChanged(const QString &arg1)
 {
     this->ui->in_button_save_vproxy->setText("Save Configuration");
     this->ui->in_button_save_vproxy->setVisible(true);
+}
 
+void AllProxy::on_fproxy_check_toggled(bool checked)
+{
+    this->ui->in_text_fproxy_path_upload->setText("");
 }
 
 void AllProxy::on_browse_dproxy_clicked()
@@ -696,20 +686,13 @@ void AllProxy::on_browse_dproxy_clicked()
 
         this->ui->in_dproxy_filepath->setText(file_path);
     }
-
-
 }
 
 void AllProxy::on_push_dproxy_download_clicked()
 {
     QProcess p;
-
     p.startDetached("bash", QStringList() << "start.sh" << "dproxy" << this->ui->in_dproxy_url->text() << this->ui->in_dproxy_filepath->text());
-//    if (p.state() == QProcess::Running)
-//        p.
-//        p.waitForFinished(-1);
 
-//    p.waitForFinished(-1);
 }
 
 void AllProxy::on_in_button_fproxy_browse_download_clicked()
@@ -728,6 +711,7 @@ void AllProxy::on_in_button_fproxy_browse_download_clicked()
         this->ui->in_text_fproxy_path_download->setText(directory);
         project_settings.setValue("fproxy_download_path",directory);
         qDebug()<<directory;
+        update_config("fproxy_download_path", directory);
     }
 }
 
@@ -739,6 +723,14 @@ void AllProxy::on_in_button_fproxy_browse_upload_clicked()
 
     if(this->ui->fproxy_check->isChecked()){
         fd->setFileMode(QFileDialog::DirectoryOnly);
+        update_config("fproxy_upload_type", "directory");
+        project_settings.setValue("fproxy_checked","true");
+        update_config("fproxy_checked", "true");
+
+    }else{
+        update_config("fproxy_upload_type", "file");
+        project_settings.setValue("fproxy_checked","false");
+        update_config("fproxy_checked", "false");
     }
     fd->setViewMode(QFileDialog::Detail);
     int result = fd->exec();
@@ -749,6 +741,7 @@ void AllProxy::on_in_button_fproxy_browse_upload_clicked()
         this->ui->in_text_fproxy_path_upload->setText(file);
         project_settings.setValue("fproxy_upload_path",file);
         qDebug() << file;
+        update_config("fproxy_upload_path", file);
     }
 }
 
@@ -758,17 +751,12 @@ void AllProxy::on_switch_fproxy_clicked()
     QString status = project_settings.value("status_fproxy").toString();
     QProcess p;
     if(status == "on"){
-        p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "fproxy");
+        p.startDetached("bash", QStringList() << "stop.sh" << "fproxy");
     }else{
         p.startDetached("bash", QStringList() << "start.sh" << "fproxy");
-//        QProcess::startDetached("nc -l -k 12121");
-//        QThread ::sleep(100000);
     }
 
-//    if (p.state() == QProcess::Running)
-//        p.waitForFinished(-1);
-//    p.waitForFinished(-1);
-
+    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_vproxy_clicked()
@@ -781,11 +769,6 @@ void AllProxy::on_switch_vproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "vproxy");
     }
-
-    if (p.state() == QProcess::Running)
-        p.waitForFinished(-1);
-    p.waitForFinished(-1);
-
 }
 
 void AllProxy::on_switch_sproxy_clicked()
@@ -798,10 +781,6 @@ void AllProxy::on_switch_sproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "sproxy");
     }
-
-    if (p.state() == QProcess::Running)
-        p.waitForFinished(-1);
-    p.waitForFinished(-1);
 
 }
 
@@ -816,10 +795,6 @@ void AllProxy::on_switch_lproxy_clicked()
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "lproxy");
     }
 
-    if (p.state() == QProcess::Running)
-        p.waitForFinished(-1);
-    p.waitForFinished(-1);
-
 }
 
 void AllProxy::on_switch_tproxy_clicked()
@@ -832,10 +807,6 @@ void AllProxy::on_switch_tproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
     }
-
-    if (p.state() == QProcess::Running)
-        p.waitForFinished(-1);
-    p.waitForFinished(-1);
 
 }
 
@@ -850,8 +821,20 @@ void AllProxy::on_switch_cproxy_clicked()
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "cproxy");
     }
 
-    if (p.state() == QProcess::Running)
-        p.waitForFinished(-1);
-    p.waitForFinished(-1);
+}
+
+void AllProxy::on_in_button_fproxy_send_clicked()
+{
+    QSettings project_settings("project_settings");
+    if(project_settings.value("fproxy_dest_ip").toString() != this->ui->in_text_fproxy_dip->text()){
+        project_settings.setValue("fproxy_dest_ip", this->ui->in_text_fproxy_dip->text());
+        update_config("fproxy_dest_ip", this->ui->in_text_fproxy_dip->text());
+    }
+    QProcess p;
+    p.startDetached("gksudo", QStringList() << "bash" << "fproxy/send.sh");
+}
+
+void AllProxy::on_fproxy_check_clicked()
+{
 
 }

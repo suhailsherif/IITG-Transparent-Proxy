@@ -2,6 +2,7 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+source /etc/environment
 
 if [ -f $allproxy_path/pid/fproxy ] 
 then 

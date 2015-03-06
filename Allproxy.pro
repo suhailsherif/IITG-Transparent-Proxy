@@ -15,11 +15,15 @@ QMAKE_CFLAGS += -std=gnu99
 
 SOURCES += main.cpp\
         allproxy.cpp \
+    cproxy.cpp \
+    fproxy.cpp
 
 
 HEADERS  += allproxy.h \
     constants.h \
     constants.h \
+    cproxy.h \
+    fproxy.h
 
 FORMS    += allproxy.ui
 

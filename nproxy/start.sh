@@ -2,6 +2,7 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+source /etc/environment
 
 source $allproxy_path/config/config.sh
 
@@ -15,6 +16,7 @@ echo "socks_proxy=socks://$nproxy_username:$nproxy_password@$nproxy_server:$npro
 
 echo "no_proxy=\"localhost,127.0.0.0/8,::1,*.iitg.ernet.in,*.iitg.ac.in,202.141.80.0/23\" " >> /etc/environment
 
+echo "allproxy_path=$allproxy_path" >> /etc/environment
 echo "Acquire::http::proxy \"http://$nproxy_username:$nproxy_password@$nproxy_server:$nproxy_port/\"; " > /etc/apt/apt.conf
 echo "Acquire::http::proxy \"http://$nproxy_username:$nproxy_password@$nproxy_server:$nproxy_port/\"; " >> /etc/apt/apt.conf
 echo "Acquire::http::proxy \"http://$nproxy_username:$nproxy_password@$nproxy_server:$nproxy_port/\"; " >> /etc/apt/apt.conf

@@ -1,4 +1,5 @@
 #!/bin/bash
+source /etc/environment
 
 # Killing fake DNS server, if running
 sudo fuser -k 55/udp

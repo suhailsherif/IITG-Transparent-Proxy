@@ -9,6 +9,9 @@ start)
 	sudo iptables -t nat -A OUTPUT -p udp --dport 7708 -j REDIRECT --to 55
 	sudo iptables -t nat -A OUTPUT -p udp --dport 7717 -j REDIRECT --to 55
 	sudo iptables -t nat -A OUTPUT -p udp --dport 20560 -j REDIRECT --to 55
+	sudo iptables -t nat -A OUTPUT -p udp --dport 5243 -j REDIRECT --to 55	# viber
+	sudo iptables -t nat -A OUTPUT -p udp --dport 9785 -j REDIRECT --to 55	# viber
+	
 
 	sudo iptables -t nat -A OUTPUT -d 127.0.0.0/8 -j RETURN
 	sudo iptables -t nat -A OUTPUT -p tcp -d 10.0.0.0/8 -j RETURN
@@ -24,8 +27,8 @@ start)
 	sudo iptables -t nat -A OUTPUT -p tcp --dport 5228 -j REDIRECT --to 8124
 	sudo iptables -t nat -A OUTPUT -p tcp --dport 5223 -j REDIRECT --to 8124
 	sudo iptables -t nat -A OUTPUT -p tcp --dport 5222 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5242 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 4244 -j REDIRECT --to 8124
+	sudo iptables -t nat -A OUTPUT -p tcp --dport 5242 -j REDIRECT --to 8124	# viber
+	sudo iptables -t nat -A OUTPUT -p tcp --dport 4244 -j REDIRECT --to 8124	# viber
 	sudo iptables -t nat -A OUTPUT -p tcp --dport 943 -j REDIRECT --to 8124
 	sudo iptables -t nat -A OUTPUT -p tcp --dport 28852 -j REDIRECT --to 8124
 	sudo iptables -t nat -A OUTPUT -p tcp --dport 8075 -j REDIRECT --to 8124

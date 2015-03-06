@@ -1,4 +1,5 @@
 #!/bin/bash
+source /etc/environment
 
 
 echo "

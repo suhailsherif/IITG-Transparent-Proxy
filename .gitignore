@@ -13,3 +13,4 @@ config.sh
 new.txt
 vpnbook
 *.iso
+*.o

@@ -46,9 +46,13 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = main.cpp \
-		allproxy.cpp moc_allproxy.cpp
+		allproxy.cpp \
+		cproxy.cpp \
+		fproxy.cpp moc_allproxy.cpp
 OBJECTS       = main.o \
 		allproxy.o \
+		cproxy.o \
+		fproxy.o \
 		moc_allproxy.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
@@ -281,7 +285,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/Allproxy1.0.0 || mkdir -p .tmp/Allproxy1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.h constants.h constants.h .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents main.cpp allproxy.cpp .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.ui .tmp/Allproxy1.0.0/ && (cd `dirname .tmp/Allproxy1.0.0` && $(TAR) Allproxy1.0.0.tar Allproxy1.0.0 && $(COMPRESS) Allproxy1.0.0.tar) && $(MOVE) `dirname .tmp/Allproxy1.0.0`/Allproxy1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/Allproxy1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.h constants.h constants.h cproxy.h fproxy.h .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents main.cpp allproxy.cpp cproxy.cpp fproxy.cpp .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.ui .tmp/Allproxy1.0.0/ && (cd `dirname .tmp/Allproxy1.0.0` && $(TAR) Allproxy1.0.0.tar Allproxy1.0.0 && $(COMPRESS) Allproxy1.0.0.tar) && $(MOVE) `dirname .tmp/Allproxy1.0.0`/Allproxy1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/Allproxy1.0.0
 
 
 clean:compiler_clean 
@@ -715,6 +719,10 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qtoolbox.h \
 		/usr/include/qt5/QtWidgets/qframe.h \
 		ui_allproxy.h \
+		/usr/include/qt5/QtCore/QVariant \
+		/usr/include/qt5/QtWidgets/QAction \
+		/usr/include/qt5/QtWidgets/qaction.h \
+		/usr/include/qt5/QtWidgets/qactiongroup.h \
 		/usr/include/qt5/QtWidgets/QApplication \
 		/usr/include/qt5/QtWidgets/qapplication.h \
 		/usr/include/qt5/QtCore/qcoreapplication.h \
@@ -722,14 +730,15 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
 		/usr/include/qt5/QtGui/qguiapplication.h \
 		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtCore/QTranslator \
-		/usr/include/qt5/QtCore/qtranslator.h \
-		/usr/include/qt5/QtCore/QLocale \
-		/usr/include/qt5/QtCore/QLibraryInfo \
-		/usr/include/qt5/QtCore/qlibraryinfo.h \
-		/usr/include/qt5/QtCore/qdatetime.h \
-		/usr/include/qt5/QtWidgets/QTreeView \
-		/usr/include/qt5/QtWidgets/qtreeview.h \
+		/usr/include/qt5/QtWidgets/QButtonGroup \
+		/usr/include/qt5/QtWidgets/qbuttongroup.h \
+		/usr/include/qt5/QtWidgets/QCheckBox \
+		/usr/include/qt5/QtWidgets/qcheckbox.h \
+		/usr/include/qt5/QtWidgets/qabstractbutton.h \
+		/usr/include/qt5/QtWidgets/QGroupBox \
+		/usr/include/qt5/QtWidgets/qgroupbox.h \
+		/usr/include/qt5/QtWidgets/QHeaderView \
+		/usr/include/qt5/QtWidgets/qheaderview.h \
 		/usr/include/qt5/QtWidgets/qabstractitemview.h \
 		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
 		/usr/include/qt5/QtCore/qitemselectionmodel.h \
@@ -743,6 +752,34 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qstyle.h \
 		/usr/include/qt5/QtWidgets/qtabbar.h \
 		/usr/include/qt5/QtWidgets/qrubberband.h \
+		/usr/include/qt5/QtWidgets/QLabel \
+		/usr/include/qt5/QtWidgets/qlabel.h \
+		/usr/include/qt5/QtWidgets/QLayout \
+		/usr/include/qt5/QtWidgets/qlayout.h \
+		/usr/include/qt5/QtWidgets/qlayoutitem.h \
+		/usr/include/qt5/QtWidgets/qboxlayout.h \
+		/usr/include/qt5/QtWidgets/qgridlayout.h \
+		/usr/include/qt5/QtWidgets/QLineEdit \
+		/usr/include/qt5/QtWidgets/qlineedit.h \
+		/usr/include/qt5/QtGui/qtextcursor.h \
+		/usr/include/qt5/QtGui/qtextformat.h \
+		/usr/include/qt5/QtGui/qpen.h \
+		/usr/include/qt5/QtGui/qtextoption.h \
+		/usr/include/qt5/QtWidgets/QProgressBar \
+		/usr/include/qt5/QtWidgets/qprogressbar.h \
+		/usr/include/qt5/QtWidgets/QPushButton \
+		/usr/include/qt5/QtWidgets/qpushbutton.h \
+		/usr/include/qt5/QtWidgets/QRadioButton \
+		/usr/include/qt5/QtWidgets/qradiobutton.h \
+		/usr/include/qt5/QtWidgets/QWidget \
+		/usr/include/qt5/QtCore/QTranslator \
+		/usr/include/qt5/QtCore/qtranslator.h \
+		/usr/include/qt5/QtCore/QLocale \
+		/usr/include/qt5/QtCore/QLibraryInfo \
+		/usr/include/qt5/QtCore/qlibraryinfo.h \
+		/usr/include/qt5/QtCore/qdatetime.h \
+		/usr/include/qt5/QtWidgets/QTreeView \
+		/usr/include/qt5/QtWidgets/qtreeview.h \
 		/usr/include/qt5/QtCore/QSettings \
 		/usr/include/qt5/QtCore/qsettings.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
@@ -751,10 +788,6 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/QTextEdit \
 		/usr/include/qt5/QtWidgets/qtextedit.h \
 		/usr/include/qt5/QtGui/qtextdocument.h \
-		/usr/include/qt5/QtGui/qtextoption.h \
-		/usr/include/qt5/QtGui/qtextcursor.h \
-		/usr/include/qt5/QtGui/qtextformat.h \
-		/usr/include/qt5/QtGui/qpen.h \
 		/usr/include/qt5/QtGui/QtGui \
 		/usr/include/qt5/QtGui/QtGuiDepends \
 		/usr/include/qt5/QtCore/QtCore \
@@ -930,12 +963,17 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtGui/qdesktopservices.h \
 		/usr/include/qt5/QtGui/qtguiversion.h \
 		/usr/include/qt5/QtWidgets/QVBoxLayout \
-		/usr/include/qt5/QtWidgets/qboxlayout.h \
-		/usr/include/qt5/QtWidgets/qlayout.h \
-		/usr/include/qt5/QtWidgets/qlayoutitem.h \
-		/usr/include/qt5/QtWidgets/qgridlayout.h \
-		/usr/include/qt5/QtGui/QCloseEvent
+		/usr/include/qt5/QtGui/QCloseEvent \
+		/usr/include/qt5/QtCore/QThread \
+		/usr/include/qt5/QtWidgets/QInputDialog \
+		/usr/include/qt5/QtWidgets/qinputdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o allproxy.o allproxy.cpp
+
+cproxy.o: cproxy.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cproxy.o cproxy.cpp
+
+fproxy.o: fproxy.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fproxy.o fproxy.cpp
 
 moc_allproxy.o: moc_allproxy.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_allproxy.o moc_allproxy.cpp

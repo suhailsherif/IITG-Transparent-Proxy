@@ -36,5 +36,12 @@ export tproxy_port=
 export tproxy_username=
 export tproxy_password=
 
+# File Transfer settings
+export fproxy_download_path=
+export fproxy_upload_path=
+export fproxy_upload_type=
+export fproxy_dest_ip=
+export fproxy_checked=
+
 #Misc
 export allproxy_path=

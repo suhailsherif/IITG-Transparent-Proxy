@@ -9,11 +9,10 @@
  
  
 if [[ -z "$1" || -z "$2" ]]; then
-  echo "Usage: $0 <base_port> <increment>"
-  exit 1
+  echo "0"
 else 
 	if [[ $2 -eq 0 ]]; then
-		exit 1
+		echo "0"
 	fi
 fi
  
@@ -30,4 +29,3 @@ while [[ -n "$isfree" ]]; do
 done
  
 echo "$port"
-exit 0

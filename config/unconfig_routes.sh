@@ -1,4 +1,5 @@
 #!/bin/bash
+source /etc/environment
 
 sudo ip route del 202.141.80.0/23 via $nproxy_gateway
 def_gateway=$(/sbin/ip route | awk '/default/ { print $3 }')

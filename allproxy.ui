@@ -44,15 +44,15 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QToolBox::tab {
-background-color: rgba(80, 80, 80, 150);
+background-color: rgba(180, 180, 180, 150);
 border-radius: 3px;
-color: white;
+color: black;
 }
 
 QToolBox::tab:selected { 
-background-color: rgba(50, 180, 50, 150);
+background-color: rgba(50, 50, 50, 150);
 font: italic;
-color: black;
+color: white;
 }
 </string>
     </property>
@@ -63,7 +63,7 @@ color: black;
      <enum>QFrame::Sunken</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_nproxy">
      <property name="geometry">

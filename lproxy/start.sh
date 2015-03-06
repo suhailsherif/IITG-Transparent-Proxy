@@ -1,4 +1,5 @@
 #!/bin/bash
+source /etc/environment
 
 source $allproxy_path/config/config.sh
 # echo "1" >> new.txt

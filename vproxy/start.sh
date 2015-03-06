@@ -1,4 +1,5 @@
 #!/bin/bash
+source /etc/environment
 
 sudo killall -I openvpn
 source $allproxy_path/config/config.sh

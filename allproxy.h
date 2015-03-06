@@ -105,6 +105,12 @@ private slots:
 
     void on_in_text_lproxy_password_textChanged(const QString &arg1);
 
+    void on_fproxy_check_toggled(bool checked);
+
+    void on_in_button_fproxy_send_clicked();
+
+    void on_fproxy_check_clicked();
+
 private:
     Ui::AllProxy *ui;
     QToolBox *box;

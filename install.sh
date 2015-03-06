@@ -5,8 +5,8 @@
 
 # install required packages
 req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl"\
-	"putty" "squid3" "sshpass" "netcat" "openssh-server" "openssh-sftp-server"\
-	"openssh-client" "gksu" "python-pycurl" "opus-tools" "multicat" )
+	"putty" "squid3" "sshpass" "netcat" "openssh-server" \
+	"openssh-client" "gksu" "python-pycurl" "opus-tools" "zenity" )
 for i in "${req_packages[@]}"
 do
 	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "installed")
@@ -28,15 +28,16 @@ fi
 cur_path=$(pwd)
 sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
 echo "export allproxy_path=$cur_path" >> ~/.bashrc
+echo "allproxy_path=$cur_path" >> /etc/environment
+
 echo ". $allproxy_path/config/config.sh" >> ~/.bashrc
 
 ############
 ## nproxy ##
 ############
 user=$(logname)
-
 # backup files 
-back_files=( "/etc/environment" "/etc/apt/apt.conf" "/home/$user/.bashrc" )
+back_files=( "/etc/environment" "/etc/apt/apt.conf" "$HOME/.bashrc" )
 for i in "${back_files[@]}"
 do
 	if [ -e "$i" ] 

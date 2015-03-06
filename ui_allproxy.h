@@ -151,15 +151,15 @@ public:
         font.setWeight(50);
         toolbox_main->setFont(font);
         toolbox_main->setStyleSheet(QLatin1String("QToolBox::tab {\n"
-"background-color: rgba(80, 80, 80, 150);\n"
+"background-color: rgba(180, 180, 180, 150);\n"
 "border-radius: 3px;\n"
-"color: white;\n"
+"color: black;\n"
 "}\n"
 "\n"
 "QToolBox::tab:selected { \n"
-"background-color: rgba(50, 180, 50, 150);\n"
+"background-color: rgba(50, 50, 50, 150);\n"
 "font: italic;\n"
-"color: black;\n"
+"color: white;\n"
 "}\n"
 ""));
         toolbox_main->setFrameShape(QFrame::NoFrame);
@@ -543,7 +543,7 @@ public:
 
         retranslateUi(AllProxy);
 
-        toolbox_main->setCurrentIndex(5);
+        toolbox_main->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(AllProxy);
