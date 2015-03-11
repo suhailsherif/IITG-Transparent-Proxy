@@ -6,9 +6,6 @@ source /etc/environment
 
 sudo ps -ef | grep "squid3" | awk '{print $2}' | xargs kill
 
-echo "7" >> new.txt
-
-sudo echo "8" >> new.txt
 if [ -f $allproxy_path/pid/lproxy ] 
 then 
 	sed 's|[0-9]*|sudo kill &|g' $allproxy_path/pid/lproxy | bash

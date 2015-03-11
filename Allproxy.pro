@@ -14,16 +14,12 @@ TEMPLATE = app
 QMAKE_CFLAGS += -std=gnu99
 
 SOURCES += main.cpp\
-        allproxy.cpp \
-    cproxy.cpp \
-    fproxy.cpp
+        allproxy.cpp
 
 
 HEADERS  += allproxy.h \
     constants.h \
-    constants.h \
-    cproxy.h \
-    fproxy.h
+    constants.h
 
 FORMS    += allproxy.ui
 

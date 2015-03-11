@@ -3,21 +3,64 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
+# check internet connection
+status_code=$(curl -sL -w "%{http_code}\\n" "http://www.google.co.in/" -o /dev/null)
+if [ "$status_code" = "200" ];then
+	echo "Proxy Connection successful"
+else
+	if [ -e /usr/bin/zenity ]; then
+
+		OUTPUT=$(zenity --forms --title="Allproxy" --text="Proxy Settings" --separator=","  \
+		   --add-entry="Proxy Server" \
+		   --add-entry="Proxy Port" \
+		   --add-entry="Username" \
+		   --add-password="Password" )
+
+		accepted=$?
+		if [ ! "$accepted" -eq "0" ]; then
+			echo "Installation aborted !!"
+		    exit 1
+		fi
+
+		proxy_server=$(echo $OUTPUT | awk -F, '{print $1}')
+		proxy_port=$(echo $OUTPUT | awk -F, '{print $2}')
+		proxy_username=$(echo $OUTPUT | awk -F, '{print $2}')
+		proxy_password=$(echo $OUTPUT | awk -F, '{print $2}')
+		
+
+		export http_proxy="http://$proxy_username:$proxy_password@$proxy_server:$proxy_port/"
+		export https_proxy="https://$proxy_username:$proxy_password@$proxy_server:$proxy_port/"
+		
+		status_code=$(curl -sL -w "%{http_code}\\n" "http://www.google.co.in/" -o /dev/null)
+		if [ "$status_code" = "200" ];then
+			echo "Proxy Connection successful"
+		else
+			echo "Proxy Connection failed"
+			echo "Installation aborted . Try reinstalling"
+			exit
+		fi
+	fi
+fi
+
+# update
+sudo -S apt-get update && sudo apt-get upgrade -y
+
 # install required packages
 req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl"\
-	"putty" "squid3" "sshpass" "netcat" "openssh-server" \
-	"openssh-client" "gksu" "python-pycurl" "opus-tools" "zenity" )
+	"putty" "squid3" "sshpass" "netcat" "openssh-server" "nmap" "notify-osd" \
+	"openssh-client" "gksu" "python-pycurl" "opus-tools" "zenity" "redsocks" \
+	)
 for i in "${req_packages[@]}"
 do
 	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "installed")
 	echo Checking package $i: $PKG_OK
 	if [ "" = "$PKG_OK" ]; then
-	  echo "No $i. Setting up $i."
+	  echo "$i not installed, setting up $i ..."
 	  sudo apt-get --force-yes --yes install $i
 	fi
 done
 
-# create a config file
+# create the configuration file
 if [ ! -f ./config/config.sh ] 
 then
 	echo "Creating file config.sh ..."
@@ -27,10 +70,10 @@ fi
 # set allproxy path
 cur_path=$(pwd)
 sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
-echo "export allproxy_path=$cur_path" >> ~/.bashrc
+echo "export allproxy_path=$cur_path" >> $HOME/.bashrc
 echo "allproxy_path=$cur_path" >> /etc/environment
 
-echo ". $allproxy_path/config/config.sh" >> ~/.bashrc
+echo ". $allproxy_path/config/config.sh" >> $HOME/.bashrc
 
 ############
 ## nproxy ##
@@ -57,17 +100,15 @@ echo $http_username
 ## tproxy ##
 ############
 
-# make redsocks
-if [ ! -f ./redsocks/redsocks ] 
-then
-	echo "making redsocks"
-	make -C ./redsocks/ 
-fi
+chown root:root -R /var/log
+chmod 777 -R /var/log
 
 
 ############
 ## dproxy ##
 ############
+
+# set python version
 python_version=2.7
 
 # Make the main file executable
@@ -81,3 +122,15 @@ cp ./dproxy/main.py /usr/bin/pycurl-download
 
 # Create a log file and change its read write permission
 touch /var/log/downloader.log ; chmod 777 /var/log/downloader.log
+
+
+############
+## cproxy ##
+############
+
+# notification
+sudo -E add-apt-repository ppa:leolik/leolik -y
+sudo -E add-apt-repository ppa:amandeepgrewal/notifyosdconfig -y
+sudo -S apt-get update && sudo apt-get upgrade -y
+sudo apt-get install notifyosdconfig libnotify-bin
+notifyosdconf 

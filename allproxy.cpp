@@ -769,6 +769,7 @@ void AllProxy::on_switch_vproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "vproxy");
     }
+    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_sproxy_clicked()
@@ -781,7 +782,7 @@ void AllProxy::on_switch_sproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "sproxy");
     }
-
+    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_lproxy_clicked()
@@ -794,7 +795,7 @@ void AllProxy::on_switch_lproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "lproxy");
     }
-
+    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_tproxy_clicked()
@@ -807,7 +808,7 @@ void AllProxy::on_switch_tproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
     }
-
+    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_cproxy_clicked()
@@ -820,7 +821,7 @@ void AllProxy::on_switch_cproxy_clicked()
     }else{
         p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "cproxy");
     }
-
+    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_in_button_fproxy_send_clicked()
@@ -837,4 +838,28 @@ void AllProxy::on_in_button_fproxy_send_clicked()
 void AllProxy::on_fproxy_check_clicked()
 {
 
+}
+
+void AllProxy::on_in_button_cproxy_call_clicked()
+{
+    QSettings project_settings("project_settings");
+    project_settings.setValue("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
+    update_config("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
+    QProcess p;
+    p.startDetached("gksudo", QStringList() << "bash" << "cproxy/call.sh");
+}
+
+void AllProxy::on_in_button_cproxy_send_clicked()
+{
+    QSettings project_settings("project_settings");
+    project_settings.setValue("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
+    update_config("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
+    QProcess p;
+    p.startDetached("gksudo", QStringList() << "bash" << "cproxy/send.sh");
+}
+
+void AllProxy::on_in_button_cproxy_change_settings_clicked()
+{
+    QProcess p;
+    p.startDetached("notifyosdconf");
 }

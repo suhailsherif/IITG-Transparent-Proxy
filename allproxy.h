@@ -111,6 +111,12 @@ private slots:
 
     void on_fproxy_check_clicked();
 
+    void on_in_button_cproxy_call_clicked();
+
+    void on_in_button_cproxy_send_clicked();
+
+    void on_in_button_cproxy_change_settings_clicked();
+
 private:
     Ui::AllProxy *ui;
     QToolBox *box;

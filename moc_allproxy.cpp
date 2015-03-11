@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_AllProxy_t {
-    QByteArrayData data[49];
-    char stringdata[1592];
+    QByteArrayData data[52];
+    char stringdata[1702];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -77,7 +77,10 @@ QT_MOC_LITERAL(44, 1463, 38),
 QT_MOC_LITERAL(45, 1502, 23),
 QT_MOC_LITERAL(46, 1526, 7),
 QT_MOC_LITERAL(47, 1534, 32),
-QT_MOC_LITERAL(48, 1567, 23)
+QT_MOC_LITERAL(48, 1567, 23),
+QT_MOC_LITERAL(49, 1591, 32),
+QT_MOC_LITERAL(50, 1624, 32),
+QT_MOC_LITERAL(51, 1657, 43)
     },
     "AllProxy\0on_in_button_browse_clicked\0"
     "\0on_in_text_vproxy_username_textChanged\0"
@@ -124,6 +127,9 @@ QT_MOC_LITERAL(48, 1567, 23)
     "on_fproxy_check_toggled\0checked\0"
     "on_in_button_fproxy_send_clicked\0"
     "on_fproxy_check_clicked\0"
+    "on_in_button_cproxy_call_clicked\0"
+    "on_in_button_cproxy_send_clicked\0"
+    "on_in_button_cproxy_change_settings_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -133,7 +139,7 @@ static const uint qt_meta_data_AllProxy[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      45,   14, // methods
+      48,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -141,51 +147,54 @@ static const uint qt_meta_data_AllProxy[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  239,    2, 0x08,
-       3,    1,  240,    2, 0x08,
-       5,    1,  243,    2, 0x08,
-       6,    0,  246,    2, 0x08,
-       7,    0,  247,    2, 0x08,
-       8,    0,  248,    2, 0x08,
-       9,    0,  249,    2, 0x08,
-      10,    0,  250,    2, 0x08,
-      11,    1,  251,    2, 0x08,
-      12,    1,  254,    2, 0x08,
-      13,    1,  257,    2, 0x08,
-      14,    1,  260,    2, 0x08,
-      15,    1,  263,    2, 0x08,
-      16,    1,  266,    2, 0x08,
-      17,    1,  269,    2, 0x08,
-      18,    1,  272,    2, 0x08,
-      19,    1,  275,    2, 0x08,
-      20,    1,  278,    2, 0x08,
-      21,    1,  281,    2, 0x08,
-      22,    1,  284,    2, 0x08,
-      23,    1,  287,    2, 0x08,
-      24,    1,  290,    2, 0x08,
-      25,    1,  293,    2, 0x08,
-      26,    1,  296,    2, 0x08,
-      27,    1,  299,    2, 0x08,
-      28,    1,  302,    2, 0x08,
-      29,    1,  305,    2, 0x08,
-      30,    1,  308,    2, 0x08,
-      31,    1,  311,    2, 0x08,
-      32,    1,  314,    2, 0x08,
-      33,    0,  317,    2, 0x08,
-      34,    0,  318,    2, 0x08,
-      35,    0,  319,    2, 0x08,
-      36,    0,  320,    2, 0x08,
-      37,    0,  321,    2, 0x08,
-      38,    0,  322,    2, 0x08,
-      39,    0,  323,    2, 0x08,
-      40,    0,  324,    2, 0x08,
-      41,    0,  325,    2, 0x08,
-      42,    0,  326,    2, 0x08,
-      43,    1,  327,    2, 0x08,
-      44,    1,  330,    2, 0x08,
-      45,    1,  333,    2, 0x08,
-      47,    0,  336,    2, 0x08,
-      48,    0,  337,    2, 0x08,
+       1,    0,  254,    2, 0x08,
+       3,    1,  255,    2, 0x08,
+       5,    1,  258,    2, 0x08,
+       6,    0,  261,    2, 0x08,
+       7,    0,  262,    2, 0x08,
+       8,    0,  263,    2, 0x08,
+       9,    0,  264,    2, 0x08,
+      10,    0,  265,    2, 0x08,
+      11,    1,  266,    2, 0x08,
+      12,    1,  269,    2, 0x08,
+      13,    1,  272,    2, 0x08,
+      14,    1,  275,    2, 0x08,
+      15,    1,  278,    2, 0x08,
+      16,    1,  281,    2, 0x08,
+      17,    1,  284,    2, 0x08,
+      18,    1,  287,    2, 0x08,
+      19,    1,  290,    2, 0x08,
+      20,    1,  293,    2, 0x08,
+      21,    1,  296,    2, 0x08,
+      22,    1,  299,    2, 0x08,
+      23,    1,  302,    2, 0x08,
+      24,    1,  305,    2, 0x08,
+      25,    1,  308,    2, 0x08,
+      26,    1,  311,    2, 0x08,
+      27,    1,  314,    2, 0x08,
+      28,    1,  317,    2, 0x08,
+      29,    1,  320,    2, 0x08,
+      30,    1,  323,    2, 0x08,
+      31,    1,  326,    2, 0x08,
+      32,    1,  329,    2, 0x08,
+      33,    0,  332,    2, 0x08,
+      34,    0,  333,    2, 0x08,
+      35,    0,  334,    2, 0x08,
+      36,    0,  335,    2, 0x08,
+      37,    0,  336,    2, 0x08,
+      38,    0,  337,    2, 0x08,
+      39,    0,  338,    2, 0x08,
+      40,    0,  339,    2, 0x08,
+      41,    0,  340,    2, 0x08,
+      42,    0,  341,    2, 0x08,
+      43,    1,  342,    2, 0x08,
+      44,    1,  345,    2, 0x08,
+      45,    1,  348,    2, 0x08,
+      47,    0,  351,    2, 0x08,
+      48,    0,  352,    2, 0x08,
+      49,    0,  353,    2, 0x08,
+      50,    0,  354,    2, 0x08,
+      51,    0,  355,    2, 0x08,
 
  // slots: parameters
     QMetaType::Void,
@@ -231,6 +240,9 @@ static const uint qt_meta_data_AllProxy[] = {
     QMetaType::Void, QMetaType::QString,    4,
     QMetaType::Void, QMetaType::QString,    4,
     QMetaType::Void, QMetaType::Bool,   46,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -287,6 +299,9 @@ void AllProxy::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 42: _t->on_fproxy_check_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 43: _t->on_in_button_fproxy_send_clicked(); break;
         case 44: _t->on_fproxy_check_clicked(); break;
+        case 45: _t->on_in_button_cproxy_call_clicked(); break;
+        case 46: _t->on_in_button_cproxy_send_clicked(); break;
+        case 47: _t->on_in_button_cproxy_change_settings_clicked(); break;
         default: ;
         }
     }
@@ -317,13 +332,13 @@ int AllProxy::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 45)
+        if (_id < 48)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 45;
+        _id -= 48;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 45)
+        if (_id < 48)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 45;
+        _id -= 48;
     }
     return _id;
 }

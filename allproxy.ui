@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>671</width>
-    <height>509</height>
+    <height>538</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,7 +33,7 @@
       <x>10</x>
       <y>10</y>
       <width>651</width>
-      <height>441</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="font">
@@ -63,7 +63,7 @@ color: white;
      <enum>QFrame::Sunken</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_nproxy">
      <property name="geometry">
@@ -71,7 +71,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -279,7 +279,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <attribute name="label">
@@ -413,13 +413,98 @@ color: white;
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>651</width>
+       <height>202</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Cproxy                                                                                                                                                      - Chat</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>120</y>
+        <width>411</width>
+        <height>78</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="in_button_cproxy_send">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>80</y>
+        <width>161</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Send   Message</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="in_text_vproxy_path_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>21</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>IP</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="in_text_cproxy_dip">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="in_button_cproxy_call">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Voice   Call</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="in_button_cproxy_change_settings">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>10</y>
+        <width>251</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Change Notification Settings</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="page_vproxy">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -681,7 +766,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <attribute name="label">
@@ -789,7 +874,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -961,7 +1046,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1110,7 +1195,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1236,7 +1321,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>193</height>
+       <height>202</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1285,7 +1370,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>470</y>
+      <y>500</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1298,7 +1383,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>510</x>
-      <y>470</y>
+      <y>500</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1311,7 +1396,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>460</x>
-      <y>470</y>
+      <y>500</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1324,7 +1409,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>470</y>
+      <y>500</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1337,7 +1422,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>470</y>
+      <y>500</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1350,7 +1435,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>470</y>
+      <y>500</y>
       <width>41</width>
       <height>31</height>
      </rect>
