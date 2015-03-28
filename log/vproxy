@@ -1,13 +1,11 @@
-VVproxy
-vproxy_path:  /home/kunal15595/Allproxy/vpnbook/euro1.ovpn
+Vproxy
+vproxy_path:  /home/kunal15595/Allproxy/vpnbook/us1.ovpn
 vproxy_cred_path:  
 vproxy_server:  202.141.80.19
 vpnbook_cred_path:  
 vproxy_port:  3128
 vproxy_username:  vpnbook
-vproxy_password:  rawrA6ep
-vproxy_proxy_username:  k.khandelwal
-vproxy_proxy_password:  kunal15595
+vproxy_password:  cHab7chu
 Creating temporary files for openvpn connection ...
 initiating openvpn connection ...
 removing temporary credential files ...

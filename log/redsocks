@@ -1,0 +1,1234 @@
+1427509851.970014 main.c:152 main(...) redsocks started
+1427509852.100243 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:58772->173.194.123.127:443]: accepted
+1427509852.422078 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:58772->173.194.123.127:443]: data relaying started
+1427509852.701038 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36298->198.252.206.141:80]: accepted
+1427509852.701111 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36299->198.252.206.141:80]: accepted
+1427509852.701242 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36300->198.252.206.141:80]: accepted
+1427509852.701350 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36301->198.252.206.141:80]: accepted
+1427509852.701455 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36675->107.22.164.38:80]: accepted
+1427509852.701517 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36676->107.22.164.38:80]: accepted
+1427509852.701556 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36677->107.22.164.38:80]: accepted
+1427509852.701609 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36678->107.22.164.38:80]: accepted
+1427509852.701655 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36679->107.22.164.38:80]: accepted
+1427509852.701967 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52452->198.252.206.140:80]: accepted
+1427509852.702033 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52453->198.252.206.140:80]: accepted
+1427509852.702066 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52454->198.252.206.140:80]: accepted
+1427509852.702448 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51861->74.125.224.208:80]: accepted
+1427509852.703261 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51863->74.125.224.208:80]: accepted
+1427509852.704782 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51866->74.125.224.208:80]: accepted
+1427509852.706613 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47862->173.194.123.4:80]: accepted
+1427509852.706640 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47863->173.194.123.4:80]: accepted
+1427509852.706658 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47864->173.194.123.4:80]: accepted
+1427509852.706722 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:55511->103.31.7.35:80]: accepted
+1427509852.706757 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:55512->103.31.7.35:80]: accepted
+1427509852.706817 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40860->72.21.91.121:443]: accepted
+1427509852.706859 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40861->72.21.91.121:443]: accepted
+1427509852.706912 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40863->72.21.91.121:443]: accepted
+1427509852.706951 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40864->72.21.91.121:443]: accepted
+1427509852.706988 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40866->72.21.91.121:443]: accepted
+1427509852.707026 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40867->72.21.91.121:443]: accepted
+1427509852.972544 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40864->72.21.91.121:443]: data relaying started
+1427509852.983764 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40863->72.21.91.121:443]: data relaying started
+1427509852.984318 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40867->72.21.91.121:443]: data relaying started
+1427509852.984870 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40860->72.21.91.121:443]: data relaying started
+1427509852.987912 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40866->72.21.91.121:443]: data relaying started
+1427509852.988320 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40861->72.21.91.121:443]: data relaying started
+1427509853.397597 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:41458->173.194.123.1:443]: accepted
+1427509853.547621 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52452->198.252.206.140:80]: data relaying started
+1427509853.597295 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51863->74.125.224.208:80]: data relaying started
+1427509853.598529 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51861->74.125.224.208:80]: data relaying started
+1427509853.598571 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51863->74.125.224.208:80]: both client and server disconnected
+1427509853.598583 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51863->74.125.224.208:80]: dropping client
+1427509853.599040 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45242->190.93.247.58:80]: accepted
+1427509853.599136 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45243->190.93.247.58:80]: accepted
+1427509853.599221 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45244->190.93.247.58:80]: accepted
+1427509853.600158 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51866->74.125.224.208:80]: data relaying started
+1427509853.600186 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45245->190.93.247.58:80]: accepted
+1427509853.600213 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51861->74.125.224.208:80]: both client and server disconnected
+1427509853.600226 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51861->74.125.224.208:80]: dropping client
+1427509853.600281 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45246->190.93.247.58:80]: accepted
+1427509853.601135 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45247->190.93.247.58:80]: accepted
+1427509853.601407 redsocks.c:392 redsocks_shutdown(...) [10.10.1.31:51866->74.125.224.208:80]: shutdown(client, SHUT_WR): Transport endpoint is not connected
+1427509853.601445 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47192->98.139.225.43:80]: accepted
+1427509853.601472 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51866->74.125.224.208:80]: both client and server disconnected
+1427509853.601482 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51866->74.125.224.208:80]: dropping client
+1427509853.601530 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47193->98.139.225.43:80]: accepted
+1427509853.601553 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56588->104.16.13.8:80]: accepted
+1427509853.601641 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56589->104.16.13.8:80]: accepted
+1427509853.601689 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56590->104.16.13.8:80]: accepted
+1427509853.601811 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56591->104.16.13.8:80]: accepted
+1427509853.601926 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56592->104.16.13.8:80]: accepted
+1427509853.657855 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51904->74.125.224.208:80]: accepted
+1427509853.712825 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:41458->173.194.123.1:443]: data relaying started
+1427509853.911734 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52452->198.252.206.140:80]: both client and server disconnected
+1427509853.911810 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52452->198.252.206.140:80]: dropping client
+1427509853.946472 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:43749->74.125.226.169:443]: accepted
+1427509853.992479 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51904->74.125.224.208:80]: data relaying started
+1427509853.994504 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51904->74.125.224.208:80]: both client and server disconnected
+1427509853.994546 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51904->74.125.224.208:80]: dropping client
+1427509853.995112 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:42457->64.233.171.95:80]: accepted
+1427509854.106983 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:42457->64.233.171.95:80]: data relaying started
+1427509854.108432 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:42457->64.233.171.95:80]: both client and server disconnected
+1427509854.108476 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:42457->64.233.171.95:80]: dropping client
+1427509854.109562 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45243->190.93.247.58:80]: data relaying started
+1427509854.111642 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45243->190.93.247.58:80]: both client and server disconnected
+1427509854.111694 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45243->190.93.247.58:80]: dropping client
+1427509854.115149 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45242->190.93.247.58:80]: data relaying started
+1427509854.115931 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45242->190.93.247.58:80]: both client and server disconnected
+1427509854.115953 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45242->190.93.247.58:80]: dropping client
+1427509854.195638 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:37673->66.150.118.57:80]: accepted
+1427509854.195671 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:55915->63.130.77.106:80]: accepted
+1427509854.228942 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45272->190.93.247.58:80]: accepted
+1427509854.233186 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:47862->173.194.123.4:80]: data relaying started
+1427509854.235456 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:47862->173.194.123.4:80]: both client and server disconnected
+1427509854.235485 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47862->173.194.123.4:80]: dropping client
+1427509854.235552 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:55915->63.130.77.106:80]: data relaying started
+1427509854.237504 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:55915->63.130.77.106:80]: both client and server disconnected
+1427509854.237559 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:55915->63.130.77.106:80]: dropping client
+1427509854.258738 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51921->74.125.224.208:80]: accepted
+1427509854.260044 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51923->74.125.224.208:80]: accepted
+1427509854.262840 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51925->74.125.224.208:80]: accepted
+1427509854.265195 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:43749->74.125.226.169:443]: data relaying started
+1427509854.291771 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45244->190.93.247.58:80]: data relaying started
+1427509854.308528 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45245->190.93.247.58:80]: data relaying started
+1427509854.309534 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45245->190.93.247.58:80]: both client and server disconnected
+1427509854.309552 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45245->190.93.247.58:80]: dropping client
+1427509854.322867 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:55930->63.130.77.106:80]: accepted
+1427509854.355287 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:47863->173.194.123.4:80]: data relaying started
+1427509854.357047 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:47863->173.194.123.4:80]: both client and server disconnected
+1427509854.357099 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47863->173.194.123.4:80]: dropping client
+1427509854.360063 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:55930->63.130.77.106:80]: data relaying started
+1427509854.360922 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:55930->63.130.77.106:80]: both client and server disconnected
+1427509854.360993 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:55930->63.130.77.106:80]: dropping client
+1427509854.373145 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:37673->66.150.118.57:80]: data relaying started
+1427509854.374232 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:37673->66.150.118.57:80]: both client and server disconnected
+1427509854.374262 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:37673->66.150.118.57:80]: dropping client
+1427509854.392242 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:44730->66.150.48.21:80]: accepted
+1427509854.400090 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45244->190.93.247.58:80]: both client and server disconnected
+1427509854.400180 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45244->190.93.247.58:80]: dropping client
+1427509854.421838 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45246->190.93.247.58:80]: data relaying started
+1427509854.423482 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45246->190.93.247.58:80]: both client and server disconnected
+1427509854.423519 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45246->190.93.247.58:80]: dropping client
+1427509854.424865 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45247->190.93.247.58:80]: data relaying started
+1427509854.425748 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45247->190.93.247.58:80]: both client and server disconnected
+1427509854.425768 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45247->190.93.247.58:80]: dropping client
+1427509854.453915 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45272->190.93.247.58:80]: data relaying started
+1427509854.455297 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45272->190.93.247.58:80]: both client and server disconnected
+1427509854.455351 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45272->190.93.247.58:80]: dropping client
+1427509854.480883 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45285->190.93.247.58:80]: accepted
+1427509854.481629 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45287->190.93.247.58:80]: accepted
+1427509854.488771 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45289->190.93.247.58:80]: accepted
+1427509854.491140 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45291->190.93.247.58:80]: accepted
+1427509854.497551 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51940->74.125.224.208:80]: accepted
+1427509854.592727 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45287->190.93.247.58:80]: data relaying started
+1427509854.594052 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45287->190.93.247.58:80]: both client and server disconnected
+1427509854.594069 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45287->190.93.247.58:80]: dropping client
+1427509854.599453 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45289->190.93.247.58:80]: data relaying started
+1427509854.599932 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45285->190.93.247.58:80]: data relaying started
+1427509854.600779 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45289->190.93.247.58:80]: both client and server disconnected
+1427509854.600820 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45289->190.93.247.58:80]: dropping client
+1427509854.601494 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45285->190.93.247.58:80]: both client and server disconnected
+1427509854.601518 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45285->190.93.247.58:80]: dropping client
+1427509854.602835 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45291->190.93.247.58:80]: data relaying started
+1427509854.606319 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45291->190.93.247.58:80]: both client and server disconnected
+1427509854.606349 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45291->190.93.247.58:80]: dropping client
+1427509854.737225 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:44730->66.150.48.21:80]: data relaying started
+1427509854.738081 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:44730->66.150.48.21:80]: both client and server disconnected
+1427509854.738105 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:44730->66.150.48.21:80]: dropping client
+1427509854.740768 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45298->190.93.247.58:80]: accepted
+1427509854.835999 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:55511->103.31.7.35:80]: data relaying started
+1427509854.837142 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:55511->103.31.7.35:80]: both client and server disconnected
+1427509854.837166 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:55511->103.31.7.35:80]: dropping client
+1427509854.838056 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:55512->103.31.7.35:80]: data relaying started
+1427509854.840338 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:55512->103.31.7.35:80]: both client and server disconnected
+1427509854.840386 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:55512->103.31.7.35:80]: dropping client
+1427509854.843458 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45300->190.93.247.58:80]: accepted
+1427509854.853611 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45298->190.93.247.58:80]: data relaying started
+1427509854.854335 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45298->190.93.247.58:80]: both client and server disconnected
+1427509854.854360 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45298->190.93.247.58:80]: dropping client
+1427509854.874537 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52453->198.252.206.140:80]: data relaying started
+1427509854.875175 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52453->198.252.206.140:80]: both client and server disconnected
+1427509854.875199 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52453->198.252.206.140:80]: dropping client
+1427509854.957297 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45300->190.93.247.58:80]: data relaying started
+1427509854.958506 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45300->190.93.247.58:80]: both client and server disconnected
+1427509854.958537 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45300->190.93.247.58:80]: dropping client
+1427509855.100649 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51923->74.125.224.208:80]: data relaying started
+1427509855.102374 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51923->74.125.224.208:80]: both client and server disconnected
+1427509855.102453 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51923->74.125.224.208:80]: dropping client
+1427509855.104211 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51949->74.125.224.208:80]: accepted
+1427509855.362615 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51921->74.125.224.208:80]: data relaying started
+1427509855.364890 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51921->74.125.224.208:80]: both client and server disconnected
+1427509855.364931 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51921->74.125.224.208:80]: dropping client
+1427509855.367644 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51951->74.125.224.208:80]: accepted
+1427509855.504000 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51953->74.125.224.208:80]: accepted
+1427509855.648799 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51925->74.125.224.208:80]: data relaying started
+1427509855.650802 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51925->74.125.224.208:80]: both client and server disconnected
+1427509855.650844 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51925->74.125.224.208:80]: dropping client
+1427509855.740428 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51955->74.125.224.208:80]: accepted
+1427509855.832487 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40179->74.125.226.164:443]: accepted
+1427509856.074698 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51940->74.125.224.208:80]: data relaying started
+1427509856.076724 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51940->74.125.224.208:80]: both client and server disconnected
+1427509856.076779 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51940->74.125.224.208:80]: dropping client
+1427509856.077236 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:57311->190.93.246.58:80]: accepted
+1427509856.146381 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40179->74.125.226.164:443]: data relaying started
+1427509856.347917 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51961->74.125.224.208:80]: accepted
+1427509856.540174 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51949->74.125.224.208:80]: data relaying started
+1427509856.542212 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51949->74.125.224.208:80]: both client and server disconnected
+1427509856.542254 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51949->74.125.224.208:80]: dropping client
+1427509856.610407 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51963->74.125.224.208:80]: accepted
+1427509856.836628 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51951->74.125.224.208:80]: data relaying started
+1427509856.838749 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51951->74.125.224.208:80]: both client and server disconnected
+1427509856.838810 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51951->74.125.224.208:80]: dropping client
+1427509856.840680 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51953->74.125.224.208:80]: data relaying started
+1427509856.842322 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51955->74.125.224.208:80]: data relaying started
+1427509856.843007 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51953->74.125.224.208:80]: both client and server disconnected
+1427509856.843048 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51953->74.125.224.208:80]: dropping client
+1427509856.844758 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51955->74.125.224.208:80]: both client and server disconnected
+1427509856.844783 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51955->74.125.224.208:80]: dropping client
+1427509857.048346 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:57311->190.93.246.58:80]: data relaying started
+1427509857.050251 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:57311->190.93.246.58:80]: both client and server disconnected
+1427509857.050301 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:57311->190.93.246.58:80]: dropping client
+1427509857.077843 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:57318->190.93.246.58:80]: accepted
+1427509857.191771 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:57318->190.93.246.58:80]: data relaying started
+1427509857.192551 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:57318->190.93.246.58:80]: both client and server disconnected
+1427509857.192589 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:57318->190.93.246.58:80]: dropping client
+1427509857.304230 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51961->74.125.224.208:80]: data relaying started
+1427509857.306120 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51961->74.125.224.208:80]: both client and server disconnected
+1427509857.306166 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51961->74.125.224.208:80]: dropping client
+1427509857.307778 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51963->74.125.224.208:80]: data relaying started
+1427509857.310261 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51963->74.125.224.208:80]: both client and server disconnected
+1427509857.310288 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51963->74.125.224.208:80]: dropping client
+1427509857.895451 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:36298->198.252.206.141:80]: data relaying started
+1427509857.896476 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:36298->198.252.206.141:80]: both client and server disconnected
+1427509857.896502 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36298->198.252.206.141:80]: dropping client
+1427509857.908108 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45321->190.93.247.58:80]: accepted
+1427509857.929057 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:57324->190.93.246.58:80]: accepted
+1427509857.929090 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:57325->190.93.246.58:80]: accepted
+1427509858.023289 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45321->190.93.247.58:80]: data relaying started
+1427509858.024534 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45321->190.93.247.58:80]: both client and server disconnected
+1427509858.024589 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45321->190.93.247.58:80]: dropping client
+1427509858.046077 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:57324->190.93.246.58:80]: data relaying started
+1427509858.046819 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:57324->190.93.246.58:80]: both client and server disconnected
+1427509858.046890 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:57324->190.93.246.58:80]: dropping client
+1427509858.150982 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:57325->190.93.246.58:80]: data relaying started
+1427509858.154036 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:57325->190.93.246.58:80]: both client and server disconnected
+1427509858.154115 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:57325->190.93.246.58:80]: dropping client
+1427509858.257582 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:36299->198.252.206.141:80]: data relaying started
+1427509858.258647 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:36299->198.252.206.141:80]: both client and server disconnected
+1427509858.258705 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36299->198.252.206.141:80]: dropping client
+1427509858.690384 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:36300->198.252.206.141:80]: data relaying started
+1427509858.691423 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:36300->198.252.206.141:80]: both client and server disconnected
+1427509858.691477 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36300->198.252.206.141:80]: dropping client
+1427509875.891199 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:53686->173.194.123.5:443]: accepted
+1427509876.207572 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:53686->173.194.123.5:443]: data relaying started
+1427509938.833779 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33553->74.125.226.167:443]: accepted
+1427509939.150857 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33553->74.125.226.167:443]: data relaying started
+1427509939.338855 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33555->74.125.226.167:443]: accepted
+1427509939.572447 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51982->74.125.224.208:80]: accepted
+1427509939.656225 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33555->74.125.226.167:443]: data relaying started
+1427509939.689350 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:51984->74.125.224.208:80]: accepted
+1427509940.191455 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:58694->216.58.219.238:443]: accepted
+1427509940.221530 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51982->74.125.224.208:80]: data relaying started
+1427509940.223250 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51982->74.125.224.208:80]: both client and server disconnected
+1427509940.223300 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51982->74.125.224.208:80]: dropping client
+1427509940.223673 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47737->180.149.55.14:443]: accepted
+1427509940.223764 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47738->180.149.55.14:443]: accepted
+1427509940.243386 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:47737->180.149.55.14:443]: data relaying started
+1427509940.245366 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:47738->180.149.55.14:443]: data relaying started
+1427509940.412990 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:51984->74.125.224.208:80]: data relaying started
+1427509940.415055 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:51984->74.125.224.208:80]: both client and server disconnected
+1427509940.415111 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:51984->74.125.224.208:80]: dropping client
+1427509940.415608 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:35414->173.194.7.177:443]: accepted
+1427509940.508275 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:58694->216.58.219.238:443]: data relaying started
+1427509940.701803 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:35414->173.194.7.177:443]: data relaying started
+1427509940.748896 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40216->74.125.226.164:443]: accepted
+1427509941.065372 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40216->74.125.226.164:443]: data relaying started
+1427509942.609097 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:35414->173.194.7.177:443]: both client and server disconnected
+1427509942.609266 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:35414->173.194.7.177:443]: dropping client
+1427509944.745729 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:60343->173.194.123.109:443]: accepted
+1427509944.745792 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:60344->173.194.123.109:443]: accepted
+1427509945.061031 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:60343->173.194.123.109:443]: data relaying started
+1427509945.065164 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:60344->173.194.123.109:443]: data relaying started
+1427509945.897827 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33468->74.125.226.172:443]: accepted
+1427509945.897896 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33469->74.125.226.172:443]: accepted
+1427509945.897959 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33471->74.125.226.172:443]: accepted
+1427509945.898438 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33474->74.125.226.172:443]: accepted
+1427509945.898828 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33476->74.125.226.172:443]: accepted
+1427509945.899167 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33478->74.125.226.172:443]: accepted
+1427509946.214738 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33469->74.125.226.172:443]: data relaying started
+1427509946.215112 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33476->74.125.226.172:443]: data relaying started
+1427509946.215339 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33474->74.125.226.172:443]: data relaying started
+1427509946.215362 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33468->74.125.226.172:443]: data relaying started
+1427509946.216597 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33478->74.125.226.172:443]: data relaying started
+1427509946.217620 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33471->74.125.226.172:443]: data relaying started
+1427509955.048995 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33555->74.125.226.167:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509955.049057 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33555->74.125.226.167:443]: dropping client
+1427509965.049502 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:60344->173.194.123.109:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509965.049645 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:60344->173.194.123.109:443]: dropping client
+1427509965.049911 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33469->74.125.226.172:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509965.049988 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33469->74.125.226.172:443]: dropping client
+1427509965.050232 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33474->74.125.226.172:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509965.050268 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33474->74.125.226.172:443]: dropping client
+1427509965.051272 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33468->74.125.226.172:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509965.051300 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33468->74.125.226.172:443]: dropping client
+1427509965.051381 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33478->74.125.226.172:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509965.051411 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33478->74.125.226.172:443]: dropping client
+1427509965.051523 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33471->74.125.226.172:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427509965.051548 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33471->74.125.226.172:443]: dropping client
+1427510336.486082 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52339->74.125.224.208:80]: accepted
+1427510336.632705 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52341->74.125.224.208:80]: accepted
+1427510336.927263 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52339->74.125.224.208:80]: data relaying started
+1427510336.929170 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52339->74.125.224.208:80]: both client and server disconnected
+1427510336.929227 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52339->74.125.224.208:80]: dropping client
+1427510337.236359 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52341->74.125.224.208:80]: data relaying started
+1427510337.238386 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52341->74.125.224.208:80]: both client and server disconnected
+1427510337.238429 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52341->74.125.224.208:80]: dropping client
+1427510337.690229 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52343->74.125.224.208:80]: accepted
+1427510338.024039 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52343->74.125.224.208:80]: data relaying started
+1427510338.025081 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52343->74.125.224.208:80]: both client and server disconnected
+1427510338.025100 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52343->74.125.224.208:80]: dropping client
+1427510342.345188 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52345->74.125.224.208:80]: accepted
+1427510343.026472 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52345->74.125.224.208:80]: data relaying started
+1427510343.028937 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52345->74.125.224.208:80]: both client and server disconnected
+1427510343.029003 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52345->74.125.224.208:80]: dropping client
+1427510391.383517 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52349->74.125.224.208:80]: accepted
+1427510392.112455 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52349->74.125.224.208:80]: data relaying started
+1427510392.114119 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52349->74.125.224.208:80]: both client and server disconnected
+1427510392.114151 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52349->74.125.224.208:80]: dropping client
+1427510392.938840 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52351->74.125.224.208:80]: accepted
+1427510393.274104 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52351->74.125.224.208:80]: data relaying started
+1427510393.277619 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52351->74.125.224.208:80]: both client and server disconnected
+1427510393.277682 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52351->74.125.224.208:80]: dropping client
+1427510394.218528 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52353->74.125.224.208:80]: accepted
+1427510394.553526 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52353->74.125.224.208:80]: data relaying started
+1427510394.555965 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52353->74.125.224.208:80]: both client and server disconnected
+1427510394.556035 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52353->74.125.224.208:80]: dropping client
+1427510399.818519 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52355->74.125.224.208:80]: accepted
+1427510399.819460 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52357->74.125.224.208:80]: accepted
+1427510399.821050 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52359->74.125.224.208:80]: accepted
+1427510400.151838 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52355->74.125.224.208:80]: data relaying started
+1427510400.154447 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52355->74.125.224.208:80]: both client and server disconnected
+1427510400.154511 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52355->74.125.224.208:80]: dropping client
+1427510400.262802 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52357->74.125.224.208:80]: data relaying started
+1427510400.264026 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52359->74.125.224.208:80]: data relaying started
+1427510400.265432 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52357->74.125.224.208:80]: both client and server disconnected
+1427510400.265447 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52357->74.125.224.208:80]: dropping client
+1427510400.266928 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52359->74.125.224.208:80]: both client and server disconnected
+1427510400.266949 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52359->74.125.224.208:80]: dropping client
+1427510401.615018 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52361->74.125.224.208:80]: accepted
+1427510401.704826 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52363->74.125.224.208:80]: accepted
+1427510401.952103 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52361->74.125.224.208:80]: data relaying started
+1427510401.954098 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52361->74.125.224.208:80]: both client and server disconnected
+1427510401.954122 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52361->74.125.224.208:80]: dropping client
+1427510402.290166 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52363->74.125.224.208:80]: data relaying started
+1427510402.292093 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52363->74.125.224.208:80]: both client and server disconnected
+1427510402.292146 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52363->74.125.224.208:80]: dropping client
+1427510403.060208 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52365->74.125.224.208:80]: accepted
+1427510403.561492 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52365->74.125.224.208:80]: data relaying started
+1427510403.563316 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52365->74.125.224.208:80]: both client and server disconnected
+1427510403.563393 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52365->74.125.224.208:80]: dropping client
+1427510404.824604 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52367->74.125.224.208:80]: accepted
+1427510404.825860 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52369->74.125.224.208:80]: accepted
+1427510404.826711 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52371->74.125.224.208:80]: accepted
+1427510405.159394 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52371->74.125.224.208:80]: data relaying started
+1427510405.161302 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52371->74.125.224.208:80]: both client and server disconnected
+1427510405.161344 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52371->74.125.224.208:80]: dropping client
+1427510405.162027 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52367->74.125.224.208:80]: data relaying started
+1427510405.162096 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52369->74.125.224.208:80]: data relaying started
+1427510405.167452 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52367->74.125.224.208:80]: both client and server disconnected
+1427510405.167507 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52367->74.125.224.208:80]: dropping client
+1427510405.168032 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52369->74.125.224.208:80]: both client and server disconnected
+1427510405.168101 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52369->74.125.224.208:80]: dropping client
+1427510409.831525 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52373->74.125.224.208:80]: accepted
+1427510409.832692 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52375->74.125.224.208:80]: accepted
+1427510409.833830 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52377->74.125.224.208:80]: accepted
+1427510409.834560 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52379->74.125.224.208:80]: accepted
+1427510409.835687 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52381->74.125.224.208:80]: accepted
+1427510409.836207 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52383->74.125.224.208:80]: accepted
+1427510410.167936 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52373->74.125.224.208:80]: data relaying started
+1427510410.168434 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52377->74.125.224.208:80]: data relaying started
+1427510410.169202 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52375->74.125.224.208:80]: data relaying started
+1427510410.175470 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52375->74.125.224.208:80]: both client and server disconnected
+1427510410.175524 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52375->74.125.224.208:80]: dropping client
+1427510410.176085 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52373->74.125.224.208:80]: both client and server disconnected
+1427510410.176147 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52373->74.125.224.208:80]: dropping client
+1427510410.176708 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52377->74.125.224.208:80]: both client and server disconnected
+1427510410.176729 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52377->74.125.224.208:80]: dropping client
+1427510410.270827 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52383->74.125.224.208:80]: data relaying started
+1427510410.271822 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52379->74.125.224.208:80]: data relaying started
+1427510410.273331 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52383->74.125.224.208:80]: both client and server disconnected
+1427510410.273402 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52383->74.125.224.208:80]: dropping client
+1427510410.273521 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52381->74.125.224.208:80]: data relaying started
+1427510410.281615 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52381->74.125.224.208:80]: both client and server disconnected
+1427510410.281670 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52381->74.125.224.208:80]: dropping client
+1427510410.282143 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52379->74.125.224.208:80]: both client and server disconnected
+1427510410.282171 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52379->74.125.224.208:80]: dropping client
+1427510414.836111 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52385->74.125.224.208:80]: accepted
+1427510414.836964 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52387->74.125.224.208:80]: accepted
+1427510414.840453 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52389->74.125.224.208:80]: accepted
+1427510414.840722 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52391->74.125.224.208:80]: accepted
+1427510414.841968 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52393->74.125.224.208:80]: accepted
+1427510414.842605 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52395->74.125.224.208:80]: accepted
+1427510415.170015 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52387->74.125.224.208:80]: data relaying started
+1427510415.170300 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52385->74.125.224.208:80]: data relaying started
+1427510415.175259 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52385->74.125.224.208:80]: both client and server disconnected
+1427510415.175287 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52385->74.125.224.208:80]: dropping client
+1427510415.175755 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52389->74.125.224.208:80]: data relaying started
+1427510415.175839 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52391->74.125.224.208:80]: data relaying started
+1427510415.176261 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52387->74.125.224.208:80]: both client and server disconnected
+1427510415.176318 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52387->74.125.224.208:80]: dropping client
+1427510415.177419 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52393->74.125.224.208:80]: data relaying started
+1427510415.178548 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52395->74.125.224.208:80]: data relaying started
+1427510415.178661 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52389->74.125.224.208:80]: both client and server disconnected
+1427510415.178711 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52389->74.125.224.208:80]: dropping client
+1427510415.183820 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52391->74.125.224.208:80]: both client and server disconnected
+1427510415.183882 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52391->74.125.224.208:80]: dropping client
+1427510415.187341 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52393->74.125.224.208:80]: both client and server disconnected
+1427510415.187383 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52393->74.125.224.208:80]: dropping client
+1427510415.188437 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52395->74.125.224.208:80]: both client and server disconnected
+1427510415.188493 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52395->74.125.224.208:80]: dropping client
+1427510419.847818 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52397->74.125.224.208:80]: accepted
+1427510419.849234 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52399->74.125.224.208:80]: accepted
+1427510419.853826 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52401->74.125.224.208:80]: accepted
+1427510419.854413 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52403->74.125.224.208:80]: accepted
+1427510419.854883 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52405->74.125.224.208:80]: accepted
+1427510419.855188 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52407->74.125.224.208:80]: accepted
+1427510420.184774 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52397->74.125.224.208:80]: data relaying started
+1427510420.185313 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52399->74.125.224.208:80]: data relaying started
+1427510420.185574 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52401->74.125.224.208:80]: data relaying started
+1427510420.186448 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52407->74.125.224.208:80]: data relaying started
+1427510420.188063 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52403->74.125.224.208:80]: data relaying started
+1427510420.188953 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52405->74.125.224.208:80]: data relaying started
+1427510420.190519 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52397->74.125.224.208:80]: both client and server disconnected
+1427510420.190540 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52397->74.125.224.208:80]: dropping client
+1427510420.200225 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52399->74.125.224.208:80]: both client and server disconnected
+1427510420.200271 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52399->74.125.224.208:80]: dropping client
+1427510420.201091 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52401->74.125.224.208:80]: both client and server disconnected
+1427510420.201148 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52401->74.125.224.208:80]: dropping client
+1427510420.203558 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52405->74.125.224.208:80]: both client and server disconnected
+1427510420.203623 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52405->74.125.224.208:80]: dropping client
+1427510420.204164 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52407->74.125.224.208:80]: both client and server disconnected
+1427510420.204191 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52407->74.125.224.208:80]: dropping client
+1427510420.204965 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52403->74.125.224.208:80]: both client and server disconnected
+1427510420.205004 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52403->74.125.224.208:80]: dropping client
+1427510424.862312 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52409->74.125.224.208:80]: accepted
+1427510424.862814 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52411->74.125.224.208:80]: accepted
+1427510424.863793 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52413->74.125.224.208:80]: accepted
+1427510424.864997 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52415->74.125.224.208:80]: accepted
+1427510424.866042 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52417->74.125.224.208:80]: accepted
+1427510424.867104 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52419->74.125.224.208:80]: accepted
+1427510425.195731 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52413->74.125.224.208:80]: data relaying started
+1427510425.196015 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52415->74.125.224.208:80]: data relaying started
+1427510425.196931 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52415->74.125.224.208:80]: both client and server disconnected
+1427510425.196949 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52415->74.125.224.208:80]: dropping client
+1427510425.197041 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52409->74.125.224.208:80]: data relaying started
+1427510425.199369 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52417->74.125.224.208:80]: data relaying started
+1427510425.199844 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52411->74.125.224.208:80]: data relaying started
+1427510425.200036 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52413->74.125.224.208:80]: both client and server disconnected
+1427510425.200169 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52413->74.125.224.208:80]: dropping client
+1427510425.200686 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52419->74.125.224.208:80]: data relaying started
+1427510425.202541 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52409->74.125.224.208:80]: both client and server disconnected
+1427510425.202745 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52409->74.125.224.208:80]: dropping client
+1427510425.204998 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52417->74.125.224.208:80]: both client and server disconnected
+1427510425.205560 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52417->74.125.224.208:80]: dropping client
+1427510425.208792 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52411->74.125.224.208:80]: both client and server disconnected
+1427510425.208831 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52411->74.125.224.208:80]: dropping client
+1427510425.209208 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52419->74.125.224.208:80]: both client and server disconnected
+1427510425.209243 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52419->74.125.224.208:80]: dropping client
+1427510429.865355 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52421->74.125.224.208:80]: accepted
+1427510429.869976 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52423->74.125.224.208:80]: accepted
+1427510429.870398 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52425->74.125.224.208:80]: accepted
+1427510430.202944 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52421->74.125.224.208:80]: data relaying started
+1427510430.204886 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52423->74.125.224.208:80]: data relaying started
+1427510430.205081 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52425->74.125.224.208:80]: data relaying started
+1427510430.205746 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52421->74.125.224.208:80]: both client and server disconnected
+1427510430.205789 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52421->74.125.224.208:80]: dropping client
+1427510430.210332 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52423->74.125.224.208:80]: both client and server disconnected
+1427510430.210382 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52423->74.125.224.208:80]: dropping client
+1427510430.211115 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52425->74.125.224.208:80]: both client and server disconnected
+1427510430.211155 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52425->74.125.224.208:80]: dropping client
+1427510434.873447 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52429->74.125.224.208:80]: accepted
+1427510434.874634 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52431->74.125.224.208:80]: accepted
+1427510434.875565 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52433->74.125.224.208:80]: accepted
+1427510435.207678 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52431->74.125.224.208:80]: data relaying started
+1427510435.207809 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52429->74.125.224.208:80]: data relaying started
+1427510435.209441 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52433->74.125.224.208:80]: data relaying started
+1427510435.215530 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52429->74.125.224.208:80]: both client and server disconnected
+1427510435.215561 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52429->74.125.224.208:80]: dropping client
+1427510435.216843 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52431->74.125.224.208:80]: both client and server disconnected
+1427510435.216873 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52431->74.125.224.208:80]: dropping client
+1427510435.217664 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52433->74.125.224.208:80]: both client and server disconnected
+1427510435.217699 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52433->74.125.224.208:80]: dropping client
+1427510462.466737 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52443->74.125.224.208:80]: accepted
+1427510462.975378 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52443->74.125.224.208:80]: data relaying started
+1427510462.977157 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52443->74.125.224.208:80]: both client and server disconnected
+1427510462.977196 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52443->74.125.224.208:80]: dropping client
+1427510554.820724 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52450->74.125.224.208:80]: accepted
+1427510555.754309 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52450->74.125.224.208:80]: data relaying started
+1427510555.755923 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52450->74.125.224.208:80]: both client and server disconnected
+1427510555.755948 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52450->74.125.224.208:80]: dropping client
+1427510630.048429 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52457->74.125.224.208:80]: accepted
+1427510630.494934 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52457->74.125.224.208:80]: data relaying started
+1427510630.496832 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52457->74.125.224.208:80]: both client and server disconnected
+1427510630.496887 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52457->74.125.224.208:80]: dropping client
+1427510754.563391 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40860->72.21.91.121:443]: both client and server disconnected
+1427510754.563455 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40860->72.21.91.121:443]: dropping client
+1427510754.563581 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40867->72.21.91.121:443]: both client and server disconnected
+1427510754.563608 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40867->72.21.91.121:443]: dropping client
+1427510754.563698 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40866->72.21.91.121:443]: both client and server disconnected
+1427510754.563729 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40866->72.21.91.121:443]: dropping client
+1427510754.563823 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40864->72.21.91.121:443]: both client and server disconnected
+1427510754.563850 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40864->72.21.91.121:443]: dropping client
+1427510754.563932 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40863->72.21.91.121:443]: both client and server disconnected
+1427510754.563958 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40863->72.21.91.121:443]: dropping client
+1427510754.564039 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40861->72.21.91.121:443]: both client and server disconnected
+1427510754.564070 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40861->72.21.91.121:443]: dropping client
+1427510763.563670 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:43749->74.125.226.169:443]: both client and server disconnected
+1427510763.563741 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:43749->74.125.226.169:443]: dropping client
+1427510840.563121 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:58694->216.58.219.238:443]: both client and server disconnected
+1427510840.563198 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:58694->216.58.219.238:443]: dropping client
+1427510841.563046 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40216->74.125.226.164:443]: both client and server disconnected
+1427510841.563120 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40216->74.125.226.164:443]: dropping client
+1427510844.563141 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:58772->173.194.123.127:443]: both client and server disconnected
+1427510844.563215 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:58772->173.194.123.127:443]: dropping client
+1427510845.562730 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:60343->173.194.123.109:443]: both client and server disconnected
+1427510845.562763 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:60343->173.194.123.109:443]: dropping client
+1427510845.563093 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:33553->74.125.226.167:443]: both client and server disconnected
+1427510845.563124 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33553->74.125.226.167:443]: dropping client
+1427510846.562589 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:33476->74.125.226.172:443]: both client and server disconnected
+1427510846.562651 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33476->74.125.226.172:443]: dropping client
+1427510847.562786 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:47737->180.149.55.14:443]: both client and server disconnected
+1427510847.562863 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47737->180.149.55.14:443]: dropping client
+1427510850.562905 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:53686->173.194.123.5:443]: both client and server disconnected
+1427510850.562980 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:53686->173.194.123.5:443]: dropping client
+1427510862.563426 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:41458->173.194.123.1:443]: both client and server disconnected
+1427510862.563488 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:41458->173.194.123.1:443]: dropping client
+1427510867.563544 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:47738->180.149.55.14:443]: both client and server disconnected
+1427510867.563618 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47738->180.149.55.14:443]: dropping client
+1427510867.563849 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40179->74.125.226.164:443]: both client and server disconnected
+1427510867.564006 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40179->74.125.226.164:443]: dropping client
+1427511368.442323 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52514->74.125.224.208:80]: accepted
+1427511368.875842 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52514->74.125.224.208:80]: data relaying started
+1427511368.877767 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52514->74.125.224.208:80]: both client and server disconnected
+1427511368.877820 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52514->74.125.224.208:80]: dropping client
+1427511372.330506 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52516->74.125.224.208:80]: accepted
+1427511372.663105 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52516->74.125.224.208:80]: data relaying started
+1427511372.665850 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52516->74.125.224.208:80]: both client and server disconnected
+1427511372.665903 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52516->74.125.224.208:80]: dropping client
+1427511376.238236 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52518->74.125.224.208:80]: accepted
+1427511376.568921 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52518->74.125.224.208:80]: data relaying started
+1427511376.570877 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52518->74.125.224.208:80]: both client and server disconnected
+1427511376.570928 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52518->74.125.224.208:80]: dropping client
+1427511385.848927 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52520->74.125.224.208:80]: accepted
+1427511386.447788 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52520->74.125.224.208:80]: data relaying started
+1427511386.449698 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52520->74.125.224.208:80]: both client and server disconnected
+1427511386.449773 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52520->74.125.224.208:80]: dropping client
+1427511393.004857 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52522->74.125.224.208:80]: accepted
+1427511393.338073 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52522->74.125.224.208:80]: data relaying started
+1427511393.339968 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52522->74.125.224.208:80]: both client and server disconnected
+1427511393.340012 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52522->74.125.224.208:80]: dropping client
+1427511395.787780 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52530->74.125.224.208:80]: accepted
+1427511396.118446 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52530->74.125.224.208:80]: data relaying started
+1427511396.120409 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52530->74.125.224.208:80]: both client and server disconnected
+1427511396.120461 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52530->74.125.224.208:80]: dropping client
+1427511397.081768 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52532->74.125.224.208:80]: accepted
+1427511397.414402 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52532->74.125.224.208:80]: data relaying started
+1427511397.416813 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52532->74.125.224.208:80]: both client and server disconnected
+1427511397.416875 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52532->74.125.224.208:80]: dropping client
+1427511413.658947 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52539->74.125.224.208:80]: accepted
+1427511413.994519 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52539->74.125.224.208:80]: data relaying started
+1427511413.996584 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52539->74.125.224.208:80]: both client and server disconnected
+1427511413.996627 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52539->74.125.224.208:80]: dropping client
+1427511414.461522 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52541->74.125.224.208:80]: accepted
+1427511414.973325 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52541->74.125.224.208:80]: data relaying started
+1427511414.975828 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52541->74.125.224.208:80]: both client and server disconnected
+1427511414.975912 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52541->74.125.224.208:80]: dropping client
+1427511416.321191 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52543->74.125.224.208:80]: accepted
+1427511416.809855 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52543->74.125.224.208:80]: data relaying started
+1427511416.812503 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52543->74.125.224.208:80]: both client and server disconnected
+1427511416.812558 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52543->74.125.224.208:80]: dropping client
+1427511425.523055 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52545->74.125.224.208:80]: accepted
+1427511425.670895 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52547->74.125.224.208:80]: accepted
+1427511425.856116 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52545->74.125.224.208:80]: data relaying started
+1427511425.858174 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52545->74.125.224.208:80]: both client and server disconnected
+1427511425.858192 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52545->74.125.224.208:80]: dropping client
+1427511426.107353 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52547->74.125.224.208:80]: data relaying started
+1427511426.109262 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52547->74.125.224.208:80]: both client and server disconnected
+1427511426.109308 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52547->74.125.224.208:80]: dropping client
+1427511429.888767 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52549->74.125.224.208:80]: accepted
+1427511430.221757 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52549->74.125.224.208:80]: data relaying started
+1427511430.223677 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52549->74.125.224.208:80]: both client and server disconnected
+1427511430.223720 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52549->74.125.224.208:80]: dropping client
+1427511437.016165 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52551->74.125.224.208:80]: accepted
+1427511437.346279 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52551->74.125.224.208:80]: data relaying started
+1427511437.348224 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52551->74.125.224.208:80]: both client and server disconnected
+1427511437.348284 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52551->74.125.224.208:80]: dropping client
+1427511444.755403 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52567->74.125.224.208:80]: accepted
+1427511445.561809 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52567->74.125.224.208:80]: data relaying started
+1427511445.563711 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52567->74.125.224.208:80]: both client and server disconnected
+1427511445.563778 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52567->74.125.224.208:80]: dropping client
+1427511468.794836 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52651->74.125.224.208:80]: accepted
+1427511469.351569 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52651->74.125.224.208:80]: data relaying started
+1427511469.353478 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52651->74.125.224.208:80]: both client and server disconnected
+1427511469.353522 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52651->74.125.224.208:80]: dropping client
+1427511479.562214 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52653->74.125.224.208:80]: accepted
+1427511480.055866 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52653->74.125.224.208:80]: data relaying started
+1427511480.059498 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52653->74.125.224.208:80]: both client and server disconnected
+1427511480.059595 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52653->74.125.224.208:80]: dropping client
+1427511540.562677 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:45590->23.76.223.139:80]: accepted
+1427511540.562713 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:45591->23.76.223.139:80]: accepted
+1427511540.562736 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:45592->23.76.223.139:80]: accepted
+1427511540.562922 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:33016->23.67.243.56:80]: accepted
+1427511540.562950 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:33017->23.67.243.56:80]: accepted
+1427511540.563014 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:33018->23.67.243.56:80]: accepted
+1427511540.564061 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:40274->31.13.73.1:443]: accepted
+1427511540.564784 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36391->74.125.224.208:80]: accepted
+1427511540.565502 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36393->74.125.224.208:80]: accepted
+1427511540.565917 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:58681->23.76.210.110:443]: accepted
+1427511540.565973 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:58682->23.76.210.110:443]: accepted
+1427511540.566014 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:58684->23.76.210.110:443]: accepted
+1427511540.567563 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36401->74.125.224.208:80]: accepted
+1427511540.567606 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36402->74.125.224.208:80]: accepted
+1427511540.906639 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:40274->31.13.73.1:443]: data relaying started
+1427511540.917818 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:58684->23.76.210.110:443]: data relaying started
+1427511540.923281 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:58682->23.76.210.110:443]: data relaying started
+1427511540.929967 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:58681->23.76.210.110:443]: data relaying started
+1427511540.998407 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36393->74.125.224.208:80]: data relaying started
+1427511541.000755 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36393->74.125.224.208:80]: both client and server disconnected
+1427511541.000804 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36393->74.125.224.208:80]: dropping client
+1427511541.001383 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:43299->173.194.204.95:80]: accepted
+1427511541.001464 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:43300->173.194.204.95:80]: accepted
+1427511541.001561 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:43301->173.194.204.95:80]: accepted
+1427511541.163879 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36391->74.125.224.208:80]: data relaying started
+1427511541.165829 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36391->74.125.224.208:80]: both client and server disconnected
+1427511541.165903 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36391->74.125.224.208:80]: dropping client
+1427511541.166409 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46827->91.189.94.12:80]: accepted
+1427511541.166458 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46828->91.189.94.12:80]: accepted
+1427511541.166574 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46829->91.189.94.12:80]: accepted
+1427511541.166747 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46830->91.189.94.12:80]: accepted
+1427511541.166884 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46831->91.189.94.12:80]: accepted
+1427511541.166938 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46832->91.189.94.12:80]: accepted
+1427511541.315800 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36401->74.125.224.208:80]: data relaying started
+1427511541.317805 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36401->74.125.224.208:80]: both client and server disconnected
+1427511541.317890 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36401->74.125.224.208:80]: dropping client
+1427511541.318434 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:56889->206.190.56.191:80]: accepted
+1427511541.318548 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:56890->206.190.56.191:80]: accepted
+1427511541.318678 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:56891->206.190.56.191:80]: accepted
+1427511541.559221 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36402->74.125.224.208:80]: data relaying started
+1427511541.561195 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36402->74.125.224.208:80]: both client and server disconnected
+1427511541.561237 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36402->74.125.224.208:80]: dropping client
+1427511541.561678 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:53055->91.189.89.153:443]: accepted
+1427511541.561841 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:53056->91.189.89.153:443]: accepted
+1427511541.562035 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:53058->91.189.89.153:443]: accepted
+1427511541.755121 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:53058->91.189.89.153:443]: data relaying started
+1427511541.757229 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:53056->91.189.89.153:443]: data relaying started
+1427511541.758759 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:53055->91.189.89.153:443]: data relaying started
+1427511541.969654 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46827->91.189.94.12:80]: data relaying started
+1427511542.160933 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:43299->173.194.204.95:80]: data relaying started
+1427511542.162757 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:43299->173.194.204.95:80]: both client and server disconnected
+1427511542.162805 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:43299->173.194.204.95:80]: dropping client
+1427511542.164337 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46827->91.189.94.12:80]: both client and server disconnected
+1427511542.164407 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46827->91.189.94.12:80]: dropping client
+1427511542.176098 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:45590->23.76.223.139:80]: data relaying started
+1427511542.250456 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:45590->23.76.223.139:80]: both client and server disconnected
+1427511542.250509 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:45590->23.76.223.139:80]: dropping client
+1427511542.319665 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:56889->206.190.56.191:80]: data relaying started
+1427511542.418901 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46832->91.189.94.12:80]: data relaying started
+1427511542.422783 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46832->91.189.94.12:80]: both client and server disconnected
+1427511542.422836 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46832->91.189.94.12:80]: dropping client
+1427511542.424034 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46828->91.189.94.12:80]: data relaying started
+1427511542.430012 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46851->91.189.94.12:80]: accepted
+1427511542.455464 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:56889->206.190.56.191:80]: both client and server disconnected
+1427511542.455492 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:56889->206.190.56.191:80]: dropping client
+1427511542.502802 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46831->91.189.94.12:80]: data relaying started
+1427511542.504731 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46831->91.189.94.12:80]: both client and server disconnected
+1427511542.504808 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46831->91.189.94.12:80]: dropping client
+1427511542.553369 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46830->91.189.94.12:80]: data relaying started
+1427511542.610071 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46828->91.189.94.12:80]: both client and server disconnected
+1427511542.610126 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46828->91.189.94.12:80]: dropping client
+1427511542.617858 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46851->91.189.94.12:80]: data relaying started
+1427511542.628056 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46851->91.189.94.12:80]: both client and server disconnected
+1427511542.628120 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46851->91.189.94.12:80]: dropping client
+1427511542.632112 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46853->91.189.94.12:80]: accepted
+1427511542.638839 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36436->74.125.224.208:80]: accepted
+1427511542.640538 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36438->74.125.224.208:80]: accepted
+1427511542.640988 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36440->74.125.224.208:80]: accepted
+1427511542.689921 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:35972->74.125.226.191:443]: accepted
+1427511542.690193 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:32912->74.125.226.171:443]: accepted
+1427511542.693508 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:55357->216.58.219.228:443]: accepted
+1427511542.742012 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46830->91.189.94.12:80]: both client and server disconnected
+1427511542.742038 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46830->91.189.94.12:80]: dropping client
+1427511542.818174 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46853->91.189.94.12:80]: data relaying started
+1427511542.819878 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46853->91.189.94.12:80]: both client and server disconnected
+1427511542.819910 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46853->91.189.94.12:80]: dropping client
+1427511542.823205 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46867->91.189.94.12:80]: accepted
+1427511542.982250 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:35980->74.125.226.191:443]: accepted
+1427511543.004920 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:35972->74.125.226.191:443]: data relaying started
+1427511543.008111 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:32912->74.125.226.171:443]: data relaying started
+1427511543.009603 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46867->91.189.94.12:80]: data relaying started
+1427511543.010225 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:55357->216.58.219.228:443]: data relaying started
+1427511543.010640 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46867->91.189.94.12:80]: both client and server disconnected
+1427511543.010663 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46867->91.189.94.12:80]: dropping client
+1427511543.014851 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46871->91.189.94.12:80]: accepted
+1427511543.022263 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:35984->74.125.226.191:443]: accepted
+1427511543.107747 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:35986->74.125.226.191:443]: accepted
+1427511543.111630 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36436->74.125.224.208:80]: data relaying started
+1427511543.113328 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36436->74.125.224.208:80]: both client and server disconnected
+1427511543.113346 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36436->74.125.224.208:80]: dropping client
+1427511543.117916 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36458->74.125.224.208:80]: accepted
+1427511543.158704 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46829->91.189.94.12:80]: data relaying started
+1427511543.202239 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46871->91.189.94.12:80]: data relaying started
+1427511543.203753 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46871->91.189.94.12:80]: both client and server disconnected
+1427511543.203784 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46871->91.189.94.12:80]: dropping client
+1427511543.210848 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46879->91.189.94.12:80]: accepted
+1427511543.290769 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:35992->74.125.226.191:443]: accepted
+1427511543.297244 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:35980->74.125.226.191:443]: data relaying started
+1427511543.342031 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:35984->74.125.226.191:443]: data relaying started
+1427511543.351639 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36440->74.125.224.208:80]: data relaying started
+1427511543.353343 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36440->74.125.224.208:80]: both client and server disconnected
+1427511543.353367 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36440->74.125.224.208:80]: dropping client
+1427511543.355319 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36464->74.125.224.208:80]: accepted
+1427511543.396882 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46879->91.189.94.12:80]: data relaying started
+1427511543.398720 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46879->91.189.94.12:80]: both client and server disconnected
+1427511543.398772 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46879->91.189.94.12:80]: dropping client
+1427511543.402712 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46885->91.189.94.12:80]: accepted
+1427511543.422490 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:35986->74.125.226.191:443]: data relaying started
+1427511543.536901 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36438->74.125.224.208:80]: data relaying started
+1427511543.538618 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36438->74.125.224.208:80]: both client and server disconnected
+1427511543.538640 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36438->74.125.224.208:80]: dropping client
+1427511543.541290 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36468->74.125.224.208:80]: accepted
+1427511543.589048 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46885->91.189.94.12:80]: data relaying started
+1427511543.591058 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46885->91.189.94.12:80]: both client and server disconnected
+1427511543.591117 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46885->91.189.94.12:80]: dropping client
+1427511543.595875 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46889->91.189.94.12:80]: accepted
+1427511543.605496 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:35992->74.125.226.191:443]: data relaying started
+1427511543.722122 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36458->74.125.224.208:80]: data relaying started
+1427511543.724174 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36458->74.125.224.208:80]: both client and server disconnected
+1427511543.724214 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36458->74.125.224.208:80]: dropping client
+1427511543.725886 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36472->74.125.224.208:80]: accepted
+1427511543.731986 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46829->91.189.94.12:80]: both client and server disconnected
+1427511543.732013 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46829->91.189.94.12:80]: dropping client
+1427511543.736829 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46893->91.189.94.12:80]: accepted
+1427511543.736869 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46894->91.189.94.12:80]: accepted
+1427511543.736908 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46895->91.189.94.12:80]: accepted
+1427511543.740036 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46899->91.189.94.12:80]: accepted
+1427511543.740082 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46900->91.189.94.12:80]: accepted
+1427511543.782235 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46889->91.189.94.12:80]: data relaying started
+1427511543.783041 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46889->91.189.94.12:80]: both client and server disconnected
+1427511543.783065 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46889->91.189.94.12:80]: dropping client
+1427511543.786106 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46903->91.189.94.12:80]: accepted
+1427511543.868867 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36464->74.125.224.208:80]: data relaying started
+1427511543.870897 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36464->74.125.224.208:80]: both client and server disconnected
+1427511543.870914 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36464->74.125.224.208:80]: dropping client
+1427511543.872321 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36486->74.125.224.208:80]: accepted
+1427511543.927926 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46899->91.189.94.12:80]: data relaying started
+1427511543.931902 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46894->91.189.94.12:80]: data relaying started
+1427511543.931973 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46895->91.189.94.12:80]: data relaying started
+1427511543.933963 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46899->91.189.94.12:80]: both client and server disconnected
+1427511543.933998 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46899->91.189.94.12:80]: dropping client
+1427511543.935349 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46893->91.189.94.12:80]: data relaying started
+1427511543.937802 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46894->91.189.94.12:80]: both client and server disconnected
+1427511543.937845 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46894->91.189.94.12:80]: dropping client
+1427511543.938682 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46895->91.189.94.12:80]: both client and server disconnected
+1427511543.938712 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46895->91.189.94.12:80]: dropping client
+1427511543.939270 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46893->91.189.94.12:80]: both client and server disconnected
+1427511543.939286 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46893->91.189.94.12:80]: dropping client
+1427511543.940038 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46900->91.189.94.12:80]: data relaying started
+1427511543.943521 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46900->91.189.94.12:80]: both client and server disconnected
+1427511543.943648 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46900->91.189.94.12:80]: dropping client
+1427511543.972631 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46903->91.189.94.12:80]: data relaying started
+1427511543.976722 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46903->91.189.94.12:80]: both client and server disconnected
+1427511543.976756 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46903->91.189.94.12:80]: dropping client
+1427511543.998369 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46907->91.189.94.12:80]: accepted
+1427511543.998398 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46908->91.189.94.12:80]: accepted
+1427511543.998457 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46909->91.189.94.12:80]: accepted
+1427511543.999399 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46910->91.189.94.12:80]: accepted
+1427511544.000228 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46911->91.189.94.12:80]: accepted
+1427511544.001322 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:55445->74.125.226.184:80]: accepted
+1427511544.001356 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:55446->74.125.226.184:80]: accepted
+1427511544.001402 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:55447->74.125.226.184:80]: accepted
+1427511544.010172 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46923->91.189.94.12:80]: accepted
+1427511544.040640 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36468->74.125.224.208:80]: data relaying started
+1427511544.042409 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36468->74.125.224.208:80]: both client and server disconnected
+1427511544.042430 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36468->74.125.224.208:80]: dropping client
+1427511544.081756 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:55446->74.125.226.184:80]: data relaying started
+1427511544.081823 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:55447->74.125.226.184:80]: data relaying started
+1427511544.082011 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:55445->74.125.226.184:80]: data relaying started
+1427511544.097202 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:33016->23.67.243.56:80]: data relaying started
+1427511544.099967 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:33016->23.67.243.56:80]: both client and server disconnected
+1427511544.100002 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:33016->23.67.243.56:80]: dropping client
+1427511544.151025 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:55447->74.125.226.184:80]: both client and server disconnected
+1427511544.151050 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:55447->74.125.226.184:80]: dropping client
+1427511544.153030 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:55446->74.125.226.184:80]: both client and server disconnected
+1427511544.153061 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:55446->74.125.226.184:80]: dropping client
+1427511544.158372 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:55445->74.125.226.184:80]: both client and server disconnected
+1427511544.158400 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:55445->74.125.226.184:80]: dropping client
+1427511544.191683 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46907->91.189.94.12:80]: data relaying started
+1427511544.193684 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46907->91.189.94.12:80]: both client and server disconnected
+1427511544.193753 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46907->91.189.94.12:80]: dropping client
+1427511544.195781 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46926->91.189.94.12:80]: accepted
+1427511544.196932 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46911->91.189.94.12:80]: data relaying started
+1427511544.198255 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46911->91.189.94.12:80]: both client and server disconnected
+1427511544.198279 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46911->91.189.94.12:80]: dropping client
+1427511544.199055 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46923->91.189.94.12:80]: data relaying started
+1427511544.200314 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46910->91.189.94.12:80]: data relaying started
+1427511544.200437 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46923->91.189.94.12:80]: both client and server disconnected
+1427511544.200450 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46923->91.189.94.12:80]: dropping client
+1427511544.201057 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46928->91.189.94.12:80]: accepted
+1427511544.201609 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46909->91.189.94.12:80]: data relaying started
+1427511544.202480 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46910->91.189.94.12:80]: both client and server disconnected
+1427511544.202501 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46910->91.189.94.12:80]: dropping client
+1427511544.204857 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46930->91.189.94.12:80]: accepted
+1427511544.205471 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46908->91.189.94.12:80]: data relaying started
+1427511544.205523 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46909->91.189.94.12:80]: both client and server disconnected
+1427511544.205534 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46909->91.189.94.12:80]: dropping client
+1427511544.208227 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46932->91.189.94.12:80]: accepted
+1427511544.208795 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46908->91.189.94.12:80]: both client and server disconnected
+1427511544.208814 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46908->91.189.94.12:80]: dropping client
+1427511544.210800 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46934->91.189.94.12:80]: accepted
+1427511544.212418 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46936->91.189.94.12:80]: accepted
+1427511544.226909 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36472->74.125.224.208:80]: data relaying started
+1427511544.228967 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36472->74.125.224.208:80]: both client and server disconnected
+1427511544.228988 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36472->74.125.224.208:80]: dropping client
+1427511544.367459 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36486->74.125.224.208:80]: data relaying started
+1427511544.368916 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36486->74.125.224.208:80]: both client and server disconnected
+1427511544.368945 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36486->74.125.224.208:80]: dropping client
+1427511544.386845 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46926->91.189.94.12:80]: data relaying started
+1427511544.387832 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46926->91.189.94.12:80]: both client and server disconnected
+1427511544.387851 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46926->91.189.94.12:80]: dropping client
+1427511544.391612 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46938->91.189.94.12:80]: accepted
+1427511544.397180 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46928->91.189.94.12:80]: data relaying started
+1427511544.398750 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46934->91.189.94.12:80]: data relaying started
+1427511544.399246 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46928->91.189.94.12:80]: both client and server disconnected
+1427511544.399316 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46928->91.189.94.12:80]: dropping client
+1427511544.401851 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46936->91.189.94.12:80]: data relaying started
+1427511544.404075 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46934->91.189.94.12:80]: both client and server disconnected
+1427511544.404108 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46934->91.189.94.12:80]: dropping client
+1427511544.405243 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46930->91.189.94.12:80]: data relaying started
+1427511544.405660 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46932->91.189.94.12:80]: data relaying started
+1427511544.406191 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46936->91.189.94.12:80]: both client and server disconnected
+1427511544.406219 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46936->91.189.94.12:80]: dropping client
+1427511544.409917 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46940->91.189.94.12:80]: accepted
+1427511544.410962 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46930->91.189.94.12:80]: both client and server disconnected
+1427511544.410984 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46930->91.189.94.12:80]: dropping client
+1427511544.411410 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46932->91.189.94.12:80]: both client and server disconnected
+1427511544.411427 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46932->91.189.94.12:80]: dropping client
+1427511544.412363 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46942->91.189.94.12:80]: accepted
+1427511544.580933 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46938->91.189.94.12:80]: data relaying started
+1427511544.582706 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46938->91.189.94.12:80]: both client and server disconnected
+1427511544.582763 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46938->91.189.94.12:80]: dropping client
+1427511544.604339 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46940->91.189.94.12:80]: data relaying started
+1427511544.605069 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46940->91.189.94.12:80]: both client and server disconnected
+1427511544.605098 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46940->91.189.94.12:80]: dropping client
+1427511544.609425 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46942->91.189.94.12:80]: data relaying started
+1427511544.618538 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46942->91.189.94.12:80]: both client and server disconnected
+1427511544.618574 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46942->91.189.94.12:80]: dropping client
+1427511544.877136 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:56601->63.88.100.144:443]: accepted
+1427511544.877257 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:40658->23.67.250.90:443]: accepted
+1427511544.955762 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46948->91.189.94.12:80]: accepted
+1427511544.955892 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:46949->91.189.94.12:80]: accepted
+1427511545.138376 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:40658->23.67.250.90:443]: data relaying started
+1427511545.147879 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46949->91.189.94.12:80]: data relaying started
+1427511545.152742 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46949->91.189.94.12:80]: both client and server disconnected
+1427511545.152780 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46949->91.189.94.12:80]: dropping client
+1427511545.152856 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:46948->91.189.94.12:80]: data relaying started
+1427511545.154242 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:46948->91.189.94.12:80]: both client and server disconnected
+1427511545.154276 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:46948->91.189.94.12:80]: dropping client
+1427511545.245183 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:56601->63.88.100.144:443]: data relaying started
+1427511545.728415 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:57856->74.125.226.167:443]: accepted
+1427511545.897438 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:39913->173.194.123.5:443]: accepted
+1427511546.044025 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:57856->74.125.226.167:443]: data relaying started
+1427511546.215855 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:39913->173.194.123.5:443]: data relaying started
+1427511550.749186 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:33300->74.125.226.174:443]: accepted
+1427511550.749495 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:43426->173.194.123.34:443]: accepted
+1427511550.749846 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:51961->173.194.123.127:443]: accepted
+1427511551.064455 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:33300->74.125.226.174:443]: data relaying started
+1427511551.066724 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:43426->173.194.123.34:443]: data relaying started
+1427511551.067161 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:51961->173.194.123.127:443]: data relaying started
+1427511553.011745 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:59967->173.194.123.1:443]: accepted
+1427511553.326768 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:59967->173.194.123.1:443]: data relaying started
+1427511555.827317 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:37102->74.125.226.164:443]: accepted
+1427511556.141484 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:37102->74.125.226.164:443]: data relaying started
+1427511561.251628 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:57856->74.125.226.167:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.251718 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:57856->74.125.226.167:443]: dropping client
+1427511561.252752 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:56601->63.88.100.144:443]: both client and server disconnected
+1427511561.252807 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:56601->63.88.100.144:443]: dropping client
+1427511561.253181 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:40658->23.67.250.90:443]: both client and server disconnected
+1427511561.253221 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:40658->23.67.250.90:443]: dropping client
+1427511561.253323 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:32912->74.125.226.171:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.253354 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:32912->74.125.226.171:443]: dropping client
+1427511561.253475 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:58682->23.76.210.110:443]: both client and server disconnected
+1427511561.253501 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:58682->23.76.210.110:443]: dropping client
+1427511561.253607 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:58681->23.76.210.110:443]: both client and server disconnected
+1427511561.253632 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:58681->23.76.210.110:443]: dropping client
+1427511561.253692 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:53056->91.189.89.153:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.253745 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:53056->91.189.89.153:443]: dropping client
+1427511561.253949 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:53055->91.189.89.153:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.253980 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:53055->91.189.89.153:443]: dropping client
+1427511561.254250 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:53058->91.189.89.153:443]: both client and server disconnected
+1427511561.254311 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:53058->91.189.89.153:443]: dropping client
+1427511561.254420 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:35980->74.125.226.191:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.254447 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:35980->74.125.226.191:443]: dropping client
+1427511561.254738 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:35984->74.125.226.191:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.254781 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:35984->74.125.226.191:443]: dropping client
+1427511561.254886 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:35986->74.125.226.191:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.254913 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:35986->74.125.226.191:443]: dropping client
+1427511561.255105 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:35992->74.125.226.191:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.255147 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:35992->74.125.226.191:443]: dropping client
+1427511561.255252 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:55357->216.58.219.228:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511561.255280 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:55357->216.58.219.228:443]: dropping client
+1427511571.252690 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:33300->74.125.226.174:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511571.252736 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:33300->74.125.226.174:443]: dropping client
+1427511571.252906 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:51961->173.194.123.127:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511571.252938 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:51961->173.194.123.127:443]: dropping client
+1427511610.686901 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:40274->31.13.73.1:443]: both client and server disconnected
+1427511610.686986 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:40274->31.13.73.1:443]: dropping client
+1427511619.667440 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36547->74.125.224.208:80]: accepted
+1427511620.295858 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36547->74.125.224.208:80]: data relaying started
+1427511620.297997 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36547->74.125.224.208:80]: both client and server disconnected
+1427511620.298044 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36547->74.125.224.208:80]: dropping client
+1427511620.623066 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36549->74.125.224.208:80]: accepted
+1427511621.153109 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36549->74.125.224.208:80]: data relaying started
+1427511621.155946 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36549->74.125.224.208:80]: both client and server disconnected
+1427511621.156006 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36549->74.125.224.208:80]: dropping client
+1427511639.841869 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:57876->74.125.226.167:443]: accepted
+1427511640.157955 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:57876->74.125.226.167:443]: data relaying started
+1427511640.347837 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:57878->74.125.226.167:443]: accepted
+1427511640.618065 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36557->74.125.224.208:80]: accepted
+1427511640.663487 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:57878->74.125.226.167:443]: data relaying started
+1427511640.751670 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36559->74.125.224.208:80]: accepted
+1427511641.127855 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36557->74.125.224.208:80]: data relaying started
+1427511641.128842 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36557->74.125.224.208:80]: both client and server disconnected
+1427511641.128863 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36557->74.125.224.208:80]: dropping client
+1427511641.129125 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:34778->208.117.254.39:443]: accepted
+1427511641.129222 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:34779->208.117.254.39:443]: accepted
+1427511641.155530 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:36808->216.58.219.238:443]: accepted
+1427511641.303736 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:34778->208.117.254.39:443]: data relaying started
+1427511641.306795 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:34779->208.117.254.39:443]: data relaying started
+1427511641.355766 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36559->74.125.224.208:80]: data relaying started
+1427511641.357647 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:36559->74.125.224.208:80]: both client and server disconnected
+1427511641.357688 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36559->74.125.224.208:80]: dropping client
+1427511641.358269 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:40896->208.117.252.198:443]: accepted
+1427511641.472538 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:36808->216.58.219.238:443]: data relaying started
+1427511641.664403 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:40896->208.117.252.198:443]: data relaying started
+1427511642.984657 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:37126->74.125.226.164:443]: accepted
+1427511643.298443 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:37126->74.125.226.164:443]: data relaying started
+1427511643.526886 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:40896->208.117.252.198:443]: both client and server disconnected
+1427511643.526941 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:40896->208.117.252.198:443]: dropping client
+1427511645.832716 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:40994->74.125.226.165:443]: accepted
+1427511646.149283 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:40994->74.125.226.165:443]: data relaying started
+1427511646.997414 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:49604->173.194.123.109:443]: accepted
+1427511646.997474 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:49605->173.194.123.109:443]: accepted
+1427511647.314680 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:49605->173.194.123.109:443]: data relaying started
+1427511647.315715 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:49604->173.194.123.109:443]: data relaying started
+1427511651.257442 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:57878->74.125.226.167:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511651.257528 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:57878->74.125.226.167:443]: dropping client
+1427511661.258532 redsocks.c:439 redsocks_event_error(...) [10.9.3.166:49604->173.194.123.109:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511661.258640 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:49604->173.194.123.109:443]: dropping client
+1427511688.836381 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:34778->208.117.254.39:443]: both client and server disconnected
+1427511688.836430 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:34778->208.117.254.39:443]: dropping client
+1427511697.091713 redsocks.c:707 redsocks_accept_client(...) [10.9.3.166:34794->208.117.254.39:443]: accepted
+1427511697.271523 redsocks.c:327 redsocks_start_relay(...) [10.9.3.166:34794->208.117.254.39:443]: data relaying started
+1427511711.263081 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:34794->208.117.254.39:443]: both client and server disconnected
+1427511711.263145 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:34794->208.117.254.39:443]: dropping client
+1427511731.263577 redsocks.c:400 redsocks_shutdown(...) [10.9.3.166:34779->208.117.254.39:443]: both client and server disconnected
+1427511731.263841 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:34779->208.117.254.39:443]: dropping client
+1427511739.830338 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:43793->64.233.171.188:5228]: accepted
+1427511739.832042 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:59871->216.58.219.228:443]: accepted
+1427511740.146487 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:59871->216.58.219.228:443]: data relaying started
+1427511740.153573 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:43793->64.233.171.188:5228]: data relaying started
+1427511740.372267 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:42447->173.194.123.1:443]: accepted
+1427511740.693035 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:42447->173.194.123.1:443]: data relaying started
+1427511740.842031 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:41100->74.125.226.164:443]: accepted
+1427511741.159678 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:41100->74.125.226.164:443]: data relaying started
+1427511785.924391 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56627->74.125.226.171:443]: accepted
+1427511785.924452 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38120->74.125.226.191:443]: accepted
+1427511786.240257 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38120->74.125.226.191:443]: data relaying started
+1427511786.241343 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:56627->74.125.226.171:443]: data relaying started
+1427511787.775668 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:59810->173.194.123.127:443]: accepted
+1427511787.776116 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:39563->216.58.219.193:443]: accepted
+1427511788.090895 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:39563->216.58.219.193:443]: data relaying started
+1427511788.091512 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:59810->173.194.123.127:443]: data relaying started
+1427511788.324319 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:36736->173.194.123.63:443]: accepted
+1427511788.638104 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:36736->173.194.123.63:443]: data relaying started
+1427511796.564883 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:56627->74.125.226.171:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511796.564944 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56627->74.125.226.171:443]: dropping client
+1427511798.450095 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:42461->173.194.123.1:443]: accepted
+1427511798.767269 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:42461->173.194.123.1:443]: data relaying started
+1427511799.942898 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56639->74.125.226.171:443]: accepted
+1427511800.258876 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:56639->74.125.226.171:443]: data relaying started
+1427511800.443527 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38506->91.189.94.12:80]: accepted
+1427511801.345972 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38506->91.189.94.12:80]: data relaying started
+1427511801.460191 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38508->91.189.94.12:80]: accepted
+1427511801.461745 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38508->91.189.94.12:80]: data relaying started
+1427511801.462547 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38508->91.189.94.12:80]: both client and server disconnected
+1427511801.462570 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38508->91.189.94.12:80]: dropping client
+1427511801.465046 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38510->91.189.94.12:80]: accepted
+1427511801.466581 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38510->91.189.94.12:80]: data relaying started
+1427511801.467338 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38510->91.189.94.12:80]: both client and server disconnected
+1427511801.467393 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38510->91.189.94.12:80]: dropping client
+1427511801.472280 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38512->91.189.94.12:80]: accepted
+1427511801.536850 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38506->91.189.94.12:80]: both client and server disconnected
+1427511801.536880 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38506->91.189.94.12:80]: dropping client
+1427511801.584663 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52902->74.125.224.208:80]: accepted
+1427511801.585535 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52904->74.125.224.208:80]: accepted
+1427511801.586173 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52906->74.125.224.208:80]: accepted
+1427511801.589297 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38520->91.189.94.12:80]: accepted
+1427511801.593304 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38520->91.189.94.12:80]: data relaying started
+1427511801.595590 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38522->91.189.94.12:80]: accepted
+1427511801.597815 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38520->91.189.94.12:80]: both client and server disconnected
+1427511801.597855 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38520->91.189.94.12:80]: dropping client
+1427511801.601007 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38524->91.189.94.12:80]: accepted
+1427511801.602235 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38525->91.189.94.12:80]: accepted
+1427511801.611652 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38528->91.189.94.12:80]: accepted
+1427511801.612660 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38530->91.189.94.12:80]: accepted
+1427511801.793987 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38522->91.189.94.12:80]: data relaying started
+1427511801.797303 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38522->91.189.94.12:80]: both client and server disconnected
+1427511801.797330 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38522->91.189.94.12:80]: dropping client
+1427511801.832414 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38532->91.189.94.12:80]: accepted
+1427511801.834166 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38512->91.189.94.12:80]: data relaying started
+1427511801.835040 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38512->91.189.94.12:80]: both client and server disconnected
+1427511801.835065 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38512->91.189.94.12:80]: dropping client
+1427511801.894284 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47909->23.67.243.56:80]: accepted
+1427511801.894323 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:47910->23.67.243.56:80]: accepted
+1427511801.896586 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:55944->23.76.210.110:443]: accepted
+1427511801.896657 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:55945->23.76.210.110:443]: accepted
+1427511801.956296 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38524->91.189.94.12:80]: data relaying started
+1427511801.957246 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38524->91.189.94.12:80]: both client and server disconnected
+1427511801.957269 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38524->91.189.94.12:80]: dropping client
+1427511801.968808 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38525->91.189.94.12:80]: data relaying started
+1427511801.971035 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38525->91.189.94.12:80]: both client and server disconnected
+1427511801.971075 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38525->91.189.94.12:80]: dropping client
+1427511801.978850 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38528->91.189.94.12:80]: data relaying started
+1427511801.980032 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38528->91.189.94.12:80]: both client and server disconnected
+1427511801.980061 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38528->91.189.94.12:80]: dropping client
+1427511801.998867 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38530->91.189.94.12:80]: data relaying started
+1427511802.000091 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38530->91.189.94.12:80]: both client and server disconnected
+1427511802.000116 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38530->91.189.94.12:80]: dropping client
+1427511802.026150 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38532->91.189.94.12:80]: data relaying started
+1427511802.027617 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38532->91.189.94.12:80]: both client and server disconnected
+1427511802.027641 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38532->91.189.94.12:80]: dropping client
+1427511802.176119 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52904->74.125.224.208:80]: data relaying started
+1427511802.177022 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52904->74.125.224.208:80]: both client and server disconnected
+1427511802.177040 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52904->74.125.224.208:80]: dropping client
+1427511802.178386 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52928->74.125.224.208:80]: accepted
+1427511802.205353 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:55945->23.76.210.110:443]: data relaying started
+1427511802.210543 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:55944->23.76.210.110:443]: data relaying started
+1427511802.358712 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52902->74.125.224.208:80]: data relaying started
+1427511802.360765 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52902->74.125.224.208:80]: both client and server disconnected
+1427511802.360808 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52902->74.125.224.208:80]: dropping client
+1427511802.363653 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52930->74.125.224.208:80]: accepted
+1427511802.557925 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52906->74.125.224.208:80]: data relaying started
+1427511802.561498 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52906->74.125.224.208:80]: both client and server disconnected
+1427511802.561554 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52906->74.125.224.208:80]: dropping client
+1427511802.564096 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52932->74.125.224.208:80]: accepted
+1427511802.743515 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52928->74.125.224.208:80]: data relaying started
+1427511802.744644 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52928->74.125.224.208:80]: both client and server disconnected
+1427511802.744665 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52928->74.125.224.208:80]: dropping client
+1427511802.746720 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52934->74.125.224.208:80]: accepted
+1427511802.887720 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45414->63.88.100.144:443]: accepted
+1427511802.887787 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56404->23.67.250.90:443]: accepted
+1427511802.929212 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52930->74.125.224.208:80]: data relaying started
+1427511802.930630 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52930->74.125.224.208:80]: both client and server disconnected
+1427511802.930649 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52930->74.125.224.208:80]: dropping client
+1427511802.963640 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:46252->31.13.73.1:443]: accepted
+1427511803.091854 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52932->74.125.224.208:80]: data relaying started
+1427511803.093464 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52932->74.125.224.208:80]: both client and server disconnected
+1427511803.093533 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52932->74.125.224.208:80]: dropping client
+1427511803.153736 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:56404->23.67.250.90:443]: data relaying started
+1427511803.204257 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45414->63.88.100.144:443]: data relaying started
+1427511803.301011 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:46252->31.13.73.1:443]: data relaying started
+1427511803.310844 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52934->74.125.224.208:80]: data relaying started
+1427511803.312966 redsocks.c:392 redsocks_shutdown(...) [10.10.1.31:52934->74.125.224.208:80]: shutdown(client, SHUT_WR): Transport endpoint is not connected
+1427511803.313013 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52934->74.125.224.208:80]: both client and server disconnected
+1427511803.313028 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52934->74.125.224.208:80]: dropping client
+1427511810.580367 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:56639->74.125.226.171:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511810.580422 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56639->74.125.226.171:443]: dropping client
+1427511811.716492 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:54652->173.194.123.5:443]: accepted
+1427511812.035257 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:54652->173.194.123.5:443]: data relaying started
+1427511815.427325 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:53538->198.252.206.140:80]: accepted
+1427511816.244438 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:53538->198.252.206.140:80]: data relaying started
+1427511816.339175 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:41932->72.21.91.121:443]: accepted
+1427511816.593309 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:53538->198.252.206.140:80]: both client and server disconnected
+1427511816.593373 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:53538->198.252.206.140:80]: dropping client
+1427511816.603490 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:41934->72.21.91.121:443]: accepted
+1427511816.613883 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:48943->173.194.123.4:80]: accepted
+1427511816.614887 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:38713->66.150.118.57:80]: accepted
+1427511816.615873 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:48943->173.194.123.4:80]: data relaying started
+1427511816.616459 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56956->63.130.77.106:80]: accepted
+1427511816.617265 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:41932->72.21.91.121:443]: data relaying started
+1427511816.617869 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:48943->173.194.123.4:80]: both client and server disconnected
+1427511816.617895 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:48943->173.194.123.4:80]: dropping client
+1427511816.659243 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:56956->63.130.77.106:80]: data relaying started
+1427511816.660163 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:56956->63.130.77.106:80]: both client and server disconnected
+1427511816.660182 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56956->63.130.77.106:80]: dropping client
+1427511816.799790 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:38713->66.150.118.57:80]: data relaying started
+1427511816.802759 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:38713->66.150.118.57:80]: both client and server disconnected
+1427511816.802846 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38713->66.150.118.57:80]: dropping client
+1427511816.829292 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:43562->74.125.226.165:443]: accepted
+1427511816.843645 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52958->74.125.224.208:80]: accepted
+1427511816.844394 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52960->74.125.224.208:80]: accepted
+1427511816.844579 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52961->74.125.224.208:80]: accepted
+1427511816.854920 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:37786->107.22.164.38:80]: accepted
+1427511816.882329 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:41934->72.21.91.121:443]: data relaying started
+1427511816.884720 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:48959->173.194.123.4:80]: accepted
+1427511816.887010 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:56970->63.130.77.106:80]: accepted
+1427511816.911264 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:45770->66.150.48.21:80]: accepted
+1427511816.925126 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:56970->63.130.77.106:80]: data relaying started
+1427511816.926394 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:56970->63.130.77.106:80]: both client and server disconnected
+1427511816.926430 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56970->63.130.77.106:80]: dropping client
+1427511816.937615 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:53566->198.252.206.140:80]: accepted
+1427511816.990966 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:48959->173.194.123.4:80]: data relaying started
+1427511816.992012 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:48959->173.194.123.4:80]: both client and server disconnected
+1427511816.992039 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:48959->173.194.123.4:80]: dropping client
+1427511817.144605 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:43562->74.125.226.165:443]: data relaying started
+1427511817.272760 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:45770->66.150.48.21:80]: data relaying started
+1427511817.274010 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45770->66.150.48.21:80]: both client and server disconnected
+1427511817.274055 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45770->66.150.48.21:80]: dropping client
+1427511817.288895 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:53566->198.252.206.140:80]: data relaying started
+1427511817.289726 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:53566->198.252.206.140:80]: both client and server disconnected
+1427511817.289776 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:53566->198.252.206.140:80]: dropping client
+1427511817.371633 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52958->74.125.224.208:80]: data relaying started
+1427511817.374231 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52958->74.125.224.208:80]: both client and server disconnected
+1427511817.374274 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52958->74.125.224.208:80]: dropping client
+1427511817.376449 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52974->74.125.224.208:80]: accepted
+1427511817.578216 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52961->74.125.224.208:80]: data relaying started
+1427511817.581089 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52961->74.125.224.208:80]: both client and server disconnected
+1427511817.581130 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52961->74.125.224.208:80]: dropping client
+1427511817.583366 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52976->74.125.224.208:80]: accepted
+1427511817.681487 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:37786->107.22.164.38:80]: data relaying started
+1427511817.683912 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:37786->107.22.164.38:80]: both client and server disconnected
+1427511817.683985 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:37786->107.22.164.38:80]: dropping client
+1427511817.752645 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52960->74.125.224.208:80]: data relaying started
+1427511817.753648 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52960->74.125.224.208:80]: both client and server disconnected
+1427511817.753667 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52960->74.125.224.208:80]: dropping client
+1427511817.755213 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52978->74.125.224.208:80]: accepted
+1427511817.919986 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52974->74.125.224.208:80]: data relaying started
+1427511817.920863 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52974->74.125.224.208:80]: both client and server disconnected
+1427511817.920881 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52974->74.125.224.208:80]: dropping client
+1427511817.922135 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52980->74.125.224.208:80]: accepted
+1427511818.104095 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52976->74.125.224.208:80]: data relaying started
+1427511818.105452 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52976->74.125.224.208:80]: both client and server disconnected
+1427511818.105476 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52976->74.125.224.208:80]: dropping client
+1427511818.106642 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52982->74.125.224.208:80]: accepted
+1427511818.255410 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52978->74.125.224.208:80]: data relaying started
+1427511818.257471 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52978->74.125.224.208:80]: both client and server disconnected
+1427511818.257503 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52978->74.125.224.208:80]: dropping client
+1427511818.489052 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52980->74.125.224.208:80]: data relaying started
+1427511818.491006 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52980->74.125.224.208:80]: both client and server disconnected
+1427511818.491061 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52980->74.125.224.208:80]: dropping client
+1427511818.670309 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52982->74.125.224.208:80]: data relaying started
+1427511818.672237 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52982->74.125.224.208:80]: both client and server disconnected
+1427511818.672288 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52982->74.125.224.208:80]: dropping client
+1427511820.581281 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:45414->63.88.100.144:443]: both client and server disconnected
+1427511820.581314 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:45414->63.88.100.144:443]: dropping client
+1427511820.581364 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:56404->23.67.250.90:443]: both client and server disconnected
+1427511820.581374 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56404->23.67.250.90:443]: dropping client
+1427511820.581422 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:55945->23.76.210.110:443]: both client and server disconnected
+1427511820.581432 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:55945->23.76.210.110:443]: dropping client
+1427511820.581531 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:55944->23.76.210.110:443]: both client and server disconnected
+1427511820.581540 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:55944->23.76.210.110:443]: dropping client
+1427511851.842359 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:42825->173.194.123.34:443]: accepted
+1427511852.159206 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:42825->173.194.123.34:443]: data relaying started
+1427511854.838368 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:34561->74.125.226.167:443]: accepted
+1427511855.160292 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:34561->74.125.226.167:443]: data relaying started
+1427511855.344568 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:34563->74.125.226.167:443]: accepted
+1427511855.629335 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40817->180.149.55.13:443]: accepted
+1427511855.630968 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:40819->180.149.55.13:443]: accepted
+1427511855.651530 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40819->180.149.55.13:443]: data relaying started
+1427511855.651922 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:40817->180.149.55.13:443]: data relaying started
+1427511855.659793 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:34563->74.125.226.167:443]: data relaying started
+1427511855.787525 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:52994->74.125.224.208:80]: accepted
+1427511856.188620 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:59704->216.58.219.238:443]: accepted
+1427511856.240091 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:41220->74.125.226.164:443]: accepted
+1427511856.506126 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:59704->216.58.219.238:443]: data relaying started
+1427511856.523052 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:52994->74.125.224.208:80]: data relaying started
+1427511856.525864 redsocks.c:392 redsocks_shutdown(...) [10.10.1.31:52994->74.125.224.208:80]: shutdown(client, SHUT_WR): Transport endpoint is not connected
+1427511856.525916 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:52994->74.125.224.208:80]: both client and server disconnected
+1427511856.525932 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52994->74.125.224.208:80]: dropping client
+1427511856.526095 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:44839->173.194.7.217:443]: accepted
+1427511856.558330 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:41220->74.125.226.164:443]: data relaying started
+1427511856.817891 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:44839->173.194.7.217:443]: data relaying started
+1427511858.555677 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:44839->173.194.7.217:443]: both client and server disconnected
+1427511858.555732 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:44839->173.194.7.217:443]: dropping client
+1427511858.829142 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:43608->74.125.226.165:443]: accepted
+1427511859.143929 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:43608->74.125.226.165:443]: data relaying started
+1427511860.204082 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33118->173.194.123.109:443]: accepted
+1427511860.205071 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:33120->173.194.123.109:443]: accepted
+1427511860.523368 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33118->173.194.123.109:443]: data relaying started
+1427511860.524529 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:33120->173.194.123.109:443]: data relaying started
+1427511861.829494 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:34476->74.125.226.172:443]: accepted
+1427511862.147126 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:34476->74.125.226.172:443]: data relaying started
+1427511863.991726 redsocks.c:707 redsocks_accept_client(...) [10.10.1.31:44853->74.125.226.169:443]: accepted
+1427511864.312175 redsocks.c:327 redsocks_start_relay(...) [10.10.1.31:44853->74.125.226.169:443]: data relaying started
+1427511869.307095 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:46252->31.13.73.1:443]: both client and server disconnected
+1427511869.307684 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:46252->31.13.73.1:443]: dropping client
+1427511870.582621 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:34563->74.125.226.167:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511870.582729 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:34563->74.125.226.167:443]: dropping client
+1427511880.583391 redsocks.c:439 redsocks_event_error(...) [10.10.1.31:33120->173.194.123.109:443]: client error, code EVBUFFER_READ|0|0|EVBUFFER_ERROR|0|0x0: Success
+1427511880.583458 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33120->173.194.123.109:443]: dropping client
+1427511909.825740 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40819->180.149.55.13:443]: both client and server disconnected
+1427511909.825804 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40819->180.149.55.13:443]: dropping client
+1427511970.591063 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:40817->180.149.55.13:443]: both client and server disconnected
+1427511970.591198 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:40817->180.149.55.13:443]: dropping client
+1427511981.665589 redsocks.c:400 redsocks_shutdown(...) [10.10.1.31:42447->173.194.123.1:443]: both client and server disconnected
+1427511981.665634 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:42447->173.194.123.1:443]: dropping client
+1427511998.274409 main.c:156 main(...) redsocks goes down
+1427511998.274472 redsocks.c:847 redsocks_fini_instance(...) There are connected clients during shutdown! Disconnecting them.
+1427511998.274489 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:44853->74.125.226.169:443]: dropping client
+1427511998.274579 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:34476->74.125.226.172:443]: dropping client
+1427511998.274651 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:33118->173.194.123.109:443]: dropping client
+1427511998.274696 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:43608->74.125.226.165:443]: dropping client
+1427511998.274741 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:41220->74.125.226.164:443]: dropping client
+1427511998.274784 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:59704->216.58.219.238:443]: dropping client
+1427511998.274828 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:34561->74.125.226.167:443]: dropping client
+1427511998.274887 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:42825->173.194.123.34:443]: dropping client
+1427511998.274931 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:43562->74.125.226.165:443]: dropping client
+1427511998.274976 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:41934->72.21.91.121:443]: dropping client
+1427511998.275018 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:41932->72.21.91.121:443]: dropping client
+1427511998.275111 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:54652->173.194.123.5:443]: dropping client
+1427511998.275156 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:42461->173.194.123.1:443]: dropping client
+1427511998.275202 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36736->173.194.123.63:443]: dropping client
+1427511998.275263 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:39563->216.58.219.193:443]: dropping client
+1427511998.275308 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:59810->173.194.123.127:443]: dropping client
+1427511998.275352 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:38120->74.125.226.191:443]: dropping client
+1427511998.275397 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:41100->74.125.226.164:443]: dropping client
+1427511998.275485 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:59871->216.58.219.228:443]: dropping client
+1427511998.275527 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:43793->64.233.171.188:5228]: dropping client
+1427511998.275571 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:49605->173.194.123.109:443]: dropping client
+1427511998.275597 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:40994->74.125.226.165:443]: dropping client
+1427511998.275615 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:37126->74.125.226.164:443]: dropping client
+1427511998.275632 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:36808->216.58.219.238:443]: dropping client
+1427511998.275661 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:57876->74.125.226.167:443]: dropping client
+1427511998.275698 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:37102->74.125.226.164:443]: dropping client
+1427511998.275717 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:59967->173.194.123.1:443]: dropping client
+1427511998.275735 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:43426->173.194.123.34:443]: dropping client
+1427511998.275751 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:39913->173.194.123.5:443]: dropping client
+1427511998.275768 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:35972->74.125.226.191:443]: dropping client
+1427511998.275785 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:58684->23.76.210.110:443]: dropping client
+1427511998.275815 redsocks.c:847 redsocks_fini_instance(...) There are connected clients during shutdown! Disconnecting them.
+1427511998.275823 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47910->23.67.243.56:80]: dropping client
+1427511998.275863 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47909->23.67.243.56:80]: dropping client
+1427511998.275898 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:56891->206.190.56.191:80]: dropping client
+1427511998.275932 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:56890->206.190.56.191:80]: dropping client
+1427511998.275951 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:43301->173.194.204.95:80]: dropping client
+1427511998.275969 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:43300->173.194.204.95:80]: dropping client
+1427511998.275986 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:33018->23.67.243.56:80]: dropping client
+1427511998.276004 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:33017->23.67.243.56:80]: dropping client
+1427511998.276022 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:45592->23.76.223.139:80]: dropping client
+1427511998.276041 redsocks.c:337 redsocks_drop_client(...) [10.9.3.166:45591->23.76.223.139:80]: dropping client
+1427511998.276154 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56592->104.16.13.8:80]: dropping client
+1427511998.276192 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56591->104.16.13.8:80]: dropping client
+1427511998.276228 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56590->104.16.13.8:80]: dropping client
+1427511998.276265 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56589->104.16.13.8:80]: dropping client
+1427511998.276355 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:56588->104.16.13.8:80]: dropping client
+1427511998.276392 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47193->98.139.225.43:80]: dropping client
+1427511998.276419 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47192->98.139.225.43:80]: dropping client
+1427511998.276440 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:47864->173.194.123.4:80]: dropping client
+1427511998.276469 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:52454->198.252.206.140:80]: dropping client
+1427511998.276511 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36679->107.22.164.38:80]: dropping client
+1427511998.276536 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36678->107.22.164.38:80]: dropping client
+1427511998.276557 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36677->107.22.164.38:80]: dropping client
+1427511998.276577 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36676->107.22.164.38:80]: dropping client
+1427511998.276597 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36675->107.22.164.38:80]: dropping client
+1427511998.276617 redsocks.c:337 redsocks_drop_client(...) [10.10.1.31:36301->198.252.206.141:80]: dropping client

@@ -1,0 +1,48 @@
+Sat Mar 28 08:28:02 2015 OpenVPN 2.3.2 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [eurephia] [MH] [IPv6] built on Dec  1 2014
+Sat Mar 28 08:28:02 2015 WARNING: file '/home/kunal15595/Allproxy/config/vpnbook_cred' is group or others accessible
+Sat Mar 28 08:28:02 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Sat Mar 28 08:28:02 2015 NOTE: --fast-io is disabled since we are not using UDP
+Sat Mar 28 08:28:02 2015 WARNING: file '/home/kunal15595/Allproxy/config/vproxy_cred' is group or others accessible
+Sat Mar 28 08:28:02 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Sat Mar 28 08:28:02 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Sat Mar 28 08:28:03 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Sat Mar 28 08:28:03 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Sat Mar 28 08:28:03 2015 Attempting Basic Proxy-Authorization
+Sat Mar 28 08:28:03 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Sat Mar 28 08:28:05 2015 TCPv4_CLIENT link local: [undef]
+Sat Mar 28 08:28:05 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Sat Mar 28 08:28:05 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=769bd797 7fa814a1
+Sat Mar 28 08:28:05 2015 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sat Mar 28 08:28:09 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Sat Mar 28 08:28:09 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Sat Mar 28 08:28:11 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Sat Mar 28 08:28:11 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Sat Mar 28 08:28:11 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Sat Mar 28 08:28:11 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Sat Mar 28 08:28:11 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Sat Mar 28 08:28:11 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Sat Mar 28 08:28:13 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Sat Mar 28 08:28:13 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.3.166 10.9.3.165'
+Sat Mar 28 08:28:13 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Sat Mar 28 08:28:13 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Sat Mar 28 08:28:13 2015 OPTIONS IMPORT: route options modified
+Sat Mar 28 08:28:13 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sat Mar 28 08:28:13 2015 ROUTE_GATEWAY 10.10.0.254/255.255.192.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Sat Mar 28 08:28:13 2015 TUN/TAP device tun1 opened
+Sat Mar 28 08:28:13 2015 TUN/TAP TX queue length set to 100
+Sat Mar 28 08:28:13 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Sat Mar 28 08:28:13 2015 /sbin/ip link set dev tun1 up mtu 1500
+Sat Mar 28 08:28:13 2015 /sbin/ip addr add dev tun1 local 10.9.3.166 peer 10.9.3.165
+Sat Mar 28 08:28:16 2015 /sbin/ip route add 202.141.80.19/32 via 10.10.0.254
+Sat Mar 28 08:28:16 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.3.165
+Sat Mar 28 08:28:16 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.3.165
+Sat Mar 28 08:28:16 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.3.165
+Sat Mar 28 08:28:16 2015 Initialization Sequence Completed
+Sat Mar 28 08:32:19 2015 event_wait : Interrupted system call (code=4)
+Sat Mar 28 08:32:19 2015 /sbin/ip route del 10.9.0.1/32
+Sat Mar 28 08:32:19 2015 /sbin/ip route del 202.141.80.19/32
+Sat Mar 28 08:32:19 2015 /sbin/ip route del 0.0.0.0/1
+Sat Mar 28 08:32:19 2015 /sbin/ip route del 128.0.0.0/1
+Sat Mar 28 08:32:19 2015 Closing TUN/TAP interface
+Sat Mar 28 08:32:19 2015 /sbin/ip addr del dev tun1 local 10.9.3.166 peer 10.9.3.165
+Sat Mar 28 08:32:19 2015 SIGTERM[hard,] received, process exiting

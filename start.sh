@@ -3,7 +3,8 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 source /etc/environment
-source ./config/config.sh
+source $allproxy_path/config/config.sh
+
 case $1 in
 tproxy)
 	

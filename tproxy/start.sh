@@ -20,14 +20,14 @@ echo "Configuring routes ..." >> $allproxy_path/log/tproxy
 source $allproxy_path/config/config_routes.sh >> $allproxy_path/log/config_routes #&
 
 echo "Configuring redsocks ..." >> $allproxy_path/log/tproxy
-. $allproxy_path/config/redsocks_config.sh $tproxy_server $tproxy_port $tproxy_username $tproxy_password > $allproxy_path/log/Redsocks.log 2>&1 & 
+. $allproxy_path/config/redsocks_config.sh $tproxy_server $tproxy_port $tproxy_username $tproxy_password > $allproxy_path/log/redsocks 2>&1 & 
 echo "redsocks configured successfully" >> $allproxy_path/log/tproxy 
 
 echo "initiating fake DNS server ..."
-sudo python -u $allproxy_path/tproxy/fake_dns.py > $allproxy_path/log/DNS.log 2>&1 & 
+sudo python -u $allproxy_path/tproxy/fake_dns.py $allproxy_path/pid/tproxy > $allproxy_path/log/dns 2>&1 & 
 echo "DNS server initiated" >> $allproxy_path/log/tproxy 
 
-echo $! > $allproxy_path/pid/tproxy #&
+# echo $! > $allproxy_path/pid/tproxy #&
 
 echo "Transparent proxy initiated, running in background" >> $allproxy_path/log/tproxy 
 

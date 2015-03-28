@@ -1,12 +1,5 @@
-#!/bin/bash
-source /etc/environment
 
-source $allproxy_path/config/config.sh
-
-IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -m 1 -Eo '([0-9]*\.){3}[0-9]*')
-
-echo "
-privoxy --no-daemon --pidfile $allproxy_path/pid/lproxy $allproxy_path/config/lproxy
+privoxy --no-daemon --pidfile /home/kunal15595/Allproxy/pid/lproxy /home/kunal15595/Allproxy/config/lproxy
 confdir /etc/privoxy
 logdir /var/log/privoxy
 actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
@@ -30,13 +23,10 @@ keep-alive-timeout 5
 tolerate-pipelining 1
 socket-timeout 300
 
-forward   			/	$lproxy_server:$lproxy_port
+forward   			/	202.141.80.19:3128
 #forward-socks5 	/ 	127.0.0.1:9050 .
 #forward-socks4a 	/	127.0.0.1:9050 .
-listen-address  localhost:$lproxy_local_port
-listen-address $IP:$lproxy_local_port
+listen-address  localhost:8181
+listen-address 10.10.1.31:8181
 
-" > $allproxy_path/config/lproxy
-
-privoxy --no-daemon --pidfile $allproxy_path/pid/lproxy $allproxy_path/config/lproxy
 

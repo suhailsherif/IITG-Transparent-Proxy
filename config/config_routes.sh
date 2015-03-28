@@ -3,7 +3,6 @@ source /etc/environment
 
 source $allproxy_path/config/config.sh #&
 
-echo "setting default gateway to " $nproxy_gateway
 
 sudo ip route add to 202.141.80.0/23 via $nproxy_gateway
 
@@ -23,6 +22,8 @@ then
 			tproxy_gateway=$(echo $OUTPUT | awk -F, '{print $1}')
 
 			sudo ip route del default
+
+			echo "setting default gateway to " $tproxy_gateway
 			sudo ip route add default via $tproxy_gateway
 		fi
 

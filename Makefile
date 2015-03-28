@@ -46,13 +46,9 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = main.cpp \
-		allproxy.cpp \
-		cproxy.cpp \
-		fproxy.cpp moc_allproxy.cpp
+		allproxy.cpp moc_allproxy.cpp
 OBJECTS       = main.o \
 		allproxy.o \
-		cproxy.o \
-		fproxy.o \
 		moc_allproxy.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
@@ -285,7 +281,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/Allproxy1.0.0 || mkdir -p .tmp/Allproxy1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.h constants.h constants.h cproxy.h fproxy.h .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents main.cpp allproxy.cpp cproxy.cpp fproxy.cpp .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.ui .tmp/Allproxy1.0.0/ && (cd `dirname .tmp/Allproxy1.0.0` && $(TAR) Allproxy1.0.0.tar Allproxy1.0.0 && $(COMPRESS) Allproxy1.0.0.tar) && $(MOVE) `dirname .tmp/Allproxy1.0.0`/Allproxy1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/Allproxy1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.h constants.h constants.h .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents main.cpp allproxy.cpp .tmp/Allproxy1.0.0/ && $(COPY_FILE) --parents allproxy.ui .tmp/Allproxy1.0.0/ && (cd `dirname .tmp/Allproxy1.0.0` && $(TAR) Allproxy1.0.0.tar Allproxy1.0.0 && $(COMPRESS) Allproxy1.0.0.tar) && $(MOVE) `dirname .tmp/Allproxy1.0.0`/Allproxy1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/Allproxy1.0.0
 
 
 clean:compiler_clean 
@@ -771,6 +767,9 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/qpushbutton.h \
 		/usr/include/qt5/QtWidgets/QRadioButton \
 		/usr/include/qt5/QtWidgets/qradiobutton.h \
+		/usr/include/qt5/QtWidgets/QTextEdit \
+		/usr/include/qt5/QtWidgets/qtextedit.h \
+		/usr/include/qt5/QtGui/qtextdocument.h \
 		/usr/include/qt5/QtWidgets/QWidget \
 		/usr/include/qt5/QtCore/QTranslator \
 		/usr/include/qt5/QtCore/qtranslator.h \
@@ -785,9 +784,6 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		/usr/include/qt5/QtCore/QDebug \
-		/usr/include/qt5/QtWidgets/QTextEdit \
-		/usr/include/qt5/QtWidgets/qtextedit.h \
-		/usr/include/qt5/QtGui/qtextdocument.h \
 		/usr/include/qt5/QtGui/QtGui \
 		/usr/include/qt5/QtGui/QtGuiDepends \
 		/usr/include/qt5/QtCore/QtCore \
@@ -968,12 +964,6 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtWidgets/QInputDialog \
 		/usr/include/qt5/QtWidgets/qinputdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o allproxy.o allproxy.cpp
-
-cproxy.o: cproxy.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cproxy.o cproxy.cpp
-
-fproxy.o: fproxy.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fproxy.o fproxy.cpp
 
 moc_allproxy.o: moc_allproxy.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_allproxy.o moc_allproxy.cpp
