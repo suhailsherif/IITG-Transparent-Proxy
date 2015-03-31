@@ -4,6 +4,8 @@ case $1 in
 start)
 
 	echo "Setting-up iptable rules ..."
+	sudo iptables -t nat -N REDSOCKS
+
 	sudo iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to 55
 	sudo iptables -t nat -A OUTPUT -p udp --dport 7707 -j REDIRECT --to 55
 	sudo iptables -t nat -A OUTPUT -p udp --dport 7708 -j REDIRECT --to 55
@@ -13,27 +15,36 @@ start)
 	sudo iptables -t nat -A OUTPUT -p udp --dport 9785 -j REDIRECT --to 55	# viber
 	
 
-	sudo iptables -t nat -A OUTPUT -d 127.0.0.0/8 -j RETURN
-	sudo iptables -t nat -A OUTPUT -p tcp -d 10.0.0.0/8 -j RETURN
-	sudo iptables -t nat -A OUTPUT -p tcp -d 172.16.0.0/16 -j RETURN
-	sudo iptables -t nat -A OUTPUT -p tcp -d 192.168.0.0/16 -j RETURN
-	sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.80.0/23 -j RETURN
-	sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.80.14 -j RETURN
+	sudo iptables -t nat -A REDSOCKS -d 127.0.0.0/8 -j RETURN
+	sudo iptables -t nat -A REDSOCKS -p tcp -d 10.0.0.0/8 -j RETURN
+	sudo iptables -t nat -A REDSOCKS -p tcp -d 172.16.0.0/16 -j RETURN
+	sudo iptables -t nat -A REDSOCKS -p tcp -d 192.168.0.0/16 -j RETURN
+	sudo iptables -t nat -A REDSOCKS -p tcp -d 202.141.80.0/23 -j RETURN
+	
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 80 -j REDIRECT --to 8123
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 443 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 22 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5228 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5060 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5061 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5223 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5222 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5242 -j REDIRECT --to 8124	# viber
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 4244 -j REDIRECT --to 8124	# viber
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 943 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 28852 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 8075 -j REDIRECT --to 8124
 
-	sudo iptables -t nat -A OUTPUT -p tcp -d 202.141.81.22/24 -j RETURN
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDIRECT --to 8123
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 443 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 22 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5228 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5060 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5061 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5223 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5222 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 5242 -j REDIRECT --to 8124	# viber
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 4244 -j REDIRECT --to 8124	# viber
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 943 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 28852 -j REDIRECT --to 8124
-	sudo iptables -t nat -A OUTPUT -p tcp --dport 8075 -j REDIRECT --to 8124
+	sudo iptables -t nat -A OUTPUT -p tcp -m owner --uid-owner kunal15595 -j REDSOCKS
+
+	sudo iptables -t nat -A PREROUTING -i wlan1 -p tcp -j REDSOCKS
+	sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp -j REDSOCKS
+
+	sudo iptables -A INPUT -i wlan0 -p tcp --dport 8123 -j ACCEPT
+	sudo iptables -A INPUT -i wlan0 -p tcp --dport 8124 -j ACCEPT
+	sudo iptables -A INPUT -i wlan1 -p tcp --dport 8123 -j ACCEPT
+	sudo iptables -A INPUT -i wlan1 -p tcp --dport 8124 -j ACCEPT
+	
 
 	echo "iptable configured"
 
@@ -54,5 +65,7 @@ stop)
 	fi
 
 	sudo iptables -t nat -F OUTPUT
+	sudo iptables -t nat -F REDSOCKS
+	
 
 esac

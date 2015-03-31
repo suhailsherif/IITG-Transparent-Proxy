@@ -76,7 +76,9 @@ def respuesta(query):
 		packet += '\x00\x01\x00\x01\x00\x00\x00\x3c\x00\x04'
 		# 4bytes of IP
 		packet += str.join('', map(lambda x: chr(int(x)), query.ip.split('.')))
+
 	udps.sendto(packet, query.addr)
+	
 	if stat == 1:
 		print '{:5s}  {:15s} {:15s}'.format(str(dnsRes.status), str(query.ip), str(query.dominio))
 	elif stat == 2 and not query.dominio == 'gaednsproxy1.appspot.com':

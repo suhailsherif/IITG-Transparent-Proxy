@@ -13,7 +13,7 @@ base {
 
 
 redsocks {
-	local_ip = 127.0.0.1;
+	local_ip = 0.0.0.0;
 	local_port = 8123;
 	ip = $1;
 	port = $2;
@@ -21,8 +21,9 @@ redsocks {
 	login = \"$3\";
 	password = \"$4\";
 }
+
 redsocks {
-	local_ip = 127.0.0.1;
+	local_ip = 0.0.0.0;
 	local_port = 8124;
 	ip = $1;
 	port = $2;
