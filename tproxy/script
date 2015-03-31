@@ -35,17 +35,18 @@ start)
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 28852 -j REDIRECT --to 8124
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 8075 -j REDIRECT --to 8124
 
-	sudo iptables -t nat -A OUTPUT -p tcp -m owner --uid-owner kunal15595 -j REDSOCKS
+	sudo iptables -t nat -A OUTPUT -p tcp -j REDSOCKS	
 
 	sudo iptables -t nat -A PREROUTING -i wlan1 -p tcp -j REDSOCKS
 	sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp -j REDSOCKS
+	sudo iptables -t nat -A PREROUTING -i wlan1 -p udp -j REDSOCKS
+	sudo iptables -t nat -A PREROUTING -i wlan0 -p udp -j REDSOCKS
 
 	sudo iptables -A INPUT -i wlan0 -p tcp --dport 8123 -j ACCEPT
 	sudo iptables -A INPUT -i wlan0 -p tcp --dport 8124 -j ACCEPT
 	sudo iptables -A INPUT -i wlan1 -p tcp --dport 8123 -j ACCEPT
 	sudo iptables -A INPUT -i wlan1 -p tcp --dport 8124 -j ACCEPT
 	
-
 	echo "iptable configured"
 
 	echo "Setting-up resolv.conf ..."

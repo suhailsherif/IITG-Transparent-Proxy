@@ -1,4 +1,3 @@
-redsocks/redsocksauto.conf
 .*
 pidfile.temp
 dnsCache
@@ -15,3 +14,7 @@ vpnbook/
 *.iso
 *.o
 hacks
+log/*
+pid/*
+libevent/
+Allproxy.pro.user.*

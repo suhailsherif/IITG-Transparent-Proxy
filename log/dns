@@ -1,253 +1,1129 @@
 DNS server running on port 55.
 Default IPs loaded
 Cached IPs loaded
-Hit    173.194.123.40  android.clients.google.com
-Hit    64.233.171.95   www.googleapis.com
-Hit    216.52.203.13   data.flurry.com
-Hit    54.235.141.12   e.crashlytics.com
-Hit    108.174.10.10   www.linkedin.com
-Hit    58.83.195.166   oc.umeng.com   
-Hit    64.233.171.95   play.googleapis.com
-Hit    74.125.22.95    android.googleapis.com
-Hit    64.233.171.188  mtalk.google.com
-Hit    74.125.226.170  lh5.googleusercontent.com
-Hit    216.58.219.193  lh3.googleusercontent.com
-Hit    216.58.219.232  ssl.google-analytics.com
-Hit    74.125.226.165  encrypted-tbn3.gstatic.com
-Hit    111.1.53.158    sdk.open.talk.igexin.com
-Hit    74.125.226.169  encrypted-tbn0.gstatic.com
-Hit    74.125.226.191  www.google.co.in
-Hit    173.194.123.2   encrypted-tbn2.gstatic.com
-Hit    108.160.166.125 api.dropbox.com
-Hit    23.67.243.58    androiddoes.accu-weather.com
-Hit    216.58.219.228  www.google.com 
+Hit    173.255.112.173 stream.pushbullet.com
 Hit    72.14.247.65    api.pushbullet.com
-Hit    72.14.247.65    track.pushbullet.com
-Hit    54.225.152.187  settings.crashlytics.com
-Exc    8.8.8.8                   mmi615.whatsapp.net
-Err    mmi615.whatsapp.net
-Exc    8.8.8.8                   mmi615.whatsapp.net
-Err    mmi615.whatsapp.net
-Exc    8.8.8.8                   mmi615.whatsapp.net
-Err    mmi615.whatsapp.net
+Hit    208.113.140.170 k0rx.com       Hit    208.113.140.170 dave.tycho.ws  
+
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    31.13.73.1      2-edge-chat.facebook.com
+Hit    31.13.73.1      www.facebook.com
+Hit    192.30.252.131  github.com     
+Hit    108.160.166.125 api.dropbox.com
+Hit    108.168.180.111 e14.whatsapp.net
+Hit    173.194.123.40  android.clients.google.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    74.125.226.182  mail.google.com
+Hit    54.187.109.244  www.tomsguide.com
+Hit    23.67.243.91    a.adroll.com   
+Hit    54.152.192.183  ads.servebom.com
+Hit    63.130.77.106   b.scorecardresearch.com
+Hit    62.161.94.220   logc22.xiti.com
+Hit    63.88.100.186   m.bestofmedia.com
+Hit    63.88.100.186   media.bestofmicro.com
+Hit    63.140.35.162   metrics.toptenreviews.com
+Hit    65.171.135.52   secure-us.imrworldwide.com
+Hit    173.194.123.4   www.google-analytics.com
+Hit    173.194.123.30  www.googletagmanager.com
+Hit    72.14.247.65    zebra.pushbullet.com
+Hit    64.233.171.95   ajax.googleapis.com
+Hit    54.187.109.244  www.tomsguide.com
+Hit    74.125.226.186  www.googletagservices.com
+Hit    63.88.100.186   media.bestofmicro.com
+Hit    74.125.226.172  tpc.googlesyndication.com
+Hit    63.88.100.186   m.bestofmedia.com
+Hit    74.125.226.170  themes.googleusercontent.com
+Hit    63.88.100.186   media.bestofmicro.com
+Hit    134.170.30.203  apps.microsoft.com
+Hit    54.187.115.34   downloads.tomsguide.com
+Hit    23.76.210.217   itunes.apple.com
+Hit    74.125.226.161  market.android.com
+Hit    173.194.123.34  plus.google.com
+Hit    199.16.156.6    twitter.com    
+ Hit    69.167.142.128  www.computing.net
+Hit    54.193.41.193   www.laptopmag.com
+Hit    54.215.162.134  www.purch.com  
+Hit    63.88.100.186   www.tomshardware.com
+Hit    54.187.115.34   www.tomsitpro.com
+Hit    64.233.171.188  mtalk.google.com
+Hit    63.88.100.186   m.bestofmedia.com
+Hit    205.251.251.78  pixel.crosspixel.net
+Hit    63.88.100.186   m.bestofmedia.com
+Hit    198.232.124.57  asset.pagefair.com
+Hit    198.232.125.54  asset.pagefair.net
+Hit    174.129.252.6   tag.crsspxl.com
+200    23.10.226.68    zn3sfl7hmdsjbempn-techmedianetwork.siteintercept.qualtrics.com
+Hit    54.243.80.98    stats.pagefair.com
+Hit    54.243.67.32    adfeed.pagefair.net
+Hit    23.11.213.149   a.collective-media.net
+Hit    216.52.121.177  adadvisor.net  
+Hit    172.231.252.124 cc.chango.com  
+Hit    54.174.11.141   p.nexac.com    
+Hit    173.192.208.197 i.simpli.fi    
+Hit    74.201.141.140  pix04.revsci.net
+Hit    208.71.122.1    t.mookie1.com  
+200    158.85.224.173  web.whatsapp.com
+200    204.2.197.201   idpix.media6degrees.com
+Hit    54.235.145.148  pixel.adentifi.com
+200    52.1.160.173    pix.btrll.com  
+200    158.85.224.171  w2.web.whatsapp.com
 Hit    54.243.170.58   aloha.viber.com
-Hit    173.252.103.16  mqtt.facebook.com
-Exc    8.8.8.8                   mmi615.whatsapp.net
-Err    mmi615.whatsapp.net
-Hit    31.13.73.1      graph.facebook.com
-Exc    8.8.8.8                   mms878.whatsapp.net
-Err    mms878.whatsapp.net
-Hit    31.13.73.1      api.facebook.com
+Hit    74.125.226.191  www.google.co.in
+Hit    74.125.226.174  apis.google.com
+Hit    74.125.226.167  clients5.google.com
+ Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    74.125.226.171  s2.googleusercontent.com
+Hit    216.58.219.228  www.google.com 
+Hit    173.194.123.63  www.gstatic.com
+Hit    64.233.171.95   play.googleapis.com
+Hit    64.233.171.188  mtalk.google.com
+Hit    74.125.22.95    android.googleapis.com
+Hit    74.125.226.165  encrypted-tbn3.gstatic.com
+Hit    74.125.226.169  docs.google.com
+Hit    74.125.226.170  lh5.googleusercontent.com
+Hit    216.52.203.13   data.flurry.com
+Hit    216.58.218.163  csi.gstatic.com
+Hit    173.194.123.2   encrypted-tbn2.gstatic.com
+Hit    72.14.247.65    track.pushbullet.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    216.58.219.227  id.google.co.in
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    74.125.226.191  www.google.co.in
+Hit    74.125.226.168  drive.google.com
+Hit    216.58.219.228  www.google.com 
+Hit    74.125.226.172  lh4.googleusercontent.com
+Hit    173.194.123.11  lh6.googleusercontent.com
+Hit    74.125.226.186  www.googleadservices.com
+Hit    74.125.226.170  lh5.googleusercontent.com
 Hit    173.194.123.1   clients4.google.com
 Hit    64.233.171.95   translate.googleapis.com
 Hit    216.58.219.205  accounts.google.com
-Exc    8.8.8.8                   mms878.whatsapp.net
-Err    mms878.whatsapp.net
-Hit    67.228.177.234  ui.ff.avast.com
-Hit    173.194.123.72  accounts.youtube.com
-Hit    72.21.91.127    api-mobile.soundcloud.com
-Hit    72.21.91.127    api.soundcloud.com
-Hit    74.125.226.168  clients3.google.com
-Hit    216.58.219.238  tools.google.com
-Hit    64.233.171.95   play.googleapis.com
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Hit    216.52.203.13   data.flurry.com
-Hit    209.20.75.76    www.sublimetext.com
-Hit    172.229.226.106 au.ff.avast.com
-Hit    23.226.142.216  2.android.pool.ntp.org
-Hit    77.234.40.90    al.ff.avast.com
-Hit    74.125.226.160  google.com     
 Hit    64.233.171.95   www.googleapis.com
-Exc    8.8.8.8                   mmi221.whatsapp.net
-Err    mmi221.whatsapp.net
-Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
-Exc    8.8.8.8                   mms878.whatsapp.net
-Err    mms878.whatsapp.net
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   plbzsluhoxsdaze
-Err    plbzsluhoxsdaze
-Exc    8.8.8.8                   mms878.whatsapp.net
-Err    mms878.whatsapp.net
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   plbzsluhoxsdaze
-Err    plbzsluhoxsdaze
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
+Hit    74.125.226.165  clients1.google.com
+Hit    67.228.177.234  ui.ff.avast.com
+200    209.15.14.21    www.roblox.com 
+Hit    173.194.123.72  accounts.youtube.com
+200    93.184.215.200  ajax.aspnetcdn.com
+200    23.67.243.19    js.rbxcdn.com  
+200    23.67.243.34    tap-cdn.rubiconproject.com
+200    23.67.243.96    t4.rbxcdn.com  
+Hit    108.160.165.139 www.dropbox.com
+Hit    54.192.48.167   marketing.dropbox.com
+Hit    173.194.123.30  www.googletagmanager.com
+Hit    173.194.123.4   www.google-analytics.com
+200    23.67.243.75    images.rbxcdn.com
+200    23.67.243.96    t0.rbxcdn.com  
+200    23.67.243.72    t1.rbxcdn.com  
+Hit    74.125.226.186  www.googletagservices.com
+200    23.67.243.96    t2.rbxcdn.com  
+Hit    74.125.226.172  tpc.googlesyndication.com
+200    23.67.243.96    t6.rbxcdn.com  
+200    69.25.24.25     anvil.rubiconproject.com
+200    23.67.243.72    t7.rbxcdn.com  
+Hit    74.125.22.154   stats.g.doubleclick.net
+Hit    23.76.223.139   connect.facebook.net
+200    54.230.49.109   privacy-policy.truste.com
+Hit    208.52.173.198  com-dbox.netmng.com
+Hit    199.96.57.6     platform.twitter.com
+Hit    206.190.56.190  s.yimg.com     
+Hit    173.194.123.109 googleads.g.doubleclick.net
+200    68.67.176.52    secure.adnxs.com
+200    172.231.249.124 s.adroll.com   
+200    54.230.50.95    sjs.bizographics.com
+Hit    74.125.226.170  themes.googleusercontent.com
+200    54.230.49.55    scripts.demandbase.com
+Err    avuftxsdl      
+Err    mhezcvhyh      
+Err    whnragbhseeqr  
+200    74.125.226.185  securepubads.g.doubleclick.net
+200    69.172.200.194  blog.roblox.com
+200    69.172.200.194  corp.roblox.com
+Hit    216.58.219.238  tools.google.com
+200    192.161.149.155 en.help.roblox.com
+Hit    54.231.8.200    s3.amazonaws.com
+Hit    98.139.225.35   sp.analytics.yahoo.com
+200    74.125.226.188  4727608.fls.doubleclick.net
+Hit    74.125.226.168  clients3.google.com
+Hit    54.210.199.75   api.demandbase.com
+Hit    31.13.73.1      www.facebook.com
+Hit    199.16.156.41   analytics.twitter.com
+Hit    199.16.156.11   t.co           
+200    54.83.205.124   privacy.truste.com
+200    184.72.245.82   d.adroll.com   
+Hit    54.152.121.238  a.company-target.com
+200    74.125.226.163  segment-pixel.invitemedia.com
+200    69.25.24.27     beacon.rubiconproject.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    65.52.108.27    bat.r.msn.com  
+200    74.125.226.186  bid.g.doubleclick.net
+Hit    216.58.219.194  pagead2.googlesyndication.com
+200    204.11.109.75   tags.expo9.exponential.com
+Hit    31.13.73.1      graph.facebook.com
+Hit    74.125.226.168  clients2.google.com
+Hit    202.141.80.72   csea.iitg.ernet.in
+Hit    202.141.80.14   intranet.iitg.ernet.in
+Hit    202.141.81.145  jatinga.iitg.ernet.in
+Hit    202.141.81.21   kamrup.iitg.ernet.in
+Err    avuftxsdl      
+Hit    202.141.81.98   local.iitg.ernet.in
+Err    whnragbhseeqr  
+Hit    31.13.73.1      api.facebook.com
+Err    bidya.iitg.ernet.in
+Err    mhezcvhyh      
+Err    mech05.iitg.ernet.in
+Err    avuftxsdl      
+Err    avuftxsdl      
+Err    whnragbhseeqr  
+Err    whnragbhseeqr  
+Err    bidya.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mhezcvhyh      
+Err    mhezcvhyh      
+Hit    72.21.91.127    api.soundcloud.com
+Hit    65.52.108.27    bat.bing.com   
+Hit    65.52.108.27    bat.bing.com   
+Hit    204.11.109.65   a.tribalfusion.com
+Hit    202.141.80.5    shilloi.iitg.ernet.in
+Hit    74.125.226.186  cm.g.doubleclick.net
+Hit    98.139.225.43   ads.yahoo.com  
+Hit    216.58.218.163  csi.gstatic.com
+Hit    54.85.82.173    x.bidswitch.net
+Hit    68.67.152.225   ib.adnxs.com   
+200    107.23.220.206  idsync.rlcdn.com
+Hit    173.241.242.220 us-u.openx.net 
+Err    whnragbhseeqr  
+Err    whnragbhseeqr  
+Err    avuftxsdl      
+Err    avuftxsdl      
+Err    bidya.iitg.ernet.in
+Err    bidya.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mhezcvhyh      
+Err    mhezcvhyh      
+200    162.248.19.136  simage2.pubmatic.com
+200    69.162.72.180   www.alcheringa.in
+200    202.141.80.6    www.iitg.ernet.in
+200    184.73.197.174  www.bizographics.com
+Err    avuftxsdl      
+Err    avuftxsdl      
+Err    whnragbhseeqr  
+Err    whnragbhseeqr  
+Err    bidya.iitg.ernet.in
+Err    bidya.iitg.ernet.in
+Hit    108.174.10.10   www.linkedin.com
+Err    mech05.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mhezcvhyh      
+Err    mhezcvhyh      
+200    54.225.201.121  imp2.bizographics.com
+Err    avuftxsdl      
+Err    avuftxsdl      
+Err    whnragbhseeqr  
+Err    whnragbhseeqr  
+Err    bidya.iitg.ernet.in
+Err    bidya.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mhezcvhyh      
+Err    mhezcvhyh      
+Hit    199.16.156.72   api.twitter.com
+Hit    199.16.156.6    twitter.com    
+200    87.79.3.104     m.faz.net      
+Err    avuftxsdl      
+Err    whnragbhseeqr  
+Err    bidya.iitg.ernet.in
+Err    bidya.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mhezcvhyh      
 Hit    111.1.53.158    sdk.open.talk.igexin.com
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   mmi221.whatsapp.net
-Err    mmi221.whatsapp.net
-Exc    8.8.8.8                   mmi221.whatsapp.net
-Err    mmi221.whatsapp.net
-Hit    54.235.141.12   e.crashlytics.com
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   plbzsluhoxsdaze
-Err    plbzsluhoxsdaze
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  Exc    8.8.8.8                   www.smule.com  
-
-Err    www.smule.com  Err    www.smule.com  
-
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   plbzsluhoxsdaze
-Err    plbzsluhoxsdaze
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   mmi221.whatsapp.net
-Err    mmi221.whatsapp.net
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   nxdhvxgiokbftniExc    8.8.8.8                   plbzsluhoxsdazeExc    8.8.8.8                   plbzsluhoxsdaze
-
-
-Err    plbzsluhoxsdazeErr    plbzsluhoxsdazeErr    nxdhvxgiokbftni
-
-
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   mmi215.whatsapp.net
-Err    mmi215.whatsapp.net
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   zafwixaatjaudu Exc    8.8.8.8                   plbzsluhoxsdaze
-
-Err    zafwixaatjaudu Err    plbzsluhoxsdaze
-
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   plbzsluhoxsdaze
-Err    plbzsluhoxsdaze
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   plbzsluhoxsdazeExc    8.8.8.8                   plbzsluhoxsdaze
-
-Err    plbzsluhoxsdazeErr    plbzsluhoxsdaze
-
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
-Hit    63.130.77.106   b.scorecardresearch.com
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
+200    91.215.100.37   script.ioam.de 
+200    74.125.22.95    imasdk.googleapis.com
+200    172.231.203.68  ad.yieldlab.net
+200    80.82.201.80    gwp.nuggad.net 
+Err    avuftxsdl      
+Err    whnragbhseeqr  
+Err    bidya.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+Err    mhezcvhyh      
+Hit    74.125.226.174  apis.google.com
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    23.67.243.56    static.ak.facebook.com
+Hit    23.76.210.110   s-static.ak.facebook.com
+200    144.76.158.212  cdn.iqcontentplatform.de
+200    23.235.46.175   cdn.krxd.net   
+Hit    173.194.123.34  plus.google.com
+200    178.63.47.76    s95.research.de.com
+200    193.46.63.65    mqs.ioam.de    
+200    91.215.103.65   de.ioam.de     
+200    134.119.29.239  abo.faz.net    
+200    193.227.146.30  blogs.faz.net  
+200    193.227.146.1   www.faz.net    
+200    91.103.142.129  mobile.smartadserver.com
 Hit    216.52.203.13   data.flurry.com
-Exc    8.8.8.8                   mmi215.whatsapp.net
-Err    mmi215.whatsapp.net
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   plbzsluhoxsdaze
-Err    plbzsluhoxsdaze
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
- Exc    8.8.8.8                   nxdhvxgiokbftni
-Err    nxdhvxgiokbftni
-Exc    8.8.8.8                   account.hotstar.com
-Err    account.hotstar.com
-Hit    173.194.123.40  android.clients.google.com
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Hit    74.125.226.172  lh4.googleusercontent.com
-Hit    74.125.226.186  www.googleadservices.com
+200    54.243.181.113  beacon.krxd.net
+Err    bidya.iitg.ernet.in
+Err    mech05.iitg.ernet.in
+200    74.201.141.140  js.revsci.net  
+200    46.137.175.14   cdn.adrtx.net  
+Hit    74.201.141.140  pix04.revsci.net
+200    46.137.175.14   api.adrtx.net  
+Hit    23.67.243.58    androiddoes.accu-weather.com
+Hit    74.125.226.186  media.admob.com
+Hit    173.194.123.1   clients4.google.com
+Hit    74.125.226.171  lh6.ggpht.com  
+Hit    173.194.204.95  fonts.googleapis.com
+Hit    74.125.22.155   e.admob.com    
+Hit    172.229.226.106 au.ff.avast.com
+Hit    77.234.40.90    al.ff.avast.com
+Hit    173.252.103.16  mqtt.facebook.com
+Hit    31.13.73.1      api.facebook.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    216.58.219.205  accounts.google.com
+Hit    74.125.226.174  apis.google.com
+Hit    74.125.226.189  chatenabled.mail.google.com
+Hit    74.125.226.167  clients5.google.com
+Hit    74.125.226.168  clients6.google.com
+Hit    173.194.123.63  www.gstatic.com
+Hit    173.194.123.11  mail-attachment.googleusercontent.com
+Hit    74.125.226.168  clients2.google.com
+Hit    216.58.219.228  www.google.com 
+Hit    216.58.218.163  csi.gstatic.com
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    74.125.226.172  oauth.googleusercontent.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    216.52.203.13   data.flurry.com
+Hit    208.113.140.170 k0rx.com       
+Hit    208.113.140.170 dave.tycho.ws  
+Hit    192.30.252.131  github.com     
+Hit    74.125.226.168  clients3.google.com
+Hit    64.233.171.188  mtalk.google.com
 Hit    64.233.171.95   play.googleapis.com
-Exc    8.8.8.8                   mmi215.whatsapp.net
-Err    mmi215.whatsapp.net
-Exc    8.8.8.8                   mmi215.whatsapp.net
-Err    mmi215.whatsapp.net
+Hit    158.85.58.120   e12.whatsapp.net
+Hit    216.58.219.228  www.google.com 
+200    69.10.180.70    api.svcmot.com 
+200    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    65.255.37.81    uc6.ucweb.com  
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+200    173.194.52.106  r5---sn-cvh7zn7z.gvt1.com
+Hit    180.179.177.87  down2.9apps.com
+200    65.255.37.109   mynavi.ucweb.com
+200    74.125.22.138   history.google.com
+Hit    8.37.228.174    napi.ucweb.com 
+Hit    65.255.37.92    ucus.ucweb.com 
+Hit    173.255.112.173 stream.pushbullet.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    173.194.123.11  lh6.googleusercontent.com
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    74.125.226.171  lh3.ggpht.com  
+200    202.108.23.85   hmma.baidu.com 
+Hit    74.125.226.171  lh6.ggpht.com  
+Hit    70.39.184.93    uc.ucweb.com   
+Hit    208.43.122.149  e6.whatsapp.net
+Hit    184.173.147.39  www.whatsapp.com
+Hit    54.229.100.96   track.appsflyer.com
 Hit    54.225.152.187  settings.crashlytics.com
+Hit    54.235.141.12   e.crashlytics.com
+Hit    54.225.101.84   reports.crashlytics.com
+200    98.137.201.232  analytics.query.yahoo.com
+200    54.229.96.206   api.appsflyer.com
+Hit    173.252.103.16  mqtt.facebook.com
+200    54.201.244.130  api.acompli.net
+200    180.97.33.177   pasta.dianxinos.com
+Hit    173.194.123.1   clients4.google.com
+200    66.196.116.132  android.connector.push.bf.mobile.yahoo.com
+Hit    31.13.73.1      api.facebook.com
+200    115.239.211.176 ak.dxsvr.com   
+200    74.125.22.121   applock.domobile.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    31.13.73.6      b-graph.facebook.com
+200    74.125.226.184  www.google.com.hk
+200    180.97.33.177   u.dxsvr.com    
+200    192.121.90.133  request3.truecaller.com
+Hit    74.125.226.160  google.com     
+Hit    74.125.226.191  www.google.co.in
+Hit    74.125.226.168  clients3.google.com
+Hit    216.52.203.13   data.flurry.com
+200    176.32.99.133   device-metrics-us-2.amazon.com
+200    176.32.103.187  aax-us-east.amazon-adsystem.com
+200    61.135.185.17   m.baidu.com    
+200    115.239.211.176 rts.dxsvr.com  
+Hit    64.233.171.95   play.googleapis.com
+200    54.192.51.135   www.coursera.org
+200    54.239.16.132   mads.amazon-adsystem.com
+Exc    8.8.8.8                   api.appsflyer.com
+Err    api.appsflyer.com
+Hit    54.231.8.200    s3.amazonaws.com
+200    180.97.33.177   dl.dianxinos.com
+200    223.202.36.52   push-s.maxthon.com
+200    60.28.220.99    bookmark.sync.maxthon.com
+200    223.202.36.45   stats-a.maxthon.com
+200    58.68.245.106   mad.m.maxthon.com
+200    223.202.36.45   g.dcs.maxthon.com
+Hit    173.194.123.40  android.clients.google.com
+200    176.32.100.5    s.amazon-adsystem.com
+Hit    64.233.171.95   www.googleapis.com
+200    125.39.5.33     dl.cdn.dianxinos.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    54.223.160.112  cloudapi.camera360.com
+Hit    108.174.10.10   www.linkedin.com
+Hit    137.116.32.77   b.config.skype.com
+Hit    137.116.32.77   b.config.skype.com
+Hit    191.237.6.13    api.trap.skype.net
+Hit    191.237.6.13    api.trap.skype.net
+Hit    54.187.109.244  www.tomsguide.com
+Hit    216.58.219.228  www.google.com 
+200    178.250.2.115   apps.ad-x.co.uk
+Hit    131.253.61.66   login.live.com 
+Hit    131.253.61.66   login.live.com 
+200    213.199.179.144 dsn1.d.skype.net
+Hit    213.199.179.144 dsn1.d.skype.net
+200    157.56.53.43    62296.0.2.5.20703.rst0.r.skype.net
+Hit    157.56.53.43    62296.0.2.5.20703.rst0.r.skype.net
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    216.52.203.13   data.flurry.com
+200    91.190.218.17   api.skype.com  
+Hit    91.190.218.17   api.skype.com  
+200    157.56.193.36   DB3MSGR6012605.gateway.messenger.live.com
+200    134.170.51.211  proxy-dm2-people.directory.live.com
+Hit    157.56.193.36   DB3MSGR6012605.gateway.messenger.live.com
+Hit    134.170.51.211  proxy-dm2-people.directory.live.com
+200    65.55.32.30     m.hotmail.com  
+Hit    65.55.32.30     m.hotmail.com  
+Hit    115.239.211.176 rts.dxsvr.com  
+200    207.46.11.152   bay405-m.hotmail.com
+Hit    207.46.11.152   bay405-m.hotmail.com
+200    191.239.8.125   api.mcr.skype.com
+Hit    191.239.8.125   api.mcr.skype.com
+Hit    223.202.36.52   push-s.maxthon.com
+200    23.96.89.49     pipe.skype.com 
+Hit    23.96.89.49     pipe.skype.com 
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    74.125.226.171  lh6.ggpht.com  
+Hit    173.194.123.40  android.clients.google.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    74.125.226.191  www.google.co.in
+Hit    74.125.224.208  3-dot-remindem-service.appspot.com
+Hit    74.125.226.186  www.googleadservices.com
+Hit    72.14.247.65    track.pushbullet.com
+200    168.62.1.142    androidprod.blob.core.windows.net
+200    93.184.215.200  az361816.vo.msecnd.net
+200    91.190.218.69   conn.skype.com 
+Hit    91.190.218.69   conn.skype.com 
+Hit    64.233.171.95   www.googleapis.com
+Hit    64.233.171.95   play.googleapis.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    173.194.123.1   clients4.google.com
+Hit    173.194.123.109 googleads.g.doubleclick.net
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.226.169  docs.google.com
+Hit    74.125.226.168  drive.google.com
+Hit    74.125.226.172  lh4.googleusercontent.com
+Hit    74.125.226.170  lh5.googleusercontent.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    216.58.219.228  www.google.com 
+200    180.97.33.177   rc.dxsvr.com   
+Hit    74.125.226.168  clients2.google.com
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    216.52.203.13   data.flurry.com
+200    206.190.57.60   m.mg.mail.yahoo.com
+200    103.11.143.248  asia.pool.ntp.org
+Hit    98.137.201.232  analytics.query.yahoo.com
+200    66.196.116.134  android.register.push.mobile.yahoo.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    72.247.9.122    weather.service.msn.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    74.125.224.208  3-dot-remindem-service.appspot.com
+Hit    74.125.22.95    android.googleapis.com
+Hit    74.125.226.191  www.google.co.in
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    174.36.210.47   e15.whatsapp.net
+Hit    74.125.226.168  clients3.google.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    216.52.203.13   data.flurry.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+200    173.194.52.75   r6---sn-cvh7zn7s.gvt1.com
+Hit    216.58.219.228  www.google.com 
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    72.247.9.122    weather.service.msn.com
+Hit    104.192.108.124 msafeclean.cloud.360safe.com
+Hit    104.192.108.78  msch.cloud.360safe.com
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    74.125.226.171  lh6.ggpht.com  
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    72.14.247.65    api.pushbullet.com
+Hit    77.234.40.94    apkrep.ff.avast.com
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    64.233.171.188  mtalk.google.com
+200    173.194.52.211  r14---sn-cvh7zn7k.gvt1.com
+200    23.10.225.54    www.goibibo.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    64.233.171.95   play.googleapis.com
+Hit    54.229.100.96   track.appsflyer.com
+Hit    50.17.228.232   analytics.localytics.com
+Hit    74.125.22.95    android.googleapis.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    199.16.156.107  mobile.twitter.com
+Hit    199.16.156.72   api.twitter.com
+Hit    54.229.96.206   api.appsflyer.com
+Hit    54.215.154.246  themestore.cyngn.com
+Hit    54.187.109.244  www.tomsguide.com
+Hit    104.192.108.78  msch.cloud.360safe.com
+Hit    104.192.108.124 msafeclean.cloud.360safe.com
+Hit    23.236.57.21    logjam.cyngn.com
+200    173.194.52.245  r16---sn-cvh7zn7r.gvt1.com
+Hit    58.83.195.166   oc.umeng.com   
+Hit    54.223.160.112  cloudapi.camera360.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    54.215.154.246  themestore.cyngn.com
+Hit    173.194.123.34  plus.google.com
+Hit    216.58.218.163  csi.gstatic.com
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    64.233.171.95   play.googleapis.com
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    104.192.108.124 msafeclean.cloud.360safe.com
+Hit    104.192.108.78  msch.cloud.360safe.com
+200    173.194.52.205  r8---sn-cvh7zn7k.gvt1.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    77.234.40.94    apkrep.ff.avast.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    23.10.225.54    www.goibibo.com
+Hit    54.229.100.96   track.appsflyer.com
+Hit    54.229.96.206   api.appsflyer.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    54.215.154.246  themestore.cyngn.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    31.13.73.6      b-graph.facebook.com
+200    98.137.201.252  sgws2.maps.yahoo.com
+200    72.30.202.51    yahoo-cards-yql.media.yahoo.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+200    98.138.243.53   cricketmobile.yql.yahooapis.com
+Hit    64.233.171.95   play.googleapis.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    54.215.154.246  themestore.cyngn.com
+Hit    103.11.143.248  asia.pool.ntp.org
+Hit    74.125.22.95    maps.googleapis.comHit    72.247.9.122    weather.service.msn.com
+
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    173.194.123.1   clients4.google.com
+Hit    31.13.73.1      graph.facebook.com
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    72.14.247.65    api.pushbullet.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    54.187.109.244  www.tomsguide.com
+Hit    74.125.22.95    android.googleapis.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    58.83.195.166   oc.umeng.com   
+Hit    54.223.160.112  cloudapi.camera360.com
+Hit    54.193.85.29    shopvac.cyngn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    202.108.23.85   hmma.baidu.com 
+Hit    64.233.171.188  mtalk.google.com
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    74.125.226.169  docs.google.com
+Hit    54.69.107.96    api-legacy.acompli.net
+Hit    74.125.226.168  clients2.google.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    208.113.140.170 k0rx.com       
+200    158.85.224.177  w3.web.whatsapp.com
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    108.174.10.10   www.linkedin.com
+Hit    58.83.195.166   oc.umeng.com   
+Hit    216.52.203.13   data.flurry.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    72.21.91.127    api-mobile.soundcloud.com
+Hit    158.85.224.173  web.whatsapp.com
+200    54.230.50.188   i1.sndcdn.com  
+Hit    74.125.226.184  fonts.gstatic.com
+Hit    173.194.123.1   clients4.google.com
+Hit    158.85.12.186   decide.mixpanel.com
+Hit    5.45.62.63      ai.ff.avast.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    198.23.87.81    mmi226.whatsapp.net
+Hit    198.23.87.78    mmi228.whatsapp.net
+Hit    184.173.201.50  mmi635.whatsapp.net
+200    198.23.87.66    mmi238.whatsapp.net
+Hit    74.125.22.95    maps.googleapis.com
+200    198.11.217.195  mmi215.whatsapp.net
+200    173.192.231.52  mmi128.whatsapp.net
+200    198.23.80.30    mmi202.whatsapp.net
+200    184.173.195.54  mmi631.whatsapp.net
+200    184.173.204.39  mmi615.whatsapp.net
+Hit    108.160.166.125 api.dropbox.com
+200    198.11.217.205  mmi208.whatsapp.net
+200    184.173.204.44  mmi620.whatsapp.net
+200    198.11.212.26   mmi240.whatsapp.net
+200    198.23.80.28    mmi217.whatsapp.net
+200    198.23.87.77    mmi221.whatsapp.net
+200    173.192.231.50  mmi125.whatsapp.net
+Hit    184.173.204.40  mmi616.whatsapp.net
+200    169.53.29.138   mmi647.whatsapp.net
+Hit    173.252.103.16  mqtt.facebook.com
+Hit    198.23.87.83    mmi235.whatsapp.net
+Hit    184.173.204.55  mmi603.whatsapp.net
+200    198.11.217.200  mmi204.whatsapp.net
+200    198.23.87.72    mmi230.whatsapp.net
+200    173.193.205.7   mms879.whatsapp.net
+200    198.11.217.202  mmi203.whatsapp.net
+200    184.173.204.54  mmi611.whatsapp.net
+Hit    169.53.29.133   mmi642.whatsapp.net
+Err    16.103.252.173.in-addr.arpa
+200    173.192.231.39  mmi114.whatsapp.net
+200    173.193.205.2   mms883.whatsapp.net
+200    184.173.204.56  mmi606.whatsapp.net
+Hit    23.236.57.21    logjam.cyngn.com
+Hit    31.13.73.1      graph.facebook.com
+Err    16.103.252.173.in-addr.arpa
+200    50.22.75.196    mmi622.whatsapp.net
+200    174.37.199.221  mms890.whatsapp.net
+200    173.192.231.41  mmi116.whatsapp.net
+Hit    198.11.217.194  mmi214.whatsapp.net
+Hit    184.173.204.60  mmi602.whatsapp.net
+200    173.193.205.4   mms878.whatsapp.net
+200    173.193.230.119 mmi101.whatsapp.net
+Hit    198.23.80.21    mmi201.whatsapp.net
+Hit    184.173.204.57  mmi609.whatsapp.net
+Hit    198.23.87.67    mmi237.whatsapp.net
+Hit    198.23.80.29    mmi205.whatsapp.net
+200    174.37.199.216  mms888.whatsapp.net
+Hit    23.226.142.216  2.android.pool.ntp.org
+200    184.173.204.45  mmi621.whatsapp.net
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+200    198.23.80.26    mmi219.whatsapp.net
+Hit    184.173.195.59  mmi637.whatsapp.net
+Hit    74.125.22.95    android.googleapis.com
+Hit    74.125.226.170  lh5.googleusercontent.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    54.187.109.244  www.tomsguide.com
+Hit    23.67.243.67    fbcdn-photos-c-a.akamaihd.net
+Hit    23.67.243.48    fbcdn-photos-e-a.akamaihd.net
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    23.67.250.90    fbstatic-a.akamaihd.net
+Hit    23.67.243.90    fbexternal-a.akamaihd.net
+Hit    23.67.251.121   fbcdn-sphotos-h-a.akamaihd.net
+Hit    31.13.73.1      pixel.facebook.com
+Hit    31.13.73.1      www.facebook.com
+Err    2-undefined.facebook.com
+Hit    23.67.250.90    fbstatic-a.akamaihd.net
+Hit    23.67.250.90    fbstatic-a.akamaihd.net
+Err    2-undefined.facebook.com
+Hit    74.125.226.191  www.google.co.in
+Hit    74.125.226.174  apis.google.com
+Hit    74.125.226.167  clients5.google.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    173.194.123.34  plus.google.com
+Hit    74.125.226.171  s2.googleusercontent.com
+Hit    216.58.219.228  www.google.com 
+Hit    173.194.123.63  www.gstatic.com
+Hit    192.30.252.131  github.com     
+Err    2-undefined.facebook.com
+Hit    199.27.75.133   assets-cdn.github.com
+Hit    199.27.75.133   avatars3.githubusercontent.com
+Hit    23.67.243.67    fbcdn-photos-c-a.akamaihd.net
+Hit    23.67.243.48    fbcdn-photos-e-a.akamaihd.net
+Hit    204.94.155.195  fbcdn-vthumb-a.akamaihd.net
+Hit    23.67.243.90    fbexternal-a.akamaihd.net
+Hit    31.13.79.251    scontent-sin.xx.fbcdn.net
+Hit    199.27.75.133   avatars1.githubusercontent.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Hit    23.67.251.121   fbcdn-sphotos-h-a.akamaihd.net
+Hit    31.13.73.1      5-edge-chat.facebook.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Hit    173.194.123.4   www.google-analytics.com
+Hit    54.164.28.199   collector.githubapp.com
+Err    2-undefined.facebook.com
+Hit    23.236.57.21    logjam.cyngn.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Err    2-undefined.facebook.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    216.58.218.163  csi.gstatic.com
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    198.252.206.140 stackoverflow.com
+Hit    190.93.247.58   cdn.sstatic.net
+Hit    72.21.91.121    www.gravatar.com
+Hit    104.16.25.251   blog.stackoverflow.comHit    198.252.206.141 careers.stackoverflow.com
+
+Hit    69.59.197.29    chat.stackoverflow.com
+Hit    198.252.206.140 meta.stackoverflow.com
+Hit    198.252.206.140 stackexchange.com
+Hit    198.252.206.140 academia.stackexchange.com
+Hit    104.16.18.44    askubuntu.com  
+Hit    198.252.206.140 blender.stackexchange.com
+Hit    198.252.206.140 codegolf.stackexchange.com
+Hit    69.59.197.23    data.stackexchange.com
+Hit    198.252.206.140 dba.stackexchange.com
+Hit    198.252.206.140 english.stackexchange.com
+Hit    198.252.206.140 electronics.stackexchange.com
+Hit    198.252.206.140 gamedev.stackexchange.com
+Hit    198.252.206.140 math.stackexchange.com
+Hit    198.252.206.140 movies.stackexchange.com
+Hit    198.252.206.140 music.stackexchange.com
+Hit    107.22.164.38   engine.adzerk.net
+Hit    63.130.77.106   b.scorecardresearch.com
+Hit    66.150.48.21    pixel.quantserve.com
+Hit    103.31.7.35     i.stack.imgur.com
+200    198.252.206.140 cs.stackexchange.com
+Hit    198.252.206.140 physics.stackexchange.com
+Hit    198.252.206.140 programmers.stackexchange.com
+Hit    198.252.206.140 rpg.stackexchange.com
+Hit    190.93.246.183  serverfault.com
+Hit    54.210.36.46    log.dmtry.com  
+Hit    198.252.206.141 clc.stackoverflow.com
+200    104.16.28.251   mathoverflow.net
+Hit    190.93.244.58   superuser.com  
+Hit    198.252.206.140 tex.stackexchange.com
+Hit    198.252.206.140 unix.stackexchange.com
+Hit    198.252.206.140 ux.stackexchange.com
+Hit    198.252.206.140 webapps.stackexchange.com
+Hit    198.252.206.140 webmasters.stackexchange.com
+200    198.252.206.140 parenting.stackexchange.com
+Hit    198.252.206.140 worldbuilding.stackexchange.com
+200    198.252.206.140 stats.stackexchange.com
+200    198.252.206.140 woodworking.stackexchange.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    54.223.160.112  cloudapi.camera360.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    173.192.222.180 e2.whatsapp.net
+Hit    74.125.22.95    maps.googleapis.com
+200    69.60.132.50    blog.blenderbox.com
+Hit    64.233.171.95   ajax.googleapis.com
+Hit    173.194.123.4   www.google-analytics.com
+200    23.11.134.160   www.last.fm    
+200    50.16.110.106   www.blenderbox.com
+200    23.67.243.26    cdn.last.fm    
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    108.168.176.226 e9.whatsapp.net
+200    195.24.232.205  ws.audioscrobbler.com
+200    195.24.232.211  static.last.fm 
+200    23.67.243.26    userserve-ak.last.fm
+Hit    64.233.171.188  mtalk.google.com
+Hit    74.125.226.168  clients3.google.com
+Hit    173.252.103.16  mqtt.facebook.com
+Hit    173.194.123.1   clients4.google.com
+Hit    66.196.116.132  android.connector.push.bf.mobile.yahoo.com
+Hit    180.97.33.177   pasta.dianxinos.com
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    54.231.8.200    s3.amazonaws.com
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    31.13.73.1      graph.facebook.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    61.135.185.17   m.baidu.com    
+Hit    54.235.141.12   e.crashlytics.com
+Hit    115.239.211.176 rts.dxsvr.com  
+Hit    58.68.245.106   mad.m.maxthon.com
+Hit    180.97.33.177   dl.dianxinos.com
+Hit    208.43.122.145  e5.whatsapp.net
+Hit    173.194.123.40  android.clients.google.com
+200    141.101.127.155 static2.truecaller.com
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    176.32.103.187  aax-us-east.amazon-adsystem.com
+Hit    125.39.5.33     dl.cdn.dianxinos.com
+200    192.121.90.148  search3.truecaller.com
+200    209.164.17.133  www.gpickin.com
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    74.125.226.171  lh6.ggpht.com  
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    216.58.219.193  lh3.googleusercontent.com
+200    141.101.127.155 www.truecaller.com
+200    192.121.90.169  click4.truecaller.com
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    216.52.203.13   data.flurry.com
+Hit    72.21.91.121    www.gravatar.com
+200    74.125.226.160  bks0.books.google.com
+200    74.125.226.162  bks2.books.google.com
+200    74.125.226.162  bks4.books.google.com
+Hit    74.125.226.165  clients1.google.com
+Hit    192.30.252.131  github.com     
+200    162.208.2.230   devobjective.com
+200    94.76.213.216   peterboughton.net
+200    199.27.75.133   help.github.com
+200    69.89.31.70     thecrumb.com   
+200    162.208.2.230   www.devobjective.com
+200    199.27.75.133   help.github.com
+200    50.63.59.140    www.solucija.com
+200    69.89.31.70     thecrumb.com   
+Hit    173.194.123.5   www.youtube.com
+Hit    74.125.226.186  www.googleadservices.com
+Hit    173.194.123.6   gdata.youtube.com
+Hit    216.58.219.238  www.youtube-nocookie.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    74.125.226.173  pubads.g.doubleclick.net
+Hit    74.125.226.167  i.ytimg.com    
+Hit    74.125.226.172  yt3.ggpht.com  
+200    173.194.52.82   r13---sn-cvh7zn7s.gvt1.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    74.125.226.174  apis.google.com
+Hit    74.125.226.167  clients5.google.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    74.125.226.171  s2.googleusercontent.com
+Hit    216.58.219.228  www.google.com 
+Hit    173.194.123.63  www.gstatic.com
+200    23.67.243.73    cnt.in.bookmyshow.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    216.58.218.163  csi.gstatic.com
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    64.233.171.95   play.googleapis.com
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    198.252.206.140 stackoverflow.com
+Hit    198.252.206.141 careers.stackoverflow.com
+Hit    190.93.247.58   cdn.sstatic.net
+Hit    198.252.206.141 clc.stackoverflow.com
+Hit    107.22.164.38   engine.adzerk.net
+Hit    103.31.7.35     i.stack.imgur.com
+Hit    66.150.48.21    pixel.quantserve.com
+Hit    104.16.13.8     static.adzerk.net
+Hit    54.210.36.46    log.dmtry.com  
+Hit    104.16.25.251   blog.stackoverflow.com
+Hit    69.59.197.29    chat.stackoverflow.com
+Hit    198.252.206.140 meta.stackoverflow.com
+Hit    198.252.206.140 stackexchange.com
+Hit    115.239.211.176 rts.dxsvr.com  
+Hit    198.252.206.140 academia.stackexchange.com
+ Hit    198.252.206.140 codegolf.stackexchange.com
+Hit    198.252.206.140 cooking.stackexchange.com
+Hit    198.252.206.140 gaming.stackexchange.com
+Hit    198.252.206.140 english.stackexchange.comHit    198.252.206.140 matheducators.stackexchange.com
+
+Hit    198.252.206.140 mathematica.stackexchange.com
+Hit    104.16.28.251   mathoverflow.net
+Hit    198.252.206.140 music.stackexchange.com
+Hit    198.252.206.140 programmers.stackexchange.com
+Hit    198.252.206.140 puzzling.stackexchange.com
+Hit    198.252.206.140 scifi.stackexchange.com
+Hit    198.252.206.140 unix.stackexchange.com
+Hit    198.252.206.140 woodworking.stackexchange.com
+Hit    173.194.123.4   www.google-analytics.com
+Hit    63.130.77.106   b.scorecardresearch.com
+200    198.252.206.140 graphicdesign.stackexchange.com
+Hit    198.252.206.140 apple.stackexchange.com
+Hit    104.16.18.44    askubuntu.com  
+Hit    69.59.197.23    data.stackexchange.com
+Hit    198.252.206.140 dba.stackexchange.com
+Hit    198.252.206.140 diy.stackexchange.com
+200    198.252.206.140 italian.stackexchange.com
+Hit    198.252.206.140 electronics.stackexchange.com
+Hit    198.252.206.140 gamedev.stackexchange.com
+Hit    198.252.206.140 gis.stackexchange.com
+200    198.252.206.140 android.stackexchange.com
+Hit    198.252.206.140 money.stackexchange.com
+Hit    198.252.206.140 photo.stackexchange.com
+Hit    198.252.206.140 physics.stackexchange.com
+200    198.252.206.140 drupal.stackexchange.com
+Hit    198.252.206.140 security.stackexchange.com
+Hit    190.93.246.183  serverfault.com
+200    198.252.206.140 hsm.stackexchange.com
+Hit    198.252.206.140 stats.stackexchange.com
+Hit    190.93.244.58   superuser.com  
+Hit    198.252.206.140 tex.stackexchange.com
+Hit    198.252.206.140 ux.stackexchange.com
+Hit    198.252.206.140 webapps.stackexchange.com
+Hit    198.252.206.140 webmasters.stackexchange.com
+Hit    198.252.206.140 wordpress.stackexchange.com
+200    198.252.206.140 salesforce.stackexchange.com
+200    198.252.206.140 sharepoint.stackexchange.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    74.125.22.95    maps.googleapis.com
+Hit    54.187.109.244  www.tomsguide.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    103.11.143.248  asia.pool.ntp.org
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    216.52.203.13   data.flurry.com
+Hit    74.125.226.174  apis.google.com
+ Hit    74.125.226.167  clients5.google.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    74.125.226.171  s2.googleusercontent.com
+Hit    173.194.123.63  www.gstatic.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    141.101.127.155 static2.truecaller.com
+Hit    173.255.112.173 stream.pushbullet.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    216.58.219.228  www.google.com 
+Hit    54.235.141.12   e.crashlytics.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    216.58.218.163  csi.gstatic.com
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    50.18.173.250   acompli.helpshift.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    54.201.244.130  api.acompli.net
+200    137.254.60.11   dev.mysql.com  
+200    137.254.60.6    www.mysql.com  
+Hit    72.247.9.122    weather.service.msn.com
+200    66.235.138.194  oracle.112.2o7.net
+200    66.235.138.194  oracle.112.2o7.net
+Hit    173.194.52.205  r8---sn-cvh7zn7k.gvt1.com
+Hit    202.108.23.85   hmma.baidu.com 
+200    208.117.255.210 r13---sn-vgqsem7s.gvt1.com
+Hit    54.69.107.96    api-legacy.acompli.net
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    216.52.203.13   data.flurry.com
+Hit    64.233.171.188  mtalk.google.com
+Hit    74.125.226.168  clients3.google.com
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    58.83.195.166   oc.umeng.com   
+Hit    54.243.170.58   aloha.viber.com
+Hit    173.194.123.109 googleads.g.doubleclick.net
+Hit    54.223.160.112  cloudapi.camera360.com
+Hit    64.233.171.95   www.googleapis.com
+200    173.194.52.209  r12---sn-cvh7zn7k.gvt1.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    23.67.243.73    fbcdn-photos-h-a.akamaihd.net
+Hit    23.67.243.67    fbcdn-photos-c-a.akamaihd.net
+Hit    23.67.243.48    fbcdn-photos-e-a.akamaihd.net
+Hit    23.3.13.72      fbcdn-photos-d-a.akamaihd.net
+Hit    184.51.108.18   fbcdn-sphotos-f-a.akamaihd.net
+Hit    23.67.251.170   fbcdn-sphotos-d-a.akamaihd.netHit    23.67.251.99    fbcdn-sphotos-e-a.akamaihd.net
+
+Hit    31.13.79.251    scontent-sin.xx.fbcdn.net
+Hit    173.194.123.40  android.clients.google.com
+Hit    23.67.243.90    fbexternal-a.akamaihd.net
+Hit    74.125.22.95    android.googleapis.com
+200    173.194.52.232  r3---sn-cvh7zn7r.gvt1.com
+Hit    202.141.80.21   webmail.iitg.ernet.in
+Hit    202.141.80.21   webmail.iitg.ernet.in
+Hit    158.85.12.186   decide.mixpanel.com
+Hit    5.45.62.63      ai.ff.avast.com
+Hit    108.160.166.125 api.dropbox.com
+Hit    202.141.80.21   webmail.iitg.ernet.in
+Hit    202.141.80.21   webmail.iitg.ernet.in
+Hit    173.252.103.16  mqtt.facebook.com
+Hit    54.229.100.96   track.appsflyer.com
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    202.108.23.85   hmma.baidu.com 
+200    208.117.252.183 r18---sn-q4f7dm7d.gvt1.com
+Hit    54.229.96.206   api.appsflyer.com
+Err    16.103.252.173.in-addr.arpa
+200    192.121.90.161  filter-store4.truecaller.com
+Hit    192.121.90.133  request3.truecaller.com
+Hit    31.13.73.1      graph.facebook.com
+Err    16.103.252.173.in-addr.arpa
+Hit    74.125.226.191  www.google.co.in
+Hit    108.174.10.10   www.linkedin.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    72.14.247.65    api.pushbullet.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    74.125.226.170  lh5.googleusercontent.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    173.194.123.127 ssl.gstatic.com
+Hit    74.125.226.174  apis.google.com
+Hit    74.125.226.167  clients5.google.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    74.125.226.171  s2.googleusercontent.com
+Hit    173.194.123.63  www.gstatic.com
+Hit    192.30.252.131  github.com     
+Hit    199.27.75.133   assets-cdn.github.com
+Hit    199.27.75.133   avatars1.githubusercontent.com
+Hit    199.27.75.133   avatars3.githubusercontent.com
+Hit    173.194.123.4   www.google-analytics.com
+Hit    54.164.28.199   collector.githubapp.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    192.30.252.91   live.github.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    202.108.23.85   hmma.baidu.com 
+200    173.194.52.150  r17---sn-cvh7zn76.gvt1.com
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    74.125.226.168  clients3.google.com
+Hit    206.190.57.61   weather.yahooapis.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    54.201.244.130  api.acompli.net
+Hit    54.225.152.187  settings.crashlytics.com
+Hit    172.229.226.106 au.ff.avast.com
+Hit    54.171.101.124  swiftkey-android.iris.touchtype-fluency.com
+Hit    58.83.195.166   oc.umeng.com   
 Hit    157.150.185.49  www.un.org     
-Exc    8.8.8.8                   nxdhvxgiokbftniExc    8.8.8.8                   plbzsluhoxsdaze
-
-Err    nxdhvxgiokbftniErr    plbzsluhoxsdaze
-
-Exc    8.8.8.8                   zafwixaatjaudu 
-Err    zafwixaatjaudu 
+Hit    173.194.123.40  android.clients.google.com
+Hit    77.234.40.90    al.ff.avast.com
+Hit    54.223.160.112  cloudapi.camera360.com
 Hit    104.236.251.84  freegeoip.net  
 Hit    185.24.220.241  www.telize.com 
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   account.hotstar.com
-Err    account.hotstar.com
-Hit    173.194.123.5   www.youtube.com
-Hit    64.233.171.95   www.googleapis.com
-Hit    173.194.123.6   gdata.youtube.com
-Exc    8.8.8.8                   mmi116.whatsapp.net
-Err    mmi116.whatsapp.net
-Exc    8.8.8.8                   mmi116.whatsapp.net
-Err    mmi116.whatsapp.net
-Hit    72.21.91.127    api-mobile.soundcloud.com
-Hit    31.13.73.1      graph.facebook.com
-Hit    216.58.219.238  www.youtube-nocookie.com
-Exc    8.8.8.8                   www.smule.com  
-Err    www.smule.com  
-Exc    8.8.8.8                   account.hotstar.com
-Err    account.hotstar.com
-Exc    8.8.8.8                   account.hotstar.com
-Err    account.hotstar.com
-Exc    8.8.8.8                   mmi116.whatsapp.net
-Err    mmi116.whatsapp.net
-Exc    8.8.8.8                   mms890.whatsapp.net
-Err    mms890.whatsapp.net
-Exc    8.8.8.8                   images1-esmobile-opensocial.googleusercontent.com
-Err    images1-esmobile-opensocial.googleusercontent.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    72.247.9.122    weather.service.msn.com
 Hit    111.1.53.158    sdk.open.talk.igexin.com
-Exc    8.8.8.8                   mmi116.whatsapp.net
-Err    mmi116.whatsapp.net
-Exc    8.8.8.8                   mms890.whatsapp.net
-Err    mms890.whatsapp.net
-Exc    8.8.8.8                   mms879.whatsapp.net
-Err    mms879.whatsapp.net
-Exc    8.8.8.8                   images1-esmobile-opensocial.googleusercontent.com
-Err    images1-esmobile-opensocial.googleusercontent.com
-Exc    8.8.8.8                   images1-esmobile-opensocial.googleusercontent.com
-Err    images1-esmobile-opensocial.googleusercontent.com
-Exc    8.8.8.8                   mms890.whatsapp.net
-Err    mms890.whatsapp.net
-Exc    8.8.8.8                   i1.sndcdn.com  
-Err    i1.sndcdn.com  
-Exc    8.8.8.8                   i1.sndcdn.com  
-Err    i1.sndcdn.com  
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+200    173.194.52.18   r13---sn-cvh7zn7y.gvt1.com
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    74.125.226.174  apis.google.com
+Hit    74.125.226.167  clients5.google.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    74.125.226.171  s2.googleusercontent.com
+Hit    173.194.123.63  www.gstatic.com
+Hit    202.108.23.85   hmma.baidu.com 
+Hit    173.252.120.6   fb.com         
+Hit    23.67.243.75    fbcdn-creative-a.akamaihd.net
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    23.67.251.121   fbcdn-sphotos-h-a.akamaihd.net
+Hit    204.94.155.195  fbcdn-vthumb-a.akamaihd.netHit    23.67.243.90    fbexternal-a.akamaihd.net
+
+Hit    23.67.250.90    fbstatic-a.akamaihd.net
+Hit    31.13.73.1      pixel.facebook.com
+Hit    31.13.79.251    scontent-sin.xx.fbcdn.net
+Hit    31.13.73.1      2-edge-chat.facebook.com
+Hit    23.67.251.147   fbcdn-sphotos-g-a.akamaihd.net
+Hit    74.125.226.191  www.google.co.in
+Hit    74.125.22.95    android.googleapis.com
+Hit    23.67.251.162   fbcdn-sphotos-a-a.akamaihd.net
+Hit    74.125.226.186  www.googleadservices.com
+Hit    173.194.123.5   www.youtube.com
+Hit    31.13.73.1      1-edge-chat.facebook.com
+Hit    31.13.73.1      edge-chat.facebook.com
+Hit    216.58.219.205  accounts.google.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+Hit    173.194.123.40  android.clients.google.com
+200    173.194.52.142  r9---sn-cvh7zn76.gvt1.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    204.94.155.195  fbcdn-vthumb-a.akamaihd.net
+Hit    31.13.79.251    scontent-sin.xx.fbcdn.net
+Hit    23.67.251.170   fbcdn-sphotos-d-a.akamaihd.net
+Hit    31.13.73.1      edge-chat.facebook.com
+Hit    184.51.108.18   fbcdn-sphotos-f-a.akamaihd.net
+Hit    23.67.251.121   fbcdn-sphotos-h-a.akamaihd.net
+Hit    202.141.80.6    www.iitg.ernet.in
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    54.193.85.29    shopvac.cyngn.com
+200    74.125.226.160  news.google.com
+200    192.0.78.13     terrytao.wordpress.com
+200    208.118.235.148 www.gnu.org    
+200    72.247.9.41     www.espncricinfo.com
+200    209.191.186.187 www.imagemagick.org
+200    176.28.54.184   www.latex-project.org
+200    78.46.26.61     www.texample.net
+200    192.30.252.154  xmonad.org     
+200    173.203.62.77   www.abcya.com  
+Hit    72.247.9.122    weather.service.msn.com
+Hit    74.125.22.95    maps.googleapis.com
+200    173.194.52.70   r1---sn-cvh7zn7s.gvt1.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    202.108.23.85   hmma.baidu.com 
+Hit    64.233.171.95   play.googleapis.com
+Hit    64.233.171.188  mtalk.google.com
+Hit    74.125.226.169  docs.google.com
+200    173.194.52.234  r5---sn-cvh7zn7r.gvt1.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    31.13.73.1      graph.facebook.com
+Hit    74.125.226.168  clients3.google.com
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    72.14.247.65    api.pushbullet.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    223.202.36.52   push-s.maxthon.com
+200    162.243.58.21   api.openweathermap.org
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+Hit    202.108.23.85   hmma.baidu.com 
+Hit    173.194.123.127 ssl.gstatic.com
+200    173.194.52.80   r11---sn-cvh7zn7s.gvt1.com
+Hit    74.125.226.168  clients2.google.com
+Hit    173.194.123.1   clients4.google.com
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    173.194.123.40  android.clients.google.com
+Hit    58.83.195.166   oc.umeng.com   
+Hit    54.223.160.112  cloudapi.camera360.com
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    74.125.226.171  lh6.ggpht.com  
+200    173.194.52.83   r14---sn-cvh7zn7s.gvt1.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    54.69.107.96    api-legacy.acompli.net
+Hit    103.11.143.248  asia.pool.ntp.org
+Hit    72.14.247.65    api.pushbullet.com
+Hit    173.194.123.11  lh6.googleusercontent.com
+Hit    158.85.12.186   decide.mixpanel.com
+Hit    5.45.62.63      ai.ff.avast.com
+Hit    63.88.100.144   fbcdn-profile-a.akamaihd.net
+Hit    23.67.251.121   fbcdn-sphotos-h-a.akamaihd.net
+200    173.194.52.10   r5---sn-cvh7zn7y.gvt1.com
+Hit    202.108.23.85   hmma.baidu.com 
+Hit    74.125.226.186  www.googleadservices.com
+Hit    64.233.171.95   www.googleapis.com
+Hit    223.202.36.52   push-s.maxthon.com
+Hit    173.194.123.40  android.clients.google.com
+Hit    173.194.52.209  r12---sn-cvh7zn7k.gvt1.com
+Hit    108.160.166.125 api.dropbox.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    173.252.103.16  mqtt.facebook.com
+Err    16.103.252.173.in-addr.arpa
+Hit    31.13.73.1      graph.facebook.com
+Err    16.103.252.173.in-addr.arpa
+Hit    74.125.22.95    android.googleapis.com
+Hit    202.108.23.85   hmma.baidu.com 
+Hit    216.58.219.232  ssl.google-analytics.com
+Hit    74.125.226.170  lh5.googleusercontent.com
+Hit    74.125.226.171  lh3.ggpht.com  
+Hit    74.125.226.171  lh6.ggpht.com  
+Hit    111.1.53.158    sdk.open.talk.igexin.com
+200    173.194.52.173  r8---sn-cvh7zn7d.gvt1.com
+Hit    216.58.219.193  lh3.googleusercontent.com
+Hit    173.194.123.11  lh6.googleusercontent.com
+Hit    23.226.142.216  2.android.pool.ntp.org
+Hit    74.125.226.170  lh4.ggpht.com  
+Hit    74.125.226.171  lh5.ggpht.com  
+Hit    173.194.123.109 googleads.g.doubleclick.net
+Hit    216.58.218.163  csi.gstatic.com
+Hit    64.233.171.95   play.googleapis.com
+Hit    173.194.123.40  android.clients.google.com
