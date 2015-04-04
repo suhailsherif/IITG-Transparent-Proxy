@@ -56,12 +56,12 @@ def respuesta(query):
 			except:
 				print '{:5s}  {:25s} {:15s}'.format('Exc', str(query.ip), str(query.dominio))
 
-		# add to dns cache
-		if re.match('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]', query.ip) and not query.ip == defaultIP:
-			dnsCache[query.dominio] = query.ip
-		else:
-			print '{:5s}  {:15s}'.format('Err', str(query.dominio))
-			return
+			# add to dns cache
+			if re.match('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]', query.ip) and not query.ip == defaultIP:
+				dnsCache[query.dominio] = query.ip
+			else:
+				print '{:5s}  {:15s} {:15s}'.format('Err', str(query.dominio), query.ip)
+				return
 
 	packet = ''
 	if query.dominio:
@@ -82,7 +82,7 @@ def respuesta(query):
 	if stat == 1:
 		print '{:5s}  {:15s} {:15s}'.format(str(dnsRes.status), str(query.ip), str(query.dominio))
 	elif stat == 2 and not query.dominio == 'gaednsproxy1.appspot.com':
-		print '{:5s}  {:15s} {:15s}'.format('Hit', str(query.ip), str(query.dominio))
+		print '{:5s}  {:20s} {:15s}'.format('Hit', str(query.ip), str(query.dominio))
 
 
 def signal_term_handler(signal, frame):

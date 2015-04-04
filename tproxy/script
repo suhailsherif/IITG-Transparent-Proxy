@@ -13,7 +13,6 @@ start)
 	sudo iptables -t nat -A OUTPUT -p udp --dport 20560 -j REDIRECT --to 55
 	sudo iptables -t nat -A OUTPUT -p udp --dport 5243 -j REDIRECT --to 55	# viber
 	sudo iptables -t nat -A OUTPUT -p udp --dport 9785 -j REDIRECT --to 55	# viber
-	
 
 	sudo iptables -t nat -A REDSOCKS -d 127.0.0.0/8 -j RETURN
 	sudo iptables -t nat -A REDSOCKS -p tcp -d 10.0.0.0/8 -j RETURN
@@ -33,7 +32,10 @@ start)
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 4244 -j REDIRECT --to 8124	# viber
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 943 -j REDIRECT --to 8124
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 28852 -j REDIRECT --to 8124
-	sudo iptables -t nat -A REDSOCKS -p tcp --dport 8075 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 8075 -j REDIRECT --to 8124 
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5800 -j REDIRECT --to 8124 # vnc
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5900 -j REDIRECT --to 8124 # vnc
+	
 
 	sudo iptables -t nat -A OUTPUT -p tcp -j REDSOCKS	
 

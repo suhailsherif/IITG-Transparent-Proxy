@@ -3,9 +3,6 @@ source /etc/environment
 
 source $allproxy_path/config/config.sh #&
 
-
-sudo ip route add to 202.141.80.0/23 via $nproxy_gateway
-
 def_gate=$(/sbin/ip route | awk '/default/ { print $3 }')
 if [ ! "$def_gate" == "$nproxy_gateway" ]
 then

@@ -63,7 +63,7 @@ color: white;
      <enum>QFrame::Sunken</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_nproxy">
      <property name="geometry">
@@ -268,7 +268,7 @@ color: white;
         </rect>
        </property>
        <property name="text">
-        <string>Apply</string>
+        <string>Apply Settings</string>
        </property>
       </widget>
      </widget>
@@ -438,8 +438,8 @@ color: white;
      <widget class="QPushButton" name="in_button_cproxy_send">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>80</y>
+        <x>440</x>
+        <y>140</y>
         <width>161</width>
         <height>27</height>
        </rect>
@@ -469,19 +469,6 @@ color: white;
         <width>131</width>
         <height>27</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="in_button_cproxy_call">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>80</y>
-        <width>131</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Voice   Call</string>
       </property>
      </widget>
      <widget class="QPushButton" name="in_button_cproxy_change_settings">

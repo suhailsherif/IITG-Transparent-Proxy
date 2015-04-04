@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_AllProxy_t {
     QByteArrayData data[52];
-    char stringdata[1702];
+    char stringdata[1683];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -63,24 +63,24 @@ QT_MOC_LITERAL(30, 1006, 34),
 QT_MOC_LITERAL(31, 1041, 44),
 QT_MOC_LITERAL(32, 1086, 44),
 QT_MOC_LITERAL(33, 1131, 24),
-QT_MOC_LITERAL(34, 1156, 31),
-QT_MOC_LITERAL(35, 1188, 43),
-QT_MOC_LITERAL(36, 1232, 41),
-QT_MOC_LITERAL(37, 1274, 24),
-QT_MOC_LITERAL(38, 1299, 24),
-QT_MOC_LITERAL(39, 1324, 24),
-QT_MOC_LITERAL(40, 1349, 24),
-QT_MOC_LITERAL(41, 1374, 24),
-QT_MOC_LITERAL(42, 1399, 24),
-QT_MOC_LITERAL(43, 1424, 38),
-QT_MOC_LITERAL(44, 1463, 38),
-QT_MOC_LITERAL(45, 1502, 23),
-QT_MOC_LITERAL(46, 1526, 7),
-QT_MOC_LITERAL(47, 1534, 32),
-QT_MOC_LITERAL(48, 1567, 23),
-QT_MOC_LITERAL(49, 1591, 32),
-QT_MOC_LITERAL(50, 1624, 32),
-QT_MOC_LITERAL(51, 1657, 43)
+QT_MOC_LITERAL(34, 1156, 13),
+QT_MOC_LITERAL(35, 1170, 31),
+QT_MOC_LITERAL(36, 1202, 43),
+QT_MOC_LITERAL(37, 1246, 41),
+QT_MOC_LITERAL(38, 1288, 24),
+QT_MOC_LITERAL(39, 1313, 24),
+QT_MOC_LITERAL(40, 1338, 24),
+QT_MOC_LITERAL(41, 1363, 24),
+QT_MOC_LITERAL(42, 1388, 24),
+QT_MOC_LITERAL(43, 1413, 24),
+QT_MOC_LITERAL(44, 1438, 38),
+QT_MOC_LITERAL(45, 1477, 38),
+QT_MOC_LITERAL(46, 1516, 23),
+QT_MOC_LITERAL(47, 1540, 7),
+QT_MOC_LITERAL(48, 1548, 32),
+QT_MOC_LITERAL(49, 1581, 23),
+QT_MOC_LITERAL(50, 1605, 32),
+QT_MOC_LITERAL(51, 1638, 43)
     },
     "AllProxy\0on_in_button_browse_clicked\0"
     "\0on_in_text_vproxy_username_textChanged\0"
@@ -112,7 +112,7 @@ QT_MOC_LITERAL(51, 1657, 43)
     "on_in_text_vproxy_port_textChanged\0"
     "on_in_text_vproxy_proxy_username_textChanged\0"
     "on_in_text_vproxy_proxy_password_textChanged\0"
-    "on_browse_dproxy_clicked\0"
+    "on_browse_dproxy_clicked\0dproxy_update\0"
     "on_push_dproxy_download_clicked\0"
     "on_in_button_fproxy_browse_download_clicked\0"
     "on_in_button_fproxy_browse_upload_clicked\0"
@@ -127,7 +127,6 @@ QT_MOC_LITERAL(51, 1657, 43)
     "on_fproxy_check_toggled\0checked\0"
     "on_in_button_fproxy_send_clicked\0"
     "on_fproxy_check_clicked\0"
-    "on_in_button_cproxy_call_clicked\0"
     "on_in_button_cproxy_send_clicked\0"
     "on_in_button_cproxy_change_settings_clicked\0"
 };
@@ -187,10 +186,10 @@ static const uint qt_meta_data_AllProxy[] = {
       40,    0,  339,    2, 0x08,
       41,    0,  340,    2, 0x08,
       42,    0,  341,    2, 0x08,
-      43,    1,  342,    2, 0x08,
-      44,    1,  345,    2, 0x08,
-      45,    1,  348,    2, 0x08,
-      47,    0,  351,    2, 0x08,
+      43,    0,  342,    2, 0x08,
+      44,    1,  343,    2, 0x08,
+      45,    1,  346,    2, 0x08,
+      46,    1,  349,    2, 0x08,
       48,    0,  352,    2, 0x08,
       49,    0,  353,    2, 0x08,
       50,    0,  354,    2, 0x08,
@@ -237,10 +236,10 @@ static const uint qt_meta_data_AllProxy[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::Bool,   46,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::Bool,   47,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -285,21 +284,21 @@ void AllProxy::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 28: _t->on_in_text_vproxy_proxy_username_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 29: _t->on_in_text_vproxy_proxy_password_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 30: _t->on_browse_dproxy_clicked(); break;
-        case 31: _t->on_push_dproxy_download_clicked(); break;
-        case 32: _t->on_in_button_fproxy_browse_download_clicked(); break;
-        case 33: _t->on_in_button_fproxy_browse_upload_clicked(); break;
-        case 34: _t->on_switch_fproxy_clicked(); break;
-        case 35: _t->on_switch_vproxy_clicked(); break;
-        case 36: _t->on_switch_sproxy_clicked(); break;
-        case 37: _t->on_switch_lproxy_clicked(); break;
-        case 38: _t->on_switch_tproxy_clicked(); break;
-        case 39: _t->on_switch_cproxy_clicked(); break;
-        case 40: _t->on_in_text_lproxy_username_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 41: _t->on_in_text_lproxy_password_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 42: _t->on_fproxy_check_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 43: _t->on_in_button_fproxy_send_clicked(); break;
-        case 44: _t->on_fproxy_check_clicked(); break;
-        case 45: _t->on_in_button_cproxy_call_clicked(); break;
+        case 31: _t->dproxy_update(); break;
+        case 32: _t->on_push_dproxy_download_clicked(); break;
+        case 33: _t->on_in_button_fproxy_browse_download_clicked(); break;
+        case 34: _t->on_in_button_fproxy_browse_upload_clicked(); break;
+        case 35: _t->on_switch_fproxy_clicked(); break;
+        case 36: _t->on_switch_vproxy_clicked(); break;
+        case 37: _t->on_switch_sproxy_clicked(); break;
+        case 38: _t->on_switch_lproxy_clicked(); break;
+        case 39: _t->on_switch_tproxy_clicked(); break;
+        case 40: _t->on_switch_cproxy_clicked(); break;
+        case 41: _t->on_in_text_lproxy_username_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 42: _t->on_in_text_lproxy_password_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 43: _t->on_fproxy_check_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 44: _t->on_in_button_fproxy_send_clicked(); break;
+        case 45: _t->on_fproxy_check_clicked(); break;
         case 46: _t->on_in_button_cproxy_send_clicked(); break;
         case 47: _t->on_in_button_cproxy_change_settings_clicked(); break;
         default: ;

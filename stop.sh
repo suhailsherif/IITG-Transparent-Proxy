@@ -5,8 +5,6 @@
 source /etc/environment
 source $allproxy_path/config/config.sh
 
-echo "This script stops the transparent proxy and restores the normal behavior"
-
 case $1 in
 tproxy)
 	source $allproxy_path/tproxy/stop.sh &

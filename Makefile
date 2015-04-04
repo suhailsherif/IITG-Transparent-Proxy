@@ -12,13 +12,13 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -m64 -pipe -std=gnu99 -g -Wall -W -D_REENTRANT -fPIE $(DEFINES)
 CXXFLAGS      = -m64 -pipe -g -Wall -W -D_REENTRANT -fPIE $(DEFINES)
-INCPATH       = -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I. -I/usr/include/qt5 -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtCore -I. -I.
+INCPATH       = -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I. -I/usr/include/qt5 -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtConcurrent -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtCore -I. -I.
 LINK          = g++
 LFLAGS        = -m64
-LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 -lQt5Widgets -L/usr/lib/x86_64-linux-gnu -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 -lQt5Widgets -L/usr/lib/x86_64-linux-gnu -lQt5Concurrent -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 QMAKE         = /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
@@ -208,7 +208,8 @@ Makefile: Allproxy.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.
 		Allproxy.pro \
 		/usr/lib/x86_64-linux-gnu/libQt5Widgets.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Gui.prl \
-		/usr/lib/x86_64-linux-gnu/libQt5Core.prl
+		/usr/lib/x86_64-linux-gnu/libQt5Core.prl \
+		/usr/lib/x86_64-linux-gnu/libQt5Concurrent.prl
 	$(QMAKE) -spec linux-g++-64 CONFIG+=debug CONFIG+=declarative_debug CONFIG+=qml_debug -o Makefile Allproxy.pro
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf:
@@ -274,6 +275,7 @@ Allproxy.pro:
 /usr/lib/x86_64-linux-gnu/libQt5Widgets.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Gui.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Core.prl:
+/usr/lib/x86_64-linux-gnu/libQt5Concurrent.prl:
 qmake: FORCE
 	@$(QMAKE) -spec linux-g++-64 CONFIG+=debug CONFIG+=declarative_debug CONFIG+=qml_debug -o Makefile Allproxy.pro
 
@@ -962,7 +964,105 @@ allproxy.o: allproxy.cpp allproxy.h \
 		/usr/include/qt5/QtGui/QCloseEvent \
 		/usr/include/qt5/QtCore/QThread \
 		/usr/include/qt5/QtWidgets/QInputDialog \
-		/usr/include/qt5/QtWidgets/qinputdialog.h
+		/usr/include/qt5/QtWidgets/qinputdialog.h \
+		/usr/include/qt5/QtWidgets/QtWidgets \
+		/usr/include/qt5/QtWidgets/QtWidgetsDepends \
+		/usr/include/qt5/QtWidgets/qaccessiblewidget.h \
+		/usr/include/qt5/QtWidgets/qcolordialog.h \
+		/usr/include/qt5/QtWidgets/qerrormessage.h \
+		/usr/include/qt5/QtWidgets/qfontdialog.h \
+		/usr/include/qt5/QtWidgets/qprogressdialog.h \
+		/usr/include/qt5/QtWidgets/qwizard.h \
+		/usr/include/qt5/QtWidgets/qgraphicseffect.h \
+		/usr/include/qt5/QtWidgets/qgraphicsanchorlayout.h \
+		/usr/include/qt5/QtWidgets/qgraphicsitem.h \
+		/usr/include/qt5/QtWidgets/qgraphicslayout.h \
+		/usr/include/qt5/QtWidgets/qgraphicslayoutitem.h \
+		/usr/include/qt5/QtWidgets/qgraphicsgridlayout.h \
+		/usr/include/qt5/QtWidgets/qgraphicsitemanimation.h \
+		/usr/include/qt5/QtWidgets/qgraphicslinearlayout.h \
+		/usr/include/qt5/QtWidgets/qgraphicsproxywidget.h \
+		/usr/include/qt5/QtWidgets/qgraphicswidget.h \
+		/usr/include/qt5/QtWidgets/qgraphicsscene.h \
+		/usr/include/qt5/QtWidgets/qgraphicssceneevent.h \
+		/usr/include/qt5/QtWidgets/qgraphicstransform.h \
+		/usr/include/qt5/QtGui/QVector3D \
+		/usr/include/qt5/QtGui/QMatrix4x4 \
+		/usr/include/qt5/QtWidgets/qgraphicsview.h \
+		/usr/include/qt5/QtWidgets/qscrollarea.h \
+		/usr/include/qt5/QtWidgets/qcolumnview.h \
+		/usr/include/qt5/QtWidgets/qdatawidgetmapper.h \
+		/usr/include/qt5/QtWidgets/qdirmodel.h \
+		/usr/include/qt5/QtWidgets/qfileiconprovider.h \
+		/usr/include/qt5/QtWidgets/qitemdelegate.h \
+		/usr/include/qt5/QtWidgets/qitemeditorfactory.h \
+		/usr/include/qt5/QtWidgets/qlistview.h \
+		/usr/include/qt5/QtWidgets/qlistwidget.h \
+		/usr/include/qt5/QtWidgets/qstyleditemdelegate.h \
+		/usr/include/qt5/QtWidgets/qtableview.h \
+		/usr/include/qt5/QtWidgets/qtablewidget.h \
+		/usr/include/qt5/QtWidgets/qtreewidget.h \
+		/usr/include/qt5/QtWidgets/qtreewidgetitemiterator.h \
+		/usr/include/qt5/QtWidgets/qformlayout.h \
+		/usr/include/qt5/QtWidgets/qgesture.h \
+		/usr/include/qt5/QtWidgets/qgesturerecognizer.h \
+		/usr/include/qt5/QtWidgets/qshortcut.h \
+		/usr/include/qt5/QtWidgets/qstackedlayout.h \
+		/usr/include/qt5/QtWidgets/qtooltip.h \
+		/usr/include/qt5/QtWidgets/qwhatsthis.h \
+		/usr/include/qt5/QtWidgets/qwidgetaction.h \
+		/usr/include/qt5/QtWidgets/qkeyeventtransition.h \
+		/usr/include/qt5/QtWidgets/qmouseeventtransition.h \
+		/usr/include/qt5/QtWidgets/qcommonstyle.h \
+		/usr/include/qt5/QtWidgets/qdrawutil.h \
+		/usr/include/qt5/QtWidgets/qproxystyle.h \
+		/usr/include/qt5/QtWidgets/QCommonStyle \
+		/usr/include/qt5/QtWidgets/qstylefactory.h \
+		/usr/include/qt5/QtWidgets/qstylepainter.h \
+		/usr/include/qt5/QtWidgets/qstyleplugin.h \
+		/usr/include/qt5/QtWidgets/qcolormap.h \
+		/usr/include/qt5/QtWidgets/qcompleter.h \
+		/usr/include/qt5/QtWidgets/qscroller.h \
+		/usr/include/qt5/QtCore/QPointF \
+		/usr/include/qt5/QtWidgets/QScrollerProperties \
+		/usr/include/qt5/QtWidgets/qscrollerproperties.h \
+		/usr/include/qt5/QtCore/QMetaType \
+		/usr/include/qt5/QtWidgets/qsystemtrayicon.h \
+		/usr/include/qt5/QtWidgets/qundogroup.h \
+		/usr/include/qt5/QtWidgets/qundostack.h \
+		/usr/include/qt5/QtWidgets/qundoview.h \
+		/usr/include/qt5/QtWidgets/qcalendarwidget.h \
+		/usr/include/qt5/QtWidgets/qcombobox.h \
+		/usr/include/qt5/QtWidgets/qcommandlinkbutton.h \
+		/usr/include/qt5/QtWidgets/qdatetimeedit.h \
+		/usr/include/qt5/QtWidgets/qdial.h \
+		/usr/include/qt5/QtWidgets/qdialogbuttonbox.h \
+		/usr/include/qt5/QtWidgets/qdockwidget.h \
+		/usr/include/qt5/QtWidgets/qfocusframe.h \
+		/usr/include/qt5/QtWidgets/qfontcombobox.h \
+		/usr/include/qt5/QtWidgets/qkeysequenceedit.h \
+		/usr/include/qt5/QtWidgets/qlcdnumber.h \
+		/usr/include/qt5/QtWidgets/qmdiarea.h \
+		/usr/include/qt5/QtWidgets/qmdisubwindow.h \
+		/usr/include/qt5/QtWidgets/qmenu.h \
+		/usr/include/qt5/QtWidgets/qmenubar.h \
+		/usr/include/qt5/QtWidgets/qplaintextedit.h \
+		/usr/include/qt5/QtWidgets/qscrollbar.h \
+		/usr/include/qt5/QtWidgets/qsizegrip.h \
+		/usr/include/qt5/QtWidgets/qspinbox.h \
+		/usr/include/qt5/QtWidgets/qsplashscreen.h \
+		/usr/include/qt5/QtWidgets/qsplitter.h \
+		/usr/include/qt5/QtWidgets/qstackedwidget.h \
+		/usr/include/qt5/QtWidgets/qstatusbar.h \
+		/usr/include/qt5/QtWidgets/qtextbrowser.h \
+		/usr/include/qt5/QtWidgets/qtoolbar.h \
+		/usr/include/qt5/QtWidgets/qtoolbutton.h \
+		/usr/include/qt5/QtWidgets/qtwidgetsversion.h \
+		/usr/include/qt5/QtConcurrent/qtconcurrentrun.h \
+		/usr/include/qt5/QtConcurrent/qtconcurrentcompilertest.h \
+		/usr/include/qt5/QtConcurrent/qtconcurrent_global.h \
+		/usr/include/qt5/QtConcurrent/qtconcurrentrunbase.h \
+		/usr/include/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o allproxy.o allproxy.cpp
 
 moc_allproxy.o: moc_allproxy.cpp 

@@ -26,7 +26,7 @@ socket-timeout 300
 forward   			/	202.141.80.19:3128
 #forward-socks5 	/ 	127.0.0.1:9050 .
 #forward-socks4a 	/	127.0.0.1:9050 .
-listen-address  localhost:8181
-listen-address 10.10.1.31:8181
+listen-address  localhost:8787
+listen-address 10.10.1.31:8787
 
 

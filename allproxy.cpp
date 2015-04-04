@@ -19,6 +19,9 @@
 #include <QCloseEvent>
 #include <QThread>
 #include <QInputDialog>
+#include <QtWidgets>
+#include <qtconcurrentrun.h>
+#include <QtConcurrentRun>
 
 AllProxy::AllProxy(QWidget *parent) :
     QMainWindow(parent),
@@ -688,11 +691,23 @@ void AllProxy::on_browse_dproxy_clicked()
     }
 }
 
+void AllProxy::dproxy_update()
+{
+    QFile f("dproxy/status");
+    f.open(QIODevice::ReadOnly);
+    foreach (QString i,QString(f.readAll()).split(QRegExp("[\r\n]"),QString::SkipEmptyParts)){
+
+        qDebug()<<i;
+    }
+    f.close();
+}
+
 void AllProxy::on_push_dproxy_download_clicked()
 {
     QProcess p;
     p.startDetached("bash", QStringList() << "start.sh" << "dproxy" << this->ui->in_dproxy_url->text() << this->ui->in_dproxy_filepath->text());
 
+    QtConcurrent::run(this,&AllProxy::dproxy_update);
 }
 
 void AllProxy::on_in_button_fproxy_browse_download_clicked()
@@ -840,14 +855,6 @@ void AllProxy::on_fproxy_check_clicked()
 
 }
 
-void AllProxy::on_in_button_cproxy_call_clicked()
-{
-    QSettings project_settings("project_settings");
-    project_settings.setValue("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
-    update_config("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
-    QProcess p;
-    p.startDetached("gksudo", QStringList() << "bash" << "cproxy/call.sh");
-}
 
 void AllProxy::on_in_button_cproxy_send_clicked()
 {

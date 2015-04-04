@@ -24,8 +24,8 @@ else
 
 		proxy_server=$(echo $OUTPUT | awk -F, '{print $1}')
 		proxy_port=$(echo $OUTPUT | awk -F, '{print $2}')
-		proxy_username=$(echo $OUTPUT | awk -F, '{print $2}')
-		proxy_password=$(echo $OUTPUT | awk -F, '{print $2}')
+		proxy_username=$(echo $OUTPUT | awk -F, '{print $3}')
+		proxy_password=$(echo $OUTPUT | awk -F, '{print $4}')
 		
 
 		export http_proxy="http://$proxy_username:$proxy_password@$proxy_server:$proxy_port/"

@@ -35,7 +35,8 @@
 from downloader import downloader
 import sys
 import os
-
+import signal
+import time
 
 def main(argv):
 
@@ -81,5 +82,15 @@ def main(argv):
 	# Delete temporary files
 	handle.delete_temp()
 
+def signal_term_handler(signal, frame):
+	print 'SIGTERM'
+	del handle
+	
+	sys.exit(0)
+
 if __name__=="__main__":
+
+	signal.signal(signal.SIGTERM, signal_term_handler)
+	signal.signal(signal.SIGINT, signal_term_handler)
+
 	main(sys.argv)

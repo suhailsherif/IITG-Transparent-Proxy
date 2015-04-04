@@ -63,7 +63,6 @@ public:
     QPushButton *in_button_cproxy_send;
     QLabel *in_text_vproxy_path_5;
     QLineEdit *in_text_cproxy_dip;
-    QPushButton *in_button_cproxy_call;
     QPushButton *in_button_cproxy_change_settings;
     QWidget *page_vproxy;
     QGroupBox *group_vpn;
@@ -272,16 +271,13 @@ public:
         textEdit->setGeometry(QRect(3, 120, 411, 78));
         in_button_cproxy_send = new QPushButton(page);
         in_button_cproxy_send->setObjectName(QStringLiteral("in_button_cproxy_send"));
-        in_button_cproxy_send->setGeometry(QRect(170, 80, 161, 27));
+        in_button_cproxy_send->setGeometry(QRect(440, 140, 161, 27));
         in_text_vproxy_path_5 = new QLabel(page);
         in_text_vproxy_path_5->setObjectName(QStringLiteral("in_text_vproxy_path_5"));
         in_text_vproxy_path_5->setGeometry(QRect(10, 10, 21, 31));
         in_text_cproxy_dip = new QLineEdit(page);
         in_text_cproxy_dip->setObjectName(QStringLiteral("in_text_cproxy_dip"));
         in_text_cproxy_dip->setGeometry(QRect(30, 10, 131, 27));
-        in_button_cproxy_call = new QPushButton(page);
-        in_button_cproxy_call->setObjectName(QStringLiteral("in_button_cproxy_call"));
-        in_button_cproxy_call->setGeometry(QRect(10, 80, 131, 27));
         in_button_cproxy_change_settings = new QPushButton(page);
         in_button_cproxy_change_settings->setObjectName(QStringLiteral("in_button_cproxy_change_settings"));
         in_button_cproxy_change_settings->setGeometry(QRect(360, 10, 251, 27));
@@ -573,7 +569,7 @@ public:
 
         retranslateUi(AllProxy);
 
-        toolbox_main->setCurrentIndex(2);
+        toolbox_main->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(AllProxy);
@@ -588,7 +584,7 @@ public:
         label->setText(QApplication::translate("AllProxy", "Proxy Server", 0));
         label_2->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
         label_8->setText(QApplication::translate("AllProxy", "Default Gateway", 0));
-        in_button_save_nproxy->setText(QApplication::translate("AllProxy", "Apply", 0));
+        in_button_save_nproxy->setText(QApplication::translate("AllProxy", "Apply Settings", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_nproxy), QApplication::translate("AllProxy", "Nproxy                                                                                                                                     - Normal Proxy", 0));
         in_button_fproxy_browse_upload->setText(QApplication::translate("AllProxy", "Browse ...", 0));
         in_text_fproxy_path_upload->setText(QApplication::translate("AllProxy", "path", 0));
@@ -602,7 +598,6 @@ public:
         toolbox_main->setItemText(toolbox_main->indexOf(page_fproxy), QApplication::translate("AllProxy", "Fproxy                                                                                                                                    - File Exchange ", 0));
         in_button_cproxy_send->setText(QApplication::translate("AllProxy", "Send   Message", 0));
         in_text_vproxy_path_5->setText(QApplication::translate("AllProxy", "IP", 0));
-        in_button_cproxy_call->setText(QApplication::translate("AllProxy", "Voice   Call", 0));
         in_button_cproxy_change_settings->setText(QApplication::translate("AllProxy", "Change Notification Settings", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page), QApplication::translate("AllProxy", "Cproxy                                                                                                                                                      - Chat", 0));
         group_vpn->setTitle(QString());

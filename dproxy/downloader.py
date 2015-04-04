@@ -23,6 +23,8 @@
 
 import pycurl
 import os,sys
+import signal
+import time
 
 
 class downloader:
@@ -57,10 +59,16 @@ class downloader:
 		#self.curl_obj.setopt(self.curl_obj.USERAGENT,"Mozilla/5.0 (compatible; pycurl)")
 		# Send request
 		try:
-			print "Trying to get size of the file"
-			tmp_curl_obj.perform()
+			with Timeout(3):
+				print "Trying to get size of the file"
+				print target_address
+				tmp_curl_obj.perform()
+				print "got size"
 			# get the size
-			self.size = tmp_curl_obj.getinfo(tmp_curl_obj.CONTENT_LENGTH_DOWNLOAD)
+			# print tmp_curl_obj
+			with Timeout(1):
+				self.size = tmp_curl_obj.getinfo(tmp_curl_obj.CONTENT_LENGTH_DOWNLOAD)
+				print "Size: " + str(self.size)
 		except Exception, e:
 			print e
 			self.delete_temp()
@@ -106,6 +114,7 @@ class downloader:
 			f = open('status', 'w')
 			s = str(int(100*i*self.chunk/self.size))
 			f.write(s)
+			f.close()
 
 			# Create a temporary filename
 			temp_output=os.path.join(self.dir_name,"output"+str(i))
@@ -270,3 +279,21 @@ class downloader:
 		'''
 		print "To be downloaded" + str(download_total)
 		print "Downloaded : " + str(downloaded)
+
+class Timeout():
+    """Timeout class using ALARM signal."""
+    class Timeout(Exception):
+        pass
+ 
+    def __init__(self, sec):
+        self.sec = sec
+ 
+    def __enter__(self):
+        signal.signal(signal.SIGALRM, self.raise_timeout)
+        signal.alarm(self.sec)
+ 
+    def __exit__(self, *args):
+        signal.alarm(0)    # disable alarm
+ 
+    def raise_timeout(self, *args):
+        raise Timeout.Timeout()

@@ -32,4 +32,3 @@ echo "DNS server initiated" >> $allproxy_path/log/tproxy
 echo "Transparent proxy initiated, running in background" >> $allproxy_path/log/tproxy 
 
 echo "Done !!"
-
