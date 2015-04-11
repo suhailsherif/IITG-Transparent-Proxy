@@ -1,5 +1,4 @@
 
-privoxy --no-daemon --pidfile /home/kunal15595/Allproxy/pid/lproxy /home/kunal15595/Allproxy/config/lproxy
 confdir /etc/privoxy
 logdir /var/log/privoxy
 actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.

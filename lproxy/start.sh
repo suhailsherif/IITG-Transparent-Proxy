@@ -6,7 +6,6 @@ source $allproxy_path/config/config.sh
 IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -m 1 -Eo '([0-9]*\.){3}[0-9]*')
 
 echo "
-privoxy --no-daemon --pidfile $allproxy_path/pid/lproxy $allproxy_path/config/lproxy
 confdir /etc/privoxy
 logdir /var/log/privoxy
 actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
