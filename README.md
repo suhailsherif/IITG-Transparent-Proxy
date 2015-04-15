@@ -16,15 +16,18 @@
 
 #### HowTo :
 - Run install script `sudo sh install.sh`
+- GUI  `./Allproxy`
+- From terminal `gedit config/config.sh`; specify proxy for **nproxy**, and others if required.
 
-<br/>
+
+#### Tip :
 You can use **kde-nm-connection-editor** in package **plasma-nm** to create wireless access-point on your Ubuntu machine.
-<br/>
 
-##### *Tested OS :*
+
+#### *Tested OS :*
 - Ubuntu 14.04 64-bit
 
-<br/>
-##### *Beware !*
+
+#### *Beware !*
 Non-authentic DNS servers can be used VERY 	convincingly for phishing. 
 Make sure you are in control of your configuration.

@@ -134,3 +134,7 @@ sudo -E add-apt-repository ppa:amandeepgrewal/notifyosdconfig -y
 sudo -S apt-get update && sudo apt-get upgrade -y
 sudo apt-get install notifyosdconfig libnotify-bin
 notifyosdconf 
+
+###########
+
+PATH="$PATH:/usr/sbin"
