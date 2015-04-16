@@ -12,12 +12,11 @@ then
 	if [ $? -eq 0 ]
 	then
 		echo "Internet is up."
-		tproxy_gateway=$(echo $OUTPUT | awk -F, '{print $1}')
 
 		sudo ip route del default
 
-		echo "setting default gateway to " $tproxy_gateway
-		sudo ip route add default via $tproxy_gateway
+		echo "setting default gateway to " $def_gate
+		sudo ip route add default via $def_gate
 	else
 		echo "Offline"
 		if [ -e /usr/bin/zenity ]; then		
