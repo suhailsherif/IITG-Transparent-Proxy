@@ -4,6 +4,9 @@ case $1 in
 start)
 
 	echo "Setting-up iptable rules ..."
+	# sudo iptables -t nat -A PREROUTING -i eth0 -p udp --dport 53 -j REDIRECT --to 55
+	# sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 53 -j REDIRECT --to 55
+
 	sudo iptables -t nat -N REDSOCKS
 
 	sudo iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to 55
@@ -43,11 +46,19 @@ start)
 	sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp -j REDSOCKS
 	sudo iptables -t nat -A PREROUTING -i wlan1 -p udp -j REDSOCKS
 	sudo iptables -t nat -A PREROUTING -i wlan0 -p udp -j REDSOCKS
+	sudo iptables -t nat -A PREROUTING -i eth0 -p udp -j REDSOCKS
+	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp -j REDSOCKS
+	# sudo iptables -t nat -A PREROUTING -i eth1 -p udp -j REDSOCKS
+	# sudo iptables -t nat -A PREROUTING -i eth1 -p udp -j REDSOCKS
 
 	sudo iptables -A INPUT -i wlan0 -p tcp --dport 8123 -j ACCEPT
 	sudo iptables -A INPUT -i wlan0 -p tcp --dport 8124 -j ACCEPT
 	sudo iptables -A INPUT -i wlan1 -p tcp --dport 8123 -j ACCEPT
 	sudo iptables -A INPUT -i wlan1 -p tcp --dport 8124 -j ACCEPT
+	sudo iptables -A INPUT -i eth0 -p tcp --dport 8123 -j ACCEPT
+	sudo iptables -A INPUT -i eth0 -p tcp --dport 8124 -j ACCEPT
+	# sudo iptables -A INPUT -i eth1 -p tcp --dport 8123 -j ACCEPT
+	# sudo iptables -A INPUT -i eth1 -p tcp --dport 8124 -j ACCEPT
 	
 	echo "iptable configured"
 
@@ -68,7 +79,9 @@ stop)
 	fi
 
 	sudo iptables -t nat -F OUTPUT
+	sudo iptables -t nat -F INPUT
 	sudo iptables -t nat -F REDSOCKS
+	sudo iptables -t nat -F PREROUTING
 	
 
 esac

@@ -128,13 +128,28 @@ touch /var/log/downloader.log ; chmod 777 /var/log/downloader.log
 ## cproxy ##
 ############
 
-# notification
+# install desktop notifier
 sudo -E add-apt-repository ppa:leolik/leolik -y
 sudo -E add-apt-repository ppa:amandeepgrewal/notifyosdconfig -y
 sudo -S apt-get update && sudo apt-get upgrade -y
 sudo apt-get install notifyosdconfig libnotify-bin
 notifyosdconf 
 
-###########
+######################
+## add sbin to path ##
+######################
 
 PATH="$PATH:/usr/sbin"
+
+######################
+## turn off dnsmasq ##
+######################
+
+sudo cat /etc/NetworkManager/NetworkManager.conf \
+    | sed -e 's/dns=dnsmasq/#dns=dnsmasq/' \
+    > /etc/NetworkManager/NetworkManager.conf
+
+#############################
+## restart network manager ##
+#############################
+sudo service network-manager restart
