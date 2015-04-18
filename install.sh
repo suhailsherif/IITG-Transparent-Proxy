@@ -46,7 +46,7 @@ fi
 sudo -S apt-get update && sudo apt-get upgrade -y
 
 # install required packages
-req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl"\
+req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "dnsmasq" \
 	"putty" "squid3" "sshpass" "netcat" "openssh-server" "nmap" "notify-osd" \
 	"openssh-client" "gksu" "python-pycurl" "opus-tools" "zenity" "redsocks" \
 	)

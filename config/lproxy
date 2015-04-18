@@ -26,6 +26,6 @@ forward   			/	202.141.80.19:3128
 #forward-socks5 	/ 	127.0.0.1:9050 .
 #forward-socks4a 	/	127.0.0.1:9050 .
 listen-address  localhost:8787
-listen-address 172.16.25.106:8787
+listen-address 10.10.1.31:8787
 
 

@@ -127,3 +127,5 @@ cproxy)
 ;;
 
 esac
+
+exit

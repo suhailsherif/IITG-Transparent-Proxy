@@ -8,6 +8,7 @@ chmod 777 -R /var/log
 # Killing fake DNS server, if running
 sudo fuser -k 55/udp
 sudo killall -I redsocks
+# sudo killall dnsmasq
 sleep 0.1
 
 echo "Tproxy" > $allproxy_path/log/tproxy
@@ -27,8 +28,17 @@ echo "initiating fake DNS server ..."
 sudo python -u $allproxy_path/tproxy/fake_dns.py $allproxy_path/pid/tproxy > $allproxy_path/log/dns 2>&1 & 
 echo "DNS server initiated" >> $allproxy_path/log/tproxy 
 
-# echo $! > $allproxy_path/pid/tproxy #&
+echo "Starting dnsmasq on all open interfaces ..."
+addr=( $(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -m 4 -Eo '([0-9]*\.){3}[0-9]*') )
+for x in ${addr[@]}; do
+
+	dnsmasq --conf-file --no-hosts --keep-in-foreground --bind-interfaces --except-interface=lo \
+	--clear-on-reload --strict-order --listen-address=$x \
+	--dhcp-option=option:router,$x --dhcp-lease-max=50
+done;
 
 echo "Transparent proxy initiated, running in background" >> $allproxy_path/log/tproxy 
 
 echo "Done !!"
+
+exit

@@ -13,12 +13,29 @@ then
 	if [ $? -eq 0 ]
 	then
 		echo "Internet is up."
+		exit
 
 	else
-		if [[ $restore_gateway =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] 
-		then
-			sudo ip route del default
-			sudo ip route add default via $restore_gateway
+		if [ -e /usr/bin/zenity ]; then		
+
+			OUTPUT=$(zenity --forms --title="Allproxy" --text="Proxy Settings" --separator=","  \
+			   --add-entry="Proxy Gateway" )
+
+			accepted=$?
+			if [ ! "$accepted" -eq "0" ]; then
+				echo "Tproxy aborted !!"
+			    exit 1
+			else
+				tproxy_gateway=$(echo $OUTPUT | awk -F, '{print $1}')
+
+				sudo ip route del default
+
+				echo "setting default gateway to " $tproxy_gateway
+				sudo ip route add default via $tproxy_gateway
+				exit
+			fi
+
 		fi
+		
 	fi
 fi

@@ -1,732 +1,268 @@
 DNS server running on port 55.
 Default IPs loaded
 Cached IPs loaded
-Hit    31.13.73.1           graph.facebook.com
-Hit    64.233.171.188       mtalk.google.com
-Hit    173.194.123.1        clients4.google.com
-Hit    31.13.73.1           www.facebook.com
-Hit    173.252.103.16       mqtt.facebook.com
-Hit    173.252.103.16       mqtt.facebook.com
-Hit    17.110.242.88        p30-streams.icloud.com
-Hit    17.148.88.63         radarsubmissions.apple.com
-Hit    23.202.205.15        www.apple.com  
-Hit    17.172.232.10        1-courier.sandbox.push.apple.com
-Hit    17.142.160.59        apple.com      
-Hit    17.172.239.53        1-courier.push.apple.com
-Hit    17.249.105.247       api.smoot.apple.com
-Hit    130.102.1.190        vpn.uq.edu.au  
-Err    push.apple.com  <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    local           Error          
-Hit    172.229.222.120      www.cdn.viber.com
-Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
-Hit    23.67.250.90         fbstatic-a.akamaihd.net
-Err    internalcheck.apple.com <html>
-       
-Err    3.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    internalcheck.apple.com <html>
-       
-Err    33.26.16.172.in-addr.arpa <html>
-       
-Err    2.81.141.202.in-addr.arpa <html>
-       
-Err    local           Error          
-Err    push.apple.com  <html>
-       
-Err    internalcheck.apple.com <html>
-       
-Err    26.0.42.10.in-addr.arpa <html>
-       
-Err    3.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Hit    17.110.242.14        p30-caldav.icloud.com
-Hit    74.125.226.160       calendar.google.com
-Hit    23.67.243.90         fbexternal-a.akamaihd.net
-Err    2.81.141.202.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    local           Error          
-Err    internalcheck.apple.com <html>
-       
-Err    33.26.16.172.in-addr.arpa <html>
-       
-Err    3.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    3.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    26.0.42.10.in-addr.arpa <html>
-       
-Hit    176.32.102.208       www.goodreads.com
-Hit    31.13.73.1           pixel.facebook.com
-Hit    31.13.79.251         scontent-sin.xx.fbcdn.net
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Hit    31.13.73.1           0-edge-chat.facebook.com
-Err    push.apple.com  <html>
-       
-Err    internalcheck.apple.com <html>
-       
-Hit    173.194.123.127      ssl.gstatic.com
-Err    local           Error          
-Err    2.81.141.202.in-addr.arpa <html>
-       
-Err    3.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    3.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    33.26.16.172.in-addr.arpa <html>
-       
-Err    26.0.42.10.in-addr.arpa <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    internalcheck.apple.com <html>
-       
-Err    local           Error          
-Err    push.apple.com  <html>
-       
-Err    internalcheck.apple.com <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    local           Error          
-Err    26.0.42.10.in-addr.arpa <html>
-       
-Err    2.81.141.202.in-addr.arpa <html>
-       
-Hit    23.67.251.114        fbcdn-sphotos-c-a.akamaihd.net
-Hit    184.51.108.18        fbcdn-sphotos-f-a.akamaihd.net
-Hit    63.88.100.139        fbcdn-dragon-a.akamaihd.net
-Err    3.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    3.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    33.26.16.172.in-addr.arpa <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    local           Error          
-Err    push.apple.com  <html>
-       
-Hit    173.252.103.16       mqtt.facebook.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    74.125.226.168       clients3.google.com
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    local           Error          
-Err    push.apple.com  <html>
-       
-Hit    23.101.18.25         cheatz.cloudapp.net
-Hit    173.194.123.40       android.clients.google.com
-Hit    206.190.57.60        api.flickr.com 
-Hit    206.190.57.60        api.flickr.com 
-Hit    58.83.195.166        oc.umeng.com   
-Hit    54.225.152.187       settings.crashlytics.com
-Err    push.apple.com  <html>
-       
-Hit    54.223.160.112       cloudapi.camera360.com
-Hit    185.24.220.241       www.telize.com 
-Hit    31.13.73.1           graph.facebook.com
-Hit    104.236.251.84       freegeoip.net  
-Hit    108.160.166.125      api.dropbox.com
-Hit    111.1.53.158         sdk.open.talk.igexin.com
-Hit    206.190.57.60        api.flickr.com 
-Err    push.apple.com  <html>
-       
-Hit    74.125.22.95         android.googleapis.com
-200    72.30.198.117   farm9.staticflickr.com
-Hit    72.30.198.117        farm9.staticflickr.com
-Err    push.apple.com  <html>
-       
-Hit    216.58.219.228       www.google.com 
-Hit    64.233.171.95        play.googleapis.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    21.26.16.172.in-addr.arpa <html>
-       
-Err    5.b.b.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    5.b.b.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    21.26.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.b.b.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    5.b.b.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    5.b.b.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    21.26.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.b.b.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.b.b.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    173.252.103.16       mqtt.facebook.com
-Hit    206.190.57.61        weather.yahooapis.com
-Hit    111.1.53.158         sdk.open.talk.igexin.com
-Err    push.apple.com  <html>
-       
-Err    16.103.252.173.in-addr.arpa <html>
-       
-Hit    31.13.73.1           graph.facebook.com
-Err    5.b.b.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Hit    23.67.250.90         fbstatic-a.akamaihd.net
-Hit    96.6.113.122         fbcdn-static-b-a.akamaihd.net
-Hit    23.67.251.99         fbcdn-sphotos-e-a.akamaihd.netHit    63.88.100.144        fbcdn-profile-a.akamaihd.net
-
-Hit    23.67.243.90         fbexternal-a.akamaihd.netHit    63.88.100.139        fbcdn-dragon-a.akamaihd.net
-
-Err    99.251.67.23.in-addr.arpa <html>
-       
-Err    local           Error          
-Hit    23.67.251.114        fbcdn-sphotos-c-a.akamaihd.net
-Hit    31.13.73.1           graph.facebook.com
-Err    push.apple.com  <html>
-       
-Hit    23.67.251.121        fbcdn-sphotos-h-a.akamaihd.netHit    23.67.251.147        fbcdn-sphotos-g-a.akamaihd.net
-
-Hit    23.67.251.170        fbcdn-sphotos-d-a.akamaihd.net
-Hit    31.13.79.251         scontent-sin.xx.fbcdn.net
-Exc    8.8.8.8                   21.26.16.172.in-addr.arpa
-Err    21.26.16.172.in-addr.arpa 8.8.8.8        
-Err    99.251.67.23.in-addr.arpa <html>
-       
-Err    121.251.67.23.in-addr.arpa <html>
-       
-Hit    31.13.73.1           pixel.facebook.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    31.13.73.1           5-edge-chat.facebook.com
-Hit    31.13.73.1           edge-chat.facebook.com
-Err    121.251.67.23.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    99.251.67.23.in-addr.arpa <html>
-       
-Err    121.251.67.23.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Exc    8.8.8.8                   lb.dns-sd.udp.0.0.42.10.in-addr.arpa
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa 8.8.8.8        
-Err    push.apple.com  <html>
-       
-Hit    23.101.18.25         cheatz.cloudapp.net
-Err    121.251.67.23.in-addr.arpa <html>
-       
-Err    99.251.67.23.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-200    17.172.232.12   6-courier.sandbox.push.apple.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    16.103.252.173.in-addr.arpa <html>
-       
-Hit    31.13.73.1           graph.facebook.com
-Err    push.apple.com  <html>
-       
-Hit    23.67.250.90         fbstatic-a.akamaihd.net
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Err    local           Error          
-Err    push.apple.com  <html>
-       
-Hit    111.1.53.158         sdk.open.talk.igexin.com
-Err    push.apple.com  <html>
-       
-Hit    74.125.22.95         android.googleapis.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    48.25.16.172.in-addr.arpa <html>
-       
-Err    5.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    48.25.16.172.in-addr.arpa <html>
-       
-Err    5.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    5.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    5.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    17.253.48.243        time.apple.com 
-Hit    17.253.48.243        time.apple.com 
-Hit    173.194.123.127      ssl.gstatic.com
-Err    48.25.16.172.in-addr.arpa <html>
-       
-Err    5.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    *               Error          
-Err    *               Error          
-Err    push.apple.com  <html>
-       
-Hit    23.101.18.25         cheatz.cloudapp.net
-Err    *               Error          
-Err    *               Error          
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    *               Error          
-Err    5.f.a.1.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.f.a.1.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    48.25.16.172.in-addr.arpa <html>
-       
-Err    *               Error          
-Hit    31.13.73.1           www.facebook.com
-Err    push.apple.com  <html>
-       
-Err    *               Error          
-Err    243.48.253.17.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    173.252.103.16       mqtt.facebook.com
-Err    243.48.253.17.in-addr.arpa <html>
-       
-Hit    111.1.53.158         sdk.open.talk.igexin.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
-Err    243.48.253.17.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    243.48.253.17.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    77.25.16.172.in-addr.arpa <html>
-       
-Err    5.2.a.3.d.8.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.2.a.3.d.8.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    77.25.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    5.2.a.3.d.8.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    77.25.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    23.101.18.25         cheatz.cloudapp.net
+Hit    158.85.58.120        e12.whatsapp.net
+Hit    198.252.206.140      stackoverflow.com
+Hit    198.252.206.141      careers.stackoverflow.com
+Hit    180.149.55.13        r2---sn-o3o-jj0e.googlevideo.com
 Hit    74.125.226.191       www.google.co.in
- Hit    74.125.226.174       apis.google.com
+Hit    74.125.226.174       apis.google.com
 Hit    74.125.226.167       clients5.google.com
-Hit    216.58.219.227       id.google.co.in
-Hit    173.194.123.11       lh6.googleusercontent.comHit    173.194.123.34       plus.google.com
-
- Hit    216.58.219.228       www.google.com 
-Hit    173.194.123.63       www.gstatic.com
-Hit    111.1.53.158         sdk.open.talk.igexin.com
-Hit    54.223.160.112       cloudapi.camera360.com
-Err    push.apple.com  <html>
-       
-Err    77.25.16.172.in-addr.arpa <html>
-       
-Hit    216.58.218.163       csi.gstatic.com
-Hit    173.194.123.127      ssl.gstatic.com
-Err    5.2.a.3.d.8.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    31.13.73.1           graph.facebook.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    local           Error          
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
-Hit    23.101.18.25         cheatz.cloudapp.net
-Err    push.apple.com  <html>
-       
-Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    216.58.219.238       developers.google.com
+Hit    216.58.219.193       lh3.googleusercontent.com
+Hit    173.194.123.34       plus.google.com
 Hit    216.58.219.228       www.google.com 
 Hit    173.194.123.63       www.gstatic.com
-Hit    216.58.219.238       cloud.google.com
-Hit    173.194.123.30       www.googletagmanager.com
+200    129.33.205.80   www-01.ibm.com 
+200    72.52.91.14     php.net        
 Hit    74.125.226.186       www.googleadservices.com
-Hit    74.125.226.174       apis.google.com
-Hit    173.194.123.109      googleads.g.doubleclick.net
-Hit    173.194.123.4        www.google-analytics.com
- Hit    74.125.22.154        stats.g.doubleclick.net
-Hit    74.125.226.184       fonts.gstatic.com
-Hit    216.58.219.195       accounts.google.co.in
-Hit    216.58.219.205       accounts.google.com
- Hit    173.194.123.72       accounts.youtube.com
-Hit    74.125.226.182       mail.google.com
-Hit    173.194.123.127      ssl.gstatic.com
-Hit    216.58.219.193       lh3.googleusercontent.com
-Hit    74.125.226.172       oauth.googleusercontent.com
-Err    push.apple.com  <html>
+200    23.76.219.219   www.ibm.com    
+200    104.64.33.9     libs.coremetrics.com
+Hit    88.198.26.2          httpd.apache.org
+200    69.195.222.219  bugs.php.net   
+200    76.75.200.61    edit.php.net   
+Err    www.vbcn.com.ar <html>
        
-Hit    216.58.218.163       csi.gstatic.com
-Err    push.apple.com  <html>
+200    195.68.251.139  nanoweb.si.kz  
+Err    www.vbcn.com.ar <html>
        
-Err    push.apple.com  <html>
+Err    www.vbcn.com.ar <html>
        
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    74.125.226.170       storage.googleapis.com
-Err    170.226.125.74.in-addr.arpa <html>
-       
-Hit    98.138.243.53        cricketmobile.yql.yahooapis.com
-Err    170.226.125.74.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    170.226.125.74.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    72.30.202.51         aviate-yql.media.yahoo.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    103.11.143.248       asia.pool.ntp.org
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    170.226.125.74.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    209.20.75.76         www.sublimetext.com
-Hit    111.1.53.158         sdk.open.talk.igexin.com
-Hit    77.234.42.94         auth.ff.avast.com
-Hit    23.101.18.25         cheatz.cloudapp.net
-Err    push.apple.com  <html>
-       
+Hit    31.13.73.1           2-edge-chat.facebook.com
 Hit    31.13.73.1           www.facebook.com
+Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Hit    173.255.112.173      stream.pushbullet.com
+Err    www.vbcn.com.ar <html>
+       
+Hit    72.14.247.65         api.pushbullet.com
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Err    www.vbcn.com.ar <html>
+       
+Hit    173.252.103.16       mqtt.facebook.com
 Hit    173.194.123.127      ssl.gstatic.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    176.32.102.208       www.goodreads.com
-Hit    176.32.102.208       www.goodreads.com
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    176.32.102.208       www.goodreads.com
-Err    2.6.4.4.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    2.6.4.4.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    2.6.4.4.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    2.6.4.4.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    17.148.88.63         radarsubmissions.apple.com
-Err    2.6.4.4.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    2.6.4.4.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    e.5.6.6.6.d.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    86.25.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    e.5.6.6.6.d.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    2.6.4.4.9.7.e.f.f.f.2.d.8.7.2.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    2.6.4.4.9.7.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    e.5.6.6.6.d.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    86.25.16.172.in-addr.arpa <html>
-       
-Err    e.5.6.6.6.d.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    e.5.6.6.6.d.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    86.25.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    e.5.6.6.6.d.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Hit    216.52.203.13        data.flurry.com
-Hit    108.174.10.10        www.linkedin.com
-Hit    23.67.243.58         androiddoes.accu-weather.com
-Hit    31.13.73.1           graph.facebook.com
-Err    push.apple.com  <html>
-       
-Err    0.7.2.b.7.4.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    0.7.2.b.7.4.0.8.4.9.d.d.6.d.9.8.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    e.5.6.6.6.d.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    8.27.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    0.7.2.b.7.4.0.8.4.9.d.d.6.d.9.8.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    86.25.16.172.in-addr.arpa <html>
-       
-Err    0.7.2.b.7.4.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    8.27.16.172.in-addr.arpa <html>
-       
-Err    e.5.6.6.6.d.e.f.f.f.7.7.0.6.a.3.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Hit    23.226.142.216       2.android.pool.ntp.org
-Err    0.7.2.b.7.4.0.8.4.9.d.d.6.d.9.8.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    0.7.2.b.7.4.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    8.27.16.172.in-addr.arpa <html>
-       
-Hit    98.137.204.89        farm4.staticflickr.com
-Hit    98.137.204.89        farm4.staticflickr.com
-Err    push.apple.com  <html>
-       
-Hit    54.223.160.112       cloudapi.camera360.com
-Hit    23.101.18.25         cheatz.cloudapp.net
-Err    0.7.2.b.7.4.0.8.4.9.d.d.6.d.9.8.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    0.7.2.b.7.4.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa <html>
-       
-Err    8.27.16.172.in-addr.arpa <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    local           Error          
-Err    lb.dns-sd.udp.0.0.42.10.in-addr.arpa <html>
-       
+Hit    74.125.226.174       apis.google.com
+Hit    74.125.226.167       clients5.google.com
+Hit    216.58.219.193       lh3.googleusercontent.com
+Hit    173.194.123.34       plus.google.com
+Hit    216.58.219.228       www.google.com 
+Hit    173.194.123.63       www.gstatic.com
+Hit    74.125.226.171       s2.googleusercontent.com
+200    174.36.240.128  helpdeskgeek.com
+Hit    173.194.123.5        www.youtube.com
+Hit    64.233.171.95        ajax.googleapis.com
+200    94.31.29.154    netdna.bootstrapcdn.com
 Hit    216.58.219.232       ssl.google-analytics.com
-Err    push.apple.com  <html>
+Hit    199.16.156.6         twitter.com    
+Hit    31.13.73.1           www.facebook.com
+Hit    74.125.226.165       clients1.google.com
+Hit    198.252.206.140      stackoverflow.com
+Hit    31.13.73.1           graph.facebook.com
+Hit    198.252.206.140      android.stackexchange.com
+Hit    104.16.18.44         askubuntu.com  
+Hit    104.16.25.251        blog.stackoverflow.com
+Hit    198.252.206.141      careers.stackoverflow.com
+Hit    69.59.197.29         chat.stackoverflow.com
+Hit    198.252.206.140      math.stackexchange.com
+Hit    198.252.206.140      meta.stackoverflow.com
+Hit    198.252.206.140      stackexchange.com
+Hit    190.93.244.58        superuser.com  
+Hit    103.31.7.35          i.stack.imgur.com
+Hit    74.125.226.172       lh4.googleusercontent.com
+Hit    198.252.206.140      academia.stackexchange.com
+Hit    104.16.13.13         chemistry.stackexchange.com
+Hit    198.252.206.140      cooking.stackexchange.com
+Hit    69.59.197.23         data.stackexchange.com
+Hit    104.16.13.13         engineering.stackexchange.comHit    198.252.206.140      english.stackexchange.com
+
+Hit    198.252.206.140      gamedev.stackexchange.com
+Hit    198.252.206.140      history.stackexchange.com
+Hit    198.252.206.140      lifehacks.stackexchange.com
+Hit    198.252.206.140      movies.stackexchange.com
+Hit    104.16.12.13         philosophy.stackexchange.com
+Hit    198.252.206.140      physics.stackexchange.comHit    198.252.206.140      programmers.stackexchange.com
+
+Hit    198.252.206.140      scifi.stackexchange.com
+ Hit    190.93.246.183       serverfault.comHit    198.252.206.140      security.stackexchange.comHit    198.252.206.140      travel.stackexchange.com
+
+Hit    198.252.206.140      tex.stackexchange.com
+
+Hit    198.252.206.140      unix.stackexchange.com
+Hit    198.252.206.140      webapps.stackexchange.com
+Hit    198.252.206.140      webmasters.stackexchange.com
+Hit    198.252.206.140      worldbuilding.stackexchange.com
+Hit    72.21.91.121         www.gravatar.com
+Hit    107.22.164.38        engine.adzerk.net
+Hit    173.194.123.4        www.google-analytics.com
+Hit    54.201.42.70         creativecommons.org
+Hit    66.150.48.21         pixel.quantserve.com
+Hit    63.130.77.106        b.scorecardresearch.com
+Hit    104.16.12.13         meta.stackexchange.com
+Hit    173.194.123.127      ssl.gstatic.com
+200    162.242.207.250 www.rackspace.com
+200    75.126.153.206  www.cyberciti.biz
+200    75.126.153.206  www.cyberciti.biz
+Hit    23.67.243.24         admin.brightcove.com
+Hit    104.64.33.9          libs.coremetrics.com
+Hit    213.138.111.164      i.creativecommons.org
+Hit    216.58.219.194       pagead2.googlesyndication.com
+Hit    176.32.98.166        www.amazon.com 
+200    23.253.120.28   content-services.rackspace.com
+Hit    64.233.171.95        www.googleapis.com
+200    74.86.26.67     nixcraft.com   
+Hit    173.252.120.6        facebook.com   
+Hit    74.125.226.164       feedburner.google.com
+200    74.86.144.194   bash.cyberciti.biz
+Hit    74.125.226.161       youtube.com    
+200    54.230.48.176   figs.cyberciti.biz
+Hit    173.194.204.95       fonts.googleapis.com
+200    75.98.93.66     nixcraft.wufoo.com
+200    64.233.171.121  feeds.cyberciti.biz
+Hit    74.125.226.184       fonts.gstatic.com
+200    54.230.48.176   figs.cyberciti.biz
+200    74.86.144.194   bash.cyberciti.biz
+200    75.98.93.66     nixcraft.wufoo.com
+200    205.251.251.4   s0.cyberciti.org
+200    205.251.251.4   s0.cyberciti.org
+200    23.235.46.134   rackspaceknowledgecenter.disqus.com
+200    54.230.50.118   d3c3cq33003psk.cloudfront.net
+Hit    23.235.39.130        a.disquscdn.com
+Hit    198.41.249.210       licensebuttons.net
+200    23.45.34.202    049d0f1c432d783400b6-46d4641a66ab85944fbcda2b678d03e6.ssl.cf1.rackcdn.com
+200    93.184.216.180  tags.tiqcdn.com
+200    69.20.91.24     apps.rackspace.com
+200    184.106.75.91   community.rackspace.com
+200    64.233.171.121  feeds.cyberciti.biz
+200    162.209.121.65  cp.rackspace.com
+200    54.230.50.118   d3c3cq33003psk.cloudfront.net
+200    93.184.216.180  tags.tiqcdn.com
+Hit    198.41.215.185       cdnjs.cloudflare.com
+200    23.45.34.202    049d0f1c432d783400b6-46d4641a66ab85944fbcda2b678d03e6.ssl.cf1.rackcdn.com
+200    79.125.122.162  pong.qubitproducts.com
+200    69.20.91.24     apps.rackspace.com
+200    162.209.121.65  cp.rackspace.com
+200    184.106.75.91   community.rackspace.com
+Hit    69.28.187.152        munchkin.marketo.net
+200    66.235.139.152  rackspace.112.2o7.net
+Hit    111.1.53.158         sdk.open.talk.igexin.com
+200    79.125.122.162  pong.qubitproducts.com
+Hit    23.235.37.134        disqus.com     
+Hit    199.27.76.134        referrer.disqus.com
+Hit    23.235.39.134        glitter-services.disqus.com
+Hit    23.235.39.134        docs.disqus.com
+Hit    184.72.58.122        help.disqus.com
+Hit    72.251.229.213       loadus.exelator.com
+Hit    199.233.57.10        bcp.crwdcntrl.net
+200    23.10.234.206   munchkin-cdn.marketo.net
+Hit    74.125.226.191       www.google.co.in
+200    199.15.215.196  045-qrg-025.mktoresp.com
+200    23.10.234.206   munchkin-cdn.marketo.net
+Hit    54.193.85.29         shopvac.cyngn.com
+Hit    23.226.142.216       2.android.pool.ntp.org
+Hit    5.45.62.63           ai.ff.avast.com
+Hit    31.13.73.1           graph.facebook.com
+Hit    74.125.226.164       i1.ytimg.com   
+Hit    74.125.226.167       i.ytimg.com    
+Hit    91.189.92.55         daisy.ubuntu.com
+Hit    91.189.92.55         daisy.ubuntu.com
+Hit    180.149.55.12        r1---sn-o3o-jj0e.googlevideo.com
+Hit    216.58.219.238       www.youtube-nocookie.com
+200    173.194.7.60    r6---sn-p5qlsnsr.googlevideo.com
+Hit    74.125.226.164       gg.google.com  
+Hit    74.125.226.165       clients1.google.com
+Hit    173.194.123.109      googleads.g.doubleclick.net
+Hit    54.193.85.29         shopvac.cyngn.com
+Hit    54.223.160.112       cloudapi.camera360.com
+Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
+200    162.209.66.219  support.rackspace.com
+Hit    75.126.153.206       www.cyberciti.biz
+Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
+Hit    216.58.219.227       google.co.in   
+Hit    216.58.219.227       google.co.in   
+Hit    74.125.226.191       www.google.co.in
+Hit    74.125.226.191       www.google.co.in
+Hit    74.125.226.167       i.ytimg.com    
+Hit    54.193.85.29         shopvac.cyngn.com
+Hit    111.1.53.158         sdk.open.talk.igexin.com
+Hit    75.126.153.206       www.cyberciti.biz
+Hit    180.149.55.14        r3---sn-o3o-jj0e.googlevideo.com
+Hit    74.125.226.164       gg.google.com  
+Hit    216.58.219.238       www.youtube-nocookie.com
+Hit    74.125.226.165       clients1.google.com
+Hit    173.194.123.109      googleads.g.doubleclick.net
+Hit    158.85.12.186        decide.mixpanel.com
+Hit    5.45.62.63           ai.ff.avast.com
+Hit    54.68.138.224        push1.push.hello.firefox.com
+Hit    54.68.138.224        push1.push.hello.firefox.com
+Hit    74.125.22.95         android.googleapis.com
+Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
+Hit    31.13.73.1           pixel.facebook.com
+Hit    108.160.166.125      api.dropbox.com
+Hit    54.231.8.200         s3.amazonaws.com
+Hit    54.231.8.200         s3.amazonaws.com
+Hit    173.252.103.16       mqtt.facebook.com
+Hit    74.125.226.168       clients2.google.com
+Hit    208.75.89.4          0.ubuntu.pool.ntp.org
+Hit    208.75.89.4          0.ubuntu.pool.ntp.org
+Hit    207.32.191.59        1.ubuntu.pool.ntp.org
+Hit    207.32.191.59        1.ubuntu.pool.ntp.org
+Hit    132.163.4.101        2.ubuntu.pool.ntp.org
+Hit    132.163.4.101        2.ubuntu.pool.ntp.org
+Hit    23.226.142.216       3.ubuntu.pool.ntp.org
+Hit    23.226.142.216       3.ubuntu.pool.ntp.org
+Hit    91.189.89.199        ntp.ubuntu.com 
+Hit    91.189.89.199        ntp.ubuntu.com 
+Hit    173.255.112.173      stream.pushbullet.com
+Err    16.103.252.173.in-addr.arpa <html>
        
-Err    push.apple.com  <html>
+Hit    72.14.247.65         api.pushbullet.com
+Hit    31.13.73.1           graph.facebook.com
+Err    16.103.252.173.in-addr.arpa <html>
        
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
-Err    push.apple.com  <html>
-       
+Hit    58.83.195.166        oc.umeng.com   
+Hit    180.149.55.14        r3---sn-o3o-jj0e.googlevideo.com
+Hit    54.223.160.112       cloudapi.camera360.com
+Hit    23.67.250.90         fbstatic-a.akamaihd.net
+Hit    74.125.226.169       docs.google.com
+Hit    111.1.53.158         sdk.open.talk.igexin.com
+Hit    63.88.100.139        fbcdn-dragon-a.akamaihd.net
+Hit    31.13.79.251         scontent-sin.xx.fbcdn.net
+Hit    23.67.243.90         fbexternal-a.akamaihd.net
+Hit    23.67.251.162        fbcdn-sphotos-a-a.akamaihd.net
+Hit    23.67.251.170        fbcdn-sphotos-d-a.akamaihd.net
+Hit    184.51.108.18        fbcdn-sphotos-f-a.akamaihd.net
+Hit    23.67.251.114        fbcdn-sphotos-c-a.akamaihd.net
+Hit    23.67.251.147        fbcdn-sphotos-g-a.akamaihd.net
+Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
+Hit    111.1.53.158         sdk.open.talk.igexin.com
+Hit    63.88.100.144        fbcdn-profile-a.akamaihd.net
+Hit    74.125.226.164       i1.ytimg.com   
+200    173.194.132.141 r8---sn-p5qlsnle.googlevideo.com
+200    173.194.15.118  r17---sn-4g57knkl.googlevideo.com
+Hit    74.125.226.172       yt3.ggpht.com  
+Hit    173.194.123.34       plus.google.com
+Hit    216.58.218.163       csi.gstatic.com
+Hit    111.1.53.158         sdk.open.talk.igexin.com
+Hit    64.233.171.95        play.googleapis.com
+Hit    64.233.171.188       mtalk.google.com
+Hit    173.194.123.40       android.clients.google.com
+Hit    111.1.53.158         sdk.open.talk.igexin.com
+Hit    54.68.138.224        push1.push.hello.firefox.com
+Hit    54.68.138.224        push1.push.hello.firefox.com
+Hit    54.223.160.112       cloudapi.camera360.com
+Hit    111.1.53.158         sdk.open.talk.igexin.com
