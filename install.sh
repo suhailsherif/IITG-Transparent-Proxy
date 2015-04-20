@@ -57,7 +57,7 @@ fi
 sudo -E apt-get update
 
 # install required packages
-req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "dnsmasq" "qt5-qmake" \
+req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "qt5-qmake" \
 	"putty" "squid3" "sshpass" "netcat" "openssh-server" "nmap" "notify-osd" "privoxy" \
 	"openssh-client" "gksu" "python-pycurl" "opus-tools" "zenity" "redsocks" "qt5-default" \
 	)
