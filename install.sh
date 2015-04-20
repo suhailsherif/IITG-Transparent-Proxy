@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# run with sudo rights only
+if [ "$EUID" -ne 0 ]
+  then echo "Please run with sudo "
+  exit
+fi
+
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
@@ -41,22 +47,24 @@ else
 		fi
 	fi
 fi
-
+# exit
 # update
-sudo -S apt-get update && sudo apt-get upgrade -y
+sudo -E apt-get update
 
 # install required packages
 req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "dnsmasq" \
-	"putty" "squid3" "sshpass" "netcat" "openssh-server" "nmap" "notify-osd" \
+	"putty" "squid3" "sshpass" "netcat" "openssh-server" "nmap" "notify-osd" "privoxy" \
 	"openssh-client" "gksu" "python-pycurl" "opus-tools" "zenity" "redsocks" \
 	)
 for i in "${req_packages[@]}"
 do
-	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "installed")
+	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "not-installed")
 	echo Checking package $i: $PKG_OK
-	if [ "" = "$PKG_OK" ]; then
+	if [ ! "" = "$PKG_OK" ]; then
 	  echo "$i not installed, setting up $i ..."
-	  sudo apt-get --force-yes --yes install $i
+	  sudo -E apt-get --force-yes --yes install $i
+	else echo "$i installed."
+
 	fi
 done
 
@@ -73,7 +81,7 @@ sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
 echo "export allproxy_path=$cur_path" >> $HOME/.bashrc
 echo "allproxy_path=$cur_path" >> /etc/environment
 
-echo ". $allproxy_path/config/config.sh" >> $HOME/.bashrc
+echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
 
 ############
 ## nproxy ##
@@ -100,8 +108,8 @@ echo $http_username
 ## tproxy ##
 ############
 
-chown root:root -R /var/log
-chmod 777 -R /var/log
+sudo chown root:root -R /var/log
+sudo chmod 777 -R /var/log
 
 
 ############
@@ -122,18 +130,6 @@ cp ./dproxy/main.py /usr/bin/pycurl-download
 
 # Create a log file and change its read write permission
 touch /var/log/downloader.log ; chmod 777 /var/log/downloader.log
-
-
-############
-## cproxy ##
-############
-
-# install desktop notifier
-sudo -E add-apt-repository ppa:leolik/leolik -y
-sudo -E add-apt-repository ppa:amandeepgrewal/notifyosdconfig -y
-sudo -S apt-get update && sudo apt-get upgrade -y
-sudo apt-get install notifyosdconfig libnotify-bin
-notifyosdconf 
 
 ######################
 ## add sbin to path ##
