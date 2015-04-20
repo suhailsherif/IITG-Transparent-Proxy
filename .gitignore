@@ -19,3 +19,5 @@ log/*.*
 pid/*
 libevent/
 Allproxy.pro.user.*
+config/lproxy
+pid/tproxy
