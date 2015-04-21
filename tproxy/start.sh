@@ -33,7 +33,7 @@ addr=( $(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0
 for x in ${addr[@]}; do
 
 	dnsmasq --conf-file --no-hosts --keep-in-foreground --bind-interfaces --except-interface=lo \
-	--clear-on-reload --strict-order --listen-address=$x \
+	--clear-on-reload --strict-order --listen-address=$x --dhcp-range=10.1.0.1,10.20.0.250,60m \
 	--dhcp-option=option:router,$x --dhcp-lease-max=50
 done;
 
