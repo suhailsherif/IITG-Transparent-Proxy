@@ -1,0 +1,61 @@
+Fproxy 
+10.10.1.31#request#directory#pid#1425663907#
+----------------------------
+ip:  10.10.1.31
+kind:  request
+filetype:  directory
+filename:  pid
+id:  1425663907
+port: 
+----------------------------
+request accepted
+----------------------------
+10.10.1.31#accepted###1425663907#12122
+----------------------------
+ip:  10.10.1.31
+kind:  accepted
+filetype: 
+filename: 
+id:  1425663907
+port:  12122
+----------------------------
+10.10.1.31#initiated###id#12122
+----------------------------
+ip:  10.10.1.31
+kind:  initiated
+filetype: 
+filename: 
+id:  id
+port:  12122
+----------------------------
+10.10.1.31#request#directory#pid#1425664817#
+----------------------------
+10.10.1.31#request#directory#pid#1425664878#
+----------------------------
+ip:  10.10.1.31
+kind:  request
+filetype:  directory
+filename:  pid
+id:  1425664878
+port: 
+----------------------------
+request accepted
+----------------------------
+10.10.1.31#accepted###1425664878#12122
+----------------------------
+ip:  10.10.1.31
+kind:  accepted
+filetype: 
+filename: 
+id:  1425664878
+port:  12122
+----------------------------
+10.10.1.31#initiated###id#12122
+----------------------------
+ip:  10.10.1.31
+kind:  initiated
+filetype: 
+filename: 
+id:  id
+port:  12122
+----------------------------

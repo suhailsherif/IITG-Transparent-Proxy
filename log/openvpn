@@ -1,0 +1,285 @@
+Mon Mar 30 17:28:17 2015 OpenVPN 2.3.2 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [eurephia] [MH] [IPv6] built on Dec  1 2014
+Mon Mar 30 17:28:17 2015 WARNING: file '/home/kunal15595/Allproxy/config/vpnbook_cred' is group or others accessible
+Mon Mar 30 17:28:17 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Mon Mar 30 17:28:17 2015 NOTE: --fast-io is disabled since we are not using UDP
+Mon Mar 30 17:28:17 2015 WARNING: file '/home/kunal15595/Allproxy/config/vproxy_cred' is group or others accessible
+Mon Mar 30 17:28:17 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Mon Mar 30 17:28:17 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Mon Mar 30 17:28:18 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:28:18 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Mon Mar 30 17:28:18 2015 Attempting Basic Proxy-Authorization
+Mon Mar 30 17:28:19 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Mon Mar 30 17:28:21 2015 TCPv4_CLIENT link local: [undef]
+Mon Mar 30 17:28:21 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:28:21 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=6b3ee39b bf0a47b0
+Mon Mar 30 17:28:21 2015 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Mon Mar 30 17:28:26 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:28:26 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:28:28 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:28:28 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:28:28 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:28:28 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:28:28 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Mon Mar 30 17:28:28 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:28:30 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Mon Mar 30 17:28:31 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.5.218 10.9.5.217'
+Mon Mar 30 17:28:31 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Mon Mar 30 17:28:31 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Mon Mar 30 17:28:31 2015 OPTIONS IMPORT: route options modified
+Mon Mar 30 17:28:31 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Mon Mar 30 17:28:31 2015 ROUTE_GATEWAY 172.16.24.254/255.255.252.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Mon Mar 30 17:28:31 2015 TUN/TAP device tun1 opened
+Mon Mar 30 17:28:31 2015 TUN/TAP TX queue length set to 100
+Mon Mar 30 17:28:31 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Mon Mar 30 17:28:31 2015 /sbin/ip link set dev tun1 up mtu 1500
+Mon Mar 30 17:28:31 2015 /sbin/ip addr add dev tun1 local 10.9.5.218 peer 10.9.5.217
+Mon Mar 30 17:28:33 2015 /sbin/ip route add 202.141.80.19/32 via 172.16.24.254
+Mon Mar 30 17:28:33 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.5.217
+Mon Mar 30 17:28:33 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.5.217
+Mon Mar 30 17:28:33 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.5.217
+Mon Mar 30 17:28:33 2015 Initialization Sequence Completed
+Mon Mar 30 17:34:06 2015 Connection reset, restarting [0]
+Mon Mar 30 17:34:06 2015 SIGUSR1[soft,connection-reset] received, process restarting
+Mon Mar 30 17:34:06 2015 Restart pause, 5 second(s)
+Mon Mar 30 17:34:11 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Mon Mar 30 17:34:11 2015 NOTE: --fast-io is disabled since we are not using UDP
+Mon Mar 30 17:34:11 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Mon Mar 30 17:34:11 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Mon Mar 30 17:34:12 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:34:12 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Mon Mar 30 17:34:12 2015 Attempting Basic Proxy-Authorization
+Mon Mar 30 17:34:12 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Mon Mar 30 17:34:14 2015 TCPv4_CLIENT link local: [undef]
+Mon Mar 30 17:34:14 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:34:15 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=61defb6c 5cf78f01
+Mon Mar 30 17:34:20 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:34:20 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:34:22 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:34:22 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:34:22 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:34:22 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:34:22 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Mon Mar 30 17:34:22 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:34:24 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Mon Mar 30 17:34:24 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.2.146 10.9.2.145'
+Mon Mar 30 17:34:24 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Mon Mar 30 17:34:24 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Mon Mar 30 17:34:24 2015 OPTIONS IMPORT: route options modified
+Mon Mar 30 17:34:24 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Mon Mar 30 17:34:24 2015 Preserving previous TUN/TAP instance: tun1
+Mon Mar 30 17:34:24 2015 NOTE: Pulled options changed on restart, will need to close and reopen TUN/TAP device.
+Mon Mar 30 17:34:24 2015 /sbin/ip route del 10.9.0.1/32
+Mon Mar 30 17:34:24 2015 /sbin/ip route del 202.141.80.19/32
+Mon Mar 30 17:34:24 2015 /sbin/ip route del 0.0.0.0/1
+Mon Mar 30 17:34:24 2015 /sbin/ip route del 128.0.0.0/1
+Mon Mar 30 17:34:24 2015 Closing TUN/TAP interface
+Mon Mar 30 17:34:24 2015 /sbin/ip addr del dev tun1 local 10.9.5.218 peer 10.9.5.217
+Mon Mar 30 17:34:25 2015 ROUTE_GATEWAY 172.16.24.254/255.255.252.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Mon Mar 30 17:34:25 2015 TUN/TAP device tun1 opened
+Mon Mar 30 17:34:25 2015 TUN/TAP TX queue length set to 100
+Mon Mar 30 17:34:25 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Mon Mar 30 17:34:25 2015 /sbin/ip link set dev tun1 up mtu 1500
+Mon Mar 30 17:34:25 2015 /sbin/ip addr add dev tun1 local 10.9.2.146 peer 10.9.2.145
+Mon Mar 30 17:34:27 2015 /sbin/ip route add 202.141.80.19/32 via 172.16.24.254
+Mon Mar 30 17:34:27 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.2.145
+Mon Mar 30 17:34:27 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.2.145
+Mon Mar 30 17:34:27 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.2.145
+Mon Mar 30 17:34:27 2015 Initialization Sequence Completed
+Mon Mar 30 17:38:52 2015 Authenticate/Decrypt packet error: bad packet ID (may be a replay): [ #3753 ] -- see the man page entry for --no-replay and --replay-window for more info or silence this warning with --mute-replay-warnings
+Mon Mar 30 17:38:52 2015 Fatal decryption error (process_incoming_link), restarting
+Mon Mar 30 17:38:52 2015 SIGUSR1[soft,decryption-error] received, process restarting
+Mon Mar 30 17:38:52 2015 Restart pause, 5 second(s)
+Mon Mar 30 17:38:57 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Mon Mar 30 17:38:57 2015 NOTE: --fast-io is disabled since we are not using UDP
+Mon Mar 30 17:38:57 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Mon Mar 30 17:38:57 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Mon Mar 30 17:38:58 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:38:58 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Mon Mar 30 17:38:58 2015 Attempting Basic Proxy-Authorization
+Mon Mar 30 17:38:58 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Mon Mar 30 17:39:00 2015 TCPv4_CLIENT link local: [undef]
+Mon Mar 30 17:39:00 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:39:00 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=79b31d74 f04b477c
+Mon Mar 30 17:39:05 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:39:05 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:39:07 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:39:07 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:39:07 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:39:07 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:39:07 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Mon Mar 30 17:39:07 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:39:09 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Mon Mar 30 17:39:09 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.2.214 10.9.2.213'
+Mon Mar 30 17:39:09 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Mon Mar 30 17:39:09 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Mon Mar 30 17:39:09 2015 OPTIONS IMPORT: route options modified
+Mon Mar 30 17:39:09 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Mon Mar 30 17:39:09 2015 Preserving previous TUN/TAP instance: tun1
+Mon Mar 30 17:39:09 2015 NOTE: Pulled options changed on restart, will need to close and reopen TUN/TAP device.
+Mon Mar 30 17:39:09 2015 /sbin/ip route del 10.9.0.1/32
+Mon Mar 30 17:39:09 2015 /sbin/ip route del 202.141.80.19/32
+Mon Mar 30 17:39:09 2015 /sbin/ip route del 0.0.0.0/1
+Mon Mar 30 17:39:09 2015 /sbin/ip route del 128.0.0.0/1
+Mon Mar 30 17:39:09 2015 Closing TUN/TAP interface
+Mon Mar 30 17:39:09 2015 /sbin/ip addr del dev tun1 local 10.9.2.146 peer 10.9.2.145
+Mon Mar 30 17:39:10 2015 ROUTE_GATEWAY 172.16.24.254/255.255.252.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Mon Mar 30 17:39:10 2015 TUN/TAP device tun1 opened
+Mon Mar 30 17:39:10 2015 TUN/TAP TX queue length set to 100
+Mon Mar 30 17:39:10 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Mon Mar 30 17:39:10 2015 /sbin/ip link set dev tun1 up mtu 1500
+Mon Mar 30 17:39:11 2015 /sbin/ip addr add dev tun1 local 10.9.2.214 peer 10.9.2.213
+Mon Mar 30 17:39:12 2015 /sbin/ip route add 202.141.80.19/32 via 172.16.24.254
+Mon Mar 30 17:39:12 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.2.213
+Mon Mar 30 17:39:12 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.2.213
+Mon Mar 30 17:39:12 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.2.213
+Mon Mar 30 17:39:12 2015 Initialization Sequence Completed
+Mon Mar 30 17:39:42 2015 Connection reset, restarting [0]
+Mon Mar 30 17:39:42 2015 SIGUSR1[soft,connection-reset] received, process restarting
+Mon Mar 30 17:39:42 2015 Restart pause, 5 second(s)
+Mon Mar 30 17:39:47 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Mon Mar 30 17:39:47 2015 NOTE: --fast-io is disabled since we are not using UDP
+Mon Mar 30 17:39:47 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Mon Mar 30 17:39:47 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Mon Mar 30 17:39:48 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:39:48 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Mon Mar 30 17:39:48 2015 Attempting Basic Proxy-Authorization
+Mon Mar 30 17:39:49 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Mon Mar 30 17:39:51 2015 TCPv4_CLIENT link local: [undef]
+Mon Mar 30 17:39:51 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:39:51 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=da07fd1f d1d98894
+Mon Mar 30 17:39:57 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:39:57 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:39:59 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:39:59 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:39:59 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:39:59 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:39:59 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Mon Mar 30 17:39:59 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:40:01 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Mon Mar 30 17:40:01 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.5.242 10.9.5.241'
+Mon Mar 30 17:40:01 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Mon Mar 30 17:40:01 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Mon Mar 30 17:40:01 2015 OPTIONS IMPORT: route options modified
+Mon Mar 30 17:40:01 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Mon Mar 30 17:40:01 2015 Preserving previous TUN/TAP instance: tun1
+Mon Mar 30 17:40:01 2015 NOTE: Pulled options changed on restart, will need to close and reopen TUN/TAP device.
+Mon Mar 30 17:40:01 2015 /sbin/ip route del 10.9.0.1/32
+Mon Mar 30 17:40:01 2015 /sbin/ip route del 202.141.80.19/32
+Mon Mar 30 17:40:01 2015 /sbin/ip route del 0.0.0.0/1
+Mon Mar 30 17:40:01 2015 /sbin/ip route del 128.0.0.0/1
+Mon Mar 30 17:40:01 2015 Closing TUN/TAP interface
+Mon Mar 30 17:40:01 2015 /sbin/ip addr del dev tun1 local 10.9.2.214 peer 10.9.2.213
+Mon Mar 30 17:40:02 2015 ROUTE_GATEWAY 172.16.24.254/255.255.252.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Mon Mar 30 17:40:02 2015 TUN/TAP device tun1 opened
+Mon Mar 30 17:40:02 2015 TUN/TAP TX queue length set to 100
+Mon Mar 30 17:40:02 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Mon Mar 30 17:40:02 2015 /sbin/ip link set dev tun1 up mtu 1500
+Mon Mar 30 17:40:02 2015 /sbin/ip addr add dev tun1 local 10.9.5.242 peer 10.9.5.241
+Mon Mar 30 17:40:05 2015 /sbin/ip route add 202.141.80.19/32 via 172.16.24.254
+Mon Mar 30 17:40:05 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.5.241
+Mon Mar 30 17:40:05 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.5.241
+Mon Mar 30 17:40:05 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.5.241
+Mon Mar 30 17:40:05 2015 Initialization Sequence Completed
+Mon Mar 30 17:41:13 2015 Authenticate/Decrypt packet error: bad packet ID (may be a replay): [ #884 ] -- see the man page entry for --no-replay and --replay-window for more info or silence this warning with --mute-replay-warnings
+Mon Mar 30 17:41:13 2015 Fatal decryption error (process_incoming_link), restarting
+Mon Mar 30 17:41:13 2015 SIGUSR1[soft,decryption-error] received, process restarting
+Mon Mar 30 17:41:13 2015 Restart pause, 5 second(s)
+Mon Mar 30 17:41:18 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Mon Mar 30 17:41:18 2015 NOTE: --fast-io is disabled since we are not using UDP
+Mon Mar 30 17:41:18 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Mon Mar 30 17:41:18 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Mon Mar 30 17:41:19 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:41:19 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Mon Mar 30 17:41:19 2015 Attempting Basic Proxy-Authorization
+Mon Mar 30 17:41:20 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Mon Mar 30 17:41:22 2015 TCPv4_CLIENT link local: [undef]
+Mon Mar 30 17:41:22 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:41:22 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=d8ccfe03 f64fee83
+Mon Mar 30 17:41:27 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:41:27 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:41:30 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:41:30 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:41:30 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:41:30 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:41:30 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Mon Mar 30 17:41:30 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:41:32 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Mon Mar 30 17:41:32 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.4.54 10.9.4.53'
+Mon Mar 30 17:41:32 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Mon Mar 30 17:41:32 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Mon Mar 30 17:41:32 2015 OPTIONS IMPORT: route options modified
+Mon Mar 30 17:41:32 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Mon Mar 30 17:41:32 2015 Preserving previous TUN/TAP instance: tun1
+Mon Mar 30 17:41:32 2015 NOTE: Pulled options changed on restart, will need to close and reopen TUN/TAP device.
+Mon Mar 30 17:41:32 2015 /sbin/ip route del 10.9.0.1/32
+Mon Mar 30 17:41:32 2015 /sbin/ip route del 202.141.80.19/32
+Mon Mar 30 17:41:32 2015 /sbin/ip route del 0.0.0.0/1
+Mon Mar 30 17:41:32 2015 /sbin/ip route del 128.0.0.0/1
+Mon Mar 30 17:41:32 2015 Closing TUN/TAP interface
+Mon Mar 30 17:41:32 2015 /sbin/ip addr del dev tun1 local 10.9.5.242 peer 10.9.5.241
+Mon Mar 30 17:41:33 2015 ROUTE_GATEWAY 172.16.24.254/255.255.252.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Mon Mar 30 17:41:33 2015 TUN/TAP device tun1 opened
+Mon Mar 30 17:41:33 2015 TUN/TAP TX queue length set to 100
+Mon Mar 30 17:41:33 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Mon Mar 30 17:41:33 2015 /sbin/ip link set dev tun1 up mtu 1500
+Mon Mar 30 17:41:33 2015 /sbin/ip addr add dev tun1 local 10.9.4.54 peer 10.9.4.53
+Mon Mar 30 17:41:36 2015 /sbin/ip route add 202.141.80.19/32 via 172.16.24.254
+Mon Mar 30 17:41:36 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.4.53
+Mon Mar 30 17:41:36 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.4.53
+Mon Mar 30 17:41:36 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.4.53
+Mon Mar 30 17:41:36 2015 Initialization Sequence Completed
+Mon Mar 30 17:42:31 2015 Connection reset, restarting [0]
+Mon Mar 30 17:42:31 2015 SIGUSR1[soft,connection-reset] received, process restarting
+Mon Mar 30 17:42:31 2015 Restart pause, 5 second(s)
+Mon Mar 30 17:42:36 2015 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+Mon Mar 30 17:42:36 2015 NOTE: --fast-io is disabled since we are not using UDP
+Mon Mar 30 17:42:36 2015 Socket Buffers: R=[87380->131072] S=[16384->131072]
+Mon Mar 30 17:42:36 2015 Attempting to establish TCP connection with [AF_INET]202.141.80.19:3128 [nonblock]
+Mon Mar 30 17:42:37 2015 TCP connection established with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:42:37 2015 Send to HTTP proxy: 'CONNECT 198.7.62.204:443 HTTP/1.0'
+Mon Mar 30 17:42:37 2015 Attempting Basic Proxy-Authorization
+Mon Mar 30 17:42:38 2015 HTTP proxy returned: 'HTTP/1.0 200 Connection established'
+Mon Mar 30 17:42:40 2015 TCPv4_CLIENT link local: [undef]
+Mon Mar 30 17:42:40 2015 TCPv4_CLIENT link remote: [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:42:40 2015 TLS: Initial packet from [AF_INET]202.141.80.19:3128, sid=f7be2547 daccf3ff
+Mon Mar 30 17:42:47 2015 VERIFY OK: depth=1, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:42:47 2015 VERIFY OK: depth=0, C=CH, ST=Zurich, L=Zurich, O=vpnbook.com, OU=IT, CN=vpnbook.com, name=vpnbook.com, emailAddress=admin@vpnbook.com
+Mon Mar 30 17:42:49 2015 Data Channel Encrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:42:49 2015 Data Channel Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:42:49 2015 Data Channel Decrypt: Cipher 'AES-128-CBC' initialized with 128 bit key
+Mon Mar 30 17:42:49 2015 Data Channel Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Mon Mar 30 17:42:49 2015 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA
+Mon Mar 30 17:42:49 2015 [vpnbook.com] Peer Connection Initiated with [AF_INET]202.141.80.19:3128
+Mon Mar 30 17:42:51 2015 SENT CONTROL [vpnbook.com]: 'PUSH_REQUEST' (status=1)
+Mon Mar 30 17:42:51 2015 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1,dhcp-option DNS  8.8.8.8,dhcp-option DNS  91.239.100.100,route 10.9.0.1,topology net30,ping 5,ping-restart 30,ifconfig 10.9.1.242 10.9.1.241'
+Mon Mar 30 17:42:51 2015 OPTIONS IMPORT: timers and/or timeouts modified
+Mon Mar 30 17:42:51 2015 OPTIONS IMPORT: --ifconfig/up options modified
+Mon Mar 30 17:42:51 2015 OPTIONS IMPORT: route options modified
+Mon Mar 30 17:42:51 2015 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Mon Mar 30 17:42:51 2015 Preserving previous TUN/TAP instance: tun1
+Mon Mar 30 17:42:51 2015 NOTE: Pulled options changed on restart, will need to close and reopen TUN/TAP device.
+Mon Mar 30 17:42:51 2015 /sbin/ip route del 10.9.0.1/32
+Mon Mar 30 17:42:51 2015 /sbin/ip route del 202.141.80.19/32
+Mon Mar 30 17:42:51 2015 /sbin/ip route del 0.0.0.0/1
+Mon Mar 30 17:42:51 2015 /sbin/ip route del 128.0.0.0/1
+Mon Mar 30 17:42:51 2015 Closing TUN/TAP interface
+Mon Mar 30 17:42:51 2015 /sbin/ip addr del dev tun1 local 10.9.4.54 peer 10.9.4.53
+Mon Mar 30 17:42:52 2015 ROUTE_GATEWAY 172.16.24.254/255.255.252.0 IFACE=eth0 HWADDR=3c:97:0e:45:4b:2b
+Mon Mar 30 17:42:52 2015 TUN/TAP device tun1 opened
+Mon Mar 30 17:42:52 2015 TUN/TAP TX queue length set to 100
+Mon Mar 30 17:42:52 2015 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+Mon Mar 30 17:42:52 2015 /sbin/ip link set dev tun1 up mtu 1500
+Mon Mar 30 17:42:52 2015 /sbin/ip addr add dev tun1 local 10.9.1.242 peer 10.9.1.241
+Mon Mar 30 17:42:55 2015 /sbin/ip route add 202.141.80.19/32 via 172.16.24.254
+Mon Mar 30 17:42:55 2015 /sbin/ip route add 0.0.0.0/1 via 10.9.1.241
+Mon Mar 30 17:42:55 2015 /sbin/ip route add 128.0.0.0/1 via 10.9.1.241
+Mon Mar 30 17:42:55 2015 /sbin/ip route add 10.9.0.1/32 via 10.9.1.241
+Mon Mar 30 17:42:55 2015 Initialization Sequence Completed
+Mon Mar 30 18:26:05 2015 event_wait : Interrupted system call (code=4)
+Mon Mar 30 18:26:05 2015 /sbin/ip route del 10.9.0.1/32
+Mon Mar 30 18:26:05 2015 /sbin/ip route del 202.141.80.19/32
+Mon Mar 30 18:26:05 2015 /sbin/ip route del 0.0.0.0/1
+Mon Mar 30 18:26:05 2015 /sbin/ip route del 128.0.0.0/1
+Mon Mar 30 18:26:05 2015 Closing TUN/TAP interface
+Mon Mar 30 18:26:05 2015 /sbin/ip addr del dev tun1 local 10.9.1.242 peer 10.9.1.241
+Mon Mar 30 18:26:05 2015 SIGTERM[hard,] received, process exiting
