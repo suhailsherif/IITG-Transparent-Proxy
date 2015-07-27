@@ -22,3 +22,4 @@ config/lproxy
 pid/tproxy
 test.sh
 .excludes
+.bzr
