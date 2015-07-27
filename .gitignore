@@ -23,3 +23,5 @@ pid/tproxy
 test.sh
 .excludes
 .bzr/
+constants.h
+debug.txt
