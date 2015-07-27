@@ -46,15 +46,18 @@ def respuesta(query):
 		else:
 			try:
 				dnsConn = httplib.HTTPConnection(
-					'gaednsproxy1.appspot.com', timeout=20)
+					'gaednsproxy.appspot.com', timeout=20)
 				dnsConn.request(
 					"GET", "/?d=" + base64.b64encode(base64.b64encode(query.dominio)))
 				dnsRes = dnsConn.getresponse()
 				query.ip = dnsRes.read()
 				if dnsRes.status == 200:
 					stat = 1
+				else:
+					pass
 			except:
 				print '{:5s}  {:25s} {:15s}'.format('Exc', str(query.ip), str(query.dominio))
+				return
 
 			# add to dns cache
 			if re.match('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]', query.ip) and not query.ip == defaultIP:
@@ -81,9 +84,10 @@ def respuesta(query):
 	
 	if stat == 1:
 		print '{:5s}  {:15s} {:15s}'.format(str(dnsRes.status), str(query.ip), str(query.dominio))
-	elif stat == 2 and not query.dominio == 'gaednsproxy1.appspot.com':
+		pass	
+	elif stat == 2 and not query.dominio == 'gaednsproxy.appspot.com':
 		print '{:5s}  {:20s} {:15s}'.format('Hit', str(query.ip), str(query.dominio))
-
+		pass
 
 def signal_term_handler(signal, frame):
 	print 'SIGTERM'

@@ -34,4 +34,8 @@ redsocks {
 
 " > $allproxy_path/config/redsocksauto.conf
 
-sudo redsocks -c $allproxy_path/config/redsocksauto.conf
+until sudo redsocks -c $allproxy_path/config/redsocksauto.conf; do
+    echo "redsocks crashed with exit code $?.  Respawning.." >&2
+    sleep 1
+done
+
