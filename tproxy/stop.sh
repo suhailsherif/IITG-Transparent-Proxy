@@ -7,7 +7,7 @@ source $allproxy_path/config/config.sh
 
 . $allproxy_path/tproxy/script stop
 sudo killall redsocks
-# sudo killall dnsmasq
+sudo killall dnsmasq
 
 # sudo ps -ef | grep "redsocks" | awk '{print $2}' | xargs kill
 

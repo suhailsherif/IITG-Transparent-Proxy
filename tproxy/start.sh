@@ -33,8 +33,8 @@ addr=( $(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0
 for x in ${addr[@]}; do
 	mask=( $(ifconfig  | grep "$i" | grep -Eo 'Mask:([0-9]*\.){3}[0-9]*' | grep -m 4 -Eo '([0-9]*\.){3}[0-9]*') )
 	range=$(netmask -r $x/$mask | awk -F'[\r()]' '{print $1}' | sed 's/ //g' | sed 's/-/,/')
-	
-	dnsmasq --conf-file --no-hosts --keep-in-foreground --bind-interfaces --except-interface=lo \
+
+	dnsmasq --conf-file --no-hosts --bind-interfaces --except-interface=lo \
 	--clear-on-reload --strict-order --listen-address=$x --dhcp-range=$range,60m \
 	--dhcp-option=option:router,$x --dhcp-lease-max=50
 done;
