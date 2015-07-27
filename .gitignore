@@ -14,7 +14,7 @@ vpnbook/
 *.iso
 *.o
 hacks
-log/*.*
+log/*
 pid/*
 libevent/
 Allproxy.pro.user.*
