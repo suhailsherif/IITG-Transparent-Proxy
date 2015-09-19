@@ -112,11 +112,11 @@ echo "export allproxy_path=$cur_path" >> $HOME/.bashrc
 
 echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
 
-######################
-## create log files ##
-######################
+#############################
+## create log/config files ##
+#############################
 
-touch log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
+touch config/lproxy log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
 	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
 
 
