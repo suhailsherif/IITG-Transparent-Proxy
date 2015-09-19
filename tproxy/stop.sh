@@ -6,8 +6,16 @@ source /etc/environment
 source $allproxy_path/config/config.sh
 
 . $allproxy_path/tproxy/script stop
-sudo killall redsocks
-sudo killall dnsmasq
+
+if pgrep "redsocks" > /dev/null
+then
+    sudo killall redsocks
+fi
+
+if pgrep "dnsmasq" > /dev/null
+then
+    sudo killall dnsmasq
+fi
 
 # sudo ps -ef | grep "redsocks" | awk '{print $2}' | xargs kill
 
@@ -16,3 +24,6 @@ then
 	typeset -i pid=$(cat $allproxy_path/pid/tproxy)
 	kill -15 $pid
 fi
+
+echo "Transparent proxy stopped."
+exit

@@ -1,6 +1,13 @@
 #!/bin/bash
-source /etc/environment
 
+if [ ! -z ${allproxy_path+x} ]; then 
+	source /etc/environment
+	source $HOME/.bashrc
+
+	if [ ! -z ${allproxy_path+x} ]; then 
+		echo "allproxy_path not set."
+	fi
+fi
 
 echo "
 base {

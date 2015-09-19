@@ -4,7 +4,6 @@ export nproxy_port=
 export nproxy_gateway=
 export nproxy_username=
 export nproxy_password=
-export restore_gateway=
 
 # Openvpn proxy settings
 export vproxy_username=

@@ -1,9 +1,13 @@
 #!/bin/sh
+
+command -v iptables >/dev/null 2>&1 || { echo >&2 "\"iptables\" required but it's not installed.  Aborting."; exit 1; }
+
 case $1 in
 
 start)
 
 	echo "Setting-up iptable rules ..."
+
 	sudo iptables -t nat -A PREROUTING -i eth0 -p udp --dport 53 -j REDIRECT --to 55
 	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 53 -j REDIRECT --to 55
 
@@ -64,7 +68,7 @@ start)
 
 	echo "Setting-up resolv.conf ..."
 	echo "nameserver 127.0.0.1" > temp.conf
-	sudo mv /etc/resolv.conf /etc/resolv.conf.bckup
+	sudo mv /etc/resolv.conf /etc/resolv.conf.allproxy_backup
 	sudo mv temp.conf /etc/resolv.conf
 	sudo chown root:root /etc/resolv.conf
 	sudo chmod 644 /etc/resolv.conf
@@ -73,15 +77,15 @@ start)
 ;;
 stop)
 
-	if [ -f /etc/resolv.conf.bckup ]
+	if [ -f /etc/resolv.conf.allproxy_backup ]
 	then
-	    sudo mv /etc/resolv.conf.bckup /etc/resolv.conf
+	    sudo mv /etc/resolv.conf.allproxy_backup /etc/resolv.conf
 	fi
 
 	sudo iptables -t nat -F OUTPUT
 	sudo iptables -t nat -F INPUT
 	sudo iptables -t nat -F REDSOCKS
 	sudo iptables -t nat -F PREROUTING
-	
+	sudo iptables -t nat -X REDSOCKS
 
 esac

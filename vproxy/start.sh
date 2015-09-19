@@ -38,6 +38,15 @@ then
 	echo "credential files removed" >> $allproxy_path/log/vproxy
 	echo -n "Waiting for openvpn connection ..." >> $allproxy_path/log/vproxy
 
+
+	echo "Setting-up resolv.conf ..."
+	echo "nameserver 8.8.8.8" > temp.conf
+	sudo mv /etc/resolv.conf /etc/resolv.conf.bckup
+	sudo mv temp.conf /etc/resolv.conf
+	sudo chown root:root /etc/resolv.conf
+	sudo chmod 644 /etc/resolv.conf
+	echo "resolv.conf setup successful"
+
 else
 	echo "config files not found" >> $allproxy_path/log/vproxy
 	echo "Exit On Error !" >> $allproxy_path/log/vproxy

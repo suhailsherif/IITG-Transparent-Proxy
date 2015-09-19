@@ -9,6 +9,7 @@ fi
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
+# run only inside Allproxy folder
 if [ ! -f "Allproxy.pro" ];then
 	echo "Please run in Allproxy folder"
 	exit 1
@@ -33,15 +34,27 @@ else
 		    exit 1
 		fi
 
+		# extract proxy parameters from zenity output
 		proxy_server=$(echo $OUTPUT | awk -F, '{print $1}')
 		proxy_port=$(echo $OUTPUT | awk -F, '{print $2}')
 		proxy_username=$(echo $OUTPUT | awk -F, '{print $3}')
 		proxy_password=$(echo $OUTPUT | awk -F, '{print $4}')
 		
 
+	else 
+		read "Proxy server : " proxy_server
+		read "Proxy port : " proxy_port
+		read "Proxy username : " proxy_username
+		read -s -p "Proxy password : " proxy_password
+	fi
+
+	if [[ $proxy_server =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] && [[ $proxy_port =~ ^[0-9]{1,5}$ ]]; then
+
+		# set proxy for this session
 		export http_proxy="http://$proxy_username:$proxy_password@$proxy_server:$proxy_port/"
 		export https_proxy="https://$proxy_username:$proxy_password@$proxy_server:$proxy_port/"
 		
+		# check again if proxy connection successful
 		status_code=$(curl -sL -w "%{http_code}\\n" "http://www.google.co.in/" -o /dev/null)
 		if [ "$status_code" = "200" ];then
 			echo "Proxy Connection successful"
@@ -50,9 +63,12 @@ else
 			echo "Installation aborted . Try reinstalling"
 			exit
 		fi
+	else
+		echo "Invalid proxy. Aborting."
+		exit
 	fi
 fi
-# exit
+
 # update
 sudo -E apt-get update
 
@@ -63,7 +79,7 @@ req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "qt5-qma
 	)
 for i in "${req_packages[@]}"
 do
-	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "not-installed")
+	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i | grep "not-installed")
 	echo Checking package $i: $PKG_OK
 	if [ ! "" = "$PKG_OK" ]; then
 	  echo "$i not installed, setting up $i ..."
@@ -81,6 +97,11 @@ make
 if [ ! -f ./config/config.sh ] 
 then
 	echo "Creating file config.sh ..."
+	if [ ! -f ./config/config_bak.sh ]
+	then
+		echo "Could not find initial config file. Aborting."
+		exit
+	fi
 	cp ./config/config_bak.sh ./config/config.sh
 fi
 
@@ -88,17 +109,25 @@ fi
 cur_path=$(pwd)
 sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
 echo "export allproxy_path=$cur_path" >> $HOME/.bashrc
-echo "allproxy_path=$cur_path" >> /etc/environment
 
 echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
+
+######################
+## create log files ##
+######################
+
+touch log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
+	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
+
 
 ############
 ## nproxy ##
 ############
 
 user=$(logname)
+
 # backup files 
-back_files=( "/etc/environment" "/etc/apt/apt.conf" "$HOME/.bashrc" )
+back_files=( "$HOME/.bashrc" )
 for i in "${back_files[@]}"
 do
 	if [ -e "$i" ] 
@@ -118,7 +147,9 @@ sudo chown root:root -R /var/log
 sudo chmod 777 -R /var/log
 
 # turn off automatic dnsmasq
-sudo sed -i "s/dns=dnsmasq/# dns=dnsmasq/g" /etc/NetworkManager/NetworkManager.conf
+if [ -f /etc/NetworkManager/NetworkManager.conf ]; then
+	sudo sed -i "s/dns=dnsmasq/# dns=dnsmasq/g" /etc/NetworkManager/NetworkManager.conf
+fi
 
 ############
 ## dproxy ##

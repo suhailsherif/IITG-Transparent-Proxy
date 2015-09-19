@@ -88,9 +88,6 @@ cproxy)
 			fi
 		fi
 	fi
-
-	sed -i s/restore_gateway=.*/restore_gateway=$def_gateway/g config/config.sh
-
 	
 	echo "Check your config/config.sh file"
 	read -p "Press [Enter] key to start ..."
