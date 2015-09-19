@@ -67,7 +67,7 @@ start)
 	echo "iptable configured"
 
 	echo "Setting-up resolv.conf ..."
-	echo "nameserver 127.0.0.1" > temp.conf
+	echo $'nameserver 127.0.0.1\nnameserver 8.8.8.8\nnameserver 8.8.4.4\n' > temp.conf
 	sudo mv /etc/resolv.conf /etc/resolv.conf.allproxy_backup
 	sudo mv temp.conf /etc/resolv.conf
 	sudo chown root:root /etc/resolv.conf

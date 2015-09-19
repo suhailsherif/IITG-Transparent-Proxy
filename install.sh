@@ -79,14 +79,7 @@ req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "qt5-qma
 	)
 for i in "${req_packages[@]}"
 do
-	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i | grep "not-installed")
-	echo Checking package $i: $PKG_OK
-	if [ ! "" = "$PKG_OK" ]; then
-	  echo "$i not installed, setting up $i ..."
-	  sudo -E apt-get --force-yes --yes install $i
-	else echo "$i installed."
-
-	fi
+	sudo -E apt-get --force-yes --yes install $i
 done
 
 # compile Allproxy
@@ -116,7 +109,8 @@ echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
 ## create log/config files ##
 #############################
 
-touch config/lproxy log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
+mkdir log/
+touch config/libnet-proxy-perl log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
 	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
 
 
