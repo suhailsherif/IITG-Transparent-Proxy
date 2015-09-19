@@ -25,7 +25,8 @@ You can use **kde-nm-connection-editor** in package **plasma-nm** to create wire
 
 
 #### *Tested OS :*
-- Ubuntu 14.04 64-bit
+- Ubuntu 14.04
+- Linux Mint
 
 
 #### *Beware !*
