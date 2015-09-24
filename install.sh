@@ -112,7 +112,10 @@ echo ". $cur_path/config/config.sh" >> /home/$logname/.bashrc
 ## create log/config files ##
 #############################
 
-mkdir log/
+if [ ! -d log ]; then
+  mkdir log/
+fi
+
 touch config/libnet-proxy-perl log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
 	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
 
@@ -121,10 +124,9 @@ touch config/libnet-proxy-perl log/config_routes log/cproxy log/dns log/fproxy l
 ## nproxy ##
 ############
 
-user=$(logname)
 
 # backup files 
-back_files=( "$HOME/.bashrc" )
+back_files=( "$logname/.bashrc" "/etc/environment" )
 for i in "${back_files[@]}"
 do
 	if [ -e "$i" ] 
