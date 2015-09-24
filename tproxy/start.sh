@@ -1,6 +1,6 @@
 #!/bin/bash
 source /etc/environment
-source $HOME/.bashrc
+source /home/$(logname)/.bashrc
 
 if [ -z ${allproxy_path+x} ]; then 
 	echo "allproxy_path is unset. set and try again."
@@ -58,17 +58,10 @@ echo "Starting dnsmasq on all open interfaces ..." >> $allproxy_path/log/tproxy
 # command -v netmask >/dev/null 2>&1 || { echo >&2 "\"netmask\" required but it's not installed.  Aborting."; exit 1; }
 command -v dnsmasq >/dev/null 2>&1 || { echo >&2 "\"dnsmasq\" required but it's not installed.  Aborting."; exit 1; }
 
-sudo dnsmasq
-
-# addr=( $(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -m 4 -Eo '([0-9]*\.){3}[0-9]*') )
-# for x in ${addr[@]}; do
-# 	mask=( $(ifconfig  | grep "$i" | grep -Eo 'Mask:([0-9]*\.){3}[0-9]*' | grep -m 4 -Eo '([0-9]*\.){3}[0-9]*') )
-# 	range=$(netmask -r $x/$mask | awk -F'[\r()]' '{print $1}' | sed 's/ //g' | sed 's/-/,/')
-
-# 	dnsmasq --conf-file --no-hosts --bind-interfaces --except-interface=lo \
-# 	--clear-on-reload --strict-order --listen-address=$x --dhcp-range=$range,60m \
-# 	--dhcp-option=option:router,$x --dhcp-lease-max=50
-# done;
+if pgrep "dnsmasq" > /dev/null
+then
+    sudo dnsmasq
+fi
 
 echo "Transparent proxy initiated, running in background" >> $allproxy_path/log/tproxy 
 

@@ -3,6 +3,7 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 source /etc/environment
+source /home/$(logname)/.bashrc
 
 source $allproxy_path/config/config.sh
 

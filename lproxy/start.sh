@@ -1,5 +1,6 @@
 #!/bin/bash
 source /etc/environment
+source /home/$(logname)/.bashrc
 
 source $allproxy_path/config/config.sh
 

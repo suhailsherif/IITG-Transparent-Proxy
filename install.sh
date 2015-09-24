@@ -100,10 +100,13 @@ fi
 
 # set allproxy path
 cur_path=$(pwd)
-sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
-echo "export allproxy_path=$cur_path" >> $HOME/.bashrc
+log_name=$(logname)
 
-echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
+sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
+echo "export allproxy_path=$cur_path" >> /home/$logname/.bashrc
+echo "export allproxy_path=$cur_path" >> /etc/environment
+
+echo ". $cur_path/config/config.sh" >> /home/$logname/.bashrc
 
 #############################
 ## create log/config files ##
