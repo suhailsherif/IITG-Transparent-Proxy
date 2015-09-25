@@ -86,6 +86,8 @@ stop)
 	sudo iptables -t nat -F INPUT
 	sudo iptables -t nat -F REDSOCKS
 	sudo iptables -t nat -F PREROUTING
+	sudo iptables -t nat -F POSTROUTING
+	
 	sudo iptables -t nat -X REDSOCKS
 
 esac

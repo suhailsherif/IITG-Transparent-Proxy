@@ -2,7 +2,7 @@
 
 if [ ! -z ${allproxy_path+x} ]; then 
 	source /etc/environment
-	source $HOME/.bashrc
+	source /home/$(logname)/.bashrc
 
 	if [ ! -z ${allproxy_path+x} ]; then 
 		echo "allproxy_path not set."
@@ -43,6 +43,6 @@ redsocks {
 
 until sudo redsocks -c $allproxy_path/config/redsocksauto.conf; do
     echo "redsocks crashed with exit code $?.  Respawning.." >&2
-    sleep 1
+    sleep 0.1
 done
 
