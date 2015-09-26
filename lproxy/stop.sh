@@ -5,7 +5,7 @@
 source /etc/environment
 source $allproxy_path/config/config.sh
 
-sudo ps -ef | grep "squid3" | awk '{print $2}' | xargs kill
+sudo ps -ef | grep "privoxy" | awk '{print $2}' | xargs kill
 
 if [ -f $allproxy_path/pid/lproxy ] 
 then 
