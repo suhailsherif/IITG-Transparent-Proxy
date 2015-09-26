@@ -1,5 +1,7 @@
 # All Proxy
 
+[![Build Status](https://travis-ci.org/kunal15595/Allproxy.svg?branch=master)](https://travis-ci.org/kunal15595/Allproxy)
+
 #### We would like to thank the following for their contributions:
 -	(Past, present and future) Users, Testers and Debuggers
 -	[Redsocks](http://darkk.net.ru/redsocks/)  - an opensource transparent socks redirector that wouldn't work by itself in IITG
