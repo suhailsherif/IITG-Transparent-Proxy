@@ -1,6 +1,17 @@
 #!/bin/bash
+
+log_name=$(logname)
+
+if [ $log_name = "no login name" ]; then
+	log_name=$(id -nu)
+else
+	if [ $log_name = "root" ]; then
+		log_name=$(ps -o user= -p $$ | awk '{print $1}')
+	fi
+fi
+
 source /etc/environment
-source /home/$(logname)/.bashrc
+source /home/$log_name/.bashrc
 
 if [ -z ${allproxy_path+x} ]; then 
 	echo "allproxy_path is unset. set and try again."

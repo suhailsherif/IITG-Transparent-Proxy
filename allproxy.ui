@@ -63,7 +63,7 @@ color: white;
      <enum>QFrame::Sunken</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page_nproxy">
      <property name="geometry">
@@ -71,13 +71,11 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"> QWidget#page_nproxy {
-     background-color: rgba(250, 155, 50, 20);
- }</string>
+      <string notr="true"/>
      </property>
      <attribute name="label">
       <string>Nproxy                                                                                                                                     - Normal Proxy</string>
@@ -87,9 +85,12 @@ color: white;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>731</width>
+        <width>601</width>
         <height>171</height>
        </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
       </property>
       <property name="title">
        <string/>
@@ -273,153 +274,13 @@ color: white;
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_fproxy">
+    <widget class="QWidget" name="page_cproxy">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
-      </rect>
-     </property>
-     <attribute name="label">
-      <string>Fproxy                                                                                                                                    - File Exchange </string>
-     </attribute>
-     <widget class="QPushButton" name="in_button_fproxy_browse_upload">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>110</y>
-        <width>98</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Browse ...</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="in_text_fproxy_path_upload">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>110</y>
-        <width>481</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>path</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="in_button_fproxy_send">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>160</y>
-        <width>101</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Send</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="in_text_fproxy_dip">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>160</y>
-        <width>131</width>
-        <height>27</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="in_text_vproxy_path_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>160</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Destination  IP</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="in_button_fproxy_browse_download">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>30</y>
-        <width>98</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Browse ...</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="in_text_vproxy_path_4">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Downloads Directory</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="in_text_fproxy_path_download">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>30</y>
-        <width>481</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>path</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="in_text_vproxy_path_6">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>80</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Upload path</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="fproxy_check">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>90</y>
-        <width>141</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Path is directory</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <attribute name="label">
@@ -491,13 +352,11 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"> QWidget#page_vproxy {
-     background-color: rgba(250, 155, 50, 20);
- }</string>
+      <string notr="true"/>
      </property>
      <attribute name="label">
       <string>Vproxy                                                                                                                                - OpenVPN Proxy</string>
@@ -506,8 +365,8 @@ color: white;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>0</y>
-        <width>731</width>
+        <y>11</y>
+        <width>631</width>
         <height>171</height>
        </rect>
       </property>
@@ -753,7 +612,7 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <attribute name="label">
@@ -861,13 +720,11 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"> QWidget#page_sproxy {
-     background-color: rgba(250, 155, 50, 20);
- }</string>
+      <string notr="true"/>
      </property>
      <attribute name="label">
       <string>Sproxy                                                                                                                             -  SSH Tunnel Proxy</string>
@@ -1033,16 +890,14 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"> QWidget#page_lproxy {
-     background-color: rgba(250, 155, 50, 20);
- }</string>
+      <string notr="true"/>
      </property>
      <attribute name="label">
-      <string>Lproxy                                                                                                               - Local Squid Proxy Server </string>
+      <string>Lproxy                                                                                                                          - Local Proxy Server </string>
      </attribute>
      <widget class="QLabel" name="label_14">
       <property name="geometry">
@@ -1182,13 +1037,11 @@ color: white;
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"> QWidget#page_tproxy {
-     background-color: rgba(250, 155, 50, 20);
- }</string>
+      <string notr="true"/>
      </property>
      <attribute name="label">
       <string>Tproxy                                                                                                                            - Transparent Proxy</string>
@@ -1303,12 +1156,15 @@ color: white;
      </widget>
     </widget>
     <widget class="QWidget" name="page_new">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
        <width>651</width>
-       <height>202</height>
+       <height>233</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1317,40 +1173,6 @@ color: white;
      <attribute name="label">
       <string>To be added ...</string>
      </attribute>
-     <widget class="QGroupBox" name="group_tproxy">
-      <property name="geometry">
-       <rect>
-        <x>-120</x>
-        <y>20</y>
-        <width>731</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QRadioButton" name="in_radio_tproxy">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>116</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Sawasdee</family>
-         <weight>75</weight>
-         <italic>true</italic>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Tproxy</string>
-       </property>
-      </widget>
-     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="switch_tproxy">
@@ -1418,19 +1240,6 @@ color: white;
      <string>C</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="switch_fproxy">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>500</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>F</string>
-    </property>
-   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -1465,7 +1274,6 @@ color: white;
   <tabstop>in_text_tproxy_username</tabstop>
   <tabstop>in_text_tproxy_password</tabstop>
   <tabstop>in_button_save_tproxy</tabstop>
-  <tabstop>in_radio_tproxy</tabstop>
  </tabstops>
  <resources/>
  <connections/>

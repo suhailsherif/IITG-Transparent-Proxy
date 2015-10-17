@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_AllProxy_t {
-    QByteArrayData data[52];
-    char stringdata[1683];
+    QByteArrayData data[45];
+    char stringdata[1483];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -65,22 +65,15 @@ QT_MOC_LITERAL(32, 1086, 44),
 QT_MOC_LITERAL(33, 1131, 24),
 QT_MOC_LITERAL(34, 1156, 13),
 QT_MOC_LITERAL(35, 1170, 31),
-QT_MOC_LITERAL(36, 1202, 43),
-QT_MOC_LITERAL(37, 1246, 41),
-QT_MOC_LITERAL(38, 1288, 24),
-QT_MOC_LITERAL(39, 1313, 24),
-QT_MOC_LITERAL(40, 1338, 24),
-QT_MOC_LITERAL(41, 1363, 24),
-QT_MOC_LITERAL(42, 1388, 24),
-QT_MOC_LITERAL(43, 1413, 24),
-QT_MOC_LITERAL(44, 1438, 38),
-QT_MOC_LITERAL(45, 1477, 38),
-QT_MOC_LITERAL(46, 1516, 23),
-QT_MOC_LITERAL(47, 1540, 7),
-QT_MOC_LITERAL(48, 1548, 32),
-QT_MOC_LITERAL(49, 1581, 23),
-QT_MOC_LITERAL(50, 1605, 32),
-QT_MOC_LITERAL(51, 1638, 43)
+QT_MOC_LITERAL(36, 1202, 24),
+QT_MOC_LITERAL(37, 1227, 24),
+QT_MOC_LITERAL(38, 1252, 24),
+QT_MOC_LITERAL(39, 1277, 24),
+QT_MOC_LITERAL(40, 1302, 24),
+QT_MOC_LITERAL(41, 1327, 38),
+QT_MOC_LITERAL(42, 1366, 38),
+QT_MOC_LITERAL(43, 1405, 32),
+QT_MOC_LITERAL(44, 1438, 43)
     },
     "AllProxy\0on_in_button_browse_clicked\0"
     "\0on_in_text_vproxy_username_textChanged\0"
@@ -114,9 +107,6 @@ QT_MOC_LITERAL(51, 1638, 43)
     "on_in_text_vproxy_proxy_password_textChanged\0"
     "on_browse_dproxy_clicked\0dproxy_update\0"
     "on_push_dproxy_download_clicked\0"
-    "on_in_button_fproxy_browse_download_clicked\0"
-    "on_in_button_fproxy_browse_upload_clicked\0"
-    "on_switch_fproxy_clicked\0"
     "on_switch_vproxy_clicked\0"
     "on_switch_sproxy_clicked\0"
     "on_switch_lproxy_clicked\0"
@@ -124,9 +114,6 @@ QT_MOC_LITERAL(51, 1638, 43)
     "on_switch_cproxy_clicked\0"
     "on_in_text_lproxy_username_textChanged\0"
     "on_in_text_lproxy_password_textChanged\0"
-    "on_fproxy_check_toggled\0checked\0"
-    "on_in_button_fproxy_send_clicked\0"
-    "on_fproxy_check_clicked\0"
     "on_in_button_cproxy_send_clicked\0"
     "on_in_button_cproxy_change_settings_clicked\0"
 };
@@ -138,7 +125,7 @@ static const uint qt_meta_data_AllProxy[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      48,   14, // methods
+      42,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -146,54 +133,48 @@ static const uint qt_meta_data_AllProxy[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  254,    2, 0x08,
-       3,    1,  255,    2, 0x08,
-       5,    1,  258,    2, 0x08,
-       6,    0,  261,    2, 0x08,
-       7,    0,  262,    2, 0x08,
-       8,    0,  263,    2, 0x08,
-       9,    0,  264,    2, 0x08,
-      10,    0,  265,    2, 0x08,
-      11,    1,  266,    2, 0x08,
-      12,    1,  269,    2, 0x08,
-      13,    1,  272,    2, 0x08,
-      14,    1,  275,    2, 0x08,
-      15,    1,  278,    2, 0x08,
-      16,    1,  281,    2, 0x08,
-      17,    1,  284,    2, 0x08,
-      18,    1,  287,    2, 0x08,
-      19,    1,  290,    2, 0x08,
-      20,    1,  293,    2, 0x08,
-      21,    1,  296,    2, 0x08,
-      22,    1,  299,    2, 0x08,
-      23,    1,  302,    2, 0x08,
-      24,    1,  305,    2, 0x08,
-      25,    1,  308,    2, 0x08,
-      26,    1,  311,    2, 0x08,
-      27,    1,  314,    2, 0x08,
-      28,    1,  317,    2, 0x08,
-      29,    1,  320,    2, 0x08,
-      30,    1,  323,    2, 0x08,
-      31,    1,  326,    2, 0x08,
-      32,    1,  329,    2, 0x08,
-      33,    0,  332,    2, 0x08,
-      34,    0,  333,    2, 0x08,
-      35,    0,  334,    2, 0x08,
-      36,    0,  335,    2, 0x08,
-      37,    0,  336,    2, 0x08,
-      38,    0,  337,    2, 0x08,
-      39,    0,  338,    2, 0x08,
-      40,    0,  339,    2, 0x08,
-      41,    0,  340,    2, 0x08,
-      42,    0,  341,    2, 0x08,
-      43,    0,  342,    2, 0x08,
-      44,    1,  343,    2, 0x08,
-      45,    1,  346,    2, 0x08,
-      46,    1,  349,    2, 0x08,
-      48,    0,  352,    2, 0x08,
-      49,    0,  353,    2, 0x08,
-      50,    0,  354,    2, 0x08,
-      51,    0,  355,    2, 0x08,
+       1,    0,  224,    2, 0x08,
+       3,    1,  225,    2, 0x08,
+       5,    1,  228,    2, 0x08,
+       6,    0,  231,    2, 0x08,
+       7,    0,  232,    2, 0x08,
+       8,    0,  233,    2, 0x08,
+       9,    0,  234,    2, 0x08,
+      10,    0,  235,    2, 0x08,
+      11,    1,  236,    2, 0x08,
+      12,    1,  239,    2, 0x08,
+      13,    1,  242,    2, 0x08,
+      14,    1,  245,    2, 0x08,
+      15,    1,  248,    2, 0x08,
+      16,    1,  251,    2, 0x08,
+      17,    1,  254,    2, 0x08,
+      18,    1,  257,    2, 0x08,
+      19,    1,  260,    2, 0x08,
+      20,    1,  263,    2, 0x08,
+      21,    1,  266,    2, 0x08,
+      22,    1,  269,    2, 0x08,
+      23,    1,  272,    2, 0x08,
+      24,    1,  275,    2, 0x08,
+      25,    1,  278,    2, 0x08,
+      26,    1,  281,    2, 0x08,
+      27,    1,  284,    2, 0x08,
+      28,    1,  287,    2, 0x08,
+      29,    1,  290,    2, 0x08,
+      30,    1,  293,    2, 0x08,
+      31,    1,  296,    2, 0x08,
+      32,    1,  299,    2, 0x08,
+      33,    0,  302,    2, 0x08,
+      34,    0,  303,    2, 0x08,
+      35,    0,  304,    2, 0x08,
+      36,    0,  305,    2, 0x08,
+      37,    0,  306,    2, 0x08,
+      38,    0,  307,    2, 0x08,
+      39,    0,  308,    2, 0x08,
+      40,    0,  309,    2, 0x08,
+      41,    1,  310,    2, 0x08,
+      42,    1,  313,    2, 0x08,
+      43,    0,  316,    2, 0x08,
+      44,    0,  317,    2, 0x08,
 
  // slots: parameters
     QMetaType::Void,
@@ -234,14 +215,8 @@ static const uint qt_meta_data_AllProxy[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    4,
     QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::Bool,   47,
-    QMetaType::Void,
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -286,21 +261,15 @@ void AllProxy::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 30: _t->on_browse_dproxy_clicked(); break;
         case 31: _t->dproxy_update(); break;
         case 32: _t->on_push_dproxy_download_clicked(); break;
-        case 33: _t->on_in_button_fproxy_browse_download_clicked(); break;
-        case 34: _t->on_in_button_fproxy_browse_upload_clicked(); break;
-        case 35: _t->on_switch_fproxy_clicked(); break;
-        case 36: _t->on_switch_vproxy_clicked(); break;
-        case 37: _t->on_switch_sproxy_clicked(); break;
-        case 38: _t->on_switch_lproxy_clicked(); break;
-        case 39: _t->on_switch_tproxy_clicked(); break;
-        case 40: _t->on_switch_cproxy_clicked(); break;
-        case 41: _t->on_in_text_lproxy_username_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 42: _t->on_in_text_lproxy_password_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 43: _t->on_fproxy_check_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 44: _t->on_in_button_fproxy_send_clicked(); break;
-        case 45: _t->on_fproxy_check_clicked(); break;
-        case 46: _t->on_in_button_cproxy_send_clicked(); break;
-        case 47: _t->on_in_button_cproxy_change_settings_clicked(); break;
+        case 33: _t->on_switch_vproxy_clicked(); break;
+        case 34: _t->on_switch_sproxy_clicked(); break;
+        case 35: _t->on_switch_lproxy_clicked(); break;
+        case 36: _t->on_switch_tproxy_clicked(); break;
+        case 37: _t->on_switch_cproxy_clicked(); break;
+        case 38: _t->on_in_text_lproxy_username_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 39: _t->on_in_text_lproxy_password_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 40: _t->on_in_button_cproxy_send_clicked(); break;
+        case 41: _t->on_in_button_cproxy_change_settings_clicked(); break;
         default: ;
         }
     }
@@ -331,13 +300,13 @@ int AllProxy::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 48)
+        if (_id < 42)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 48;
+        _id -= 42;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 48)
+        if (_id < 42)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 48;
+        _id -= 42;
     }
     return _id;
 }

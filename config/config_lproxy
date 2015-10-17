@@ -21,6 +21,7 @@ split-large-forms 0
 keep-alive-timeout 5
 tolerate-pipelining 1
 socket-timeout 300
+connection-sharing 1
 
 # forward   			/	k.khandelwal:kunal15595@202.141.80.19:3128
 forward   			/	202.141.80.19:3128

@@ -13,7 +13,6 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -22,7 +21,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBox>
 #include <QtWidgets/QWidget>
@@ -47,18 +45,7 @@ public:
     QLabel *label_2;
     QLabel *label_8;
     QPushButton *in_button_save_nproxy;
-    QWidget *page_fproxy;
-    QPushButton *in_button_fproxy_browse_upload;
-    QLabel *in_text_fproxy_path_upload;
-    QPushButton *in_button_fproxy_send;
-    QLineEdit *in_text_fproxy_dip;
-    QLabel *in_text_vproxy_path_3;
-    QPushButton *in_button_fproxy_browse_download;
-    QLabel *in_text_vproxy_path_4;
-    QLabel *in_text_fproxy_path_download;
-    QLabel *in_text_vproxy_path_6;
-    QCheckBox *fproxy_check;
-    QWidget *page;
+    QWidget *page_cproxy;
     QTextEdit *textEdit;
     QPushButton *in_button_cproxy_send;
     QLabel *in_text_vproxy_path_5;
@@ -127,14 +114,11 @@ public:
     QLabel *label_20;
     QPushButton *in_button_save_tproxy;
     QWidget *page_new;
-    QGroupBox *group_tproxy;
-    QRadioButton *in_radio_tproxy;
     QPushButton *switch_tproxy;
     QPushButton *switch_lproxy;
     QPushButton *switch_sproxy;
     QPushButton *switch_vproxy;
     QPushButton *switch_cproxy;
-    QPushButton *switch_fproxy;
 
     void setupUi(QMainWindow *AllProxy)
     {
@@ -173,13 +157,12 @@ public:
         toolbox_main->setFrameShadow(QFrame::Sunken);
         page_nproxy = new QWidget();
         page_nproxy->setObjectName(QStringLiteral("page_nproxy"));
-        page_nproxy->setGeometry(QRect(0, 0, 651, 202));
-        page_nproxy->setStyleSheet(QLatin1String(" QWidget#page_nproxy {\n"
-"     background-color: rgba(250, 155, 50, 20);\n"
-" }"));
+        page_nproxy->setGeometry(QRect(0, 0, 651, 233));
+        page_nproxy->setStyleSheet(QStringLiteral(""));
         group_proxy = new QGroupBox(page_nproxy);
         group_proxy->setObjectName(QStringLiteral("group_proxy"));
-        group_proxy->setGeometry(QRect(0, 0, 731, 171));
+        group_proxy->setGeometry(QRect(0, 0, 601, 171));
+        group_proxy->setAutoFillBackground(false);
         in_text_nproxy_password = new QLineEdit(group_proxy);
         in_text_nproxy_password->setObjectName(QStringLiteral("in_text_nproxy_password"));
         in_text_nproxy_password->setGeometry(QRect(130, 90, 131, 27));
@@ -229,68 +212,32 @@ public:
         in_button_save_nproxy->setObjectName(QStringLiteral("in_button_save_nproxy"));
         in_button_save_nproxy->setGeometry(QRect(260, 140, 141, 27));
         toolbox_main->addItem(page_nproxy, QStringLiteral("Nproxy                                                                                                                                     - Normal Proxy"));
-        page_fproxy = new QWidget();
-        page_fproxy->setObjectName(QStringLiteral("page_fproxy"));
-        page_fproxy->setGeometry(QRect(0, 0, 651, 202));
-        in_button_fproxy_browse_upload = new QPushButton(page_fproxy);
-        in_button_fproxy_browse_upload->setObjectName(QStringLiteral("in_button_fproxy_browse_upload"));
-        in_button_fproxy_browse_upload->setGeometry(QRect(0, 110, 98, 27));
-        in_text_fproxy_path_upload = new QLabel(page_fproxy);
-        in_text_fproxy_path_upload->setObjectName(QStringLiteral("in_text_fproxy_path_upload"));
-        in_text_fproxy_path_upload->setGeometry(QRect(110, 110, 481, 31));
-        in_button_fproxy_send = new QPushButton(page_fproxy);
-        in_button_fproxy_send->setObjectName(QStringLiteral("in_button_fproxy_send"));
-        in_button_fproxy_send->setGeometry(QRect(400, 160, 101, 27));
-        in_text_fproxy_dip = new QLineEdit(page_fproxy);
-        in_text_fproxy_dip->setObjectName(QStringLiteral("in_text_fproxy_dip"));
-        in_text_fproxy_dip->setGeometry(QRect(110, 160, 131, 27));
-        in_text_vproxy_path_3 = new QLabel(page_fproxy);
-        in_text_vproxy_path_3->setObjectName(QStringLiteral("in_text_vproxy_path_3"));
-        in_text_vproxy_path_3->setGeometry(QRect(0, 160, 101, 31));
-        in_button_fproxy_browse_download = new QPushButton(page_fproxy);
-        in_button_fproxy_browse_download->setObjectName(QStringLiteral("in_button_fproxy_browse_download"));
-        in_button_fproxy_browse_download->setGeometry(QRect(0, 30, 98, 27));
-        in_text_vproxy_path_4 = new QLabel(page_fproxy);
-        in_text_vproxy_path_4->setObjectName(QStringLiteral("in_text_vproxy_path_4"));
-        in_text_vproxy_path_4->setGeometry(QRect(0, 0, 151, 31));
-        in_text_fproxy_path_download = new QLabel(page_fproxy);
-        in_text_fproxy_path_download->setObjectName(QStringLiteral("in_text_fproxy_path_download"));
-        in_text_fproxy_path_download->setGeometry(QRect(110, 30, 481, 31));
-        in_text_vproxy_path_6 = new QLabel(page_fproxy);
-        in_text_vproxy_path_6->setObjectName(QStringLiteral("in_text_vproxy_path_6"));
-        in_text_vproxy_path_6->setGeometry(QRect(0, 80, 151, 31));
-        fproxy_check = new QCheckBox(page_fproxy);
-        fproxy_check->setObjectName(QStringLiteral("fproxy_check"));
-        fproxy_check->setGeometry(QRect(110, 90, 141, 22));
-        toolbox_main->addItem(page_fproxy, QStringLiteral("Fproxy                                                                                                                                    - File Exchange "));
-        page = new QWidget();
-        page->setObjectName(QStringLiteral("page"));
-        page->setGeometry(QRect(0, 0, 651, 202));
-        textEdit = new QTextEdit(page);
+        page_cproxy = new QWidget();
+        page_cproxy->setObjectName(QStringLiteral("page_cproxy"));
+        page_cproxy->setGeometry(QRect(0, 0, 651, 233));
+        textEdit = new QTextEdit(page_cproxy);
         textEdit->setObjectName(QStringLiteral("textEdit"));
         textEdit->setGeometry(QRect(3, 120, 411, 78));
-        in_button_cproxy_send = new QPushButton(page);
+        in_button_cproxy_send = new QPushButton(page_cproxy);
         in_button_cproxy_send->setObjectName(QStringLiteral("in_button_cproxy_send"));
         in_button_cproxy_send->setGeometry(QRect(440, 140, 161, 27));
-        in_text_vproxy_path_5 = new QLabel(page);
+        in_text_vproxy_path_5 = new QLabel(page_cproxy);
         in_text_vproxy_path_5->setObjectName(QStringLiteral("in_text_vproxy_path_5"));
         in_text_vproxy_path_5->setGeometry(QRect(10, 10, 21, 31));
-        in_text_cproxy_dip = new QLineEdit(page);
+        in_text_cproxy_dip = new QLineEdit(page_cproxy);
         in_text_cproxy_dip->setObjectName(QStringLiteral("in_text_cproxy_dip"));
         in_text_cproxy_dip->setGeometry(QRect(30, 10, 131, 27));
-        in_button_cproxy_change_settings = new QPushButton(page);
+        in_button_cproxy_change_settings = new QPushButton(page_cproxy);
         in_button_cproxy_change_settings->setObjectName(QStringLiteral("in_button_cproxy_change_settings"));
         in_button_cproxy_change_settings->setGeometry(QRect(360, 10, 251, 27));
-        toolbox_main->addItem(page, QStringLiteral("Cproxy                                                                                                                                                      - Chat"));
+        toolbox_main->addItem(page_cproxy, QStringLiteral("Cproxy                                                                                                                                                      - Chat"));
         page_vproxy = new QWidget();
         page_vproxy->setObjectName(QStringLiteral("page_vproxy"));
-        page_vproxy->setGeometry(QRect(0, 0, 651, 202));
-        page_vproxy->setStyleSheet(QLatin1String(" QWidget#page_vproxy {\n"
-"     background-color: rgba(250, 155, 50, 20);\n"
-" }"));
+        page_vproxy->setGeometry(QRect(0, 0, 651, 233));
+        page_vproxy->setStyleSheet(QStringLiteral(""));
         group_vpn = new QGroupBox(page_vproxy);
         group_vpn->setObjectName(QStringLiteral("group_vpn"));
-        group_vpn->setGeometry(QRect(10, 0, 731, 171));
+        group_vpn->setGeometry(QRect(10, 11, 631, 171));
         in_button_save_vproxy = new QPushButton(group_vpn);
         in_button_save_vproxy->setObjectName(QStringLiteral("in_button_save_vproxy"));
         in_button_save_vproxy->setGeometry(QRect(270, 140, 161, 27));
@@ -351,7 +298,7 @@ public:
         toolbox_main->addItem(page_vproxy, QStringLiteral("Vproxy                                                                                                                                - OpenVPN Proxy"));
         page_dproxy = new QWidget();
         page_dproxy->setObjectName(QStringLiteral("page_dproxy"));
-        page_dproxy->setGeometry(QRect(0, 0, 651, 202));
+        page_dproxy->setGeometry(QRect(0, 0, 651, 233));
         in_dproxy_url = new QLineEdit(page_dproxy);
         in_dproxy_url->setObjectName(QStringLiteral("in_dproxy_url"));
         in_dproxy_url->setGeometry(QRect(90, 0, 561, 27));
@@ -379,10 +326,8 @@ public:
         toolbox_main->addItem(page_dproxy, QStringLiteral("Dproxy                                                                                                                                  - Download files"));
         page_sproxy = new QWidget();
         page_sproxy->setObjectName(QStringLiteral("page_sproxy"));
-        page_sproxy->setGeometry(QRect(0, 0, 651, 202));
-        page_sproxy->setStyleSheet(QLatin1String(" QWidget#page_sproxy {\n"
-"     background-color: rgba(250, 155, 50, 20);\n"
-" }"));
+        page_sproxy->setGeometry(QRect(0, 0, 651, 233));
+        page_sproxy->setStyleSheet(QStringLiteral(""));
         in_text_sproxy_local_port = new QLineEdit(page_sproxy);
         in_text_sproxy_local_port->setObjectName(QStringLiteral("in_text_sproxy_local_port"));
         in_text_sproxy_local_port->setGeometry(QRect(120, 10, 113, 27));
@@ -426,10 +371,8 @@ public:
         toolbox_main->addItem(page_sproxy, QStringLiteral("Sproxy                                                                                                                             -  SSH Tunnel Proxy"));
         page_lproxy = new QWidget();
         page_lproxy->setObjectName(QStringLiteral("page_lproxy"));
-        page_lproxy->setGeometry(QRect(0, 0, 651, 202));
-        page_lproxy->setStyleSheet(QLatin1String(" QWidget#page_lproxy {\n"
-"     background-color: rgba(250, 155, 50, 20);\n"
-" }"));
+        page_lproxy->setGeometry(QRect(0, 0, 651, 233));
+        page_lproxy->setStyleSheet(QStringLiteral(""));
         label_14 = new QLabel(page_lproxy);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setGeometry(QRect(90, 20, 81, 20));
@@ -464,13 +407,11 @@ public:
         label_29 = new QLabel(page_lproxy);
         label_29->setObjectName(QStringLiteral("label_29"));
         label_29->setGeometry(QRect(10, 110, 111, 20));
-        toolbox_main->addItem(page_lproxy, QStringLiteral("Lproxy                                                                                                               - Local Squid Proxy Server "));
+        toolbox_main->addItem(page_lproxy, QStringLiteral("Lproxy                                                                                                                          - Local Proxy Server "));
         page_tproxy = new QWidget();
         page_tproxy->setObjectName(QStringLiteral("page_tproxy"));
-        page_tproxy->setGeometry(QRect(0, 0, 651, 202));
-        page_tproxy->setStyleSheet(QLatin1String(" QWidget#page_tproxy {\n"
-"     background-color: rgba(250, 155, 50, 20);\n"
-" }"));
+        page_tproxy->setGeometry(QRect(0, 0, 651, 233));
+        page_tproxy->setStyleSheet(QStringLiteral(""));
         in_text_tproxy_server = new QLineEdit(page_tproxy);
         in_text_tproxy_server->setObjectName(QStringLiteral("in_text_tproxy_server"));
         in_text_tproxy_server->setGeometry(QRect(230, 10, 113, 27));
@@ -502,20 +443,9 @@ public:
         toolbox_main->addItem(page_tproxy, QStringLiteral("Tproxy                                                                                                                            - Transparent Proxy"));
         page_new = new QWidget();
         page_new->setObjectName(QStringLiteral("page_new"));
-        page_new->setGeometry(QRect(0, 0, 651, 202));
+        page_new->setEnabled(false);
+        page_new->setGeometry(QRect(0, 0, 651, 233));
         page_new->setStyleSheet(QStringLiteral(""));
-        group_tproxy = new QGroupBox(page_new);
-        group_tproxy->setObjectName(QStringLiteral("group_tproxy"));
-        group_tproxy->setGeometry(QRect(-120, 20, 731, 41));
-        in_radio_tproxy = new QRadioButton(group_tproxy);
-        in_radio_tproxy->setObjectName(QStringLiteral("in_radio_tproxy"));
-        in_radio_tproxy->setGeometry(QRect(10, 10, 116, 22));
-        QFont font2;
-        font2.setFamily(QStringLiteral("Sawasdee"));
-        font2.setBold(true);
-        font2.setItalic(true);
-        font2.setWeight(75);
-        in_radio_tproxy->setFont(font2);
         toolbox_main->addItem(page_new, QStringLiteral("To be added ..."));
         switch_tproxy = new QPushButton(widget_main);
         switch_tproxy->setObjectName(QStringLiteral("switch_tproxy"));
@@ -532,9 +462,6 @@ public:
         switch_cproxy = new QPushButton(widget_main);
         switch_cproxy->setObjectName(QStringLiteral("switch_cproxy"));
         switch_cproxy->setGeometry(QRect(610, 500, 41, 31));
-        switch_fproxy = new QPushButton(widget_main);
-        switch_fproxy->setObjectName(QStringLiteral("switch_fproxy"));
-        switch_fproxy->setGeometry(QRect(360, 500, 41, 31));
         AllProxy->setCentralWidget(widget_main);
         QWidget::setTabOrder(in_text_sproxy_local_port, in_text_sproxy_server);
         QWidget::setTabOrder(in_text_sproxy_server, in_text_sproxy_port);
@@ -565,11 +492,10 @@ public:
         QWidget::setTabOrder(in_text_tproxy_port, in_text_tproxy_username);
         QWidget::setTabOrder(in_text_tproxy_username, in_text_tproxy_password);
         QWidget::setTabOrder(in_text_tproxy_password, in_button_save_tproxy);
-        QWidget::setTabOrder(in_button_save_tproxy, in_radio_tproxy);
 
         retranslateUi(AllProxy);
 
-        toolbox_main->setCurrentIndex(0);
+        toolbox_main->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(AllProxy);
@@ -586,20 +512,10 @@ public:
         label_8->setText(QApplication::translate("AllProxy", "Default Gateway", 0));
         in_button_save_nproxy->setText(QApplication::translate("AllProxy", "Apply Settings", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_nproxy), QApplication::translate("AllProxy", "Nproxy                                                                                                                                     - Normal Proxy", 0));
-        in_button_fproxy_browse_upload->setText(QApplication::translate("AllProxy", "Browse ...", 0));
-        in_text_fproxy_path_upload->setText(QApplication::translate("AllProxy", "path", 0));
-        in_button_fproxy_send->setText(QApplication::translate("AllProxy", "Send", 0));
-        in_text_vproxy_path_3->setText(QApplication::translate("AllProxy", "Destination  IP", 0));
-        in_button_fproxy_browse_download->setText(QApplication::translate("AllProxy", "Browse ...", 0));
-        in_text_vproxy_path_4->setText(QApplication::translate("AllProxy", "Downloads Directory", 0));
-        in_text_fproxy_path_download->setText(QApplication::translate("AllProxy", "path", 0));
-        in_text_vproxy_path_6->setText(QApplication::translate("AllProxy", "Upload path", 0));
-        fproxy_check->setText(QApplication::translate("AllProxy", "Path is directory", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_fproxy), QApplication::translate("AllProxy", "Fproxy                                                                                                                                    - File Exchange ", 0));
         in_button_cproxy_send->setText(QApplication::translate("AllProxy", "Send   Message", 0));
         in_text_vproxy_path_5->setText(QApplication::translate("AllProxy", "IP", 0));
         in_button_cproxy_change_settings->setText(QApplication::translate("AllProxy", "Change Notification Settings", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page), QApplication::translate("AllProxy", "Cproxy                                                                                                                                                      - Chat", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_cproxy), QApplication::translate("AllProxy", "Cproxy                                                                                                                                                      - Chat", 0));
         group_vpn->setTitle(QString());
         in_button_save_vproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         label_7->setText(QApplication::translate("AllProxy", "VPN Password", 0));
@@ -631,22 +547,19 @@ public:
         in_button_save_lproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         label_28->setText(QApplication::translate("AllProxy", "Proxy password", 0));
         label_29->setText(QApplication::translate("AllProxy", "Proxy username", 0));
-        toolbox_main->setItemText(toolbox_main->indexOf(page_lproxy), QApplication::translate("AllProxy", "Lproxy                                                                                                               - Local Squid Proxy Server ", 0));
+        toolbox_main->setItemText(toolbox_main->indexOf(page_lproxy), QApplication::translate("AllProxy", "Lproxy                                                                                                                          - Local Proxy Server ", 0));
         label_17->setText(QApplication::translate("AllProxy", "Proxy Server", 0));
         label_18->setText(QApplication::translate("AllProxy", "Proxy Port", 0));
         label_19->setText(QApplication::translate("AllProxy", "Proxy Username", 0));
         label_20->setText(QApplication::translate("AllProxy", "Proxy Password", 0));
         in_button_save_tproxy->setText(QApplication::translate("AllProxy", "Save configuration", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_tproxy), QApplication::translate("AllProxy", "Tproxy                                                                                                                            - Transparent Proxy", 0));
-        group_tproxy->setTitle(QString());
-        in_radio_tproxy->setText(QApplication::translate("AllProxy", "Tproxy", 0));
         toolbox_main->setItemText(toolbox_main->indexOf(page_new), QApplication::translate("AllProxy", "To be added ...", 0));
         switch_tproxy->setText(QApplication::translate("AllProxy", "T", 0));
         switch_lproxy->setText(QApplication::translate("AllProxy", "L", 0));
         switch_sproxy->setText(QApplication::translate("AllProxy", "S", 0));
         switch_vproxy->setText(QApplication::translate("AllProxy", "V", 0));
         switch_cproxy->setText(QApplication::translate("AllProxy", "C", 0));
-        switch_fproxy->setText(QApplication::translate("AllProxy", "F", 0));
     } // retranslateUi
 
 };

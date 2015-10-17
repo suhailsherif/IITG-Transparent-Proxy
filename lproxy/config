@@ -1,7 +1,0 @@
-
-forward   			/	202.141.80.19:3128
-#forward-socks5 	/ 	127.0.0.1:9050 .
-#forward-socks4a 	/	127.0.0.1:9050 .
-listen-address 172.16.25.137:8118
-
-

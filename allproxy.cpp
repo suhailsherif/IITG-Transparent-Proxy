@@ -121,19 +121,6 @@ bool AllProxy::event(QEvent * e) // overloading event(QEvent*) method of QMainWi
                                                "border-radius: 5px;");
             }
 
-            QFile f("./pid/fproxy");
-            if(f.exists()) {
-                project_settings.setValue("status_fproxy", "on");
-                this->ui->switch_fproxy->setStyleSheet("color: white;"
-                                                "background-color: green;"
-                                               "border-radius: 5px;");
-            }else{
-                project_settings.setValue("status_fproxy", "off");
-                this->ui->switch_fproxy->setStyleSheet("color: white;"
-                                                "background-color: red;"
-                                               "border-radius: 5px;");
-            }
-
             QFile v("./pid/vproxy");
             if(v.exists()) {
                 project_settings.setValue("status_vproxy", "on");
@@ -234,15 +221,6 @@ void AllProxy::load_configuration(){
     this->ui->in_text_sproxy_port->setText(project_settings.value("sproxy_port").toString());
     this->ui->in_text_sproxy_ssh_server->setText(project_settings.value("sproxy_ssh_server").toString());
     
-
-    if(project_settings.value("fproxy_checked").toString() == "true"){
-        this->ui->fproxy_check->setChecked(true);
-    }else{
-        this->ui->fproxy_check->setChecked(false);
-    }
-    this->ui->in_text_fproxy_path_download->setText(project_settings.value("fproxy_download_path").toString());
-    this->ui->in_text_fproxy_path_upload->setText(project_settings.value("fproxy_upload_path").toString());
-
     QString status_vproxy, status_sproxy, status_lproxy, status_tproxy;
     status_lproxy = project_settings.value("status_lproxy").toString();
     status_sproxy = project_settings.value("status_sproxy").toString();
@@ -667,11 +645,6 @@ void AllProxy::on_in_text_vproxy_proxy_password_textChanged(const QString &arg1)
     this->ui->in_button_save_vproxy->setVisible(true);
 }
 
-void AllProxy::on_fproxy_check_toggled(bool checked)
-{
-    this->ui->in_text_fproxy_path_upload->setText("");
-}
-
 void AllProxy::on_browse_dproxy_clicked()
 {
     QFile *selected_file;
@@ -708,70 +681,6 @@ void AllProxy::on_push_dproxy_download_clicked()
     p.startDetached("bash", QStringList() << "start.sh" << "dproxy" << this->ui->in_dproxy_url->text() << this->ui->in_dproxy_filepath->text());
 
     QtConcurrent::run(this,&AllProxy::dproxy_update);
-}
-
-void AllProxy::on_in_button_fproxy_browse_download_clicked()
-{
-    QSettings project_settings("project_settings");
-
-    QFileDialog *fd = new QFileDialog;
-    fd->setFileMode(QFileDialog::Directory);
-    fd->setOption(QFileDialog::ShowDirsOnly);
-    fd->setViewMode(QFileDialog::Detail);
-    int result = fd->exec();
-    QString directory;
-    if (result)
-    {
-        directory = fd->selectedFiles()[0];
-        this->ui->in_text_fproxy_path_download->setText(directory);
-        project_settings.setValue("fproxy_download_path",directory);
-        qDebug()<<directory;
-        update_config("fproxy_download_path", directory);
-    }
-}
-
-void AllProxy::on_in_button_fproxy_browse_upload_clicked()
-{
-    QSettings project_settings("project_settings");
-
-    QFileDialog *fd = new QFileDialog;
-
-    if(this->ui->fproxy_check->isChecked()){
-        fd->setFileMode(QFileDialog::DirectoryOnly);
-        update_config("fproxy_upload_type", "directory");
-        project_settings.setValue("fproxy_checked","true");
-        update_config("fproxy_checked", "true");
-
-    }else{
-        update_config("fproxy_upload_type", "file");
-        project_settings.setValue("fproxy_checked","false");
-        update_config("fproxy_checked", "false");
-    }
-    fd->setViewMode(QFileDialog::Detail);
-    int result = fd->exec();
-    QString file;
-    if (result)
-    {
-        file = fd->selectedFiles()[0];
-        this->ui->in_text_fproxy_path_upload->setText(file);
-        project_settings.setValue("fproxy_upload_path",file);
-        qDebug() << file;
-        update_config("fproxy_upload_path", file);
-    }
-}
-
-void AllProxy::on_switch_fproxy_clicked()
-{
-    QSettings project_settings("project_settings");
-    QString status = project_settings.value("status_fproxy").toString();
-    QProcess p;
-    if(status == "on"){
-        p.startDetached("bash", QStringList() << "stop.sh" << "fproxy");
-    }else{
-        p.startDetached("bash", QStringList() << "start.sh" << "fproxy");
-    }
-
-    this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_vproxy_clicked()
@@ -838,23 +747,6 @@ void AllProxy::on_switch_cproxy_clicked()
     }
     this->setWindowState(Qt::WindowMinimized);
 }
-
-void AllProxy::on_in_button_fproxy_send_clicked()
-{
-    QSettings project_settings("project_settings");
-    if(project_settings.value("fproxy_dest_ip").toString() != this->ui->in_text_fproxy_dip->text()){
-        project_settings.setValue("fproxy_dest_ip", this->ui->in_text_fproxy_dip->text());
-        update_config("fproxy_dest_ip", this->ui->in_text_fproxy_dip->text());
-    }
-    QProcess p;
-    p.startDetached("gksudo", QStringList() << "bash" << "fproxy/send.sh");
-}
-
-void AllProxy::on_fproxy_check_clicked()
-{
-
-}
-
 
 void AllProxy::on_in_button_cproxy_send_clicked()
 {

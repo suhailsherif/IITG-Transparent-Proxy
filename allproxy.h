@@ -85,12 +85,6 @@ private slots:
     void dproxy_update();
 
     void on_push_dproxy_download_clicked();
-
-    void on_in_button_fproxy_browse_download_clicked();
-    
-    void on_in_button_fproxy_browse_upload_clicked();
-    
-    void on_switch_fproxy_clicked();
     
     void on_switch_vproxy_clicked();
     
@@ -106,11 +100,6 @@ private slots:
 
     void on_in_text_lproxy_password_textChanged(const QString &arg1);
 
-    void on_fproxy_check_toggled(bool checked);
-
-    void on_in_button_fproxy_send_clicked();
-
-    void on_fproxy_check_clicked();
 
     void on_in_button_cproxy_send_clicked();
 

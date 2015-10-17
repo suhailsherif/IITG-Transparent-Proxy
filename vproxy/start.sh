@@ -1,6 +1,17 @@
 #!/bin/bash
+
+log_name=$(logname)
+
+if [ $log_name = "no login name" ]; then
+	log_name=$(id -nu)
+else
+	if [ $log_name = "root" ]; then
+		log_name=$(ps -o user= -p $$ | awk '{print $1}')
+	fi
+fi
+
 source /etc/environment
-source /home/$(logname)/.bashrc
+source /home/$log_name/.bashrc
 
 sudo killall -I openvpn
 source $allproxy_path/config/config.sh

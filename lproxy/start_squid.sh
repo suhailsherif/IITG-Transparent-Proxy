@@ -31,7 +31,7 @@ cache_dir ufs $allproxy_path/cache 100 16 256
 
 " > $allproxy_path/config/lproxy.conf
 
-squid3 -N -f $allproxy_path/config/lproxy.conf
+sudo squid3 -N -f $allproxy_path/config/lproxy.conf
 
 sleep 0.5
 echo `ps aux | grep -m 1 -F 'squid3' | grep -v -F 'grep' | awk '{ print $2 }'` > $allproxy_path/pid/lproxy

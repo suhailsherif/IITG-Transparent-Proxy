@@ -72,6 +72,7 @@ fi
 # update
 sudo -E apt-get update
 
+
 # install required packages
 req_packages=( "libevent-dev" "openvpn" "libnet-proxy-perl" "qt5-qmake" "netmask" \
 	"putty" "sshpass" "netcat" "openssh-server" "notify-osd" "privoxy" \
