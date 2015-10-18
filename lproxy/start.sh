@@ -1,21 +1,7 @@
 #!/bin/bash
 
-log_name=$(logname)
-
-if [ $log_name = "no login name" ]; then
-	log_name=$(id -nu)
-else
-	if [ $log_name = "root" ]; then
-		log_name=$(ps -o user= -p $$ | awk '{print $1}')
-	fi
-fi
-
-source /etc/environment
-source /home/$log_name/.bashrc
-
+source /etc/allproxy/config
 source $allproxy_path/config/config.sh
-
-IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -m 1 -Eo '([0-9]*\.){3}[0-9]*')
 
 echo "
 confdir /etc/privoxy

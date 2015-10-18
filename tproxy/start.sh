@@ -1,17 +1,10 @@
 #!/bin/bash
 
-log_name=$(logname)
+# run inside tproxy folder
+cd "$(dirname "$0")"
 
-if [ $log_name = "no login name" ]; then
-	log_name=$(id -nu)
-else
-	if [ $log_name = "root" ]; then
-		log_name=$(ps -o user= -p $$ | awk '{print $1}')
-	fi
-fi
-
-source /etc/environment
-source /home/$log_name/.bashrc
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
 
 if [ -z ${allproxy_path+x} ]; then 
 	echo "allproxy_path is unset. set and try again."
@@ -25,8 +18,8 @@ else
 	exit 1
 fi
 
-chown root:root -R /var/log
-chmod 777 -R /var/log
+sudo chown root:root -R /var/log
+sudo chmod 777 -R /var/log
 
 # Killing fake DNS server, if running
 if pgrep "redsocks" > /dev/null

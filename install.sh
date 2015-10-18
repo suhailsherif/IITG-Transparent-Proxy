@@ -1,19 +1,12 @@
 #!/bin/bash
 
-# run with sudo rights only
-if [ "$EUID" -ne 0 ]
-  then echo "Please run with sudo "
-  exit
-fi
-
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
 # run only inside Allproxy folder
-if [ ! -f "Allproxy.pro" ];then
-	echo "Please run in Allproxy folder"
-	exit 1
-fi
+cd "$(dirname "$0")"
+
+sudo echo "Installing Allproxy."
 
 # check internet connection
 status_code=$(curl -sL -w "%{http_code}\\n" "http://www.google.co.in/" -o /dev/null)
@@ -72,7 +65,6 @@ fi
 # update
 sudo -E apt-get update
 
-
 # install required packages
 req_packages=( "libevent-dev" "openvpn" "libnet-proxy-perl" "qt5-qmake" "netmask" \
 	"putty" "sshpass" "netcat" "openssh-server" "notify-osd" "privoxy" \
@@ -99,27 +91,49 @@ then
 	cp ./config/config_bak.sh ./config/config.sh
 fi
 
-# set allproxy path
-cur_path=$(pwd)
-log_name=$(logname)
-
-sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
-echo "export allproxy_path=$cur_path" >> /home/$logname/.bashrc
-echo "export allproxy_path=$cur_path" >> /etc/environment
-
-echo ". $cur_path/config/config.sh" >> /home/$logname/.bashrc
-
 #############################
 ## create log/config files ##
 #############################
 
+# user-specific directory
+if [ ! -d $HOME/.allproxy ]; then
+	mkdir $HOME/.allproxy
+fi
+
+touch $HOME/.allproxy/config
+
+#global directory
+if [ ! -d /etc/allproxy ]; then
+	sudo mkdir -p /etc/allproxy
+fi
+
+sudo touch /etc/allproxy/config
+
+# set allproxy path
+cur_path=$(pwd)
+
+sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
+echo "export allproxy_path=$cur_path" >> $HOME/.allproxy/config
+echo "export allproxy_path=$cur_path" | sudo tee -a /etc/allproxy/config > /dev/null
+
+echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
+
 if [ ! -d log ]; then
-  mkdir log/
+	mkdir log/
 fi
 
 touch config/libnet-proxy-perl log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
 	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
 
+
+# enable dash launching
+cp allproxy.desktop.in allproxy.desktop
+sed -i 's|allproxy_path|'"$cur_path"'|g' allproxy.desktop
+chmod +x allproxy.desktop
+
+if [ -d /usr/share/applications ]; then
+	sudo cp allproxy.desktop /usr/share/applications/allproxy.desktop
+fi
 
 ############
 ## nproxy ##
@@ -127,13 +141,15 @@ touch config/libnet-proxy-perl log/config_routes log/cproxy log/dns log/fproxy l
 
 
 # backup files 
-back_files=( "$logname/.bashrc" "/etc/environment" )
+back_files=( "$HOME/.bashrc" "/etc/environment" )
 for i in "${back_files[@]}"
 do
 	if [ -e "$i" ] 
 	then
-		echo "backing up $i"
-		sudo cp $i $i"_ibak"
+		if [ ! -f $i"_allproxy_bak" ]; then
+			echo "backing up $i"
+			sudo cp $i $i"_allproxy_bak"
+		fi
 	else
 		echo "could not find $i"
 	fi
@@ -162,16 +178,14 @@ python_version=2.7
 chmod a+x ./dproxy/main.py
 
 # Copy the downloader class library to /usr/lib/python (this can be changed based on the version of python)
-cp ./dproxy/downloader.py /usr/lib/python$python_version/
+sudo cp ./dproxy/downloader.py /usr/lib/python$python_version/
 
 # Copy the main file to the bin folder
-cp ./dproxy/main.py /usr/bin/pycurl-download
+sudo cp ./dproxy/main.py /usr/bin/pycurl-download
 
 # Create a log file and change its read write permission
-touch /var/log/downloader.log ; chmod 777 /var/log/downloader.log
-
-# add sbin to path
-PATH="$PATH:/usr/sbin"
+sudo touch /var/log/downloader.log
+sudo chmod 777 /var/log/downloader.log
 
 # restart network manager 
 sudo service network-manager restart

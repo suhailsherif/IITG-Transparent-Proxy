@@ -1,7 +1,7 @@
 #!/bin/bash
-source /etc/environment
 
-source $allproxy_path/config/config.sh #&
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
 
 def_gate=$(/sbin/ip route | awk '/default/ { print $3 }')
 # echo $def_gate

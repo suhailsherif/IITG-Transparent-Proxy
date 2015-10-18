@@ -1,12 +1,10 @@
 #!/bin/bash
 
-if [ ! -z ${allproxy_path+x} ]; then 
-	source /etc/environment
-	source /home/$(logname)/.bashrc
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
 
-	if [ ! -z ${allproxy_path+x} ]; then 
-		echo "allproxy_path not set."
-	fi
+if [ -z ${allproxy_path+x} ]; then 
+	echo "allproxy_path is unset. set and try again."
 fi
 
 echo "

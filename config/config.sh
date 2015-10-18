@@ -1,3 +1,6 @@
+
+## Do not change manually !!
+
 # Normal proxy settings
 export nproxy_server=202.141.80.19
 export nproxy_port=3128
@@ -35,14 +38,9 @@ export tproxy_port=3128
 export tproxy_username=k.khandelwal
 export tproxy_password=kunal15595
 
-# File Transfer settings
-export fproxy_download_path=/home/kunal15595/Downloads
-export fproxy_upload_path=/home/kunal15595/Allproxy/pid
-export fproxy_upload_type=directory
-export fproxy_dest_ip=10.10.1.31
-export fproxy_checked=true
-
 # Chat Settings
-export cproxy_dest_ip=172.16.25.106
+export cproxy_ip=10.10.2.40
+export cproxy_port=8520
 
+#Misc
 export allproxy_path=/home/kunal15595/Allproxy

@@ -4,7 +4,7 @@
 ; HTTP listener in format ip:port.
 listen = cproxy_ip:cproxy_port
 ; Full path to directory where to find the server web assets.
-;root = /usr/share/nginx/html/spreed-webrtc
+root = cproxy_root
 ; HTTP socket read timeout in seconds.
 ;readtimeout = 10
 ; HTTP socket write timeout in seconds.

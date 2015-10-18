@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>671</width>
-    <height>538</height>
+    <width>570</width>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,8 +32,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>651</width>
-      <height>481</height>
+      <width>551</width>
+      <height>411</height>
      </rect>
     </property>
     <property name="font">
@@ -63,22 +63,22 @@ color: white;
      <enum>QFrame::Sunken</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_nproxy">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <attribute name="label">
-      <string>Nproxy                                                                                                                                     - Normal Proxy</string>
+      <string>Nproxy                                                                                               - Normal Proxy</string>
      </attribute>
      <widget class="QGroupBox" name="group_proxy">
       <property name="geometry">
@@ -99,7 +99,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>90</y>
+         <y>40</y>
          <width>131</width>
          <height>27</height>
         </rect>
@@ -115,7 +115,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>420</x>
-         <y>0</y>
+         <y>10</y>
          <width>71</width>
          <height>27</height>
         </rect>
@@ -127,8 +127,8 @@ color: white;
       <widget class="QLabel" name="label_4">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>100</y>
+         <x>10</x>
+         <y>40</y>
          <width>121</width>
          <height>20</height>
         </rect>
@@ -145,8 +145,8 @@ color: white;
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>0</y>
+         <x>330</x>
+         <y>10</y>
          <width>81</width>
          <height>20</height>
         </rect>
@@ -163,8 +163,8 @@ color: white;
       <widget class="QLineEdit" name="in_text_nproxy_server">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>0</y>
+         <x>420</x>
+         <y>40</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -177,7 +177,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>60</y>
+         <y>10</y>
          <width>131</width>
          <height>27</height>
         </rect>
@@ -193,7 +193,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>420</x>
-         <y>70</y>
+         <y>80</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -208,8 +208,8 @@ color: white;
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>10</y>
+         <x>320</x>
+         <y>40</y>
          <width>91</width>
          <height>17</height>
         </rect>
@@ -226,8 +226,8 @@ color: white;
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>70</y>
+         <x>10</x>
+         <y>10</y>
          <width>121</width>
          <height>17</height>
         </rect>
@@ -245,7 +245,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>290</x>
-         <y>70</y>
+         <y>80</y>
          <width>131</width>
          <height>20</height>
         </rect>
@@ -262,8 +262,8 @@ color: white;
       <widget class="QPushButton" name="in_button_save_nproxy">
        <property name="geometry">
         <rect>
-         <x>260</x>
-         <y>140</y>
+         <x>100</x>
+         <y>110</y>
          <width>141</width>
          <height>27</height>
         </rect>
@@ -279,40 +279,17 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <attribute name="label">
-      <string>Cproxy                                                                                                                                                      - Chat</string>
+      <string>Cproxy                                                                                                                 - Chat</string>
      </attribute>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="geometry">
-       <rect>
-        <x>3</x>
-        <y>120</y>
-        <width>411</width>
-        <height>78</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="in_button_cproxy_send">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>140</y>
-        <width>161</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Send   Message</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="in_text_vproxy_path_5">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>10</y>
         <width>21</width>
         <height>31</height>
@@ -322,27 +299,50 @@ color: white;
        <string>IP</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="in_text_cproxy_dip">
+     <widget class="QLineEdit" name="in_text_cproxy_ip">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>50</x>
         <y>10</y>
         <width>131</width>
         <height>27</height>
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="in_button_cproxy_change_settings">
+     <widget class="QLineEdit" name="in_text_cproxy_port">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>10</y>
-        <width>251</width>
+        <x>50</x>
+        <y>40</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="in_text_vproxy_path_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Port</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="in_button_save_cproxy">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>30</y>
+        <width>161</width>
         <height>27</height>
        </rect>
       </property>
       <property name="text">
-       <string>Change Notification Settings</string>
+       <string>Save configuration</string>
       </property>
      </widget>
     </widget>
@@ -351,23 +351,23 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <attribute name="label">
-      <string>Vproxy                                                                                                                                - OpenVPN Proxy</string>
+      <string>Vproxy                                                                                            - OpenVPN Proxy</string>
      </attribute>
      <widget class="QGroupBox" name="group_vpn">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>11</y>
-        <width>631</width>
-        <height>171</height>
+        <x>0</x>
+        <y>1</y>
+        <width>551</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="title">
@@ -376,8 +376,8 @@ color: white;
       <widget class="QPushButton" name="in_button_save_vproxy">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>140</y>
+         <x>170</x>
+         <y>190</y>
          <width>161</width>
          <height>27</height>
         </rect>
@@ -390,7 +390,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>120</y>
+         <y>130</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -403,7 +403,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>120</y>
+         <y>130</y>
          <width>111</width>
          <height>20</height>
         </rect>
@@ -420,9 +420,9 @@ color: white;
       <widget class="QLabel" name="in_text_vproxy_path">
        <property name="geometry">
         <rect>
-         <x>250</x>
-         <y>30</y>
-         <width>481</width>
+         <x>10</x>
+         <y>60</y>
+         <width>531</width>
          <height>31</height>
         </rect>
        </property>
@@ -434,7 +434,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>90</y>
+         <y>100</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -444,7 +444,7 @@ color: white;
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>90</y>
+         <y>100</y>
          <width>111</width>
          <height>20</height>
         </rect>
@@ -461,7 +461,7 @@ color: white;
       <widget class="QPushButton" name="in_button_browse">
        <property name="geometry">
         <rect>
-         <x>140</x>
+         <x>20</x>
          <y>30</y>
          <width>98</width>
          <height>27</height>
@@ -474,8 +474,8 @@ color: white;
       <widget class="QLabel" name="label_5">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>30</y>
+         <x>10</x>
+         <y>10</y>
          <width>131</width>
          <height>20</height>
         </rect>
@@ -492,7 +492,7 @@ color: white;
       <widget class="QLineEdit" name="in_text_vproxy_port">
        <property name="geometry">
         <rect>
-         <x>390</x>
+         <x>410</x>
          <y>0</y>
          <width>113</width>
          <height>27</height>
@@ -502,8 +502,8 @@ color: white;
       <widget class="QLineEdit" name="in_text_vproxy_server">
        <property name="geometry">
         <rect>
-         <x>110</x>
-         <y>0</y>
+         <x>410</x>
+         <y>30</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -512,7 +512,7 @@ color: white;
       <widget class="QLabel" name="label_22">
        <property name="geometry">
         <rect>
-         <x>310</x>
+         <x>320</x>
          <y>0</y>
          <width>81</width>
          <height>20</height>
@@ -530,8 +530,8 @@ color: white;
       <widget class="QLabel" name="label_23">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>0</y>
+         <x>310</x>
+         <y>30</y>
          <width>101</width>
          <height>20</height>
         </rect>
@@ -548,8 +548,8 @@ color: white;
       <widget class="QLabel" name="label_24">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>70</y>
+         <x>280</x>
+         <y>100</y>
          <width>121</width>
          <height>20</height>
         </rect>
@@ -566,8 +566,8 @@ color: white;
       <widget class="QLabel" name="label_25">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>100</y>
+         <x>280</x>
+         <y>130</y>
          <width>121</width>
          <height>20</height>
         </rect>
@@ -584,8 +584,8 @@ color: white;
       <widget class="QLineEdit" name="in_text_vproxy_proxy_username">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>70</y>
+         <x>410</x>
+         <y>100</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -594,8 +594,8 @@ color: white;
       <widget class="QLineEdit" name="in_text_vproxy_proxy_password">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>100</y>
+         <x>410</x>
+         <y>130</y>
          <width>113</width>
          <height>27</height>
         </rect>
@@ -611,19 +611,19 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <attribute name="label">
-      <string>Dproxy                                                                                                                                  - Download files</string>
+      <string>Dproxy                                                                                              - Download files</string>
      </attribute>
      <widget class="QLineEdit" name="in_dproxy_url">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>40</x>
         <y>0</y>
-        <width>561</width>
+        <width>501</width>
         <height>27</height>
        </rect>
       </property>
@@ -631,9 +631,9 @@ color: white;
      <widget class="QLineEdit" name="in_dproxy_filepath">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>80</y>
-        <width>531</width>
+        <x>100</x>
+        <y>70</y>
+        <width>451</width>
         <height>27</height>
        </rect>
       </property>
@@ -641,7 +641,7 @@ color: white;
      <widget class="QLabel" name="label_26">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>0</y>
         <width>31</width>
         <height>20</height>
@@ -660,7 +660,7 @@ color: white;
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>60</y>
+        <y>50</y>
         <width>191</width>
         <height>20</height>
        </rect>
@@ -677,8 +677,8 @@ color: white;
      <widget class="QPushButton" name="browse_dproxy">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>80</y>
+        <x>0</x>
+        <y>70</y>
         <width>98</width>
         <height>27</height>
        </rect>
@@ -690,8 +690,8 @@ color: white;
      <widget class="QPushButton" name="push_dproxy_download">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>130</y>
+        <x>150</x>
+        <y>110</y>
         <width>98</width>
         <height>27</height>
        </rect>
@@ -703,8 +703,8 @@ color: white;
      <widget class="QProgressBar" name="dproxy_progress">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>130</y>
+        <x>340</x>
+        <y>110</y>
         <width>191</width>
         <height>23</height>
        </rect>
@@ -719,15 +719,15 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <attribute name="label">
-      <string>Sproxy                                                                                                                             -  SSH Tunnel Proxy</string>
+      <string>Sproxy                                                                                          -  SSH Tunnel Proxy</string>
      </attribute>
      <widget class="QLineEdit" name="in_text_sproxy_local_port">
       <property name="geometry">
@@ -742,7 +742,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_sproxy_server">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>420</x>
         <y>0</y>
         <width>113</width>
         <height>27</height>
@@ -752,8 +752,8 @@ color: white;
      <widget class="QLineEdit" name="in_text_sproxy_username">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>110</y>
+        <x>150</x>
+        <y>80</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -762,7 +762,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_sproxy_port">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>420</x>
         <y>30</y>
         <width>113</width>
         <height>27</height>
@@ -772,8 +772,8 @@ color: white;
      <widget class="QLineEdit" name="in_text_sproxy_password">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>140</y>
+        <x>150</x>
+        <y>110</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -786,7 +786,7 @@ color: white;
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>10</y>
+        <y>20</y>
         <width>67</width>
         <height>17</height>
        </rect>
@@ -798,7 +798,7 @@ color: white;
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>330</x>
         <y>0</y>
         <width>91</width>
         <height>20</height>
@@ -811,7 +811,7 @@ color: white;
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>330</x>
         <y>30</y>
         <width>91</width>
         <height>20</height>
@@ -824,8 +824,8 @@ color: white;
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>296</x>
-        <y>120</y>
+        <x>0</x>
+        <y>80</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -837,8 +837,8 @@ color: white;
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>296</x>
-        <y>150</y>
+        <x>0</x>
+        <y>110</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -850,8 +850,8 @@ color: white;
      <widget class="QPushButton" name="in_button_save_sproxy">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>70</y>
+        <x>310</x>
+        <y>110</y>
         <width>161</width>
         <height>27</height>
        </rect>
@@ -863,7 +863,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_sproxy_ssh_server">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>420</x>
         <y>70</y>
         <width>113</width>
         <height>27</height>
@@ -873,8 +873,8 @@ color: white;
      <widget class="QLabel" name="label_21">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>80</y>
+        <x>330</x>
+        <y>70</y>
         <width>91</width>
         <height>20</height>
        </rect>
@@ -889,21 +889,21 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <attribute name="label">
-      <string>Lproxy                                                                                                                          - Local Proxy Server </string>
+      <string>Lproxy                                                                                          - Local Proxy Server </string>
      </attribute>
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>20</y>
+        <x>10</x>
+        <y>10</y>
         <width>81</width>
         <height>20</height>
        </rect>
@@ -915,8 +915,8 @@ color: white;
      <widget class="QLineEdit" name="in_text_lproxy_local_port">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>20</y>
+        <x>90</x>
+        <y>10</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -925,8 +925,8 @@ color: white;
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>20</y>
+        <x>290</x>
+        <y>10</y>
         <width>91</width>
         <height>20</height>
        </rect>
@@ -938,7 +938,7 @@ color: white;
      <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>290</x>
         <y>50</y>
         <width>81</width>
         <height>20</height>
@@ -951,8 +951,8 @@ color: white;
      <widget class="QLineEdit" name="in_text_lproxy_server">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>20</y>
+        <x>380</x>
+        <y>10</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -961,7 +961,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_lproxy_port">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>380</x>
         <y>50</y>
         <width>113</width>
         <height>27</height>
@@ -1036,20 +1036,20 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <attribute name="label">
-      <string>Tproxy                                                                                                                            - Transparent Proxy</string>
+      <string>Tproxy                                                                                          - Transparent Proxy</string>
      </attribute>
      <widget class="QLineEdit" name="in_text_tproxy_server">
       <property name="geometry">
        <rect>
-        <x>230</x>
+        <x>110</x>
         <y>10</y>
         <width>113</width>
         <height>27</height>
@@ -1059,7 +1059,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_tproxy_port">
       <property name="geometry">
        <rect>
-        <x>230</x>
+        <x>110</x>
         <y>40</y>
         <width>113</width>
         <height>27</height>
@@ -1069,7 +1069,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_tproxy_username">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>400</x>
         <y>10</y>
         <width>113</width>
         <height>27</height>
@@ -1079,7 +1079,7 @@ color: white;
      <widget class="QLineEdit" name="in_text_tproxy_password">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>400</x>
         <y>40</y>
         <width>113</width>
         <height>27</height>
@@ -1092,7 +1092,7 @@ color: white;
      <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
-        <x>106</x>
+        <x>10</x>
         <y>10</y>
         <width>91</width>
         <height>20</height>
@@ -1105,7 +1105,7 @@ color: white;
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
-        <x>116</x>
+        <x>10</x>
         <y>40</y>
         <width>81</width>
         <height>20</height>
@@ -1118,7 +1118,7 @@ color: white;
      <widget class="QLabel" name="label_19">
       <property name="geometry">
        <rect>
-        <x>386</x>
+        <x>280</x>
         <y>10</y>
         <width>111</width>
         <height>20</height>
@@ -1131,7 +1131,7 @@ color: white;
      <widget class="QLabel" name="label_20">
       <property name="geometry">
        <rect>
-        <x>386</x>
+        <x>280</x>
         <y>40</y>
         <width>111</width>
         <height>20</height>
@@ -1144,8 +1144,8 @@ color: white;
      <widget class="QPushButton" name="in_button_save_tproxy">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>120</y>
+        <x>200</x>
+        <y>100</y>
         <width>161</width>
         <height>27</height>
        </rect>
@@ -1163,8 +1163,8 @@ color: white;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
-       <height>233</height>
+       <width>551</width>
+       <height>163</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1178,8 +1178,8 @@ color: white;
    <widget class="QPushButton" name="switch_tproxy">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>500</y>
+      <x>310</x>
+      <y>430</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1192,7 +1192,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>510</x>
-      <y>500</y>
+      <y>430</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1205,7 +1205,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>460</x>
-      <y>500</y>
+      <y>430</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1218,7 +1218,7 @@ color: white;
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>500</y>
+      <y>430</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -1230,8 +1230,8 @@ color: white;
    <widget class="QPushButton" name="switch_cproxy">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>500</y>
+      <x>360</x>
+      <y>430</y>
       <width>41</width>
       <height>31</height>
      </rect>

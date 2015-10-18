@@ -23,5 +23,3 @@ HEADERS  += allproxy.h \
     constants.h
 
 FORMS    += allproxy.ui
-
-win32: RC_ICONS += icon.png

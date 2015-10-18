@@ -2,7 +2,8 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
-source /etc/environment
+
+source /etc/allproxy/config
 source $allproxy_path/config/config.sh
 
 case $1 in
@@ -21,10 +22,6 @@ lproxy)
 sproxy)
 	
 	source $allproxy_path/sproxy/start.sh &
-;;
-fproxy)
-	
-	source $allproxy_path/fproxy/start.sh &
 ;;
 dproxy)
 	
@@ -113,9 +110,6 @@ cproxy)
 	;;
 	nproxy)
 		source $allproxy_path/nproxy/start.sh &
-	;;
-	fproxy)
-		source $allproxy_path/fproxy/start.sh &
 	;;
 	cproxy)
 		source $allproxy_path/cproxy/start.sh &

@@ -80,7 +80,7 @@ bool AllProxy::event(QEvent * e) // overloading event(QEvent*) method of QMainWi
                 p.waitForFinished(-1);
             p.waitForFinished(-1);
 
-            QSettings project_settings("project_settings");
+            QSettings project_settings("allproxy_settings");
             
             QFile t("./pid/tproxy");
             if(t.exists()) {
@@ -186,7 +186,7 @@ void AllProxy::setToolBoxButtonColor(QToolBox* toolBox, int index, QColor color)
 }
 
 void AllProxy::load_configuration(){
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
 
     this->ui->in_text_nproxy_gateway->setText(project_settings.value("nproxy_gateway").toString());
     this->ui->in_text_nproxy_server->setText(project_settings.value("nproxy_server").toString());
@@ -221,11 +221,16 @@ void AllProxy::load_configuration(){
     this->ui->in_text_sproxy_port->setText(project_settings.value("sproxy_port").toString());
     this->ui->in_text_sproxy_ssh_server->setText(project_settings.value("sproxy_ssh_server").toString());
     
-    QString status_vproxy, status_sproxy, status_lproxy, status_tproxy;
+    this->ui->in_text_cproxy_ip->setText(project_settings.value("cproxy_ip").toString());
+    this->ui->in_text_cproxy_port->setText(project_settings.value("cproxy_port").toString());
+    
+    QString status_vproxy, status_sproxy, status_lproxy, status_tproxy, status_cproxy;
     status_lproxy = project_settings.value("status_lproxy").toString();
     status_sproxy = project_settings.value("status_sproxy").toString();
     status_vproxy = project_settings.value("status_vproxy").toString();
     status_tproxy = project_settings.value("status_tproxy").toString();
+    status_cproxy = project_settings.value("status_cproxy").toString();
+    
 
 }
 
@@ -234,7 +239,7 @@ void AllProxy::on_in_button_browse_clicked()
     this->ui->in_button_save_vproxy->setText("Save Configuration");
     this->ui->in_button_save_vproxy->setVisible(true);
 
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QFile *selected_file;
     QString file_path,previous_path;
 
@@ -257,7 +262,7 @@ void AllProxy::on_in_button_browse_clicked()
 
 void AllProxy::on_in_button_save_nproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString nproxy_server, nproxy_port, nproxy_username, nproxy_password, nproxy_gateway;
 
     nproxy_server = project_settings.value("nproxy_server").toString();
@@ -306,7 +311,7 @@ void AllProxy::on_in_button_save_nproxy_clicked()
 
 void AllProxy::on_in_button_save_vproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString vproxy_username, vproxy_password, vproxy_path, vproxy_server, vproxy_port, vproxy_proxy_username, vproxy_proxy_password;
 
     vproxy_username = project_settings.value("vproxy_username").toString();
@@ -362,7 +367,7 @@ void AllProxy::on_in_button_save_vproxy_clicked()
 
 void AllProxy::on_in_button_save_tproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString tproxy_username, tproxy_password, tproxy_server, tproxy_port;
 
     tproxy_username = project_settings.value("tproxy_username").toString();
@@ -397,7 +402,7 @@ void AllProxy::on_in_button_save_tproxy_clicked()
 
 void AllProxy::on_in_button_save_lproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString lproxy_local_port, lproxy_server, lproxy_port, lproxy_username, lproxy_password;
 
     lproxy_local_port = project_settings.value("lproxy_local_port").toString();
@@ -439,7 +444,7 @@ void AllProxy::on_in_button_save_lproxy_clicked()
 
 void AllProxy::on_in_button_save_sproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString sproxy_username, sproxy_password, sproxy_server, sproxy_local_port, sproxy_port, sproxy_ssh_server;
 
     sproxy_username = project_settings.value("sproxy_username").toString();
@@ -483,6 +488,28 @@ void AllProxy::on_in_button_save_sproxy_clicked()
     this->ui->in_button_save_sproxy->setText("Saved");
     this->ui->in_button_save_sproxy->setVisible(false);
     
+}
+
+void AllProxy::on_in_button_save_cproxy_clicked()
+{
+    QSettings project_settings("allproxy_settings");
+    QString cproxy_ip, cproxy_port, sproxy_server, sproxy_local_port, sproxy_port, sproxy_ssh_server;
+
+    cproxy_ip = project_settings.value("cproxy_ip").toString();
+    cproxy_port = project_settings.value("cproxy_port").toString();
+
+    if(cproxy_ip != this->ui->in_text_cproxy_ip->text()){
+//        qDebug() << "Saving vproxy username : " << this->ui->in_text_cproxy_ip->text() << " from " << project_settings.value("cproxy_ip").toString();
+        project_settings.setValue("cproxy_ip", this->ui->in_text_cproxy_ip->text());
+        update_config("cproxy_ip", this->ui->in_text_cproxy_ip->text());
+    }
+    if(cproxy_port != this->ui->in_text_cproxy_port->text()){
+//        qDebug() << "Saving vproxy username : " << this->ui->in_text_cproxy_port->text() << " from " << project_settings.value("cproxy_port").toString();
+        project_settings.setValue("cproxy_port", this->ui->in_text_cproxy_port->text());
+        update_config("cproxy_port", this->ui->in_text_cproxy_port->text());
+    }
+    this->ui->in_button_save_cproxy->setText("Saved");
+    this->ui->in_button_save_cproxy->setVisible(false);
 }
 
 void AllProxy::on_in_text_nproxy_server_textChanged(const QString &arg1)
@@ -645,6 +672,18 @@ void AllProxy::on_in_text_vproxy_proxy_password_textChanged(const QString &arg1)
     this->ui->in_button_save_vproxy->setVisible(true);
 }
 
+void AllProxy::on_in_text_cproxy_ip_textChanged(const QString &arg1)
+{
+    this->ui->in_button_save_cproxy->setText("Save Configuration");
+    this->ui->in_button_save_cproxy->setVisible(true);
+}
+
+void AllProxy::on_in_text_cproxy_port_textChanged(const QString &arg1)
+{
+    this->ui->in_button_save_cproxy->setText("Save Configuration");
+    this->ui->in_button_save_cproxy->setVisible(true);
+}
+
 void AllProxy::on_browse_dproxy_clicked()
 {
     QFile *selected_file;
@@ -685,7 +724,7 @@ void AllProxy::on_push_dproxy_download_clicked()
 
 void AllProxy::on_switch_vproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString status = project_settings.value("status_vproxy").toString();
     QProcess p;
     if(status == "on"){
@@ -698,7 +737,7 @@ void AllProxy::on_switch_vproxy_clicked()
 
 void AllProxy::on_switch_sproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString status = project_settings.value("status_sproxy").toString();
     QProcess p;
     if(status == "on"){
@@ -711,7 +750,7 @@ void AllProxy::on_switch_sproxy_clicked()
 
 void AllProxy::on_switch_lproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString status = project_settings.value("status_lproxy").toString();
     QProcess p;
     if(status == "on"){
@@ -724,20 +763,21 @@ void AllProxy::on_switch_lproxy_clicked()
 
 void AllProxy::on_switch_tproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString status = project_settings.value("status_tproxy").toString();
     QProcess p;
     if(status == "on"){
         p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "tproxy");
     }else{
-        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
+//        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
+        p.startDetached( "bash", QStringList() << "start.sh" << "tproxy");
     }
     this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_cproxy_clicked()
 {
-    QSettings project_settings("project_settings");
+    QSettings project_settings("allproxy_settings");
     QString status = project_settings.value("status_cproxy").toString();
     QProcess p;
     if(status == "on"){
@@ -748,17 +788,3 @@ void AllProxy::on_switch_cproxy_clicked()
     this->setWindowState(Qt::WindowMinimized);
 }
 
-void AllProxy::on_in_button_cproxy_send_clicked()
-{
-    QSettings project_settings("project_settings");
-    project_settings.setValue("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
-    update_config("cproxy_dest_ip", this->ui->in_text_cproxy_dip->text());
-    QProcess p;
-    p.startDetached("gksudo", QStringList() << "bash" << "cproxy/send.sh");
-}
-
-void AllProxy::on_in_button_cproxy_change_settings_clicked()
-{
-    QProcess p;
-    p.startDetached("notifyosdconf");
-}

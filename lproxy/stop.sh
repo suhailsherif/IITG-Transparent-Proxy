@@ -2,7 +2,8 @@
 
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
-source /etc/environment
+
+source /etc/allproxy/config
 source $allproxy_path/config/config.sh
 
 sudo ps -ef | grep "privoxy" | awk '{print $2}' | xargs kill

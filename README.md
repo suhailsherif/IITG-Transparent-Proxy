@@ -17,7 +17,7 @@
 - Improvements (Includes analysis of the working of the IITG DNS)
 
 #### HowTo :
-- Run install script `sudo -E bash install.sh`
+- Run install script `./install.sh`
 - GUI  `./Allproxy`. Enable/Disable proxies as desired.
 - From terminal `gedit config/config.sh`; specify proxy for **nproxy**, and others if required.
 

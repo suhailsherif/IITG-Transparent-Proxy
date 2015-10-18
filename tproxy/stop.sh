@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# run inside tproxy folder
+cd "$(dirname "$0")"
+
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
-source /etc/environment
+
+source /etc/allproxy/config
 source $allproxy_path/config/config.sh
 
 . $allproxy_path/tproxy/script stop
@@ -22,7 +26,7 @@ fi
 if [ -f $allproxy_path/pid/tproxy ] 
 then 
 	typeset -i pid=$(cat $allproxy_path/pid/tproxy)
-	kill -15 $pid
+	sudo kill -15 $pid
 fi
 
 echo "Transparent proxy stopped."

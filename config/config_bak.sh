@@ -1,3 +1,6 @@
+
+## Do not change manually !!
+
 # Normal proxy settings
 export nproxy_server=
 export nproxy_port=
@@ -35,12 +38,9 @@ export tproxy_port=
 export tproxy_username=
 export tproxy_password=
 
-# File Transfer settings
-export fproxy_download_path=
-export fproxy_upload_path=
-export fproxy_upload_type=
-export fproxy_dest_ip=
-export fproxy_checked=
+# Chat Settings
+export cproxy_ip=172.16.25.106
+export cproxy_port=8520
 
 #Misc
 export allproxy_path=

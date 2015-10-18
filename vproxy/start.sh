@@ -1,20 +1,9 @@
 #!/bin/bash
 
-log_name=$(logname)
-
-if [ $log_name = "no login name" ]; then
-	log_name=$(id -nu)
-else
-	if [ $log_name = "root" ]; then
-		log_name=$(ps -o user= -p $$ | awk '{print $1}')
-	fi
-fi
-
-source /etc/environment
-source /home/$log_name/.bashrc
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
 
 sudo killall -I openvpn
-source $allproxy_path/config/config.sh
 
 echo "Vproxy" > $allproxy_path/log/vproxy
 

@@ -82,6 +82,7 @@ private slots:
     void on_in_text_vproxy_proxy_password_textChanged(const QString &arg1);
 
     void on_browse_dproxy_clicked();
+    
     void dproxy_update();
 
     void on_push_dproxy_download_clicked();
@@ -100,10 +101,11 @@ private slots:
 
     void on_in_text_lproxy_password_textChanged(const QString &arg1);
 
+    void on_in_text_cproxy_ip_textChanged(const QString &arg1);
 
-    void on_in_button_cproxy_send_clicked();
+    void on_in_text_cproxy_port_textChanged(const QString &arg1);
 
-    void on_in_button_cproxy_change_settings_clicked();
+    void on_in_button_save_cproxy_clicked();
 
 private:
     Ui::AllProxy *ui;
