@@ -25,8 +25,9 @@ fi
 
 if [ -f $allproxy_path/pid/tproxy ] 
 then 
-	typeset -i pid=$(cat $allproxy_path/pid/tproxy)
-	sudo kill -15 $pid
+	sed 's|[0-9]*|sudo kill &|g' $allproxy_path/pid/tproxy | bash
+	rm $allproxy_path/pid/tproxy
+	
 fi
 
 echo "Transparent proxy stopped."

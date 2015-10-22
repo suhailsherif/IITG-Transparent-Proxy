@@ -8,6 +8,8 @@ cd "$(dirname "$0")"
 
 sudo echo "Installing Allproxy."
 
+command -v curl >/dev/null 2>&1 || { echo >&2 "\"curl\" required but it's not installed.  Aborting."; exit 1; }
+
 # check internet connection
 status_code=$(curl -sL -w "%{http_code}\\n" "http://www.google.co.in/" -o /dev/null)
 if [ "$status_code" = "200" ];then
@@ -67,7 +69,7 @@ sudo -E apt-get update
 
 # install required packages
 req_packages=( "libevent-dev" "openvpn" "libnet-proxy-perl" "qt5-qmake" "netmask" \
-	"putty" "sshpass" "netcat" "openssh-server" "notify-osd" "privoxy" \
+	"putty" "sshpass" "netcat" "openssh-server" "notify-osd" "privoxy" "g++" "curl" \
 	"openssh-client" "gksu" "python-pycurl" "zenity" "redsocks" "qt5-default" \
 	)
 for i in "${req_packages[@]}"
@@ -122,7 +124,7 @@ if [ ! -d log ]; then
 	mkdir log/
 fi
 
-touch config/libnet-proxy-perl log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
+touch log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
 	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
 
 

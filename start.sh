@@ -9,27 +9,27 @@ source $allproxy_path/config/config.sh
 case $1 in
 tproxy)
 	
-	source $allproxy_path/tproxy/start.sh &
+	$allproxy_path/tproxy/start.sh &
 ;;
 vproxy)
 	
-	source $allproxy_path/vproxy/start.sh &
+	$allproxy_path/vproxy/start.sh &
 ;;
 lproxy)
 	
-	source $allproxy_path/lproxy/start.sh &
+	$allproxy_path/lproxy/start.sh &
 ;;
 sproxy)
 	
-	source $allproxy_path/sproxy/start.sh &
+	$allproxy_path/sproxy/start.sh &
 ;;
 dproxy)
 	
-	source $allproxy_path/dproxy/start.sh $2 $3 &
+	$allproxy_path/dproxy/start.sh $2 $3 &
 ;;
 cproxy)
 	
-	source $allproxy_path/cproxy/start.sh &
+	$allproxy_path/cproxy/start.sh &
 ;;
 *)
 	echo "Stopping process if already running ..."

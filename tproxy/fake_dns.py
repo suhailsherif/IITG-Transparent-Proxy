@@ -92,7 +92,7 @@ def respuesta(query):
 def signal_term_handler(signal, frame):
 	print 'SIGTERM'
 	print 'Saving cache'
-	a = file('./tproxy/dnsCache', 'w')
+	a = file(os.path.join(sys.argv[2],'dnsCache'), 'w')
 	for i in dnsCache:
 		a.write(dnsCache[i].ljust(20) + '\t\t' + i + '\n')
 	a.close()
@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
 	dnsCache = dict()
 	try:
-		a = file('./tproxy/defaultIPs', 'r')
+		a = file(os.path.join(sys.argv[2],'defaultIPs'), 'r')
 		for i in a:
 			line_ip = re.split("[, \-!?:\t\n]+", i)
 			dnsCache[line_ip[1]] = line_ip[0]
@@ -128,7 +128,7 @@ if __name__ == '__main__':
 		print 'Could not load default IPs'
 
 	try:
-		a = file('./tproxy/dnsCache', 'r')
+		a = file(os.path.join(sys.argv[2],'dnsCache'), 'r')
 		for i in a:
 			line_ip = re.split("[\n \t]+", i)
 			if re.match('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]', line_ip[0]):
@@ -146,7 +146,7 @@ if __name__ == '__main__':
 			t.start()
 	except (KeyboardInterrupt, SystemExit):
 		print 'Finalizing'
-		a = file('./tproxy/dnsCache', 'w')
+		a = file(os.path.join(sys.argv[2],'dnsCache'), 'w')
 		for i in dnsCache:
 			a.write(dnsCache[i].ljust(20) + '\t\t' + i + '\n')
 		a.close()

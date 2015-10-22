@@ -54,7 +54,7 @@ echo "initiating fake DNS server ..." >> $allproxy_path/log/tproxy
 
 command -v python >/dev/null 2>&1 || { echo >&2 "\"python\" required but it's not installed.  Aborting."; exit 1; }
 
-sudo python -u $allproxy_path/tproxy/fake_dns.py $allproxy_path/pid/tproxy > $allproxy_path/log/dns 2>&1 & 
+sudo python -u $allproxy_path/tproxy/fake_dns.py $allproxy_path/pid/tproxy $allproxy_path/tproxy > $allproxy_path/log/dns 2>&1 & 
 echo "DNS server initiated" >> $allproxy_path/log/tproxy 
 
 echo "Starting dnsmasq on all open interfaces ..." >> $allproxy_path/log/tproxy

@@ -43,6 +43,85 @@ AllProxy::~AllProxy()
 void AllProxy::start(){
     qDebug() << "App path : " << qApp->applicationDirPath();
 
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(update_display()));
+    timer->start(3000);
+}
+
+void AllProxy::update_display(){
+    QProcess p;
+
+    p.start("bash", QStringList() << "./config/update_status.sh");
+    if (p.state() == QProcess::Running)
+        p.waitForFinished(-1);
+    p.waitForFinished(-1);
+
+    QSettings project_settings("allproxy_settings");
+    
+    QFile t("./pid/tproxy");
+    if(t.exists()) {
+        project_settings.setValue("status_tproxy", "on");
+        this->ui->switch_tproxy->setStyleSheet("color: white;"
+                                        "background-color: green;"
+                                       "border-radius: 5px;");
+    }else{
+        project_settings.setValue("status_tproxy", "off");
+        this->ui->switch_tproxy->setStyleSheet("color: white;"
+                                        "background-color: red;"
+                                       "border-radius: 5px;");
+    }
+
+    QFile l("./pid/lproxy");
+    if(l.exists()) {
+        project_settings.setValue("status_lproxy", "on");
+        this->ui->switch_lproxy->setStyleSheet("color: white;"
+                                        "background-color: green;"
+                                       "border-radius: 5px;");
+    }else{
+        project_settings.setValue("status_lproxy", "off");
+        this->ui->switch_lproxy->setStyleSheet("color: white;"
+                                        "background-color: red;"
+                                       "border-radius: 5px;");
+    }
+
+    QFile c("./pid/cproxy");
+    if(c.exists()) {
+        project_settings.setValue("status_cproxy", "on");
+        this->ui->switch_cproxy->setStyleSheet("color: white;"
+                                        "background-color: green;"
+                                       "border-radius: 5px;");
+    }else{
+        project_settings.setValue("status_cproxy", "off");
+        this->ui->switch_cproxy->setStyleSheet("color: white;"
+                                        "background-color: red;"
+                                       "border-radius: 5px;");
+    }
+
+    QFile v("./pid/vproxy");
+    if(v.exists()) {
+        project_settings.setValue("status_vproxy", "on");
+        this->ui->switch_vproxy->setStyleSheet("color: white;"
+                                        "background-color: green;"
+                                       "border-radius: 5px;");
+    }else{
+        project_settings.setValue("status_vproxy", "off");
+        this->ui->switch_vproxy->setStyleSheet("color: white;"
+                                        "background-color: red;"
+                                       "border-radius: 5px;");
+    }
+
+    QFile s("./pid/sproxy");
+    if(s.exists()) {
+        project_settings.setValue("status_sproxy", "on");
+        this->ui->switch_sproxy->setStyleSheet("color: white;"
+                                        "background-color: green;"
+                                       "border-radius: 5px;");
+    }else{
+        project_settings.setValue("status_sproxy", "off");
+        this->ui->switch_sproxy->setStyleSheet("color: white;"
+                                        "background-color: red;"
+                                       "border-radius: 5px;");
+    }
 }
 
 void AllProxy::display_error(QString error){
@@ -73,80 +152,8 @@ bool AllProxy::event(QEvent * e) // overloading event(QEvent*) method of QMainWi
             int ms = 100;  
             struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
             nanosleep(&ts, NULL);
-            QProcess p;
-
-            p.start("bash", QStringList() << "./config/update_status.sh");
-            if (p.state() == QProcess::Running)
-                p.waitForFinished(-1);
-            p.waitForFinished(-1);
-
-            QSettings project_settings("allproxy_settings");
             
-            QFile t("./pid/tproxy");
-            if(t.exists()) {
-                project_settings.setValue("status_tproxy", "on");
-                this->ui->switch_tproxy->setStyleSheet("color: white;"
-                                                "background-color: green;"
-                                               "border-radius: 5px;");
-            }else{
-                project_settings.setValue("status_tproxy", "off");
-                this->ui->switch_tproxy->setStyleSheet("color: white;"
-                                                "background-color: red;"
-                                               "border-radius: 5px;");
-            }
-
-            QFile l("./pid/lproxy");
-            if(l.exists()) {
-                project_settings.setValue("status_lproxy", "on");
-                this->ui->switch_lproxy->setStyleSheet("color: white;"
-                                                "background-color: green;"
-                                               "border-radius: 5px;");
-            }else{
-                project_settings.setValue("status_lproxy", "off");
-                this->ui->switch_lproxy->setStyleSheet("color: white;"
-                                                "background-color: red;"
-                                               "border-radius: 5px;");
-            }
-
-            QFile c("./pid/cproxy");
-            if(c.exists()) {
-                project_settings.setValue("status_cproxy", "on");
-                this->ui->switch_cproxy->setStyleSheet("color: white;"
-                                                "background-color: green;"
-                                               "border-radius: 5px;");
-            }else{
-                project_settings.setValue("status_cproxy", "off");
-                this->ui->switch_cproxy->setStyleSheet("color: white;"
-                                                "background-color: red;"
-                                               "border-radius: 5px;");
-            }
-
-            QFile v("./pid/vproxy");
-            if(v.exists()) {
-                project_settings.setValue("status_vproxy", "on");
-                this->ui->switch_vproxy->setStyleSheet("color: white;"
-                                                "background-color: green;"
-                                               "border-radius: 5px;");
-            }else{
-                project_settings.setValue("status_vproxy", "off");
-                this->ui->switch_vproxy->setStyleSheet("color: white;"
-                                                "background-color: red;"
-                                               "border-radius: 5px;");
-            }
-
-            QFile s("./pid/sproxy");
-            if(s.exists()) {
-                project_settings.setValue("status_sproxy", "on");
-                this->ui->switch_sproxy->setStyleSheet("color: white;"
-                                                "background-color: green;"
-                                               "border-radius: 5px;");
-            }else{
-                project_settings.setValue("status_sproxy", "off");
-                this->ui->switch_sproxy->setStyleSheet("color: white;"
-                                                "background-color: red;"
-                                               "border-radius: 5px;");
-            }
-
+            update_display();
         }
         case QEvent::WindowDeactivate :{
             // lost focus
@@ -769,8 +776,7 @@ void AllProxy::on_switch_tproxy_clicked()
     if(status == "on"){
         p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "tproxy");
     }else{
-//        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
-        p.startDetached( "bash", QStringList() << "start.sh" << "tproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
     }
     this->setWindowState(Qt::WindowMinimized);
 }

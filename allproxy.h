@@ -107,6 +107,8 @@ private slots:
 
     void on_in_button_save_cproxy_clicked();
 
+    void update_display();
+
 private:
     Ui::AllProxy *ui;
     QToolBox *box;

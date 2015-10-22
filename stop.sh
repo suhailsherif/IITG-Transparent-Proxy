@@ -8,25 +8,25 @@ source $allproxy_path/config/config.sh
 
 case $1 in
 tproxy)
-	source $allproxy_path/tproxy/stop.sh &
+	$allproxy_path/tproxy/stop.sh &
 ;;
 vproxy)
-	source $allproxy_path/vproxy/stop.sh &
+	$allproxy_path/vproxy/stop.sh &
 ;;
 lproxy)
-	source $allproxy_path/lproxy/stop.sh &
+	$allproxy_path/lproxy/stop.sh &
 ;;
 sproxy)
-	source $allproxy_path/sproxy/stop.sh &
+	$allproxy_path/sproxy/stop.sh &
 ;;
 tproxy)
-	source $allproxy_path/tproxy/stop.sh &
+	$allproxy_path/tproxy/stop.sh &
 ;;
 fproxy)
-	source $allproxy_path/fproxy/stop.sh &
+	$allproxy_path/fproxy/stop.sh &
 ;;
 cproxy)
-	source $allproxy_path/cproxy/stop.sh &
+	$allproxy_path/cproxy/stop.sh &
 ;;
 all)
 	source $allproxy_path/sproxy/stop.sh &
