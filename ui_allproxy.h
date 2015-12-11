@@ -449,6 +449,7 @@ public:
         switch_tproxy = new QPushButton(widget_main);
         switch_tproxy->setObjectName(QStringLiteral("switch_tproxy"));
         switch_tproxy->setGeometry(QRect(310, 430, 41, 31));
+        switch_tproxy->setFlat(false);
         switch_lproxy = new QPushButton(widget_main);
         switch_lproxy->setObjectName(QStringLiteral("switch_lproxy"));
         switch_lproxy->setGeometry(QRect(510, 430, 41, 31));
@@ -494,7 +495,7 @@ public:
 
         retranslateUi(AllProxy);
 
-        toolbox_main->setCurrentIndex(2);
+        toolbox_main->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(AllProxy);

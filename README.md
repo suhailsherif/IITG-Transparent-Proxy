@@ -19,12 +19,12 @@
 #### HowTo :
 - Run install script `./install.sh`
 - GUI  `./Allproxy`. Enable/Disable proxies as desired.
-- From terminal `gedit config/config.sh`; specify proxy for **nproxy**, and others if required.
+- From terminal open `config/config.sh`; specify proxy for **nproxy**, and others as required.
 
 
-#### Tip :
-You can use **kde-nm-connection-editor** in package **plasma-nm** to create wireless access-point on your Ubuntu machine.
-
+#### Tips :
+- You can use **kde-nm-connection-editor** in package **plasma-nm** to create wireless access-point on your Ubuntu machine.
+- Always prefer local proxy to global proxy.
 
 #### *Tested OS :*
 - Ubuntu 14.04

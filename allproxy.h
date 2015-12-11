@@ -114,7 +114,7 @@ private:
     QToolBox *box;
     QFileSystemModel *dirmodel;
     QFileSystemModel *filemodel;
-    QString module_name,project_path;
+    QString module_name,project_path, allproxy_path;
     QStringList files_list;
     QString project_config_file_name;
     bool event(QEvent * e);

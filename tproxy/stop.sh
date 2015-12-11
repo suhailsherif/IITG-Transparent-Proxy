@@ -16,17 +16,17 @@ then
     sudo killall redsocks
 fi
 
-if pgrep "dnsmasq" > /dev/null
-then
-    sudo killall dnsmasq
-fi
+# if pgrep "dnsmasq" > /dev/null
+# then
+#     sudo killall dnsmasq
+# fi
 
 # sudo ps -ef | grep "redsocks" | awk '{print $2}' | xargs kill
 
 if [ -f $allproxy_path/pid/tproxy ] 
 then 
 	sed 's|[0-9]*|sudo kill &|g' $allproxy_path/pid/tproxy | bash
-	rm $allproxy_path/pid/tproxy
+	rm -rf $allproxy_path/pid/tproxy
 	
 fi
 

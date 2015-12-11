@@ -43,6 +43,7 @@ AllProxy::~AllProxy()
 void AllProxy::start(){
     qDebug() << "App path : " << qApp->applicationDirPath();
 
+    allproxy_path = qApp->applicationDirPath();
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update_display()));
     timer->start(3000);
@@ -51,14 +52,14 @@ void AllProxy::start(){
 void AllProxy::update_display(){
     QProcess p;
 
-    p.start("bash", QStringList() << "./config/update_status.sh");
+    p.start("bash", QStringList() << allproxy_path+"/config/update_status.sh");
     if (p.state() == QProcess::Running)
         p.waitForFinished(-1);
     p.waitForFinished(-1);
 
     QSettings project_settings("allproxy_settings");
     
-    QFile t("./pid/tproxy");
+    QFile t(allproxy_path+"/pid/tproxy");
     if(t.exists()) {
         project_settings.setValue("status_tproxy", "on");
         this->ui->switch_tproxy->setStyleSheet("color: white;"
@@ -71,7 +72,7 @@ void AllProxy::update_display(){
                                        "border-radius: 5px;");
     }
 
-    QFile l("./pid/lproxy");
+    QFile l(allproxy_path+"/pid/lproxy");
     if(l.exists()) {
         project_settings.setValue("status_lproxy", "on");
         this->ui->switch_lproxy->setStyleSheet("color: white;"
@@ -84,7 +85,7 @@ void AllProxy::update_display(){
                                        "border-radius: 5px;");
     }
 
-    QFile c("./pid/cproxy");
+    QFile c(allproxy_path+"/pid/cproxy");
     if(c.exists()) {
         project_settings.setValue("status_cproxy", "on");
         this->ui->switch_cproxy->setStyleSheet("color: white;"
@@ -97,7 +98,7 @@ void AllProxy::update_display(){
                                        "border-radius: 5px;");
     }
 
-    QFile v("./pid/vproxy");
+    QFile v(allproxy_path+"/pid/vproxy");
     if(v.exists()) {
         project_settings.setValue("status_vproxy", "on");
         this->ui->switch_vproxy->setStyleSheet("color: white;"
@@ -110,7 +111,7 @@ void AllProxy::update_display(){
                                        "border-radius: 5px;");
     }
 
-    QFile s("./pid/sproxy");
+    QFile s(allproxy_path+"/pid/sproxy");
     if(s.exists()) {
         project_settings.setValue("status_sproxy", "on");
         this->ui->switch_sproxy->setStyleSheet("color: white;"
@@ -735,11 +736,11 @@ void AllProxy::on_switch_vproxy_clicked()
     QString status = project_settings.value("status_vproxy").toString();
     QProcess p;
     if(status == "on"){
-        p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "vproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/stop.sh" << "vproxy");
     }else{
-        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "vproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/start.sh" << "vproxy");
     }
-    this->setWindowState(Qt::WindowMinimized);
+    // this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_sproxy_clicked()
@@ -748,11 +749,11 @@ void AllProxy::on_switch_sproxy_clicked()
     QString status = project_settings.value("status_sproxy").toString();
     QProcess p;
     if(status == "on"){
-        p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "sproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/stop.sh" << "sproxy");
     }else{
-        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "sproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/start.sh" << "sproxy");
     }
-    this->setWindowState(Qt::WindowMinimized);
+    // this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_lproxy_clicked()
@@ -761,11 +762,11 @@ void AllProxy::on_switch_lproxy_clicked()
     QString status = project_settings.value("status_lproxy").toString();
     QProcess p;
     if(status == "on"){
-        p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "lproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/stop.sh" << "lproxy");
     }else{
-        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "lproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/start.sh" << "lproxy");
     }
-    this->setWindowState(Qt::WindowMinimized);
+    // this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_tproxy_clicked()
@@ -774,11 +775,11 @@ void AllProxy::on_switch_tproxy_clicked()
     QString status = project_settings.value("status_tproxy").toString();
     QProcess p;
     if(status == "on"){
-        p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "tproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/stop.sh" << "tproxy");
     }else{
-        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "tproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/start.sh" << "tproxy");
     }
-    this->setWindowState(Qt::WindowMinimized);
+    // this->setWindowState(Qt::WindowMinimized);
 }
 
 void AllProxy::on_switch_cproxy_clicked()
@@ -787,10 +788,10 @@ void AllProxy::on_switch_cproxy_clicked()
     QString status = project_settings.value("status_cproxy").toString();
     QProcess p;
     if(status == "on"){
-        p.startDetached("gksudo", QStringList() << "bash" << "stop.sh" << "cproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/stop.sh" << "cproxy");
     }else{
-        p.startDetached("gksudo", QStringList() << "bash" << "start.sh" << "cproxy");
+        p.startDetached("gksudo", QStringList() << "bash" << allproxy_path+"/start.sh" << "cproxy");
     }
-    this->setWindowState(Qt::WindowMinimized);
+    // this->setWindowState(Qt::WindowMinimized);
 }
 

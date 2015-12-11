@@ -29,11 +29,11 @@ fi
 
 sudo fuser -k 55/udp
 
-if pgrep "dnsmasq" > /dev/null
-then
-    sudo killall dnsmasq
-fi
-sleep 0.1
+# if pgrep "dnsmasq" > /dev/null
+# then
+#     sudo killall dnsmasq
+# fi
+# sleep 0.1
 
 echo "Tproxy" > $allproxy_path/log/tproxy
 
@@ -42,9 +42,6 @@ source $allproxy_path/config/config.sh #&
 
 echo "Configuring iptables ..." >> $allproxy_path/log/tproxy
 . $allproxy_path/tproxy/script start #& 
-
-echo "Configuring routes ..." >> $allproxy_path/log/tproxy
-source $allproxy_path/config/config_routes.sh >> $allproxy_path/log/config_routes #&
 
 echo "Configuring redsocks ..." >> $allproxy_path/log/tproxy
 . $allproxy_path/config/redsocks_config.sh $tproxy_server $tproxy_port $tproxy_username $tproxy_password > $allproxy_path/log/redsocks 2>&1 & 
@@ -62,10 +59,10 @@ echo "Starting dnsmasq on all open interfaces ..." >> $allproxy_path/log/tproxy
 # command -v netmask >/dev/null 2>&1 || { echo >&2 "\"netmask\" required but it's not installed.  Aborting."; exit 1; }
 command -v dnsmasq >/dev/null 2>&1 || { echo >&2 "\"dnsmasq\" required but it's not installed.  Aborting."; exit 1; }
 
-if pgrep "dnsmasq" > /dev/null
-then
-    sudo dnsmasq
-fi
+# if pgrep "dnsmasq" > /dev/null
+# then
+#     sudo dnsmasq
+# fi
 
 echo "Transparent proxy initiated, running in background" >> $allproxy_path/log/tproxy 
 

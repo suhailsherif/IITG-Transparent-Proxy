@@ -12,7 +12,7 @@ cp "$allproxy_path/cproxy/server.conf.in" "$allproxy_path/cproxy/server.conf"
 
 if [ $# -eq 0 ]; then
     # no arguments"
-    sed -i "s,cproxy_ip,$cproxy_ip," $allproxy_path/cproxy/server.conf
+    sed -i "s,cproxy_ip,0.0.0.0," $allproxy_path/cproxy/server.conf
     sed -i "s,cproxy_port,$cproxy_port," $allproxy_path/cproxy/server.conf
 else
 	sed -i "s,cproxy_ip,$1," $allproxy_path/cproxy/server.conf
@@ -37,7 +37,7 @@ fi
 if [ $# -eq 0 ]; then
     # no arguments"
     echo "Opening link http://$cproxy_ip:$cproxy_port"
-    xdg-open "http://$cproxy_ip:$cproxy_port"
+    xdg-open "http://localhost:$cproxy_port"
 else
 	echo "Opening link http://$1:$2"
 	xdg-open "http://$1:$2"

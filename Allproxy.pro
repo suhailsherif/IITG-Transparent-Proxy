@@ -18,8 +18,6 @@ SOURCES += main.cpp\
         allproxy.cpp
 
 
-HEADERS  += allproxy.h \
-    constants.h \
-    constants.h
+HEADERS  += allproxy.h
 
 FORMS    += allproxy.ui
