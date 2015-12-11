@@ -1,16 +1,19 @@
 #!/bin/bash
 
-# force bash
+## force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
-# run only inside Allproxy folder
+## run only inside Allproxy folder
 cd "$(dirname "$0")"
 
 sudo echo "Installing Allproxy."
 
+## install curl
+sudo apt-get install curl
+
 command -v curl >/dev/null 2>&1 || { echo >&2 "\"curl\" required but it's not installed.  Aborting."; exit 1; }
 
-# check internet connection
+## check internet connection
 status_code=$(curl -sL -w "%{http_code}\\n" "http://www.google.co.in/" -o /dev/null)
 if [ "$status_code" = "200" ];then
 	echo "Proxy Connection successful"
@@ -64,13 +67,13 @@ else
 	fi
 fi
 
-# update
+## update
 sudo -E apt-get update
 
-# install required packages
-req_packages=( "libevent-dev" "openvpn" "libnet-proxy-perl" "qt5-qmake" "netmask" \
-	"putty" "sshpass" "netcat" "openssh-server" "notify-osd" "privoxy" "g++" "curl" \
-	"openssh-client" "gksu" "python-pycurl" "zenity" "redsocks" "qt5-default" \
+## install required packages
+req_packages=( "libevent-dev" "openvpn" "qt5-qmake" "qt5-default" "netmask" \
+	"putty" "sshpass" "openssh-server" "openssh-client" "privoxy" "g++" "curl" \
+	"gksu" "python-pycurl" "zenity" "redsocks" "netcat" \
 	)
 for i in "${req_packages[@]}"
 do
@@ -97,28 +100,28 @@ fi
 ## create log/config files ##
 #############################
 
-# user-specific directory
+## user-specific directory
 if [ ! -d $HOME/.allproxy ]; then
 	mkdir $HOME/.allproxy
 fi
 
 touch $HOME/.allproxy/config
 
-#global directory
+## global directory
 if [ ! -d /etc/allproxy ]; then
 	sudo mkdir -p /etc/allproxy
 fi
 
 sudo touch /etc/allproxy/config
 
-# set allproxy path
+## set allproxy path
 cur_path=$(pwd)
 
 sed -i 's|allproxy_path=.*|allproxy_path='"$cur_path"'|g' config/config.sh
 echo "export allproxy_path=$cur_path" >> $HOME/.allproxy/config
 echo "export allproxy_path=$cur_path" | sudo tee -a /etc/allproxy/config > /dev/null
 
-echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
+# echo ". $cur_path/config/config.sh" >> $HOME/.bashrc
 
 if [ ! -d log ]; then
 	mkdir log/
@@ -128,7 +131,7 @@ touch log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
 	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
 
 
-# enable dash launching
+## enable dash launching
 cp allproxy.desktop.in allproxy.desktop
 sed -i 's|allproxy_path|'"$cur_path"'|g' allproxy.desktop
 chmod +x allproxy.desktop
@@ -173,21 +176,12 @@ fi
 ## dproxy ##
 ############
 
-# set python version
-python_version=2.7
-
-# Make the main file executable
+## Make the main file executable
 chmod a+x ./dproxy/main.py
-
-# Copy the downloader class library to /usr/lib/python (this can be changed based on the version of python)
-sudo cp ./dproxy/downloader.py /usr/lib/python$python_version/
-
-# Copy the main file to the bin folder
-sudo cp ./dproxy/main.py /usr/bin/pycurl-download
-
-# Create a log file and change its read write permission
+syst
+## Create a log file and change its read write permission
 sudo touch /var/log/downloader.log
 sudo chmod 777 /var/log/downloader.log
 
-# restart network manager 
+## restart network manager 
 sudo service network-manager restart

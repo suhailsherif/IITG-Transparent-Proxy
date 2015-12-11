@@ -6,6 +6,7 @@ import re
 import signal
 import os
 import sys
+import json
 
 defaultIP = '8.8.8.8'
 
@@ -40,17 +41,20 @@ def respuesta(query):
 		query.ip = dnsCache[query.dominio]
 	else:
 		query.dominio = query.dominio.replace('_', '')
-		if query.dominio.lower()[-12:] == '.appspot.com':
-			query.ip = '74.125.224.208'
+		if query.dominio.lower()[-11:] == 'dns-api.org':
+			query.ip = '80.68.84.120'
 			stat = 0
 		else:
 			try:
-				dnsConn = httplib.HTTPConnection(
-					'gaednsproxy.appspot.com', timeout=20)
-				dnsConn.request(
-					"GET", "/?d=" + base64.b64encode(base64.b64encode(query.dominio)))
+				# print query.dominio
+
+				dnsConn = httplib.HTTPSConnection('dns-api.org', timeout=15)
+				dnsConn.request("GET", "/A/" + query.dominio)
+				
 				dnsRes = dnsConn.getresponse()
-				query.ip = dnsRes.read()
+				jsonRes = json.loads(dnsRes.read())
+				query.ip = jsonRes[0]['value']
+
 				if dnsRes.status == 200:
 					stat = 1
 				else:
@@ -85,7 +89,7 @@ def respuesta(query):
 	if stat == 1:
 		print '{:5s}  {:15s} {:15s}'.format(str(dnsRes.status), str(query.ip), str(query.dominio))
 		pass	
-	elif stat == 2 and not query.dominio == 'gaednsproxy.appspot.com':
+	elif stat == 2 and not query.dominio == 'dns-api.org':
 		print '{:5s}  {:20s} {:15s}'.format('Hit', str(query.ip), str(query.dominio))
 		pass
 

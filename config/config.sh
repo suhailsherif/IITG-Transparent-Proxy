@@ -10,12 +10,12 @@ export nproxy_password=kunal15595
 
 # Openvpn proxy settings
 export vproxy_username=vpnbook
-export vproxy_password=pRasa6ap
-export vproxy_path=/home/kunal15595/Allproxy/vpnbook/vpnbook-us1-tcp443.ovpn
+export vproxy_password=2retebRa
+export vproxy_path=/home/kunal15595/vpn/vpnbook-ca1-tcp443.ovpn
 export vproxy_proxy_username=k.khandelwal
 export vproxy_proxy_password=kunal15595
-export vproxy_server=202.141.80.19
-export vproxy_port=3128
+export vproxy_server=10.10.2.40
+export vproxy_port=8787
 
 # Local Squid proxy server settings
 export lproxy_username=k.khandelwal
@@ -33,8 +33,8 @@ export sproxy_username=kunal15595
 export sproxy_server=202.141.80.19
 
 # Transparent proxy settings
-export tproxy_server=202.141.80.19
-export tproxy_port=3128
+export tproxy_server=127.0.0.1
+export tproxy_port=8787
 export tproxy_username=k.khandelwal
 export tproxy_password=kunal15595
 
