@@ -31,10 +31,10 @@ start)
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 443 -j REDIRECT --to 8124
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 22 -j REDIRECT --to 8124
 	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5228 -j REDIRECT --to 8124
+	sudo iptables -t nat -A REDSOCKS -p tcp --dport 5222 -j REDIRECT --to 8124
 	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 5060 -j REDIRECT --to 8124
 	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 5061 -j REDIRECT --to 8124
 	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 5223 -j REDIRECT --to 8124
-	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 5222 -j REDIRECT --to 8124
 	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 5242 -j REDIRECT --to 8124	# viber
 	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 4244 -j REDIRECT --to 8124	# viber
 	# sudo iptables -t nat -A REDSOCKS -p tcp --dport 943 -j REDIRECT --to 8124
