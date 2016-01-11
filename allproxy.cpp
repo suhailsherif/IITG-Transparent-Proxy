@@ -134,7 +134,7 @@ void AllProxy::update_config(QString key, QString value){
     key.replace(QString("/"), QString("\\/"));
     value.replace(QString("/"), QString("\\/"));
     QProcess p;
-    QString s = "sed -i s/" + key + "=.*/" + key + "=" + value + "/g config/config.sh";
+    QString s = "sed -i s/" + key + "=.*/" + key + "=" + value + "/g " + allproxy_path + "/config/config.sh";
     qDebug() << "string: " << s ;
     p.start(s);
     if (p.state() == QProcess::Running)
