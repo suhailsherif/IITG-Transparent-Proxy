@@ -25,3 +25,4 @@ debug.txt
 constants.h
 config/config.sh
 config/redsocksauto.conf
+tproxy/dnsCache
