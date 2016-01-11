@@ -128,7 +128,8 @@ if [ ! -d log ]; then
 fi
 
 touch log/config_routes log/cproxy log/dns log/fproxy log/openvpn log/redsocks \
-	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy
+	log/sproxy log/start.log log/stop.log log/tproxy log/unconfig_routes log/vproxy \
+	tproxy/dnsCache
 
 
 ## enable dash launching
