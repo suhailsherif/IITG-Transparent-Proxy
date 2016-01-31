@@ -118,7 +118,7 @@ if __name__ == '__main__':
 	print 'DNS server running on port 55.'
 
 	udps = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	udps.bind(('', 55))
+	udps.bind(("0.0.0.0", 55))
 
 	dnsCache = dict()
 	try:

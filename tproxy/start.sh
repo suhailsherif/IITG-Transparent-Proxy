@@ -21,12 +21,13 @@ fi
 sudo chown root:root -R /var/log
 sudo chmod 777 -R /var/log
 
-# Killing fake DNS server, if running
+# Killing redsocks, if running
 if pgrep "redsocks" > /dev/null
 then
     sudo killall -I redsocks
 fi
 
+# Killing fake DNS server, if running
 sudo fuser -k 55/udp
 
 # if pgrep "dnsmasq" > /dev/null
