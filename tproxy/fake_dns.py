@@ -40,6 +40,8 @@ def respuesta(query):
 	if dnsCache.__contains__(query.dominio):
 		query.ip = dnsCache[query.dominio]
 	else:
+		if len(query.dominio.split('.')) < 2:
+			return
 		query.dominio = query.dominio.replace('_', '')
 		if query.dominio.lower()[-11:] == 'dns-api.org':
 			query.ip = '80.68.84.120'
@@ -131,16 +133,17 @@ if __name__ == '__main__':
 	except:
 		print 'Could not load default IPs'
 
-	try:
-		a = file(os.path.join(sys.argv[2],'dnsCache'), 'r')
-		for i in a:
-			line_ip = re.split("[\n \t]+", i)
-			if re.match('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]', line_ip[0]):
-				dnsCache[line_ip[1]] = line_ip[0]
-		a.close()
-		print 'Cached IPs loaded'
-	except:
-		print 'Could not load cached IPs'
+	## load DNS cache
+	# try:
+	# 	a = file(os.path.join(sys.argv[2],'dnsCache'), 'r')
+	# 	for i in a:
+	# 		line_ip = re.split("[\n \t]+", i)
+	# 		if re.match('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]', line_ip[0]):
+	# 			dnsCache[line_ip[1]] = line_ip[0]
+	# 	a.close()
+	# 	print 'Cached IPs loaded'
+	# except:
+	# 	print 'Could not load cached IPs'
 
 	try:
 		while 1:
@@ -150,9 +153,12 @@ if __name__ == '__main__':
 			t.start()
 	except (KeyboardInterrupt, SystemExit):
 		print 'Finalizing'
-		a = file(os.path.join(sys.argv[2],'dnsCache'), 'w')
-		for i in dnsCache:
-			a.write(dnsCache[i].ljust(20) + '\t\t' + i + '\n')
-		a.close()
+		
+		## save DNS cache
+		# a = file(os.path.join(sys.argv[2],'dnsCache'), 'w')
+		# for i in dnsCache:
+		# 	a.write(dnsCache[i].ljust(20) + '\t\t' + i + '\n')
+		# a.close()
+		
 		udps.close()
 		sys.exit(0)

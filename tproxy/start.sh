@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# execute with privileges only
+if [ $EUID != 0 ]; then
+    sudo bash "$0" "$@"
+    exit $?
+fi
+
 # run inside tproxy folder
 cd "$(dirname "$0")"
 
@@ -8,7 +14,7 @@ source $allproxy_path/config/config.sh
 
 if [ -z ${allproxy_path+x} ]; then 
 	echo "allproxy_path is unset. set and try again."
-	exit 1 
+	exit 1
 fi
 
 if [ -f $allproxy_path/config/config.sh ]; then
