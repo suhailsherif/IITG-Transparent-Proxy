@@ -3,24 +3,41 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
-echo "This script stops the transparent proxy and restores the normal behavior"
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
 
 case $1 in
 tproxy)
-	source ./tproxy/stop.sh &
+	$allproxy_path/tproxy/stop.sh &
 ;;
 vproxy)
-	source ./vproxy/stop.sh &
+	$allproxy_path/vproxy/stop.sh &
 ;;
 lproxy)
-	source ./lproxy/stop.sh &
+	$allproxy_path/lproxy/stop.sh &
 ;;
 sproxy)
-	source ./sproxy/stop.sh &
+	$allproxy_path/sproxy/stop.sh &
+;;
+tproxy)
+	$allproxy_path/tproxy/stop.sh &
+;;
+fproxy)
+	$allproxy_path/fproxy/stop.sh &
+;;
+cproxy)
+	$allproxy_path/cproxy/stop.sh &
+;;
+all)
+	source $allproxy_path/sproxy/stop.sh &
+	source $allproxy_path/tproxy/stop.sh &
+	source $allproxy_path/lproxy/stop.sh &
+	source $allproxy_path/vproxy/stop.sh &
+	source $allproxy_path/cproxy/stop.sh &
+	source $allproxy_path/fproxy/stop.sh &
 ;;
 *) 
-	sudo fuser -k 55/udp
-	source ./config/config.sh
-	source ./config/unconfig_routes.sh >> ./log/unconfig_routes
+	source $allproxy_path/config/config.sh
+	source $allproxy_path/config/unconfig_routes.sh >> $allproxy_path/log/unconfig_routes
 ;;
 esac

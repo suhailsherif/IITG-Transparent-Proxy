@@ -3,30 +3,37 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
+
 case $1 in
 tproxy)
 	
-	source ./tproxy/start.sh &
+	$allproxy_path/tproxy/start.sh &
 ;;
 vproxy)
 	
-	source ./vproxy/start.sh &
+	$allproxy_path/vproxy/start.sh &
 ;;
 lproxy)
 	
-	source ./lproxy/start.sh &
+	$allproxy_path/lproxy/start.sh &
 ;;
 sproxy)
 	
-	source ./sproxy/start.sh &
+	$allproxy_path/sproxy/start.sh &
 ;;
-nproxy)
+dproxy)
 	
-	source ./nproxy/start.sh &
+	$allproxy_path/dproxy/start.sh $2 $3 &
+;;
+cproxy)
+	
+	$allproxy_path/cproxy/start.sh &
 ;;
 *)
 	echo "Stopping process if already running ..."
-	. ./stop.sh > ./log/stop.log
+	. $allproxy_path/stop.sh > $allproxy_path/log/stop.log
 
 	echo "Checking connectivity to default Gateway ..."
 	def_gateway=$(/sbin/ip route | awk '/default/ { print $3 }')
@@ -78,36 +85,38 @@ nproxy)
 			fi
 		fi
 	fi
-
-	sed -i s/restore_gateway=.*/restore_gateway=$def_gateway/g config/config.sh
-
 	
 	echo "Check your config/config.sh file"
 	read -p "Press [Enter] key to start ..."
 
-	chmod +rwx ./config/config.sh
+	chmod +rwx $allproxy_path/config/config.sh
 
-	source ./config/config.sh
+	source $allproxy_path/config/config.sh
 
 	read -p "Which proxy ? : " which_proxy
 
 	case $which_proxy in
 	tproxy)
-		source ./tproxy/start.sh &
+		source $allproxy_path/tproxy/start.sh &
 	;;
 	vproxy)
-		source ./vproxy/start.sh &
+		source $allproxy_path/vproxy/start.sh &
 	;;
 	lproxy)
-		source ./lproxy/start.sh &
+		source $allproxy_path/lproxy/start.sh &
 	;;
 	sproxy)
-		source ./sproxy/start.sh &
+		source $allproxy_path/sproxy/start.sh &
 	;;
 	nproxy)
-		source ./nproxy/start.sh &
+		source $allproxy_path/nproxy/start.sh &
+	;;
+	cproxy)
+		source $allproxy_path/cproxy/start.sh &
 	;;
 	esac
 ;;
 
 esac
+
+exit

@@ -3,19 +3,14 @@
 # force bash
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 
-sudo ps -ef | grep "squid3" | awk '{print $2}' | xargs kill
+source /etc/allproxy/config
+source $allproxy_path/config/config.sh
 
-echo "7" >> new.txt
+sudo ps -ef | grep "privoxy" | awk '{print $2}' | xargs kill
 
-sudo echo "8" >> new.txt
-if [ -f ./pid/lproxy ] 
+if [ -f $allproxy_path/pid/lproxy ] 
 then 
-	sed 's|[0-9]*|sudo kill &|g' ./pid/lproxy | bash
-	rm ./pid/lproxy
+	sed 's|[0-9]*|sudo kill &|g' $allproxy_path/pid/lproxy | bash
+	rm $allproxy_path/pid/lproxy
 	
-fi
-
-if [ -f /etc/squid3/squid_bak.conf ] 
-then 
-	sudo mv /etc/squid3/squid_bak.conf /etc/squid3/squid.conf 
 fi

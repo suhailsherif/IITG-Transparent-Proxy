@@ -1,0 +1,34 @@
+
+confdir /etc/privoxy
+logdir /var/log/privoxy
+actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
+actionsfile default.action   # Main actions file
+actionsfile user.action      # User customizations
+filterfile default.filter
+filterfile user.filter      # User customizations
+logfile logfile
+toggle  1
+enable-remote-toggle  0
+enable-remote-http-toggle  0
+enable-edit-actions 0
+enforce-blocks 0
+buffer-limit 4096
+enable-proxy-authentication-forwarding 1
+forwarded-connect-retries  0
+accept-intercepted-requests 0
+allow-cgi-request-crunching 0
+split-large-forms 0
+keep-alive-timeout 5
+tolerate-pipelining 1
+socket-timeout 300
+connection-sharing 1
+
+# forward   			/	k.khandelwal:kunal15595@202.141.80.19:3128
+forward   			/	202.141.80.19:3128
+# forward-socks5 	/ 	127.0.0.1:9050 .
+# forward-socks4a 	/	127.0.0.1:9050 .
+# listen-address  localhost:8787
+# listen-address  127.0.0.1:8787
+listen-address 0.0.0.0:8787
+
+
