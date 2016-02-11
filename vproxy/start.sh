@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# execute with privileges only
+if [ $EUID != 0 ]; then
+    sudo bash "$0" "$@"
+    exit $?
+fi
+
 source /etc/allproxy/config
 source $allproxy_path/config/config.sh
 
