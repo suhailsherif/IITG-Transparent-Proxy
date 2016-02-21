@@ -6,9 +6,6 @@ import re
 
 defaultIP='8.8.8.8'
 
-# import sys
-# sys.stdout = open('./log/DNS.log', 'w+')
-
 class DNSQuery:
   def __init__(self, data, addr):
     self.data=data
@@ -60,9 +57,9 @@ def respuesta(query):
     packet+=str.join('',map(lambda x: chr(int(x)), query.ip.split('.'))) # 4bytes of IP
   udps.sendto(packet, query.addr)
   if stat == 1:
-    print str(dnsRes.status)+'-'+str(dnsRes.reason)+'-'+str(query.dominio)+'-'+str(query.ip)
+    print dnsRes.status, dnsRes.reason, query.dominio, query.ip
   if stat == 2 and not query.dominio == 'gaednsproxy1.appspot.com':
-    print 'Result from cache: '+str(query.dominio)+'-'+str(query.ip)
+    print 'Result from cache:', query.dominio, query.ip
 
 if __name__ == '__main__':
   print 'DNS server running on port 55.'

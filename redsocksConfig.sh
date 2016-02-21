@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 
 echo "
@@ -29,6 +29,6 @@ redsocks {
  login = \"$3\";
  password = \"$4\";
 }
-" > ./redsocks/redsocksauto.conf
+" > redsocks/redsocksauto.conf
 
-sudo ./redsocks/redsocks -c ./redsocks/redsocksauto.conf
+sudo ./redsocks/redsocks -c redsocks/redsocksauto.conf
