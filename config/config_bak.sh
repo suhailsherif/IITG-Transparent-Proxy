@@ -1,12 +1,10 @@
-
-## Do not change manually !!
-
 # Normal proxy settings
 export nproxy_server=
 export nproxy_port=
 export nproxy_gateway=
 export nproxy_username=
 export nproxy_password=
+export restore_gateway=
 
 # Openvpn proxy settings
 export vproxy_username=
@@ -37,10 +35,3 @@ export tproxy_server=
 export tproxy_port=
 export tproxy_username=
 export tproxy_password=
-
-# Chat Settings
-export cproxy_ip=172.16.25.106
-export cproxy_port=8520
-
-#Misc
-export allproxy_path=

@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,9 +14,12 @@ TEMPLATE = app
 QMAKE_CFLAGS += -std=gnu99
 
 SOURCES += main.cpp\
-        allproxy.cpp
+        allproxy.cpp \
 
 
-HEADERS  += allproxy.h
+HEADERS  += allproxy.h \
+    constants.h \
+    constants.h \
 
 FORMS    += allproxy.ui
+
