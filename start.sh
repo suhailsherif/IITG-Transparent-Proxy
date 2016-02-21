@@ -81,7 +81,24 @@ nproxy)
 
 	sed -i s/restore_gateway=.*/restore_gateway=$def_gateway/g config/config.sh
 
-	
+	req_packages=( "libevent-dev" "openvpn" "plasma-nm" "libnet-proxy-perl" "putty" "squid3" "sshpass" )
+	for i in "${req_packages[@]}"
+	do
+		PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $i |grep "installed")
+		echo Checking package $i: $PKG_OK
+		if [ "" = "$PKG_OK" ]; then
+		  echo "No $i. Setting up $i."
+		  sudo apt-get --force-yes --yes install $i
+		fi
+	done
+
+	if [ ! -f ./config/config.sh ] 
+	then
+		echo "Creating file config.sh ..."
+		touch ./config/config.sh
+		cp ./config/config_bak.sh ./config/config.sh
+	fi
+
 	echo "Check your config/config.sh file"
 	read -p "Press [Enter] key to start ..."
 

@@ -649,36 +649,3 @@ void AllProxy::on_in_text_vproxy_proxy_password_textChanged(const QString &arg1)
     this->ui->in_button_save_vproxy->setVisible(true);
 
 }
-
-void AllProxy::on_browse_dproxy_clicked()
-{
-    QFile *selected_file;
-    QString file_path,previous_path;
-
-    if(previous_path=="")
-        previous_path="/home";
-
-    file_path = QFileDialog::getOpenFileName(this,
-        tr("Any file"), previous_path, tr("All files (*)"));
-
-    if( file_path != NULL ){
-
-        selected_file = new QFile(file_path);
-
-        this->ui->in_dproxy_filepath->setText(file_path);
-    }
-
-
-}
-
-void AllProxy::on_push_dproxy_download_clicked()
-{
-    QProcess p;
-
-    p.startDetached("pycurl-download", QStringList() << this->ui->in_dproxy_url->text() << this->ui->in_dproxy_filepath->text());
-//    if (p.state() == QProcess::Running)
-//        p.
-//        p.waitForFinished(-1);
-
-//    p.waitForFinished(-1);
-}

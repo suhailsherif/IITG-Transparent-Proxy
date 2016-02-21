@@ -7,4 +7,3 @@ startMyProxy.sh
 config.sh
 *.log
 *test.sh
-*.pyc
