@@ -97,10 +97,6 @@ private slots:
 
     void on_in_text_vproxy_proxy_password_textChanged(const QString &arg1);
 
-    void on_browse_dproxy_clicked();
-
-    void on_push_dproxy_download_clicked();
-
 private:
     Ui::AllProxy *ui;
     QToolBox *box;
