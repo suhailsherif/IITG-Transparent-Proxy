@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Allproxy
-Exec=allproxy_path/Allproxy
-Terminal=false
-Type=Application
-Icon=allproxy_path/icon.png
-

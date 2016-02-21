@@ -1,42 +1,33 @@
 #!/bin/bash
 
-source /etc/allproxy/config
-source $allproxy_path/config/config.sh
+source ./config/config.sh
+# echo "1" >> new.txt
+# sudo echo "2" >> new.txt
 
-echo "
-confdir /etc/privoxy
-logdir /var/log/privoxy
-actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
-actionsfile default.action   # Main actions file
-actionsfile user.action      # User customizations
-filterfile default.filter
-filterfile user.filter      # User customizations
-logfile logfile
-toggle  1
-enable-remote-toggle  0
-enable-remote-http-toggle  0
-enable-edit-actions 0
-enforce-blocks 0
-buffer-limit 4096
-enable-proxy-authentication-forwarding 1
-forwarded-connect-retries  0
-accept-intercepted-requests 0
-allow-cgi-request-crunching 0
-split-large-forms 0
-keep-alive-timeout 5
-tolerate-pipelining 1
-socket-timeout 300
-connection-sharing 1
+sudo mv /etc/squid3/squid.conf /etc/squid3/squid_bak.conf
 
-# forward   			/	$lproxy_username:$lproxy_password@$lproxy_server:$lproxy_port
-forward   			/	$lproxy_server:$lproxy_port
-# forward-socks5 	/ 	127.0.0.1:9050 .
-# forward-socks4a 	/	127.0.0.1:9050 .
-# listen-address  localhost:$lproxy_local_port
-# listen-address  127.0.0.1:$lproxy_local_port
-listen-address 0.0.0.0:$lproxy_local_port
+echo " " > /etc/squid3/squid.conf
+echo "acl lan src 10.10.0.0/18" >> /etc/squid3/squid.conf
+echo "http_access allow localhost" >> /etc/squid3/squid.conf
+echo "http_access allow lan" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 443" >> /etc/squid3/squid.conf
+echo "acl SSL_ports port 443" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 80		# http" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 21		# ftp" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 443		# https" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 70		# gopher" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 210		# wais" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 1025-65535	# unregistered ports" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 280		# http-mgmt" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 488		# gss-http" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 591		# filemaker" >> /etc/squid3/squid.conf
+echo "acl Safe_ports port 777		# multiling http" >> /etc/squid3/squid.conf
+echo "acl CONNECT method CONNECT" >> /etc/squid3/squid.conf
+echo "http_port $lproxy_local_port" >> /etc/squid3/squid.conf
+# echo "http_port $lproxy_trans_port intercept" >> /etc/squid3/squid.conf
+echo "cache_peer $lproxy_server parent $lproxy_port 0 no-query default login=$lproxy_username:$lproxy_password" >> /etc/squid3/squid.conf
+echo "never_direct allow all" >> /etc/squid3/squid.conf
 
-" > $allproxy_path/config/config_lproxy
-
-privoxy --no-daemon --pidfile $allproxy_path/pid/lproxy $allproxy_path/config/config_lproxy
-
+sudo squid3
+sleep 0.5
+echo `ps aux | grep -m 1 -F 'squid3' | grep -v -F 'grep' | awk '{ print $2 }'` > ./pid/lproxy

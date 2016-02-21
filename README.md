@@ -1,7 +1,5 @@
 # All Proxy
 
-[![Build Status](https://travis-ci.org/kunal15595/Allproxy.svg?branch=master)](https://travis-ci.org/kunal15595/Allproxy)
-
 #### We would like to thank the following for their contributions:
 -	(Past, present and future) Users, Testers and Debuggers
 -	[Redsocks](http://darkk.net.ru/redsocks/)  - an opensource transparent socks redirector that wouldn't work by itself in IITG
@@ -17,20 +15,16 @@
 - Improvements (Includes analysis of the working of the IITG DNS)
 
 #### HowTo :
-- Run install script `./install.sh`
-- GUI  `./Allproxy`. Enable/Disable proxies as desired.
-- From terminal open `config/config.sh`; specify proxy for **nproxy**, and others as required.
+- Run install script `sudo sh install.sh`
 
+<br/>
+You can use **kde-nm-connection-editor** in package **plasma-nm** to create wireless access-point on your Ubuntu machine.
+<br/>
 
-#### Tips :
-- You can use **kde-nm-connection-editor** in package **plasma-nm** to create wireless access-point on your Ubuntu machine.
-- Always prefer local proxy to global proxy.
+##### *Tested OS :*
+- Ubuntu 14.04 64-bit
 
-#### *Tested OS :*
-- Ubuntu 14.04
-- Linux Mint
-
-
-#### *Beware !*
+<br/>
+##### *Beware !*
 Non-authentic DNS servers can be used VERY 	convincingly for phishing. 
 Make sure you are in control of your configuration.
